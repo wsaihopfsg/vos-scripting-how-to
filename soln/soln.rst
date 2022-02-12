@@ -13,7 +13,7 @@ Using reference shape to compute dimensions
 +-----------------------------------------------------------------------------------------------------------+
 
 
-:ref:`Sequential reading of QR codes <shiftROI>`
+:doc:`Sequential reading of QR codes </soln/ROI/roi>`
 -----------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -31,5 +31,3 @@ Using reference shape to compute dimensions
 
 .. |VOSROX| image:: /img/VOSROX.gif
    :align: middle
-   :width: 400pt
-   :height: 250pt

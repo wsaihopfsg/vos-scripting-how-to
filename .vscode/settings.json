@@ -1,4 +1,3 @@
 {
-    "ros.distro": "melodic",
-    "restructuredtext.confPath": "${workspaceFolder}"
+    "ros.distro": "melodic"
 }
