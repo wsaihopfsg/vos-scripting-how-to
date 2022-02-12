@@ -17,7 +17,7 @@ Tool Explanation
 * At the ``Tool Setup`` page |toolsetup|, click on |takepic| if ``QR1.bmp`` is not loaded
 * Only a ``2D Barcode`` tool called ``B2d0`` is used with the region-of-interest (ROI) set at one of the QR codes. Note that the actual QR code that lies within the ROI in this ``Tool Setup`` page may be different, depending on when the emulator was stopped in the previous run.
 
-|BC2d|
+|BC2d_ROI|
 
 Code Explanation
 ----------------
@@ -89,13 +89,15 @@ Periodic Function
   6. x2 is the x-coordinate of the bottom right corner
   7. y2 is the y-coordinate of the bottom right corner
 
-* ``nowCtr`` in line 19 is a counter that keeps track of the current QR code being read
+* ``nowCtr`` in line 19 is a counter that keeps track of the current QR code being read, numbered as shown below.
    * ``nowCol`` in line 3 is the current column as calculated from ``nowCtr`` 
    * ``nowRow`` in line 4 is the current row as calculated from ``nowCtr`` 
 
+  |BC2d_idx|
+
 * ``xIntv`` in line 1 the increament in x value for each column
 * ``yIntv`` in line 2 the increament in y value for each row
-* The hardcoded values in lines 9-12 are the top left and bottom right (x,y) coordinates for the first QR code on the top left hand corner.
+* The hardcoded values in lines 9-12 are the top left and bottom right (x,y) coordinates for the first QR code on the top left hand corner, when nowCtr=0.
 * ``Delay`` in line 16 creates a delay in a periodic function in milliseconds.
 * ``ReTrigger`` in line 17 causes re-processing the last image on the indicated camID, which works only in a periodic function. Each ``ReTrigger`` causes the script to be re-run, with ROI shifted and the output changed.
 
@@ -147,7 +149,9 @@ Post Image Process
    :width: 45px
    :height: 45px
 
-.. |BC2d| image:: /img/Soln/ROI/BC2d.jpg
+.. |BC2d_ROI| image:: /img/Soln/ROI/BC2d_ROI.jpg
 
 .. |function| image:: /img/emulator/function.jpg
+
+.. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
