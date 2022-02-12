@@ -30,8 +30,9 @@ As always, we would be happy to hear your comments and receive your contribution
    intro/advanced
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 0
    :hidden:
    :caption: Solutions:
 
    soln/soln
+

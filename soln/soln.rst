@@ -13,8 +13,8 @@ Using reference shape to compute dimensions
 +-----------------------------------------------------------------------------------------------------------+
 
 
-Sequential reading of QR codes
----------------------------------
+:ref:`Sequential reading of QR codes <shiftROI>`
+-----------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
 |Changing ROI Programmatically                                                                              |       
@@ -30,5 +30,6 @@ Sequential reading of QR codes
    :height: 480pt
 
 .. |VOSROX| image:: /img/VOSROX.gif
-   :width: 480pt
-   :height: 300pt
+   :align: middle
+   :width: 400pt
+   :height: 250pt
