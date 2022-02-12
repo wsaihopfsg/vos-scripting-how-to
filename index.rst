@@ -13,7 +13,7 @@ The following links describe a set of basic VOS tutorials. Please note that thei
 
 You should have downloaded and installed the ``Pepperl-Fuchs Vision Configuration Tool`` as described in the manual. 
 
-The VOS emulator is the only program that we will be using in this tutorial, which is launched through VOS Emulator Config 
+The ``VOS emulator`` is the only program that we will be using in this tutorial, which is launched through ``VOS Emulator Config`` 
 
 .. image:: /img/emulatorConfig.JPG
 

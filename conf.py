@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'VOS Scripting How-To'
-copyright = '2022, Wong Sai Ho, Lim CJ, Liew Pooi Looi, Wong Hoon Keit'
-author = 'Wong Sai Ho, Lim CJ, Liew Pooi Looi, Wong Hoon Keit'
+copyright = '2022, WSH'
+author = 'WSH'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
