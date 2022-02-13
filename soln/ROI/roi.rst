@@ -19,13 +19,30 @@ Tool Explanation
 
 |BC2d_ROI|
 
-Code Explanation
-----------------
+Code Walk-Through
+-----------------
 * Click on ``Edit Script`` |edit| 
+
+Solution Initialize Function
+############################
+
+* Choose the predefined function ``Solution Initialize`` at the bottom right 
+  |fn_init|
+
+* In the Script Function window we see 2 variables being initialized
+   * ``nowCtr`` keeps track of which QR code is being read
+   * ``opStr`` is the output string for ``SetDisplayStatus``
+  
+.. code-block::
+   nowCtr = 0
+   opStr = ""
+
 
 Periodic Function
 #################
-* Choose the predefined function ``Periodic: 200ms`` at the bottom right |fn_periodic|
+* Choose the predefined function ``Periodic: 200ms`` at the bottom right 
+  |fn_periodic|
+
 * In the Script Function window we see 
 
 .. code-block::
@@ -80,14 +97,14 @@ Periodic Function
 
 * The ``argList`` is stored in the array ``Tool1Pos`` defined in lines 5-12
   
-  0. Name of the parameter being set, ``setroi``
-  1. Tool name, ``B2d0``
-  2. CamID, always ``0`` for VOS 
-  3. ROI Type, ``rect``
-  4. x1 is the x-coordinate of the top left corner
-  5. y1 is the y-coordinate of the top left corner
-  6. x2 is the x-coordinate of the bottom right corner
-  7. y2 is the y-coordinate of the bottom right corner
+  1. Name of the parameter being set, ``setroi``
+  2. Tool name, ``B2d0``
+  3. CamID, always ``0`` for VOS 
+  4. ROI Type, ``rect``
+  5. x1 is the x-coordinate of the top left corner
+  6. y1 is the y-coordinate of the top left corner
+  7. x2 is the x-coordinate of the bottom right corner
+  8. y2 is the y-coordinate of the bottom right corner
 
 * ``nowCtr`` in line 19 is a counter that keeps track of the current QR code being read, numbered as shown below.
    * ``nowCol`` in line 3 is the current column as calculated from ``nowCtr`` 
@@ -103,7 +120,8 @@ Periodic Function
 
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right |fn_post|
+* Choose the predefined function ``Post Image Process`` at the bottom right 
+  |fn_post|
 
 * In the Script Function window we see 
 
@@ -159,6 +177,8 @@ Post Image Process
 .. |fn_post| image:: /img/emulator/fn_post.jpg
 
 .. |fn_periodic| image:: /img/emulator/fn_periodic.jpg
+
+.. |fn_init| image:: /img/emulator/fn_init.jpg    
 
 .. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
