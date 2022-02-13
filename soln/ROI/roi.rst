@@ -25,7 +25,7 @@ Code Explanation
 
 Periodic Function
 #################
-* Choose the predefined function ``Periodic: 200ms`` at the bottom right |function|
+* Choose the predefined function ``Periodic: 200ms`` at the bottom right |fn|
 * In the Script Function window we see 
 
 .. code-block::
@@ -104,7 +104,9 @@ Periodic Function
 Post Image Process
 ##################
 * Choose the predefined function ``Post Image Process`` at the bottom right 
-  |function|
+  
+  |fn|
+
 * In the Script Function window we see 
 
 .. code-block::
@@ -156,7 +158,7 @@ Post Image Process
 
 .. |BC2d_ROI| image:: /img/Soln/ROI/BC2d_ROI.jpg
 
-.. |function| image:: /img/emulator/function.jpg
+.. |fn| image:: /img/emulator/fn.jpg
 
 .. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
