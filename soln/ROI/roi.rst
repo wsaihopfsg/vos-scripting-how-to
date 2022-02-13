@@ -103,7 +103,8 @@ Periodic Function
 
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right |function|
+* Choose the predefined function ``Post Image Process`` at the bottom right 
+  |function|
 * In the Script Function window we see 
 
 .. code-block::
@@ -115,7 +116,11 @@ Post Image Process
     endif
     SetDisplayStatus(opStr,"darkgreen")
 
-* The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break in line 3 before displaying ``opStr``.
+* The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr``.
+
+  |vosrox|
+
+#dynamic #ROI #setparam #sequential 
 
 .. |QR1| image:: /code/ROI/QR1.bmp
    :width: 480pt
@@ -155,3 +160,4 @@ Post Image Process
 
 .. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
+.. |vosrox| image:: /img/vosrox.gif
