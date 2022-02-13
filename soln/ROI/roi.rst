@@ -34,6 +34,7 @@ Solution Initialize Function
    * ``opStr`` is the output string for ``SetDisplayStatus``
   
 .. code-block::
+
    nowCtr = 0
    opStr = ""
 
