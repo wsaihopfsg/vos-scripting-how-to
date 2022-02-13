@@ -25,7 +25,7 @@ Code Explanation
 
 Periodic Function
 #################
-* Choose the predefined function ``Periodic: 200ms`` at the bottom right |fn|
+* Choose the predefined function ``Periodic: 200ms`` at the bottom right |fn_periodic|
 * In the Script Function window we see 
 
 .. code-block::
@@ -103,9 +103,7 @@ Periodic Function
 
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right 
-  
-  |fn|
+* Choose the predefined function ``Post Image Process`` at the bottom right |fn_post|
 
 * In the Script Function window we see 
 
@@ -120,9 +118,9 @@ Post Image Process
 
 * The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr``.
 
-  |vosrox|
+  |VOSROX|
 
-#dynamic #ROI #setparam #sequential 
+#dynamic #ROI #setparam #sequential #shift #region-of-interest #region #interest
 
 .. |QR1| image:: /code/ROI/QR1.bmp
    :width: 480pt
@@ -158,8 +156,11 @@ Post Image Process
 
 .. |BC2d_ROI| image:: /img/Soln/ROI/BC2d_ROI.jpg
 
-.. |fn| image:: /img/emulator/fn.jpg
+.. |fn_post| image:: /img/emulator/fn_post.jpg
+
+.. |fn_periodic| image:: /img/emulator/fn_periodic.jpg
 
 .. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
-.. |vosrox| image:: /img/vosrox.gif
+.. |VOSROX| image:: /img/VOSROX.gif
+   :align: middle
