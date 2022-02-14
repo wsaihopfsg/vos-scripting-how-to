@@ -25,9 +25,25 @@ Using reference shape to compute dimensions
 || |VOSROX|                                                                                                 | 
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |refCir| image:: /img/refCirManyRect.JPG
+
+:doc:`Defect Detection </soln/DefectDots/DefectDots>`
+-----------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Defect Detection Through Preprocessors                                                                     |       
++===========================================================================================================+
+|| This solution shows defect detection through preprocessors.                                              |
+|| * Threshold (band)                                                                                       | 
+|| * Invert                                                                                                 |
+|| * Remove blobs                                                                                           |
+|| |DefectDots|                                                                                             | 
++-----------------------------------------------------------------------------------------------------------+
+
+.. |refCir| image:: /img/Soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
    :height: 480pt
 
-.. |VOSROX| image:: /img/VOSROX.gif
+.. |VOSROX| image:: /img/Soln/ROI/vosrox.gif
    :align: middle
+
+.. |DefectDots| image:: /soln/DefectDots/failedPatches.jpg

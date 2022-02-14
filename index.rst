@@ -17,8 +17,6 @@ The ``VOS emulator`` is the only program that we will be using in this tutorial,
 
 .. image:: /img/emulatorConfig.JPG
 
-**Yes you can try all the cool functions that VOS offers before purchasing the physical unit!**
-
 As always, we would be happy to hear your comments and receive your contributions on any tutorial.
 
 .. toctree::

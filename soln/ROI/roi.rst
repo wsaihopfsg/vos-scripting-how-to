@@ -14,8 +14,8 @@ Sequential reading of QR codes
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``QR1.bmp`` has been saved 
 
-Tool Explanation
-----------------
+Tools Explanation
+-----------------
 * At the ``Tool Setup`` page |toolsetup|, click on |takepic| if ``QR1.bmp`` is not loaded
 * Only a ``2D Barcode`` tool called ``B2d0`` is used with the region-of-interest (ROI) set at one of the QR codes. Note that the actual QR code that lies within the ROI in this ``Tool Setup`` page may be different, depending on when the emulator was stopped in the previous run.
 
@@ -151,9 +151,9 @@ Post Image Process
    :width: 480pt
    :height: 360pt
 
-.. |BC2d_ROI| image:: /img/Soln/ROI/BC2d_ROI.jpg
+.. |BC2d_ROI| image:: /soln/ROI/BC2d_ROI.jpg
 
-.. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
+.. |BC2d_idx| image:: /soln/ROI/BC2d_idx.jpg
 
-.. |VOSROX| image:: /img/VOSROX.gif
+.. |VOSROX| image:: /soln/ROI/VOSROX.gif
    :align: middle
