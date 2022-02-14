@@ -1,3 +1,5 @@
+.. include:: /shared/EmulatorComponents.rst
+
 Sequential reading of QR codes
 ++++++++++++++++++++++++++++++
 
@@ -30,10 +32,12 @@ Solution Initialize Function
   |fn_init|
 
 * In the Script Function window we see 2 variables being initialized
+
    * ``nowCtr`` keeps track of which QR code is being read
    * ``opStr`` is the output string for ``SetDisplayStatus``
   
 .. code-block::
+   :linenos:
 
    nowCtr = 0
    opStr = ""
@@ -98,16 +102,18 @@ Periodic Function
 
 * The ``argList`` is stored in the array ``Tool1Pos`` defined in lines 5-12
   
-  1. Name of the parameter being set, ``setroi``
-  2. Tool name, ``B2d0``
-  3. CamID, always ``0`` for VOS 
-  4. ROI Type, ``rect``
-  5. x1 is the x-coordinate of the top left corner
-  6. y1 is the y-coordinate of the top left corner
-  7. x2 is the x-coordinate of the bottom right corner
-  8. y2 is the y-coordinate of the bottom right corner
+  0. Name of the parameter being set, ``setroi``
+  1. Tool name, ``B2d0``
+  2. CamID, always ``0`` for VOS 
+  3. ROI Type, ``rect``
+  4. x1 is the x-coordinate of the top left corner
+  5. y1 is the y-coordinate of the top left corner
+  6. x2 is the x-coordinate of the bottom right corner
+  7. y2 is the y-coordinate of the bottom right corner
+
 
 * ``nowCtr`` in line 19 is a counter that keeps track of the current QR code being read, numbered as shown below.
+   
    * ``nowCol`` in line 3 is the current column as calculated from ``nowCtr`` 
    * ``nowRow`` in line 4 is the current row as calculated from ``nowCtr`` 
 
@@ -115,7 +121,7 @@ Periodic Function
 
 * ``xIntv`` in line 1 the increament in x value for each column
 * ``yIntv`` in line 2 the increament in y value for each row
-* The hardcoded values in lines 9-12 are the top left and bottom right (x,y) coordinates for the first QR code on the top left hand corner, when nowCtr=0.
+* The hardcoded values in lines 9-12 are the top left and bottom right (x,y) coordinates for the first QR code when nowCtr=0.
 * ``Delay`` in line 16 creates a delay in a periodic function in milliseconds.
 * ``ReTrigger`` in line 17 causes re-processing the last image on the indicated camID, which works only in a periodic function. Each ``ReTrigger`` causes the script to be re-run, with ROI shifted and the output changed.
 
@@ -135,7 +141,7 @@ Post Image Process
     endif
     SetDisplayStatus(opStr,"darkgreen")
 
-* The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr``.
+* The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr`` through ``SetDisplayStatus``.
 
   |VOSROX|
 
@@ -145,41 +151,7 @@ Post Image Process
    :width: 480pt
    :height: 360pt
 
-.. |edit| image:: /img/emulator/buttons/editscript.jpg
-   :width: 45px
-   :height: 45px
-
-.. |solnsetup| image:: /img/emulator/buttons/SolutionSetup.jpg
-   :width: 45px
-   :height: 45px
-
-.. |import| image:: /img/emulator/buttons/ImportSoln.jpg
-   :width: 45px
-   :height: 45px
-
-.. |demoimg| image:: /img/emulator/demoImgLoc.jpg
-   :width: 421px
-   :height: 74px
-
-.. |sensorsetup| image:: /img/emulator/buttons/SensorSetup.jpg
-   :width: 45px
-   :height: 45px
-
-.. |toolsetup| image:: /img/emulator/buttons/ToolSetup.jpg
-   :width: 45px
-   :height: 45px
-
-.. |takepic| image:: /img/emulator/buttons/TakePic.jpg
-   :width: 45px
-   :height: 45px
-
 .. |BC2d_ROI| image:: /img/Soln/ROI/BC2d_ROI.jpg
-
-.. |fn_post| image:: /img/emulator/fn_post.jpg
-
-.. |fn_periodic| image:: /img/emulator/fn_periodic.jpg
-
-.. |fn_init| image:: /img/emulator/fn_init.jpg    
 
 .. |BC2d_idx| image:: /img/Soln/ROI/BC2d_idx.jpg
 
