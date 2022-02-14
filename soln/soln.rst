@@ -39,11 +39,11 @@ Using reference shape to compute dimensions
 || |DefectDots|                                                                                             | 
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |refCir| image:: /img/Soln/RefCirSizeRect/refCirManyRect.JPG
+.. |refCir| image:: /soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
    :height: 480pt
 
-.. |VOSROX| image:: /img/Soln/ROI/vosrox.gif
+.. |VOSROX| image:: /soln/ROI/vosrox.gif
    :align: middle
 
 .. |DefectDots| image:: /soln/DefectDots/failedPatches.jpg
