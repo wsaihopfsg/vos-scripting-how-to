@@ -155,5 +155,5 @@ Post Image Process
 
 .. |BC2d_idx| image:: /soln/ROI/BC2d_idx.jpg
 
-.. |VOSROX| image:: /soln/ROI/VOSROX.gif
+.. |VOSROX| image:: /soln/ROI/vosrox.gif
    :align: middle
