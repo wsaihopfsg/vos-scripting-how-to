@@ -10,7 +10,7 @@ Sequential reading of QR codes
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
-#. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/QR1.bmp?raw=true>`_ with 6 QR codes, with an alphabet encoded in each.
+#. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/QR1.bmp?raw=true>`__ with 6 QR codes, with an alphabet encoded in each.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``QR1.bmp`` has been saved 
 

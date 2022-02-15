@@ -23,6 +23,10 @@
    :width: 45px
    :height: 45px
 
+.. |preprocess| image:: /img/emulator/buttons/preprocess.jpg
+   :width: 45px
+   :height: 45px
+
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
    :width: 421px
