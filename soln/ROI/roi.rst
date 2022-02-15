@@ -6,7 +6,7 @@ Sequential reading of QR codes
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/ROI>`_
 --------------------------------------------------------------------------------------------
 
-#. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/roishift.bin?raw=true>`_
+#. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/roishift.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   

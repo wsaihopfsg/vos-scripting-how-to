@@ -39,6 +39,23 @@ Using reference shape to compute dimensions
 || |DefectDots|                                                                                             | 
 +-----------------------------------------------------------------------------------------------------------+
 
+:doc:`Scratch Detection </soln/Scratch/Scratch>`
+-----------------------------------------------------
+
++------------------------------------------------------------------------------------------------+
+|Scratch Detection in the Presence of Background Noise                                           |
++================================================================================================+
+|| This solution shows scratch detection through use of multiple preprocessors stacked together. |
+|| * Normalize                                                                                   |
+|| * Threshold (band)                                                                            |
+|| * Invert                                                                                      |
+|| * Remove blobs                                                                                |
+|| * Median                                                                                      |
+|| * Erode                                                                                       |
+|| * Remove blobs                                                                                |
+|| |scratch_hi|                                                                                  |
++------------------------------------------------------------------------------------------------+
+
 .. |refCir| image:: /soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
    :height: 480pt
@@ -47,3 +64,5 @@ Using reference shape to compute dimensions
    :align: middle
 
 .. |DefectDots| image:: /soln/DefectDots/failedPatches.jpg
+
+.. |scratch_hi| image:: /soln/Scratch/scratch_highlighted.jpg

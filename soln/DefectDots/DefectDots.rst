@@ -6,7 +6,7 @@ Defect Detection
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/DetectDots>`__
 ----------------------------------------------------------------------------------------------------
 
-#. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/detectpatches.bin?raw=true>`_
+#. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/detectpatches.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
@@ -33,7 +33,8 @@ Tools Explanation
   
         |Preprocess1|
   
-    2. Since in ``Count Properties`` the ``Object Type`` is set to ``Dark``, the ``Count`` tool would be counting black objects. Hence the ``Invert`` tool is needed as the second preprocessor |Preprocess2| 
+    2. Since in ``Count Properties`` the ``Object Type`` is set to ``Dark``, the ``Count`` tool would be counting black objects. Hence the ``Invert`` tool is needed as the second preprocessor. Take note of the 4 crescent shapes at the bottom; they should not be considered as defects.
+       |Preprocess2| 
     3. Until this step the alphabets would have been included in the defect count. Since they are expected to be much bigger than the defects, we use the ``Remove blobs`` tool to get rid of them. However before using ``Remove blobs`` tool, we need information on what we are removing or retaining. With only the first 2 preprocessors above active, we can click on the ``Advanced...`` |advanced| button
 
        |Advanced|
