@@ -27,6 +27,10 @@
    :width: 45px
    :height: 45px
 
+.. |advanced| image:: /img/emulator/buttons/advanced.jpg
+   :width: 45px
+   :height: 45px
+
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
    :width: 421px
