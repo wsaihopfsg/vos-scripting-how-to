@@ -39,6 +39,26 @@
    :width: 45px
    :height: 45px
 
+.. |invisible| image:: /img/emulator/buttons/invisible.jpg
+   :width: 45px
+   :height: 45px
+
+.. |ok| image:: /img/emulator/buttons/ok.jpg
+   :width: 45px
+   :height: 45px
+ 
+.. |cancel| image:: /img/emulator/buttons/cancel.jpg
+   :width: 45px
+   :height: 45px
+
+.. |apply| image:: /img/emulator/buttons/apply.jpg
+   :width: 45px
+   :height: 45px
+
+.. |help| image:: /img/emulator/buttons/help.jpg
+   :width: 45px
+   :height: 45px
+
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
    :width: 421px

@@ -17,7 +17,7 @@ Defect Detection
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| if until ``mpsmdots.bmp`` is loaded.
+* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``mpsmdots.bmp`` is loaded.
 * Only a ``Count`` tool called ``N`` is used with the region-of-interest (ROI) set to the area where defect detection is to be performed.
   * The ``Tolerance`` of the tool is set to all zeros because we want to trigger a failure when N>0 
 * Hovering the mouse over the green line denoting the ROI, the count tool gives a preview of the output after preprocessing has been applied. |CountPreview|
@@ -87,7 +87,7 @@ Post Image Process
         SetDisplayStatus("Fail with "+N+" patches detected","red")
     endif
 
-* The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output the number of defects detected by ``SetDisplayStatus``.
+* The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output by ``SetDisplayStatus`` with the number of defects detected .
 
 Running the solution
 ####################
