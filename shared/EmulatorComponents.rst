@@ -31,6 +31,14 @@
    :width: 45px
    :height: 45px
 
+.. |runsoln| image:: /img/emulator/buttons/RunSoln.jpg
+   :width: 45px
+   :height: 45px
+
+.. |manTrig| image:: /img/emulator/buttons/manualTrig.jpg
+   :width: 45px
+   :height: 45px
+
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
    :width: 421px

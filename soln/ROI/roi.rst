@@ -143,6 +143,11 @@ Post Image Process
 
 * The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr`` through ``SetDisplayStatus``.
 
+Running the solution
+####################
+
+* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button.
+
   |VOSROX|
 
 #dynamic #ROI #setparam #sequential #shift #region-of-interest #region #interest
