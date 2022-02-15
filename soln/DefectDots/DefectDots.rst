@@ -52,15 +52,37 @@ Tools Explanation
        +-----------------+-------------------+                                                +       
        |Max area         |10000              |area                                            |
        +-----------------+-------------------+------------------------------------------------+
-       |Min width        |3                  |From ``Advanced..``, alphabets are > 10000 in   |
+       |Min width        |3                  |From ``Advanced..``, defects' width is < 55.    |
        +-----------------+-------------------+                                                +       
-       |Max width        |50                 |area                                            |
+       |Max width        |55                 |Min width of 3 to exclude very small defects.   |
        +-----------------+-------------------+------------------------------------------------+
-       |Min height       |3                  |From ``Advanced..``, alphabets are > 10000 in   |
+       |Min height       |3                  |From ``Advanced..``, defects' height is < 55.   |
        +-----------------+-------------------+                                                +       
-       |Max height       |50                 |area                                            |
+       |Max height       |55                 |Min height of 3 to exclude very small defects.  |
        +-----------------+-------------------+------------------------------------------------+
 
+Code Walk-Through
+-----------------
+* Click on ``Edit Script`` |edit| 
+
+Post Image Process
+##################
+* Choose the predefined function ``Post Image Process`` at the bottom right 
+  |fn_post|
+
+* In the Script Function window we see 
+
+.. code-block::
+    :linenos:
+
+    if(N=0) 
+        SetDisplayStatus("Pass","darkgreen")
+    else
+        SetDisplayStatus("Fail with "+N+" patches detected","red")
+    endif
+
+* The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output the number of defects detected by ``SetDisplayStatus``.
+  
 .. |CountPreview| image:: /soln/DefectDots/CountPreview.jpg
 
 .. |CountProp| image:: /soln/DefectDots/CountProperties.jpg
