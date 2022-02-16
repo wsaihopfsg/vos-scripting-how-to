@@ -59,6 +59,10 @@
    :width: 45px
    :height: 45px
 
+.. |conn| image:: /img/emulator/buttons/SetupConn.jpg
+   :width: 45px
+   :height: 45px
+
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
    :width: 281px

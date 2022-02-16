@@ -3,14 +3,14 @@
 Sequential reading of QR codes
 ++++++++++++++++++++++++++++++
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/ROI>`_
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`_
 --------------------------------------------------------------------------------------------
 
-#. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/roishift.bin?raw=true>`__
+#. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
-#. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/ROI/QR1.bmp?raw=true>`__ with 6 QR codes, with an alphabet encoded in each.
+#. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__ with 6 QR codes, with an alphabet encoded in each.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``QR1.bmp`` has been saved 
 
@@ -25,8 +25,8 @@ Code Walk-Through
 -----------------
 * Click on ``Edit Script`` |edit| 
 
-Solution Initialize Function
-############################
+Solution Initialize
+###################
 
 * Choose the predefined function ``Solution Initialize`` at the bottom right 
   |fn_init|

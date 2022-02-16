@@ -3,15 +3,15 @@
 Defect Detection 
 ++++++++++++++++
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/DetectDots>`__
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/DetectDots>`__
 ----------------------------------------------------------------------------------------------------
 
-#. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/detectpatches.bin?raw=true>`__
+#. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
-#. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
+#. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
+#. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved 
 

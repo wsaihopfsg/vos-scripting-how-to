@@ -3,15 +3,15 @@
 Scratch Detection 
 +++++++++++++++++
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Scratch>`__
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
 -------------------------------------------------------------------------------------------------
 
-#. ``scratch.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Scratch/scratch.bin?raw=true>`__
+#. ``scratch.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
-#. ``unscratched.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
+#. ``unscratched.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
+#. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where the image files have been saved.
 
@@ -40,7 +40,7 @@ Tools Explanation
   #. Remove blobs
   #. Erode
 
-* We can turn preprocessors 2-5 off by selecting `--` and click on ``apply`` |apply| to see the immediate effects on the image. As long as ``ok`` |ok| is not invoked, it is still possible to regain the original settings for all preprocessors by clicking ``cancel`` |cancel|.
+* We can turn preprocessors 2-5 off by selecting ``--`` and click on ``apply`` |apply| to see the immediate effects on the image. As long as ``ok`` |ok| is not invoked, it is still possible to regain the original settings for all preprocessors by clicking ``cancel`` |cancel|.
 
   .. image:: /soln/Scratch/pre_1.jpg
 
