@@ -11,7 +11,7 @@ Scratch Detection
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
 #. ``unscratched.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/DetectDots/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
+#. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where the image files have been saved.
 
@@ -25,9 +25,10 @@ Tools Explanation
 
   * A ``Preprocess`` tool named ``Pre`` whose region-of-interest (ROI) covers the whole picture
   * Another ``Preprocess`` tool named ``Pre1`` whose ROI overlaps with ``Pre``
+    * From the ``Tool List`` we can see that ``Pre`` is executed before ``Pre1``. 
   * A ``Count`` tool named ``N`` that has an ROI made artificially smaller than ``Pre`` & ``Pre1`` 
 
-* To keep our sanity, we first make the effects by ``Pre1`` and ``Count`` invisible by clicking on their ``visibility toggle`` |invisible|. The resulting ``Tool List`` should look like 
+* To keep things simple, we first make the effects by ``Pre1`` and ``Count`` invisible by clicking on their ``visibility toggle`` |invisible|. The resulting ``Tool List`` should look like 
 
   .. image:: /soln/Scratch/pre_visible_only.jpg
 
@@ -47,7 +48,7 @@ Tools Explanation
 
   .. image:: /soln/Scratch/pre_1img.jpg
 
-* Next we turn preprocessors 3-5 off, which effctive turn the image into binary.
+* Next we turn preprocessors 3-5 off, which effctively turns the image into binary.
 
   .. image:: /soln/Scratch/pre_12img.jpg
 
@@ -79,7 +80,7 @@ Tools Explanation
 
 .. image:: /soln/Scratch/pre_12345img.jpg
 
-* After making ``Pre1`` visible, right click on its row in the ``Tool List`` to bring up its properties. There is only 1 preprocessor in ``Pre1``, which is a ``Remove blobs`` tool to remove the larger patches. The final result from stacking these 2 preprocessors is only the 
+* After making ``Pre1`` visible, right click on its row in the ``Tool List`` to bring up its properties. There is only 1 preprocessor in ``Pre1``, which is a ``Remove blobs`` tool to remove the larger patches. The final result from stacking these 2 preprocessors is only a slightly expanded version of the scratch.
 
  .. image:: /soln/Scratch/pre_123456img.jpg
 
@@ -113,8 +114,12 @@ Running the solution
 +-------------------------+
 ||pass|                   |
 +-------------------------+
+|                         |
++-------------------------+
 ||fail|                   |
 +-------------------------+
+
+#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
 
 .. |pass| image:: /soln/Scratch/pass.jpg
 

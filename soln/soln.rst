@@ -50,7 +50,6 @@ Using reference shape to compute dimensions
 || * Threshold (band)                                                                            |
 || * Invert                                                                                      |
 || * Remove blobs                                                                                |
-|| * Median                                                                                      |
 || * Erode                                                                                       |
 || * Remove blobs                                                                                |
 || |scratch_hi|                                                                                  |

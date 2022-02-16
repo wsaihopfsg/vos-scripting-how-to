@@ -61,8 +61,8 @@
 
 .. image locations
 .. |demoimg| image:: /img/emulator/demoImgLoc.jpg
-   :width: 421px
-   :height: 74px
+   :width: 281px
+   :height: 49px
 
 .. functions
 
