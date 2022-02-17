@@ -13,6 +13,7 @@ This sample demonstrates
 #. Overwriting ``PASS``. ``FAIL`` & ``RECYCLE`` results
 
 The solution uses a circle, placed at the most left position, as having an user-supplied reference diameter of ``cirD`` units. Rectangles of random sizes and orientation are place at random, and the following properties will be computed for these rectangles.
+
 * L: Length in units
 * W: Width in units
 * R: Rotation angle in degree
@@ -42,6 +43,7 @@ Tools Explanation
 
   * A ``Preprocess`` tool named ``Pre`` whose region-of-interest (ROI) covers the whole picture
   * A ``Count`` tool named ``N`` with the following properties enabled
+
     * Area
     * Major
     * Minor
@@ -117,6 +119,7 @@ Periodic Function
 * Line 4 (high-lighted): Read from ``CommandString`` from character 0 for 1 chracter and output to ``CommandCharacter``
 * Line 6 (high-lighted):  Read from ``CommandString`` from character 1 for 1 chracter and output to ``ProgramNumber``
 * Line 7: Check if ``ProgramNumber``>0, if so pass the value to ``cirD`` in Line 8
+  * In this version, only single digit diameter is used
 * Line 10: Check if ``CommandCharacter`` = ``T``, if perform software ``trigger()`` in Line 11
   
 Post Image Process

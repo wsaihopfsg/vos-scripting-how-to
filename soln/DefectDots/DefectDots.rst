@@ -3,6 +3,11 @@
 Defect Detection 
 ++++++++++++++++
 
+This sample demonstrates
+
+#. Use of preprocessors to aid in a vision task
+#. Detailed explanation for ``Remove blob``
+
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/DetectDots>`__
 ---------------------------------------------------------------------------------------------------------
 
@@ -40,7 +45,9 @@ Tools Explanation
        |Advanced|
 
        * With the information on the area and the minor/major axes from ``Advanced...``, we can proceed to populate the parameters for the third preprocessor ``Remove blob``.
-  
+
+.. _blob:  
+
        +-----------------+-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
        |White blobs      |0                  |Removing dark blobs                                                                                                                                          |
        +-----------------+-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -97,7 +104,9 @@ Running the solution
   .. image:: /soln/DefectDots/failedPatches.jpg
   
   .. image:: /soln/DefectDots/passPatches.jpg    
-  
+
+#remove #blob #defect #detection #preprocessor
+
 .. |CountPreview| image:: /soln/DefectDots/CountPreview.jpg
 
 .. |CountProp| image:: /soln/DefectDots/CountProperties.jpg

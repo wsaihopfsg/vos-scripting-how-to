@@ -3,6 +3,11 @@
 Scratch Detection 
 +++++++++++++++++
 
+This sample demonstrates
+
+#. Stacking of multiple preprocessors
+#. Use of the ``erode`` preprocessor
+
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
 ------------------------------------------------------------------------------------------------------
 
@@ -56,7 +61,7 @@ Tools Explanation
 
   .. image:: /soln/Scratch/pre_123img.jpg
 
-* When only preprocessor 5 in ``Pre`` off, the ``Remove blobs`` tool removes all of the smallest patches, so that the larger patches remain.
+* When only preprocessor 5 in ``Pre`` off, the ``Remove blobs`` tool removes all of the smallest patches, so that the larger patches remain. Details of the ``Remove blob`` can be found :doc:`here </soln/DefectDots/DefectDots>`
 
   .. image:: /soln/Scratch/pre_1234img.jpg
 

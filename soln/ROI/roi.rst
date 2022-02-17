@@ -3,6 +3,11 @@
 Sequential reading of QR codes
 ++++++++++++++++++++++++++++++
 
+This sample demonstrates
+
+#. How to dynamically change ROI through VOS script
+#. Reading of QR codes
+
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
 --------------------------------------------------------------------------------------------------
 
