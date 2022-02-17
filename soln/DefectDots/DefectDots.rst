@@ -80,7 +80,7 @@ Code Walk-Through
 
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right 
+* Choose the predefined function ``Post Image Process`` at the bottom left 
   |fn_post|
 
 * In the Script Function window we see 

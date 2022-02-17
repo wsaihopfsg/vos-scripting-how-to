@@ -33,7 +33,7 @@ Code Walk-Through
 Solution Initialize
 ###################
 
-* Choose the predefined function ``Solution Initialize`` at the bottom right 
+* Choose the predefined function ``Solution Initialize`` at the bottom left 
   |fn_init|
 
 * In the Script Function window we see 2 variables being initialized
@@ -132,7 +132,7 @@ Periodic Function
 
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right 
+* Choose the predefined function ``Post Image Process`` at the bottom left 
   |fn_post|
 
 * In the Script Function window we see 

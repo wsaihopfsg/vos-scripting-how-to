@@ -72,7 +72,7 @@ Code Walk-Through
 
 Solution Initialize
 ###################
-* Choose the predefined function ``Solution Initialize`` at the bottom right 
+* Choose the predefined function ``Solution Initialize`` at the bottom left 
   |fn_init_here|
 
 * In the Script Function window we see 3 variables being initialized
@@ -91,7 +91,7 @@ Solution Initialize
 Periodic Function
 #################
 
-* Choose the predefined function ``Periodic: 200ms`` at the bottom right 
+* Choose the predefined function ``Periodic: 200ms`` at the bottom left 
   |fn_period_here|
 
 * In the Script Function window we see 
@@ -119,12 +119,14 @@ Periodic Function
 * Line 4 (high-lighted): Read from ``CommandString`` from character 0 for 1 chracter and output to ``CommandCharacter``
 * Line 6 (high-lighted):  Read from ``CommandString`` from character 1 for 1 chracter and output to ``ProgramNumber``
 * Line 7: Check if ``ProgramNumber``>0, if so pass the value to ``cirD`` in Line 8
+  
   * In this version, only single digit diameter is used
+  
 * Line 10: Check if ``CommandCharacter`` = ``T``, if perform software ``trigger()`` in Line 11
   
 Post Image Process
 ##################
-* Choose the predefined function ``Post Image Process`` at the bottom right 
+* Choose the predefined function ``Post Image Process`` at the bottom left 
   |fn_post_here|
 
 * In the Script Function window we see 
@@ -175,8 +177,10 @@ Post Image Process
 * Line 11 computes the average of ``MajorCir`` & ``MinorCir``
 * Line 12 ``minY`` is the y-coordinate of the left most shape
 * Line 13 ``err`` is the error index, initialized to ``0`` 
+  
   * 0: no error
   * 1: bad reference shape
+  
 * Line 14 checks if the ratio of ``MinorCir`` to ``MajorCir`` is within tolerance set by ``tolCir``, since we know that the ratio for a perfect circle is close to 1.
 * Lines 15-16 handles the case when the ratio is not within tolerance, and the left-most shape is definitely not circular
 * Line 18 uses a heuristic threshold ``areaFact`` to determine whether a shape is circular or squarish, since both shapes will pass the ``tolCir`` test  earlier.
@@ -192,7 +196,7 @@ findLeftMostShape()
 
 .. _findL:
 
-* Choose the predefined function ``findLeftMostShape()`` at the bottom right 
+* Choose the predefined function ``findLeftMostShape()`` at the bottom left 
   |fn_left_here|, and the following code will be shown
 
 .. code-block::
@@ -210,6 +214,7 @@ findLeftMostShape()
     Return(0)
 
 * findLeftMostShape() uses a ``while`` loop to cycle through all shapes' x-coordinates detected by the ``Count`` tool.
+  
   * ``minShape``: The shape index of the left-most shape 
   * ``minX``: The x-coordinate of the left-most shape 
   * Notice that we are not returning these values by the ``Return()`` function. In fact every variable created has global scope and is not destroyed after the user-defined function has ``Return()``.
@@ -219,7 +224,7 @@ calcRectSizeDist()
 
 .. _calc:
 
-* Choose the predefined function ``calcRectSizeDist()`` at the bottom right 
+* Choose the predefined function ``calcRectSizeDist()`` at the bottom left 
   |fn_calc_here|, and the following code will be shown
 
 .. code-block::
@@ -245,6 +250,7 @@ calcRectSizeDist()
 * Line 1: ``adjFact`` is a heuristic factor that takes into account of the user-input reference circle diameter ``cirD``.
 * Line 2: ``RefCir`` is a factor that links ``Major`` & ``Minor`` axes values as measured by VOS to actual measurements in units.
 * Lines 5-15: The ``while`` loop goes through all shapes except for the reference and computes
+  
   * Line 7: ``Major`` axis (length) as ``rectL``
   * Line 8: ``Minor`` axis (width) as ``rectW``
   * Line 9: ``CountAngle`` as ``rectRot``
@@ -306,6 +312,8 @@ Running the solution
 +-------------------------+-------------------------+
 |Phone                    |VOS Emulator             |
 +-------------------------+-------------------------+
+
+`An advanced tutorial for integrating this solution with c# can be found ...todo....`
 
 #scale-invariant #socket #tcp #remote #trigger #user-defined #function #string #format #results #over-writing
 
