@@ -1,8 +1,8 @@
 User contributions
 ==================
 
-Using reference shape to compute dimensions
--------------------------------------------
+:doc:`Using reference shape to compute dimensions </soln/RefCirSizeRect/RefCirSizeRect>`
+----------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
 |Scale-Invariant Solution                                                                                   |       

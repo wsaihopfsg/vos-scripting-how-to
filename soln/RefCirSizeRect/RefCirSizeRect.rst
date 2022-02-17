@@ -4,6 +4,7 @@ Using a Reference Circle to Compute Size of Rectangles
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This sample demonstrates
+
 #. A scale-invariant VOS solution
 #. Using socket to control parameters
 #. Remote triggering
@@ -56,7 +57,7 @@ Tools Explanation
 
 Connections
 -----------
-* Click on ``Setup Connections`` |conn|. We are using the VOS emulator as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``. Note that the VOS emulator can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup.
+* Click on ``Setup Connections`` |conn|. We are using the VOS emulator as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``. Note that the VOS emulator can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. 
 
 .. image:: /soln/RefCirSizeRect/tcp5025.jpg 
 
@@ -87,11 +88,13 @@ Solution Initialize
 
 Periodic Function
 #################
+
 * Choose the predefined function ``Periodic: 200ms`` at the bottom right 
   |fn_period_here|
 
 * In the Script Function window we see 
 
+.. _period:
 .. code-block::
     :linenos:
     :emphasize-lines: 6, 4
@@ -110,7 +113,7 @@ Periodic Function
         endif
     endif
 
-* Line 1: Attempts to read from the configured TCP socket port and scans for ``CR`` character (ASCII 13)
+* Line 1: Attempts to read from the configured TCP socket port and scans for ``<CR>`` character (ASCII 13)
 * Line 4 (high-lighted): Read from ``CommandString`` from character 0 for 1 chracter and output to ``CommandCharacter``
 * Line 6 (high-lighted):  Read from ``CommandString`` from character 1 for 1 chracter and output to ``ProgramNumber``
 * Line 7: Check if ``ProgramNumber``>0, if so pass the value to ``cirD`` in Line 8
@@ -179,6 +182,7 @@ Post Image Process
 * Lines 26-29 outputs the ``opStr`` to the screen with ``SetDisplayStatus`` if there is error index indicates no error.
 * Line 31 outputs the ``opStr`` error message to the screen with ``SetDisplayStatus`` in red. 
 * Lines 32-34 overwrites the ``Result`` variable to ``FAIL``. Note that all 3 built-in variables ``PASS``, ``FAIL`` & ``RECYCLE`` must be in CAPS.
+* Line 36 writes the ``opStr`` to the TCP socket ``TcpP5025``
 
 findLeftMostShape()
 ====================
@@ -219,9 +223,9 @@ calcRectSizeDist()
     :linenos:
 
     adjFact = sqrt(4/3) / cirD
-    nowCtr = 0
     RefCir = MeanCir* adjFact
     opStr1 = "Ref Circle Diameter = [cirD%d] units\r\n"
+    nowCtr = 0
     while (nowCtr < N )
         if(nowCtr != minShape) 
             rectL = Major.[nowCtr] / RefCir
@@ -235,20 +239,72 @@ calcRectSizeDist()
     endwhile
     Return(opStr1)
 
+* Line 1: ``adjFact`` is a heuristic factor that takes into account of the user-input reference circle diameter ``cirD``.
+* Line 2: ``RefCir`` is a factor that links ``Major`` & ``Minor`` axes values as measured by VOS to actual measurements in units.
+* Lines 5-15: The ``while`` loop goes through all shapes except for the reference and computes
+  * Line 7: ``Major`` axis (length) as ``rectL``
+  * Line 8: ``Minor`` axis (width) as ``rectW``
+  * Line 9: ``CountAngle`` as ``rectRot``
+  * Line 10: Distance of the centre of the shape from the centre of the reference as ``rectDist``
+  * Line 11-12: Output string, which is returned in Line 16
+
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
+* Click on the ``Run Solution`` |runsoln|
+* Get a phone connected as the same WiFi network as the PC. Download app that, for example ``Simple TCP Socket Tester`` for Android
 
-+-------------------------+
-|pass                     |
-+-------------------------+
-|                         |
-+-------------------------+
-|fail                     |
-+-------------------------+
+.. image:: /soln/RefCirSizeRect/tcpSocketApp.jpg
+   :width: 240pt
+   
 
-#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
+
+* The phone is the ``TCP socket client`` while VOS emulator as the ``TCP socket server``. Connect to the PC's IP address (in this case 192.168.10.143) and configured port (5025) for VOS emulator
+
+.. image:: /soln/RefCirSizeRect/tcpSocketStep1.jpg
+   :width: 240pt
+
+* Choose to enter values as ``HEX``, and type ``54310D`` and press ``SEND``
+
+  * #54 is the ASCII character ``T`` , for :ref:`Software Trigger <period>`
+
+  * #31 is the ASCII character ``1``, as the user-input reference circle diameter of 1 unit
+
+  * #0D is the ``<CR>`` character, which the ``periodic function`` checks for :ref:`end of a command <period>`
+
+* The following should be shown on the phone and the VOS emulator 
+  
++-------------------------+-------------------------+
+||test0phone|             ||test0result|            |
++-------------------------+-------------------------+
+|Phone                    |VOS Emulator             |
++-------------------------+-------------------------+
+
+* Press ``SEND`` again with ``54310D`` unchanged, the following error should be shown on the phone and the VOS emulator because the left-most shape is not circular
+
++-------------------------+-------------------------+
+||test1phone|             ||test1result|            |
++-------------------------+-------------------------+
+|Phone                    |VOS Emulator             |
++-------------------------+-------------------------+
+
+* Change the HEX string to ``54330D``, here we are informing VOS that the reference diameter is 3 units (#33). Press ``SEND``, the following should be shown on the phone and the VOS emulator 
+
++-------------------------+-------------------------+
+||test2phone|             ||test2result|            |
++-------------------------+-------------------------+
+|Phone                    |VOS Emulator             |
++-------------------------+-------------------------+
+
+* Press ``SEND`` again with ``54330D`` unchanged, the following should be shown on the phone and the VOS emulator 
+
++-------------------------+-------------------------+
+||test3phone|             ||test3result|            |
++-------------------------+-------------------------+
+|Phone                    |VOS Emulator             |
++-------------------------+-------------------------+
+
+#scale-invariant #socket #tcp #remote #trigger #user-defined #function #string #format #results #over-writing
 
 .. |fn_init_here| image:: /soln/RefCirSizeRect/fnSolnInit.jpg
 
@@ -259,3 +315,19 @@ Running the solution
 .. |fn_left_here| image:: /soln/RefCirSizeRect/fnLeft.jpg    
 
 .. |fn_calc_here| image:: /soln/RefCirSizeRect/fnCalc.jpg    
+
+.. |test0phone| image:: /soln/RefCirSizeRect/test0phone.jpg
+
+.. |test1phone| image:: /soln/RefCirSizeRect/test1phone.jpg
+
+.. |test2phone| image:: /soln/RefCirSizeRect/test2phone.jpg
+
+.. |test3phone| image:: /soln/RefCirSizeRect/test3phone.jpg
+
+.. |test0result| image:: /soln/RefCirSizeRect/test0result.jpg
+
+.. |test1result| image:: /soln/RefCirSizeRect/test1result.jpg
+
+.. |test2result| image:: /soln/RefCirSizeRect/test2result.jpg
+
+.. |test3result| image:: /soln/RefCirSizeRect/test3result.jpg
