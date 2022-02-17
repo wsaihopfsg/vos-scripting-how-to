@@ -70,13 +70,13 @@ Code Walk-Through
 Solution Initialize
 ###################
 * Choose the predefined function ``Solution Initialize`` at the bottom right 
-  |fn_init|
+  |fn_init_here|
 
 * In the Script Function window we see 3 variables being initialized
 
    * ``cirD`` which is the default diameter of the reference circle. It can be changed based on user input during software trigger.
-   * ``tolCir`` fixed to 0.95 //todo explain what does this mean
-   * ``areaFact`` fixed to 1.3 //todo explain what does this mean
+   * ``tolCir`` fixed to 0.95, defining the tolerance for ratio of ``Minor Axis`` to ``Major Axis`` of the left-most shape
+   * ``areaFact`` fixed to 1.3 is a heuristic ratio threshold between the area returned by the ``Area`` property of the ``Count`` tool against the value computed from the product of ``Major`` and ``Minor`` of the same shape. It is to distinguish between a square from a circle.
   
 .. code-block::
    :linenos:
@@ -88,7 +88,7 @@ Solution Initialize
 Periodic Function
 #################
 * Choose the predefined function ``Periodic: 200ms`` at the bottom right 
-  |fn_periodic|
+  |fn_period_here|
 
 * In the Script Function window we see 
 
@@ -119,13 +119,13 @@ Periodic Function
 Post Image Process
 ##################
 * Choose the predefined function ``Post Image Process`` at the bottom right 
-  |fn_post|
+  |fn_post_here|
 
 * In the Script Function window we see 
 
 .. code-block::
     :linenos:
-    :emphasize-lines:
+    :emphasize-lines: 5,22
 
     ////////Find left most shape start//////
     //
@@ -164,23 +164,98 @@ Post Image Process
     endif
     WriteFormatString(TcpP5025 , opStr)
 
-* The code uses the count value ``N`` to decide whether to pass or fail the scratch inspection, and output by ``SetDisplayStatus`` with the number of scratches detected.
+* Lines 3-5 uses a user-defined function :ref:`findLeftMostShape() <findL>` to compute the shape index ``minShape`` of the left-most object at ``minX`` resulting from the ``Count`` tool. 
+* Lines 9-10 uses ``minShape`` to obtain the ``Major`` & ``Minor`` axes and return them to ``MajorCir`` & ``MinorCir``
+* Line 11 computes the average of ``MajorCir`` & ``MinorCir``
+* Line 12 ``minY`` is the y-coordinate of the left most shape
+* Line 13 ``err`` is the error index, initialized to ``0`` 
+  * 0: no error
+  * 1: bad reference shape
+* Line 14 checks if the ratio of ``MinorCir`` to ``MajorCir`` is within tolerance set by ``tolCir``, since we know that the ratio for a perfect circle is close to 1.
+* Lines 15-16 handles the case when the ratio is not within tolerance, and the left-most shape is definitely not circular
+* Line 18 uses a heuristic threshold ``areaFact`` to determine whether a shape is circular or squarish, since both shapes will pass the ``tolCir`` test  earlier.
+* Lines 19-20 handles the case when the left-most shape is squarish and not circular
+* Line 22 uses a user-defined function :ref:`calcRectSizeDist() <calc>` to compute the dimensions of the other shapes, using the left-most circular shape as reference. The relevant information is output to ``opStr``.
+* Lines 26-29 outputs the ``opStr`` to the screen with ``SetDisplayStatus`` if there is error index indicates no error.
+* Line 31 outputs the ``opStr`` error message to the screen with ``SetDisplayStatus`` in red. 
+* Lines 32-34 overwrites the ``Result`` variable to ``FAIL``. Note that all 3 built-in variables ``PASS``, ``FAIL`` & ``RECYCLE`` must be in CAPS.
+
+findLeftMostShape()
+====================
+
+.. _findL:
+
+* Choose the predefined function ``findLeftMostShape()`` at the bottom right 
+  |fn_left_here|, and the following code will be shown
+
+.. code-block::
+    :linenos:
+ 
+    nowCtr = 0
+    while( nowCtr < N )
+        nowX = CountX.[nowCtr]
+        if(  nowX < minX) 
+            minX = nowX
+            minShape = nowCtr
+        endif
+        nowCtr = nowCtr+1
+    endwhile
+    Return(0)
+
+* findLeftMostShape() uses a ``while`` loop to cycle through all shapes' x-coordinates detected by the ``Count`` tool.
+  * ``minShape``: The shape index of the left-most shape 
+  * ``minX``: The x-coordinate of the left-most shape 
+  * Notice that we are not returning these values by the ``Return()`` function. In fact every variable created has global scope and is not destroyed after the user-defined function has ``Return()``.
+
+calcRectSizeDist()
+====================
+
+.. _calc:
+
+* Choose the predefined function ``calcRectSizeDist()`` at the bottom right 
+  |fn_calc_here|, and the following code will be shown
+
+.. code-block::
+    :linenos:
+
+    adjFact = sqrt(4/3) / cirD
+    nowCtr = 0
+    RefCir = MeanCir* adjFact
+    opStr1 = "Ref Circle Diameter = [cirD%d] units\r\n"
+    while (nowCtr < N )
+        if(nowCtr != minShape) 
+            rectL = Major.[nowCtr] / RefCir
+            rectW = Minor.[nowCtr] / RefCir
+            rectRot = CountAngle.[nowCtr]
+            rectDist = sqrt((CountX.[nowCtr]-minX)*(CountX.[nowCtr]-minX) + (CountY.[nowCtr]-minY)*(CountY.[nowCtr]-minY)) / MeanCir
+            opStr1 = opStr1 + "Rect" + FormatString( "[nowCtr%d]") + " L:"+ FormatString("[rectL%.2f]") + " W:" + FormatString("[rectW%.2f]") + " R:" + FormatString("[rectRot%.1f]") +Char(176)
+            opStr1 = opStr1 + " D:" + FormatString("[rectDist%.2f]") +"\r\n"
+        endif
+        nowCtr = nowCtr +1
+    endwhile
+    Return(opStr1)
 
 Running the solution
-####################
+--------------------
 
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
 
 +-------------------------+
-||pass|                   |
+|pass                     |
 +-------------------------+
 |                         |
 +-------------------------+
-||fail|                   |
+|fail                     |
 +-------------------------+
 
 #multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
 
-.. |pass| image:: /soln/Scratch/pass.jpg
+.. |fn_init_here| image:: /soln/RefCirSizeRect/fnSolnInit.jpg
 
-.. |fail| image:: /soln/Scratch/fail.jpg
+.. |fn_period_here| image:: /soln/RefCirSizeRect/fnPeriodic.jpg
+
+.. |fn_post_here| image:: /soln/RefCirSizeRect/fnPostImgProc.jpg  
+
+.. |fn_left_here| image:: /soln/RefCirSizeRect/fnLeft.jpg    
+
+.. |fn_calc_here| image:: /soln/RefCirSizeRect/fnCalc.jpg    

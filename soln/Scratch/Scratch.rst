@@ -4,7 +4,7 @@ Scratch Detection
 +++++++++++++++++
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
 #. ``scratch.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__
 
@@ -19,7 +19,7 @@ Tools Explanation
 -----------------
 * At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``scratched_hidden.bmp`` is loaded. 
 
-.. image:: /code/Scratch/scratched_hidden.bmp
+.. image:: /code/Soln/Scratch/scratched_hidden.bmp
 
 * 3 tools have been used
 
@@ -107,7 +107,7 @@ Post Image Process
 * The code uses the count value ``N`` to decide whether to pass or fail the scratch inspection, and output by ``SetDisplayStatus`` with the number of scratches detected.
 
 Running the solution
-####################
+--------------------
 
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
 

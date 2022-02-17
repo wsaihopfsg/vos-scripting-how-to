@@ -4,7 +4,7 @@ Defect Detection
 ++++++++++++++++
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/DetectDots>`__
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 #. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__
 
@@ -90,7 +90,7 @@ Post Image Process
 * The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output by ``SetDisplayStatus`` with the number of defects detected .
 
 Running the solution
-####################
+--------------------
 
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
   

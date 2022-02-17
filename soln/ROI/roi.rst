@@ -3,8 +3,8 @@
 Sequential reading of QR codes
 ++++++++++++++++++++++++++++++
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`_
---------------------------------------------------------------------------------------------
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
+--------------------------------------------------------------------------------------------------
 
 #. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__
 
@@ -144,7 +144,7 @@ Post Image Process
 * The code simply appends the results from the QR code tool to ``opStr`` in line 1 and insetion of a line break at the third character in line 3 before displaying ``opStr`` through ``SetDisplayStatus``.
 
 Running the solution
-####################
+--------------------
 
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button.
 
@@ -152,7 +152,7 @@ Running the solution
 
 #dynamic #ROI #setparam #sequential #shift #region-of-interest #region #interest
 
-.. |QR1| image:: /code/ROI/QR1.bmp
+.. |QR1| image:: /code/Soln/ROI/QR1.bmp
    :width: 480pt
    :height: 360pt
 
