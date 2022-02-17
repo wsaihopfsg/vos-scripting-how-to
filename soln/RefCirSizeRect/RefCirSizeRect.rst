@@ -52,8 +52,8 @@ Tools Explanation
 
 * Right-click on the row occupied by the preprocessor ``Pre`` in the ``Tool List``, to bring up properties of ``Pre``. Drag the ``Preprocess Properties`` window so that it is not blocking the main picture. The 2 preprocessors used in ``Pre`` are
 
-  #. Threshold, Level = 230. It converts the greyscale picture to binary.
-  #. Median, Width = 11. It removes salt-and-pepper noise.
+  #. ``Threshold``, ``Level`` = 230. It converts the greyscale picture to binary.
+  #. ``Median``, ``Width`` = 11. It removes salt-and-pepper noise.
 
 Connections
 -----------
