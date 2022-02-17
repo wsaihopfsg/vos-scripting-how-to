@@ -324,10 +324,10 @@ Running the solution
 
 .. |test3phone| image:: /soln/RefCirSizeRect/test3phone.jpg
 
-.. |test0result| image:: /soln/RefCirSizeRect/test0result.jpg
+.. |test0result| image:: /soln/RefCirSizeRect/test0Re.jpg
 
-.. |test1result| image:: /soln/RefCirSizeRect/test1result.jpg
+.. |test1result| image:: /soln/RefCirSizeRect/test1Re.jpg
 
-.. |test2result| image:: /soln/RefCirSizeRect/test2result.jpg
+.. |test2result| image:: /soln/RefCirSizeRect/test2Re.jpg
 
-.. |test3result| image:: /soln/RefCirSizeRect/test3result.jpg
+.. |test3result| image:: /soln/RefCirSizeRect/test3Re.jpg
