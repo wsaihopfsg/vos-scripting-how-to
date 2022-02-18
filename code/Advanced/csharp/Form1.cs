@@ -809,7 +809,7 @@ namespace CsClient
         {
 			byte[] inStream = new byte[(int)clientSocket.ReceiveBufferSize];
 			NetworkStream serverStream = clientSocket.GetStream();
-			byte[] outStream = { 0x54, (byte)(Byte.Parse(updUnit.Text) + 0x30), 10, 13 };
+			byte[] outStream = { 0x54, (byte)(Byte.Parse(updUnit.Text) + 0x30), 13 };
 			serverStream.Write(outStream, 0, outStream.Length);
 			serverStream.Flush();
 
@@ -825,7 +825,7 @@ namespace CsClient
 			string tmpStr = ipStr;
 			tmpStr = tmpStr.Substring(0,tmpStr.LastIndexOf('\n')+1);
 			tmpStr = tmpStr.Replace("units", DefaultUnit);
-			tmpStr = tmpStr.Replace("?", "°");
+			tmpStr = tmpStr.Replace("?", "ï¿½");
 			return tmpStr;
         } 
     }

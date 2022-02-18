@@ -14,7 +14,7 @@ This sample demonstrates
 #. How to run a VOS server at the background
 #. How to integrate VOS solution in C# 
 
-   * Specifically, :ref:`this solution <refcir>` using reference shape to compute dimensions.
+   * Specifically, :ref:`this solution <refcir>` using reference shape to compute rectangular dimensions.
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/csharp>`__
 ---------------------------------------------------------------------------------------------------------
@@ -68,10 +68,20 @@ Code Walk-Through
 * ``Form1.cs: Form1_Load``
 
   * Line 3: Create a pointer to the Client engine object based on the configured IP Address.
-  * Line 4: 
+  * Line 4: :ref:`GetCurrentState() <currentState>`
   * Line 10: Get the Run Mode of ``iServer.exe`` application, returns an ``int`` as ``EngMode``
+   
+    ``0.`` Live image
+
+    ``1.`` Process solution
+    
+    ``2.`` Stopped
+    
   * Line 11: Based on ``EngMode``, display the Run Mode as text to label ``Mode``.
-  * Lines 13-14: 
+  * Lines 13-14: Set to the configure solution.
+  * Lines 18-20: For picture display at ``pictureBox1``
+  * Line 21: Populate the up-down box ``updUnit`` for reference circle diameter selection
+  * Line 22: Socket connection to the configured IP & port
 
 .. code-block::
     :linenos:
@@ -104,11 +114,28 @@ Code Walk-Through
         }
     }
 
+.. _currentState:
+
 * ``GetCurrentState()``
+
+  * Line 3: Get the current status of the application software, returns an ``short`` as ``nLastState``
+  * Line 4: Based on ``nLastState``, display the Run Mode as text to label ``State``.
+   
+    ``0.`` Not configured
+    
+    ``1.`` Ready to run
+    
+    ``2.`` Running
+    
+    ``3.`` Alarm
+    
+    ``4.`` Stopped
+    
+    ``5.`` Live image
 
 .. code-block::
     :linenos:
-    
+
     private void GetCurrentState()
     {
         nLastState = iClientLib.iClientGetState(pIClient);
@@ -129,11 +156,58 @@ Code Walk-Through
         }
     }
 
+* ``Form1.cs: btnTrigger_Click(object sender, EventArgs e)``
 
+  * Line 5: Prepare the bytes for software triggering and user-defined reference diameter
   
+.. code-block::
+    :linenos:
 
+    private void btnTrigger_Click(object sender, EventArgs e)
+    {
+        byte[] inStream = new byte[(int)clientSocket.ReceiveBufferSize];
+        NetworkStream serverStream = clientSocket.GetStream();
+        byte[] outStream = { 0x54, (byte)(Byte.Parse(updUnit.Text) + 0x30), 13 };
+        serverStream.Write(outStream, 0, outStream.Length);
+        serverStream.Flush();
+
+        serverStream.Read(inStream, 0, (int)clientSocket.ReceiveBufferSize);
+        string serverText = System.Text.Encoding.ASCII.GetString(inStream);
+    
+        txtOp.Text = parseVosOpString(serverText);//serverText
+    }
+
+Running the c# client 
+---------------------
+
+* Make sure ``iServer.exe`` is already running
+* Make sure all .dll files has been copied to the same folder as the compiled c# executable 
+* Change the working folder to where the 4 images for :ref:`Using a Reference Circle to Compute Size of Rectangles <refcir>` solution using ``VOS emulator`` if needed
   
+  * You may exit the emulator after changing the folder
   
+* Run the c# client. The ``iServer.exe`` updates with ``Client connected``
+  
+  .. image:: /intro/Advanced/csharp/iserverConnected.jpg
+
+* Use the up-down box to select the reference diameter
+* Press ``Trigger``
+* Output for ``test0.bmp``, Triggered with 1cm reference diameter
+  
+  .. image:: /intro/Advanced/csharp/test0.jpg
+
+* Output for ``test1.bmp``
+  
+  .. image:: /intro/Advanced/csharp/test1.jpg
+
+* Output for ``test2.bmp``, Triggered with 3cm reference diameter
+  
+  .. image:: /intro/Advanced/csharp/test2.jpg
+
+* Output for ``test3.bmp``, Triggered with 3cm reference diameter
+
+  .. image:: /intro/Advanced/csharp/test3.jpg
+      
 .. |iserverico| image:: /intro/Advanced/csharp/iserver_ico.jpg
 
 .. |APIhelp| image:: /intro/Advanced/csharp/vbhelp.jpg
