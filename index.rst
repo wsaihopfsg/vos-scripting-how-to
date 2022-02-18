@@ -54,6 +54,8 @@ Integration with ROS
 +-----------------------------------------------------------------------------------------------------------+
 |Publishing (X,Y) & Rotation Information For Robot Pick-and-Place (WIP)                                     |       
 +===========================================================================================================+
+|| The virtual robot performs a pick-and-place demonstration in RViz based on the (X,Y) co-ordinates        |
+|| published by the VOS emulator. Path planning is done by the MoveIt! package.                             |
 || |pNp|                                                                                                    |
 || `(c) Picture Credits <http://www.google.com>`__  //todo                                                  |
 +-----------------------------------------------------------------------------------------------------------+

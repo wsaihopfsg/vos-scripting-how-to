@@ -23,7 +23,8 @@ This sample demonstrates
 * ``Form1.cs``: Main Form `source code <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/Form1.cs?raw=true>`__
 * ``iClientApi.cs``: VOS `wrapper for c# <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/iClientApi.cs?raw=true>`__
 * ``App.config``: The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__
-
+* Explanations of other files are left out for brevity
+  
 Running iServer.exe
 ===================
 
@@ -192,22 +193,22 @@ Running the c# client
 
 * Use the up-down box to select the reference diameter
 * Press ``Trigger``
-* Output for ``test0.bmp``, Triggered with 1cm reference diameter
+* Output for ``test0.bmp``, triggered with 1cm reference diameter
   
   .. image:: /intro/Advanced/csharp/test0.jpg
 
-* Output for ``test1.bmp``
+* Output for ``test1.bmp``. Notice that ``Failed`` has been high-lighted in red.
   
   .. image:: /intro/Advanced/csharp/test1.jpg
 
-* Output for ``test2.bmp``, Triggered with 3cm reference diameter
+* Output for ``test2.bmp``, triggered with 3cm reference diameter
   
   .. image:: /intro/Advanced/csharp/test2.jpg
 
-* Output for ``test3.bmp``, Triggered with 3cm reference diameter
+* Output for ``test3.bmp``, triggered with 3cm reference diameter
 
   .. image:: /intro/Advanced/csharp/test3.jpg
-      
+
 .. |iserverico| image:: /intro/Advanced/csharp/iserver_ico.jpg
 
 .. |APIhelp| image:: /intro/Advanced/csharp/vbhelp.jpg
