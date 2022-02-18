@@ -1,5 +1,7 @@
 :orphan:
 
+.. _defectdots:
+
 .. toctree::
 
 .. include:: /shared/EmulatorComponents.rst

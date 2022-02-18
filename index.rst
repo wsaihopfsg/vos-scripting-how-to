@@ -24,14 +24,15 @@ As always, we would be happy to hear your comments and receive your contribution
 Basic Topics
 ============
 
-Variable Tree List
-------------------
-Function List
--------------
-Script Editor
--------------
-Scripting Basics
-----------------
++-----------------------------------------------------------------------------------------------------------+
+|WIP                                                                                                        |  
++===========================================================================================================+
+|| "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  |
+|| dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  |
+|| ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu | 
+|| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia         |
+|| deserunt mollit anim id est laborum.                                                                     |             
++-----------------------------------------------------------------------------------------------------------+
 
 Advanced Topics
 ===============
@@ -39,9 +40,23 @@ Advanced Topics
 :ref:`Interation with C# <csharp>`
 ------------------------------------
 
++-----------------------------------------------------------------------------------------------------------+
+|Customized User Interface with C#                                                                          |       
++===========================================================================================================+
+|| Sometimes we may not want operators have direct access to the VOS emulator software. While solution      |
+|| development can only be done at the VOS emulator, it is for a .NET program integrated with VOS           |
+|| |UI|                                                                                                     | 
++-----------------------------------------------------------------------------------------------------------+
+
 Integration with ROS
 --------------------
 
++-----------------------------------------------------------------------------------------------------------+
+|Publishing (X,Y) & Rotation Information For Robot Pick-and-Place (WIP)                                     |       
++===========================================================================================================+
+|| |pNp|                                                                                                    |
+|| `(c) Picture Credits <http://www.google.com>`                                                            |
++-----------------------------------------------------------------------------------------------------------+
 User contributions
 ==================
 
@@ -57,7 +72,7 @@ User contributions
 +-----------------------------------------------------------------------------------------------------------+
 
 
-:doc:`Sequential reading of QR codes </soln/ROI/roi>`
+:ref:`Sequential reading of QR codes <ROI>`
 -----------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -70,7 +85,7 @@ User contributions
 +-----------------------------------------------------------------------------------------------------------+
 
 
-:doc:`Defect Detection </soln/DefectDots/DefectDots>`
+:ref:`Defect Detection <defectdots>`
 -----------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -83,7 +98,7 @@ User contributions
 || |DefectDots|                                                                                             | 
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Scratch Detection </soln/Scratch/Scratch>`
+:ref:`Scratch Detection <scratch>`
 -----------------------------------------------------
 
 +------------------------------------------------------------------------------------------------+
@@ -109,3 +124,10 @@ User contributions
 .. |DefectDots| image:: /soln/DefectDots/failedPatches.jpg
 
 .. |scratch_hi| image:: /soln/Scratch/scratch_highlighted.jpg
+
+.. |UI| image:: /intro/Advanced/csharp/UI.jpg
+
+.. |pNp| image:: /intro/Advanced/ROS/pickNplace.jpg  
+   :width: 320pt
+
+.. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf

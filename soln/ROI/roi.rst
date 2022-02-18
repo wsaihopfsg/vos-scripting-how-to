@@ -1,5 +1,7 @@
 :orphan:
 
+.. _ROI:
+
 .. toctree::
 
 .. include:: /shared/EmulatorComponents.rst

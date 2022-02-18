@@ -65,7 +65,7 @@ Tools Explanation
 
 Connections
 -----------
-* Click on ``Setup Connections`` |conn|. We are using the VOS emulator as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``. Note that the VOS emulator can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. 
+* Click on ``Setup Connections`` |conn|. We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``. Note that the ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. 
 
 .. image:: /soln/RefCirSizeRect/tcp5025.jpg 
 
@@ -274,7 +274,7 @@ Running the solution
    
 
 
-* The phone is the ``TCP socket client`` while VOS emulator as the ``TCP socket server``. Connect to the PC's IP address (in this case 192.168.10.143) and configured port (5025) for VOS emulator
+* The phone is the ``TCP socket client`` while ``VOS emulator`` as the ``TCP socket server``. Connect to the PC's IP address (in this case 192.168.10.143) and configured port (5025) for ``VOS emulator``
 
 .. image:: /soln/RefCirSizeRect/tcpSocketStep1.jpg
    :width: 240pt
@@ -287,7 +287,7 @@ Running the solution
 
   * #0D is the ``<CR>`` character, which the ``periodic function`` checks for :ref:`end of a command <period>`
 
-* The following should be shown on the phone and the VOS emulator 
+* The following should be shown on the phone and the ``VOS emulator`` 
   
 +-------------------------+-------------------------+
 ||test0phone|             ||test0result|            |
@@ -295,7 +295,7 @@ Running the solution
 |Phone                    |VOS Emulator             |
 +-------------------------+-------------------------+
 
-* Press ``SEND`` again with ``54310D`` unchanged, the following error should be shown on the phone and the VOS emulator because the left-most shape is not circular
+* Press ``SEND`` again with ``54310D`` unchanged, the following error should be shown on the phone and the ``VOS emulator`` because the left-most shape is not circular
 
 +-------------------------+-------------------------+
 ||test1phone|             ||test1result|            |
@@ -303,7 +303,7 @@ Running the solution
 |Phone                    |VOS Emulator             |
 +-------------------------+-------------------------+
 
-* Change the HEX string to ``54330D``, here we are informing VOS that the reference diameter is 3 units (#33). Press ``SEND``, the following should be shown on the phone and the VOS emulator 
+* Change the HEX string to ``54330D``, here we are informing VOS that the reference diameter is 3 units (#33). Press ``SEND``, the following should be shown on the phone and the ``VOS emulator`` 
 
 +-------------------------+-------------------------+
 ||test2phone|             ||test2result|            |
@@ -311,7 +311,7 @@ Running the solution
 |Phone                    |VOS Emulator             |
 +-------------------------+-------------------------+
 
-* Press ``SEND`` again with ``54330D`` unchanged, the following should be shown on the phone and the VOS emulator 
+* Press ``SEND`` again with ``54330D`` unchanged, the following should be shown on the phone and the ``VOS emulator``
 
 +-------------------------+-------------------------+
 ||test3phone|             ||test3result|            |
