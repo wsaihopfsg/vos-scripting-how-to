@@ -1,5 +1,7 @@
+:orphan:
+
 .. toctree::
-   
+
 .. include:: /shared/EmulatorComponents.rst
 
 Sequential reading of QR codes
@@ -52,6 +54,7 @@ Solution Initialize
 
 Periodic Function
 #################
+
 * Choose the predefined function ``Periodic: 200ms`` at the bottom right 
   |fn_periodic|
 

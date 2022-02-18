@@ -1,3 +1,5 @@
+:orphan:
+
 .. toctree::
 
 .. include:: /shared/EmulatorComponents.rst
@@ -7,18 +9,18 @@ Defect Detection
 
 This sample demonstrates
 
-#. Use of preprocessors to aid in a vision task
-#. Detailed explanation for ``Remove blob``
+1. Use of preprocessors to aid in a vision task
+2. Detailed explanation for ``Remove blob``
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/DetectDots>`__
 ---------------------------------------------------------------------------------------------------------
 
-#. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__
+1. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__
 
    * At the Solution Setup page |solnsetup|, import |import| the solution 
   
-#. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
+2. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
+3. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
 
    * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved 
 

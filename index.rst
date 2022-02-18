@@ -36,15 +36,16 @@ Scripting Basics
 Advanced Topics
 ===============
 
-Interation with C#
-------------------
+:ref:`Interation with C# <csharp>`
+------------------------------------
+
 Integration with ROS
 --------------------
 
 User contributions
 ==================
 
-:doc:`Using reference shape to compute dimensions </soln/RefCirSizeRect/RefCirSizeRect>`
+:ref:`Using reference shape to compute dimensions <refcir>`
 ----------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+

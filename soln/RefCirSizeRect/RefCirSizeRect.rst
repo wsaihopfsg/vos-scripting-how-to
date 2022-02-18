@@ -1,3 +1,7 @@
+:orphan:
+
+.. _refcir:
+
 .. toctree::
   
 .. include:: /shared/EmulatorComponents.rst
