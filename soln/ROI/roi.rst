@@ -1,3 +1,5 @@
+.. toctree::
+   
 .. include:: /shared/EmulatorComponents.rst
 
 Sequential reading of QR codes
