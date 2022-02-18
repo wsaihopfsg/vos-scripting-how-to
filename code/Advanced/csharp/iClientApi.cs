@@ -76,252 +76,252 @@ public class iClientLib
 
     public delegate void ProcessResultsCallback(IntPtr p1);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetConnectToAddress")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetConnectToAddress")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetConnectToAddress();
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientCreate")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientCreate")]
 	public static extern IntPtr		iClientCreate([MarshalAs(UnmanagedType.BStr)] string bstrIPAddress);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientCreateEx")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientCreateEx")]
     public static extern IntPtr iClientCreateEx([MarshalAs(UnmanagedType.BStr)] string bstrIPAddress, UInt32 options);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientDelete")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientDelete")]
 	public static extern bool		iClientDelete(IntPtr pIClient, bool bShutdownServer);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientStopInspection")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientStopInspection")]
 	public static extern bool		iClientStopInspection(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientStartInspection")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientStartInspection")]
 	public static extern bool		iClientStartInspection(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVersion")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVersion")]
 	public static extern int			iClientGetVersion(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetAppTitle")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetAppTitle")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetAppTitle(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetWindow")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetWindow")]
 	public static extern bool		iClientSetWindow(IntPtr pIClient, IntPtr hWnd);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientMaxNumOfSolutions")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientMaxNumOfSolutions")]
 	public static extern int		iClientMaxNumOfSolutions(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientDeleteSolution")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientDeleteSolution")]
 	public static extern bool		iClientDeleteSolution(IntPtr pIClient, int nSolutionID);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientChangeSolution")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientChangeSolution")]
 	public static extern bool		iClientChangeSolution(IntPtr pIClient, int nNewSolutionID);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetCurrentSolutionID")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetCurrentSolutionID")]
 	public static extern int			iClientGetCurrentSolutionID(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientIsAvailableSolution")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientIsAvailableSolution")]
 	public static extern bool		iClientIsAvailableSolution(IntPtr pIClient, int nSolutionID);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetSolutionDescription")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetSolutionDescription")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetSolutionDescription(IntPtr pIClient, int nSolutionID);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetSavedSolutionIds")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetSavedSolutionIds")]
 	public static extern int			iClientGetSavedSolutionIds(IntPtr pIClient, int[] SolutionIDs, UInt32 maxNumEntries);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetProcessTime")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetProcessTime")]
 	public static extern double		iClientGetProcessTime(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetProcessCount")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetProcessCount")]
 	public static extern int		iClientGetProcessCount(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetSkipCount")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetSkipCount")]
 	public static extern int		iClientGetSkipCount(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetPassCount")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetPassCount")]
 	public static extern int		iClientGetPassCount(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetFailCount")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetFailCount")]
 	public static extern int		iClientGetFailCount(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetRecycleCount")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetRecycleCount")]
 	public static extern int		iClientGetRecycleCount(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetResult")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetResult")]
 	public static extern int			iClientGetResult(IntPtr pIClient);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetNumOfCameras")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetNumOfCameras")]
 	public static extern int			iClientGetNumOfCameras(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetCurrentCameraID")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetCurrentCameraID")]
 	public static extern int 		iClientGetCurrentCameraID(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetCurrentCameraID")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetCurrentCameraID")]
 	public static extern bool		iClientSetCurrentCameraID(IntPtr pIClient, int nNewCameraID);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMode")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMode")]
 	public static extern int 		iClientGetMode(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetState")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetState")]
 	public static extern int			iClientGetState(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetModeString")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetModeString")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetModeString(int iMode);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetStateString")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetStateString")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetStateString(int iState);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarRoot")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarRoot")]
 	public static extern IntPtr		iClientGetVarRoot(IntPtr pIClient);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetFirstChild")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetFirstChild")]
 	public static extern IntPtr		iClientGetFirstChild(IntPtr pAppVar);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetNextChild")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetNextChild")]
 	public static extern IntPtr		iClientGetNextChild(IntPtr pAppVar, IntPtr pCurrChild);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarName")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarName")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetVarName(IntPtr pAppVar);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarValueStr")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarValueStr")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetVarValueStr(IntPtr pIClient, IntPtr pAppVar);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientIsSysAppVar")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientIsSysAppVar")]
 	public static extern bool		iClientIsSysAppVar(IntPtr pAppVar);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarValDbl")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarValDbl")]
 	public static extern double		iClientGetVarValDbl(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarValStr")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarValStr")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetVarValStr(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetVarValDbl")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetVarValDbl")]
 	public static extern bool		iClientSetVarValDbl(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, double val);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetVarValStr")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetVarValStr")]
 	public static extern bool		iClientSetVarValStr(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, [MarshalAs(UnmanagedType.BStr)]string val);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarValDblCamera")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarValDblCamera")]
 	public static extern double		iClientGetVarValDblCamera(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarValStrCamera")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarValStrCamera")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetVarValStrCamera(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetVarValDblCamera")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetVarValDblCamera")]
 	public static extern bool		iClientSetVarValDblCamera(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex, double val);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetVarValStrCamera")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetVarValStrCamera")]
 	public static extern bool		iClientSetVarValStrCamera(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex, [MarshalAs(UnmanagedType.BStr)]string val);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetVarNumChildren")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetVarNumChildren")]
 	public static extern int		iClientGetVarNumChildren(IntPtr pAppVar);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetReportMode")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetReportMode")]
 	public static extern bool		iClientSetReportMode(IntPtr pIClient, int nPassReportMode, int nFailReportMode, int nRecyleReportMode);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetCamWindow")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetCamWindow")]
 	public static extern bool		iClientSetCamWindow(IntPtr pIClient, int camId /* 1...3*/, IntPtr hWnd);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetCamZoom")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientSetCamZoom")]
 	public static extern bool		iClientSetCamZoom(IntPtr pIClient, int camId /* 1...3*/, double dXZoom, double dYZoom);
 
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGenerateManualTrigger")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGenerateManualTrigger")]
 	public static extern bool		iClientGenerateManualTrigger(IntPtr pIClient);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetTolerances")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientSetTolerances")]
 	public static extern bool		iClientSetTolerances(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex, double[] tolerances);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetTolerances")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetTolerances")]
 	public static extern bool		iClientGetTolerances(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex, double[] tolerances);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientSetMeasPerfectString")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientSetMeasPerfectString")]
 	public static extern bool		iClientSetMeasPerfectString(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex, [MarshalAs(UnmanagedType.BStr)]string perfectString);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasPerfectString")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasPerfectString")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string	iClientGetMeasPerfectString(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasStdDeviation")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasStdDeviation")]
 	public static extern double	iClientGetMeasStdDeviation(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasMean")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasMean")]
 	public static extern double	iClientGetMeasMean(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasMin")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasMin")]
 	public static extern double	iClientGetMeasMin(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasMax")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasMax")]
 	public static extern double	iClientGetMeasMax(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientResetMeasVarStats")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientResetMeasVarStats")]
 	public static extern bool	iClientResetMeasVarStats(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasType")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasType")]
 	public static extern int	iClientGetMeasType(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string varName, int iCamIndex);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetMeasName")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetMeasName")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string	iClientGetMeasName(IntPtr pIClient, int varIndex, int iCamIndex);
 
- 	[DllImport("iClientApi2258.dll", EntryPoint = "iClientEvalEquation")]
+ 	[DllImport("iClientApi.dll", EntryPoint = "iClientEvalEquation")]
 	public static extern double	iClientEvalEquation(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string equation);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSetResultsCallback")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSetResultsCallback")]
     public static extern bool iClientSetResultsCallback(IntPtr pIClient, ProcessResultsCallback resultsCB, IntPtr param);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSaveSolution")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSaveSolution")]
     public static extern bool iClientSaveSolution(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string solutionDescription, int iSolutionIndex);
 
 
-   	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetNumDevices")]
+   	[DllImport("iClientApi.dll", EntryPoint = "iClientGetNumDevices")]
 	public static extern int		iClientGetNumDevices();
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientGetDeviceIP")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientGetDeviceIP")]
 	[return: MarshalAs(UnmanagedType.BStr)]public static extern string		iClientGetDeviceIP(int devNum);
 
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientWaitImage")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientWaitImage")]
     public static extern bool iClientWaitImage(IntPtr pIClient, int camId, IntPtr imgBuf, UInt32 waitTimeMillisec);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSetOutputPort")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSetOutputPort")]
     public static extern bool iClientSetOutputPort(IntPtr pIClient, int uLine, int val);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSetLogHistoryToFile")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSetLogHistoryToFile")]
     public static extern bool iClientSetLogHistoryToFile(IntPtr pIClient, bool bLogHistory, bool bLogFailed, bool bLogRecycle, bool bLogPass, 
 										   bool logGraphics, IFW_IMG_TYPE fileType, bool bLogSubFolders, [MarshalAs(UnmanagedType.BStr)]string filePrefix );
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientGetLogDomainSize")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientGetLogDomainSize")]
     public static extern int iClientGetLogDomainSize(IntPtr pIClient, HISTORY_DOMAIN_TYPE domain);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientGetLogEntry")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientGetLogEntry")]
     public static extern int iClientGetLogEntry(IntPtr pIClient, HISTORY_DOMAIN_TYPE domain, int pos, bool withOverlay, [MarshalAs(UnmanagedType.BStr)]string fileName, IntPtr numInspected);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSetHistoryLock")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSetHistoryLock")]
     public static extern int iClientSetHistoryLock(IntPtr pIClient, bool historyLock);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientExportSolutions")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientExportSolutions")]
     public static extern bool iClientExportSolutions(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string solutionPath);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientImportSolutions")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientImportSolutions")]
     public static extern bool iClientImportSolutions(IntPtr pIClient, [MarshalAs(UnmanagedType.BStr)]string solutionPath);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientResetRejector")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientResetRejector")]
 	public static extern bool iClientResetRejector(IntPtr pIClient, int iPartsBetween);
 
-	[DllImport("iClientApi2258.dll", EntryPoint = "iClientResetStatistics")]
+	[DllImport("iClientApi.dll", EntryPoint = "iClientResetStatistics")]
 	public static extern bool iClientResetStatistics(IntPtr pIClient);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientSetParameter")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientSetParameter")]
     public static extern bool iClientSetParameter(IntPtr pIClient, int paramID, double val);
 
-    [DllImport("iClientApi2258.dll", EntryPoint = "iClientGetParameter")]
+    [DllImport("iClientApi.dll", EntryPoint = "iClientGetParameter")]
     public static extern double iClientGetParameter(IntPtr pIClient, int paramID);
 
 }

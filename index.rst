@@ -55,7 +55,7 @@ Integration with ROS
 |Publishing (X,Y) & Rotation Information For Robot Pick-and-Place (WIP)                                     |       
 +===========================================================================================================+
 || |pNp|                                                                                                    |
-|| `(c) Picture Credits <http://www.google.com>`__                                                          |
+|| `(c) Picture Credits <http://www.google.com>`__  //todo                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
 User contributions
