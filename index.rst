@@ -56,7 +56,8 @@ Branching to Multiple Solutions (WIP)
 +===========================================================================================================+
 || A single solution may not be able to handle complicated vision problems. The C# client can load the      |
 || appropriate solution based on the image information from VOS. This greatly expands the capability and    |
-|| flexibility of VOS.                                                                                      | 
+|| flexibility of VOS. Note that solution switching can be achieved with a PLC also, which is not within the| 
+|| purview of this tutorial.                                                                                |
 || |branch|                                                                                                 |
 +-----------------------------------------------------------------------------------------------------------+
 
@@ -159,7 +160,7 @@ Scale-Invariant OCR On a Rim (WIP)
 .. |branch| image:: /intro/Advanced/SolnSwitch/Overview.jpg
    :width: 320pt
    
-.. |OCR57| image:: /soln/OCRim/ocr7.jpg
+.. |OCR57| image:: /soln/OCRim/ocr57.JPG
 
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
 
