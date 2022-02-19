@@ -79,7 +79,7 @@ User contributions
 ----------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Scale-Invariant Solution                                                                                   |       
+|Scale-Invariant Solution Using Circular Reference Shape                                                    |       
 +===========================================================================================================+
 || This solution uses a circle's diameter as a reference to compute the length and breadth of any rectangles|
 || in the field-of-view. The reference circle is required to be the left most shape.                        |
@@ -129,6 +129,17 @@ User contributions
 || |scratch_hi|                                                                                  |
 +------------------------------------------------------------------------------------------------+
 
+Scale-Invariant OCR On a Rim (WIP)
+----------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Scale-Invariant OCR With Multiple Taught-In Font Sizes                                                     |       
++===========================================================================================================+
+|| This solution uses 2 taught in font sizes to achieve scale-invariant OCR. The OCR ROI is adjusted based  |
+|| on 2 count tools' output.                                                                                |
+|| |OCR57|                                                                                                  |
++-----------------------------------------------------------------------------------------------------------+
+
 .. |refCir| image:: /soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
    :height: 480pt
@@ -148,5 +159,7 @@ User contributions
 .. |branch| image:: /intro/Advanced/SolnSwitch/Overview.jpg
    :width: 320pt
    
+.. |OCR57| image:: /soln/OCRim/ocr7.jpg
+
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
 
