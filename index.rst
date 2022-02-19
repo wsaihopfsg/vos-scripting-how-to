@@ -48,14 +48,26 @@ Advanced Topics
 || |UI|                                                                                                     | 
 +-----------------------------------------------------------------------------------------------------------+
 
-Integration with ROS
---------------------
+Branching to Multiple Solutions (WIP)
+-------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Publishing (X,Y) & Rotation Information For Robot Pick-and-Place (WIP)                                     |       
+|C# client switches to another solution based on current image                                              |       
++===========================================================================================================+
+|| A single solution may not be able to handle complicated vision problems. The C# client can load the      |
+|| appropriate solution based on the image information from VOS. This greatly expands the capability and    |
+|| flexibility of VOS.                                                                                      | 
+|| |branch|                                                                                                 |
++-----------------------------------------------------------------------------------------------------------+
+
+Integration with ROS (WIP)
+--------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Publishing (X,Y) & Rotation Information For Robot Pick-and-Place                                           |
 +===========================================================================================================+
 || The virtual robot performs a pick-and-place demonstration in RViz based on the (X,Y) co-ordinates        |
-|| published by the VOS emulator. Path planning is done by the MoveIt! package.                             |
+|| pf the camera_frame published by the VOS emulator. Path planning is done by the MoveIt! package.         |
 || |pNp|                                                                                                    |
 || `(c) Picture Credits <http://www.google.com>`__  //todo                                                  |
 +-----------------------------------------------------------------------------------------------------------+
@@ -133,4 +145,8 @@ User contributions
 .. |pNp| image:: /intro/Advanced/ROS/pickNplace.jpg  
    :width: 320pt
 
+.. |branch| image:: /intro/Advanced/SolnSwitch/Overview.jpg
+   :width: 320pt
+   
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
+
