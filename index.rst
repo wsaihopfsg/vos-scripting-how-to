@@ -24,14 +24,15 @@ As always, we would be happy to hear your comments and receive your contribution
 Basic Topics
 ============
 
+:ref:`String Functions <strfunc>`
+----------------------------------------
+
 +-----------------------------------------------------------------------------------------------------------+
-|WIP                                                                                                        |  
+|Formatting Strings                                                                                         |  
 +===========================================================================================================+
-|| "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  |
-|| dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  |
-|| ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu | 
-|| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia         |
-|| deserunt mollit anim id est laborum.                                                                     |             
+|| The user-defined function strips a certain a character in a string. May be useful in OCR/barcode/QR code |
+|| reading or dealing with any string.                                                                      |
+|| |strfunc|                                                                                                |
 +-----------------------------------------------------------------------------------------------------------+
 
 Advanced Topics
@@ -164,3 +165,5 @@ Scale-Invariant OCR On a Rim (WIP)
 
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
 
+.. |strfunc| image:: /intro/Basic/StrFunc/StrFunc.jpg
+   :width: 320pt
