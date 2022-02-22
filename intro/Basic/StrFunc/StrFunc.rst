@@ -172,7 +172,7 @@ Running the solution
   .. image:: /intro/Basic/StrFunc/strFunc.jpg
    :width: 320pt
   
-* Insepction of the ``Variable List`` the results for ``xInt ``, ``xFloat`` & ``xString`` can be seen.
+* Insepction of the ``Variable List`` the results for ``xInt`` , ``xFloat`` & ``xString`` can be seen.
  
   .. image:: /intro/Basic/StrFunc/varList.jpg
 

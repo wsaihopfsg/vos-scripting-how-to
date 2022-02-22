@@ -35,6 +35,16 @@ Basic Topics
 || |strfunc|                                                                                                |
 +-----------------------------------------------------------------------------------------------------------+
 
+:ref:`Math Functions <mathfunc>`
+----------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Mathematical Functions                                                                                     |
++===========================================================================================================+
+|| Demonstrates built-in math functions with Rake, Distance and Angle tools                                 |
+|| |mathfunc|                                                                                               |
++-----------------------------------------------------------------------------------------------------------+
+
 Advanced Topics
 ===============
 
@@ -166,4 +176,7 @@ Scale-Invariant OCR On a Rim (WIP)
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
 
 .. |strfunc| image:: /intro/Basic/StrFunc/strFunc.jpg
+   :width: 320pt
+
+.. |mathfunc| image:: /intro/Basic/MathFunc/MathFunc.jpg
    :width: 320pt
