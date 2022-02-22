@@ -26,7 +26,9 @@ This sample demonstrates
    * ``FormatString`` (*stringForm*) - Returns a formatted string using *stringForm*
 
      * [*VariableName* %{width} {.precision} type ] Example: [myFloat%3.4f]
-     * Items in {} are optional
+  
+       * Items in {} are optional
+  
      * Type
   
        * *c* : character
@@ -167,7 +169,7 @@ Running the solution
 
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button
   
-  .. image:: /intro/Basic/StrFunc/StrFunc.jpg
+  .. image:: /intro/Basic/StrFunc/strFunc.jpg
    :width: 320pt
   
 * Insepction of the ``Variable List`` the results for ``xInt ``, ``xFloat`` & ``xString`` can be seen.
