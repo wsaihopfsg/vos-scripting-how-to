@@ -38,6 +38,9 @@ This sample demonstrates
        * *x* : unsigned hex, in "abcdef"
        * *X* : unsigned hex, in "ABCDEF"
        * *f* : floating point in [–]dddd.dddd 
+       * *g* : todo
+       * *G* : todo
+       * *s* : todo
   
          * dddd are some decimal digits
   
@@ -92,10 +95,33 @@ Post Image Process
     xFloat = float("123.456")
     xString = string("[Angle%.4f]")
 
-* Line 1: Calls a user-defined function :ref:`removeChar <removechar>` to remove ``char(32)`` (white-space) from ``B2d``
-* Line 2: Calls a user-defined function :ref:`up2low <uplow>` to convert all characters in ``B2d`` to lower-case
-* Line 4: Formats ``Angle`` to 4 decimal places and returns it to ``opStrAngle4f``
-* Line 5: Replaces the last character of ``opStrAngle4f`` with ``Char(176)``
+* Line 1: Call a user-defined function :ref:`removeChar <removechar>` to remove ``char(32)`` (white-space) from ``B2d``
+* Line 2: Call a user-defined function :ref:`up2low <uplow>` to convert all characters in ``B2d`` to lower-case
+* Line 4: Format ``Angle`` to 4 decimal places and returns it to ``opStrAngle4f``
+* Line 5: Replace the last character of ``opStrAngle4f`` with ``Char(176)``
+* Line 6: Set the text in the Inspection Status Box with a specific color. Note that font size is chosen automatically.
+  
+  * ``black``
+  * ``red``
+  * ``green``
+  * ``yellow`` 
+  * ``blue``
+  * ``magenta`` 
+  * ``cyan`` 
+  * ``white`` 
+  * ``darkred``
+  * ``darkgreen`` 
+  * ``darkyellow`` 
+  * ``darkblue``
+  * ``darkmagenta`` 
+  * ``darkcyan`` 
+  * ``lightgray1``
+  * ``lightgray2``
+  * ``moneygreen``
+  * ``skyblue``
+  * ``cream``
+  * ``mediumgray``
+
 * Lines 7-9: Demonstration of ``int``, ``float``, ``string`` functions respectively
 
 .. _removechar:

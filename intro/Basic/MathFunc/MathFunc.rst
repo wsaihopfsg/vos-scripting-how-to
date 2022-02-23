@@ -124,8 +124,8 @@ Running the solution
   .. image:: /intro/Basic/MathFunc/MathFunc.jpg
    :width: 320pt
   
-* Insepction of the ``Variable List`` the results for ``xInt`` , ``xFloat`` & ``xString`` can be seen.
+* Insepction of the ``Variable List`` the results for the various variables can be seen.
  
-  .. image:: /intro/Basic/StrFunc/varlist.jpg
+  .. image:: /intro/Basic/MathFunc/varlist.jpg
 
 #math #radian #degree #trigonometry #logarithm
