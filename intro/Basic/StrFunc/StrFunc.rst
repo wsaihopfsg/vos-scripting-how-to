@@ -13,9 +13,62 @@ This sample demonstrates
 
 1. Reading a QR Code 
 2. Built-in string functions; all indices are zero-based
-   
-   * ``Find`` (*substring*, *inString*) - Return the first occurance of *substring* within *inString*; -1 if not found
-   * ``Substring`` (*string*, *startIndex*, *length*) - Return a substring from *stratIndex* for *length* characters; *length* =0 for the end of string
+
++-----------------+----------------------------------+------------------------------------------------------------------+
+|**Function**     |**Parameters**                    |**Explanation**                                                   |
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``Find``         |``substring``,                    |Return the first occurance of ``substring`` within ``inString``.  |
+|                 |                                  |                                                                  |
+|                 |``inString``                      |-1 if not found                                                   |   
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``Substring``    |``string``,                       |Return a substring from ``stratIndex`` for ``length`` characters  | 
+|                 |                                  |                                                                  |
+|                 |``startIndex``,                   |in ``string``. ``length`` =0 for the end of string                |
+|                 |                                  |                                                                  |
+|                 |``length``                        |                                                                  |   
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``StrLen``       |``string``                        |Return how many characters are in ``string``                      |
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``GetChar``      |``string``,                       |Return the ASCII code of a character at ``index`` of ``string``   |  
+|                 |                                  |                                                                  |   
+|                 |``index``                         |                                                                  |
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``SetChar``      |``string``,                       |Replace the character at ``index`` with ``char`` within ``string``|
+|                 |                                  |                                                                  |   
+|                 |``index``,                        |Note ``string`` itself is modified.                               |
+|                 |                                  |                                                                  |   
+|                 |``char``                          |                                                                  |
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``char``         |``int``                           |Return a character from the input ASCII ``int`` value             |   
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``int``          |``string``                        |Return an integer after conversion of the input ``string``        |  
++-----------------+----------------------------------+------------------------------------------------------------------+
+|``float``        |``string``                        |Return a floating point number after conversion of the input      |
+|                 |                                  |                                                                  |   
+|                 |                                  |``string``                                                        |
++-----------------+----------------------------------+------------------------------------------------------------------+   
+|``string``       |``inputNum``                      |Return a string based on the input number. *inputNum* can be an   |
+|                 |                                  |                                                                  |   
+|                 |                                  |integer or float. Float format please refer to ``FormatString``   |                                                                                   
+|                 |                                  |                                                                  |   
+|                 |                                  |below                                                             |
++-----------------+----------------------------------+------------------------------------------------------------------+   
+||setmatch|       |``string``                        |Change the "perfect" value of the barcode/QR code/OCR             |
+|                 |                                  |                                                                  |
+|                 |                                  |``measurementVar`` to ``perfectMatch`` .                          |
++-----------------+----------------------------------+------------------------------------------------------------------+   
+|``float``        |``measurementVar``,               |Return a floating point number after conversion of the input      |
+|                 |                                  |                                                                  |
+|                 |``perfectMatch``                  |``string``                                                        |
++-----------------+----------------------------------+------------------------------------------------------------------+   
+|``FormatString`` |``stringForm``                    |Return a formatted string using ``stringForm``. Refer to          |
+|                 |                                  |:ref:`string formatting <stringformat>`                           |
+|                 |                                  |                                                                  |
+|                 |                                  |* Eg: [myFloat%3.4f]                                              |
+|                 |                                  |                                                                  |   
++-----------------+----------------------------------+------------------------------------------------------------------+   
+
+
    * ``StrLen`` (*string*) - Return how many characters are in *string*
    * ``GetChar`` (*string*, *index*) - Return the ASCII code of a character at *index* of *string*
    * ``SetChar`` (*string*, *index*, *char*) - Replace the character at *index* with *char* within *string*. Note *string* itself is modified. 
@@ -101,28 +154,15 @@ Post Image Process
 * Line 2: Call a user-defined function :ref:`up2low <uplow>` to convert all characters in ``B2d`` to lower-case
 * Line 4: Format ``Angle`` to 4 decimal places and returns it to ``opStrAngle4f``
 * Line 5: Replace the last character of ``opStrAngle4f`` with ``Char(176)``
-* Line 6: Set the text in the Inspection Status Box with a specific color. Note that font size is chosen automatically.
-  
-  * ``black``
-  * ``red``
-  * ``green``
-  * ``yellow`` 
-  * ``blue``
-  * ``magenta`` 
-  * ``cyan`` 
-  * ``white`` 
-  * ``darkred``
-  * ``darkgreen`` 
-  * ``darkyellow`` 
-  * ``darkblue``
-  * ``darkmagenta`` 
-  * ``darkcyan`` 
-  * ``lightgray1``
-  * ``lightgray2``
-  * ``moneygreen``
-  * ``skyblue``
-  * ``cream``
-  * ``mediumgray``
+* Line 6: Set the text in the Inspection Status Box with a specific color as summarized in the table below. Note that font size is chosen automatically.
+
+===== ===== ===== ===== 
+ |0|   |1|   |2|   |3|   
+ |4|   |5|   |6|   |8|        
+ |7|   |9|  |10|  |11|     
+|12|  |13|  |14|  |15|
+|16|  |17|  |18|  |19|
+===== ===== ===== ===== 
 
 * Lines 7-9: Demonstration of ``int``, ``float``, ``string`` functions respectively
 
@@ -212,4 +252,78 @@ Running the solution
 
   .. image:: /intro/Basic/StrFunc/varlist_reject.jpg
 
+Appendix
+-----------------
+
+.. _stringformat:
+
+String Formatting
+##################
+
+
 #string #upper-case #lower-case #remove #space 
+
+.. |0| image:: /intro/Basic/StrFunc/0.jpg
+   :width: 80pt
+
+.. |1| image:: /intro/Basic/StrFunc/1.jpg
+   :width: 50pt
+
+.. |2| image:: /intro/Basic/StrFunc/2.jpg
+   :width: 80pt
+
+.. |3| image:: /intro/Basic/StrFunc/3.jpg
+   :width: 100pt
+
+.. |4| image:: /intro/Basic/StrFunc/4.jpg
+   :width: 80pt
+
+.. |5| image:: /intro/Basic/StrFunc/5.jpg
+   :width: 100pt
+
+.. |6| image:: /intro/Basic/StrFunc/6.jpg
+   :width: 80pt
+
+.. |7| image:: /intro/Basic/StrFunc/7.jpg
+   :width: 100pt
+
+.. |8| image:: /intro/Basic/StrFunc/8.jpg
+   :width: 100pt
+
+.. |9| image:: /intro/Basic/StrFunc/9.jpg
+   :width: 150pt
+
+.. |10| image:: /intro/Basic/StrFunc/10.jpg
+   :width: 150pt
+
+.. |11| image:: /intro/Basic/StrFunc/11.jpg
+   :width: 150pt
+
+.. |12| image:: /intro/Basic/StrFunc/12.jpg
+   :width: 150pt
+
+.. |13| image:: /intro/Basic/StrFunc/13.jpg
+   :width: 150pt
+
+.. |14| image:: /intro/Basic/StrFunc/14.jpg
+   :width: 150pt
+
+.. |15| image:: /intro/Basic/StrFunc/15.jpg
+   :width: 150pt
+
+.. |16| image:: /intro/Basic/StrFunc/16.jpg
+   :width: 100pt
+
+.. |17| image:: /intro/Basic/StrFunc/17.jpg
+   :width: 150pt
+
+.. |18| image:: /intro/Basic/StrFunc/18.jpg
+   :width: 150pt
+
+.. |19| image:: /intro/Basic/StrFunc/19.jpg
+   :width: 150pt
+
+.. |setmatch| replace:: ``SetMatchString``
+
+.. |formatting| replace:: [VariableName%{width} {.precision} type]; Items in {} are optional  
+
