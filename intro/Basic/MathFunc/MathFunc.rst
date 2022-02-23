@@ -13,23 +13,54 @@ This sample demonstrates
 
 1. Use of the  ``Angle`` , ``Distance`` & ``Rake`` tools
 2. Built-in Mathematical functions
-   
-   * ``sin`` (:math:`{x}`) - Returns :math:`\sin{x}`, :math:`{x}` in radians
-   * ``cos`` (:math:`{x}`) - Returns :math:`\cos{x}`, :math:`{x}` in radians
-   * ``tan`` (:math:`{x}`) - Returns :math:`\tan{x}`, :math:`{x}` in radians
-   * ``asin`` (:math:`{x}`) - Returns :math:`\arcsin{x}` within [-:math:`\pi`/2, :math:`\pi`/2] radians; :math:`{x}` is [-1,1]
-   * ``acos`` (:math:`{x}`) - Returns :math:`\arccos{x}` within [-:math:`\pi`/2, :math:`\pi`/2] radians; :math:`{x}` is [-1,1]
-   * ``atan`` (:math:`{x}`) - Returns :math:`\arctan{x}` within [-:math:`\pi`/2, :math:`\pi`/2] radians
-   * ``atan2`` (:math:`{y}` , :math:`{x}`) - Returns :math:`\arctan{y/x}` within [-:math:`\pi`, :math:`\pi`] radians
-   * ``exp`` (:math:`{x}`) - Returns :math:`e^x`
-   * ``logn`` (:math:`{x}`) - Returns :math:`ln(x)`
-   * ``sqrt`` (:math:`{x}`) - Returns :math:`\sqrt{x}`
-   * ``pow`` (:math:`{x}` , :math:`{y}`) - Returns :math:`x^y`
-   * ``GetMean`` (*measurementVar*) - returns the arithmetic mean of *measurementVar* 
-   * ``GetStdDev`` (*measurementVar*) - returns the standard deviation of *measurementVar*
-   * ``GetMin`` (*measurementVar*) - returns the minimum value of *measurementVar*
-   * ``GetMax`` (*measurementVar*) - returns the maximum value of *measurementVar*
-   * ``RequestRelearn``(*measurementVar*) - resets the statistics of *measurementVar* on the next image
+
++------------------+----------------------------------+------------------------------------------------------------------+
+|**Function**      |**Parameters**                    |**Explanation**                                                   |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``sin``           |:math:`{x}`                       |Return :math:`\sin{x}`, :math:`{x}` in radians                    |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``cos``           |:math:`{x}`                       |Return :math:`\cos{x}`, :math:`{x}` in radians                    |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``tan``           |:math:`{x}`                       |Return :math:`\tan{x}`, :math:`{x}` in radians                    |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``asin``          |:math:`{x}`                       |Return :math:`\arcsin{x}`, :math:`{x}` within [-:math:`\pi`/2,    |
+|                  |                                  |:math:`\pi`/2] radians;                                           |    
+|                  |                                  |                                                                  |
+|                  |                                  |:math:`{x}` is [-1,1]                                             |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``acos``          |:math:`{x}`                       |Return :math:`\arccos{x}`, :math:`{x}` within [-:math:`\pi`/2,    |
+|                  |                                  |:math:`\pi`/2] radians;                                           |    
+|                  |                                  |                                                                  |
+|                  |                                  |:math:`{x}` is [-1,1]                                             |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``atan``          |:math:`{x}`                       |Return :math:`\arctan{x}`, :math:`{x}` within [-:math:`\pi`/2,    |
+|                  |                                  |:math:`\pi`/2] radians;                                           |    
++------------------+----------------------------------+------------------------------------------------------------------+
+|``atan2``         |:math:`{y}`,                      |Return :math:`\arctan{y/x}`, within [-:math:`\pi`, :math:`\pi`/2] |
+|                  |                                  |                                                                  |    
+|                  |:math:`{x}`                       |radians                                                           |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``exp``           |:math:`{x}`                       |Return :math:`e^x`                                                |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``logn``          |:math:`{x}`                       |Return :math:`ln(x)`                                              |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``sqrt``          |:math:`{x}`                       |Return :math:`\sqrt{x}`                                           |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``pow``           |:math:`{x}`                       |Return :math:`x^y`                                                |
+|                  |                                  |                                                                  |    
+|                  |:math:`{y}`                       |                                                                  |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``GetMean``       |``measurementVar``                |Return mean of ``measurementVar``                                 |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``GetStdDev``     |``measurementVar``                |Return standard deviation of ``measurementVar``                   |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``GetMin``        |``measurementVar``                |Return minimum value of ``measurementVar``                        |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``GetMax``        |``measurementVar``                |Return maximum value of ``measurementVar``                        |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``RequestRelearn``|``measurementVar``                |Reset statistics of ``measurementVar``                            |
++------------------+----------------------------------+------------------------------------------------------------------+
+
   
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/MathFunc>`__
 ---------------------------------------------------------------------------------------------------------
@@ -62,14 +93,12 @@ deg2rad(p1)
 
   .. image:: /intro/Basic/MathFunc/deg2rad.jpg
 
-* In the Script Function window we see 
+* In the Script Function window we see a line of code that converts degree input into radians. 
 
 .. code-block::
     :linenos:
 
     return(p1/180*3.141592654)
-
-* Line 1: Converts the degree input into radians
 
 .. _rad2deg:
 
@@ -79,14 +108,12 @@ rad2deg(p1)
 
   .. image:: /intro/Basic/MathFunc/rad2deg.jpg
 
-* In the Script Function window we see 
+* In the Script Function window we see a line of code that converts radians into degrees
 
 .. code-block::
     :linenos:
 
     return(p1/3.141592654*180)
-
-* Line 1: Returns radians input into degrees
 
 Post Image Process
 ##################
