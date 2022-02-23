@@ -61,50 +61,10 @@ This sample demonstrates
 |                 |                                  |                                                                  |
 |                 |``perfectMatch``                  |``string``                                                        |
 +-----------------+----------------------------------+------------------------------------------------------------------+   
-|``FormatString`` |``stringForm``                    |Return a formatted string using ``stringForm``. Refer to          |
-|                 |                                  |:ref:`string formatting <stringformat>`                           |
-|                 |                                  |                                                                  |
-|                 |                                  |* Eg: [myFloat%3.4f]                                              |
-|                 |                                  |                                                                  |   
+|``FormatString`` |``stringForm``                    |Return formatted string using ``stringForm``. Refer to            |
+|                 |                                  |:ref:`string format <stringformat>`                               |
 +-----------------+----------------------------------+------------------------------------------------------------------+   
-
-
-   * ``StrLen`` (*string*) - Return how many characters are in *string*
-   * ``GetChar`` (*string*, *index*) - Return the ASCII code of a character at *index* of *string*
-   * ``SetChar`` (*string*, *index*, *char*) - Replace the character at *index* with *char* within *string*. Note *string* itself is modified. 
-   * ``char`` (*int*) - Return a character from the input ASCII *int* value
-   * ``int`` (*string*) - Return an integer after conversion of the input *string*
-   * ``float`` (*string*) - Return a floating point number after conversion of the input *string*
-   * ``string`` (*inputNum*) - Return a string based on the input number. *inputNum* can be an integer or float. Formatting for float please refer to ``FormatString`` below
-   * ``SetMatchString`` (*measurementVar*, *perfectMatch*) - Change the "perfect" value of the barcode/QR code/OCR *measurementVar* to *perfectMatch* .
-   * ``FormatString`` (*stringForm*) - Return a formatted string using *stringForm*
-
-     * [*VariableName* %{width} {.precision} type ] Example: [myFloat%3.4f]
-  
-       * Items in {} are optional
-  
-     * Type
-  
-       * *c* : character
-       * *d* : signed decimal
-       * *i* : signed integer
-       * *u* : unsigned decimal
-       * *x* : unsigned hex, in "abcdef"
-       * *X* : unsigned hex, in "ABCDEF"
-       * *f* : floating point in [–]dddd.dddd 
-       * *g* : todo
-       * *G* : todo
-       * *s* : todo
-  
-         * dddd are some decimal digits
-  
-       * *e* : scientific format in exponential notation in [–]d.dddd e [sign]dd[d]
-
-         * d is single decimal digit
-         * dddd are some decimal digits
-         * [sign] is ``+`` or ``-``
-         * dd[d] is 2 or 3 decimal digits
-   
+ 
   
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/StrFunc>`__
 ---------------------------------------------------------------------------------------------------------
@@ -260,6 +220,74 @@ Appendix
 String Formatting
 ##################
 
+[``VariableName`` %{``width``} {. ``precision``} ``type``]. Items in {} are optional
+
+* ``width`` //todo: example
+  
+  * Optional positive decimal, specifying minimum number of characters in the formatted text.
+  * Padding is done if the number of characters is less than ``width``, by
+    
+    * 0 if ``width`` is prefixed with 0
+    * space otherwise
+
+* ``precision``  //todo: example
+  
+  * For types ``d``, ``i``, ``u``, ``o``, ``x`` & ``X``: Minimum digits output, default = 1
+    
+    * If digits less than precision, pad on the left with 0
+    * No truncation if precision is exceeded
+  
+  * For types ``e`` & ``E``: Number of digits after decimal point with rounding, default = 6
+    
+    * If ``precision``=0 or ``.`` appears without a number, no decimal is output
+  
+  * For type ``f``: Number of digits after decimal point 
+    
+    * If there is a decimal point, at least 1 digit is before it
+    * The value is rounded to the specified number of digits
+  
+* ``type``
+  
++------+-----------------------------------------------------------------------+
+|Type  |Meaning                                                                |
++------+-----------------------------------------------------------------------+
+|``c`` |character                                                              |
++------+-----------------------------------------------------------------------+
+|``d`` |signed decimal                                                         |
++------+-----------------------------------------------------------------------+
+|``i`` |signed integer                                                         |
++------+-----------------------------------------------------------------------+
+|``u`` |unsigned decimal                                                       |
++------+-----------------------------------------------------------------------+
+|``x`` |unsigned hex, in "abcdef"                                              |
++------+-----------------------------------------------------------------------+
+|``X`` |unsigned hex, in "ABCDEF"                                              |
++------+-----------------------------------------------------------------------+
+|``f`` |floating point in [–]dddd.dddd                                         |
+|      |                                                                       |
+|      |* dddd are some decimal digits                                         |
++------+-----------------------------------------------------------------------+
+|``e`` |scientific format in exponential notation in [–]d.dddd e [sign]dd[d]   |
+|      |                                                                       |
+|      |* d is single decimal digit                                            |
+|      |                                                                       |
+|      |* dddd are some decimal digits                                         |
+|      |                                                                       |
+|      |* [sign] is ``+`` or ``-``                                             |
+|      |                                                                       |
+|      |* dd[d] is 2 or 3 decimal digits                                       |
++------+-----------------------------------------------------------------------+
+|``g`` |Signed value in ``f`` or ``e`` format, whichever is more compact.      |
+|      |todo: example                                                          |
++------+-----------------------------------------------------------------------+
+|``G`` |Identical to ``g``, except for ``E`` instead of ``e`` for exponent     |
++------+-----------------------------------------------------------------------+
+|``s`` |Single-byte character string, printed up to                            |
+|      |                                                                       |
+|      |* first null character or                                              |
+|      |                                                                       |
+|      |* precision value is reached                                           |
++------+-----------------------------------------------------------------------+
 
 #string #upper-case #lower-case #remove #space 
 
