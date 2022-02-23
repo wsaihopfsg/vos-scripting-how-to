@@ -14,16 +14,17 @@ This sample demonstrates
 1. Reading a QR Code 
 2. Built-in string functions; all indices are zero-based
    
-   * ``Find`` (*substring*, *inString*) - Returns the first occurance of *substring* within *inString*; -1 if not found
-   * ``Substring`` (*string*, *startIndex*, *length*) - Returns a substring from *stratIndex* for *length* characters; *length* =0 for the end of string
-   * ``StrLen`` (*string*) - Returns how many characters are in *string*
-   * ``GetChar`` (*string*, *index*) - Returns the ASCII code of a character at *index* of *string*
-   * ``SetChar`` (*string*, *index*, *char*) - Replaces the character at *index* with *char* within *string*. Note *string* itself is modified. 
-   * ``char`` (*int*) - Returns a character from the input ASCII *int* value
-   * ``int`` (*string*) - Returns an integer after conversion of the input *string*
-   * ``float`` (*string*) - Returns a floating point number after conversion of the input *string*
-   * ``string`` (*inputNum*) - Returns a string based on the input number. *inputNum* can be an integer or float. Formatting for float please refer to ``FormatString`` below
-   * ``FormatString`` (*stringForm*) - Returns a formatted string using *stringForm*
+   * ``Find`` (*substring*, *inString*) - Return the first occurance of *substring* within *inString*; -1 if not found
+   * ``Substring`` (*string*, *startIndex*, *length*) - Return a substring from *stratIndex* for *length* characters; *length* =0 for the end of string
+   * ``StrLen`` (*string*) - Return how many characters are in *string*
+   * ``GetChar`` (*string*, *index*) - Return the ASCII code of a character at *index* of *string*
+   * ``SetChar`` (*string*, *index*, *char*) - Replace the character at *index* with *char* within *string*. Note *string* itself is modified. 
+   * ``char`` (*int*) - Return a character from the input ASCII *int* value
+   * ``int`` (*string*) - Return an integer after conversion of the input *string*
+   * ``float`` (*string*) - Return a floating point number after conversion of the input *string*
+   * ``string`` (*inputNum*) - Return a string based on the input number. *inputNum* can be an integer or float. Formatting for float please refer to ``FormatString`` below
+   * ``SetMatchString`` (*measurementVar*, *perfectMatch*) - Change the "perfect" value of the barcode/QR code/OCR *measurementVar* to *perfectMatch* .
+   * ``FormatString`` (*stringForm*) - Return a formatted string using *stringForm*
 
      * [*VariableName* %{width} {.precision} type ] Example: [myFloat%3.4f]
   
@@ -94,6 +95,7 @@ Post Image Process
     xInt = int("123")
     xFloat = float("123.456")
     xString = string("[Angle%.4f]")
+    SetMatchString(B2d, "Something Else")
 
 * Line 1: Call a user-defined function :ref:`removeChar <removechar>` to remove ``char(32)`` (white-space) from ``B2d``
 * Line 2: Call a user-defined function :ref:`up2low <uplow>` to convert all characters in ``B2d`` to lower-case
@@ -123,6 +125,10 @@ Post Image Process
   * ``mediumgray``
 
 * Lines 7-9: Demonstration of ``int``, ``float``, ``string`` functions respectively
+
+.. _setperfect:
+
+* Line 10: Changes the "perfect" value of ``B2d`` to the string "Something Else"
 
 .. _removechar:
 
@@ -202,4 +208,8 @@ Running the solution
  
   .. image:: /intro/Basic/StrFunc/varList.jpg
 
-#string #upper-case #lower-case #remove #space
+* Notice that the ``Result`` variable is ``Passed``, because the orginal "perfect" value of ``B2d`` was set to "*". However, the :ref:`last line <setperfect>` of ``Post Image Process`` sets the "perfect" string to some other values. Hence if we click on ``Manual Trigger`` |manTrig| button again, the ``Result`` variable becomes ``Rejected``.
+
+  .. image:: /intro/Basic/StrFunc/varlist_reject.jpg
+
+#string #upper-case #lower-case #remove #space 

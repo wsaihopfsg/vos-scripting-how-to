@@ -25,10 +25,11 @@ This sample demonstrates
    * ``logn`` (:math:`{x}`) - Returns :math:`ln(x)`
    * ``sqrt`` (:math:`{x}`) - Returns :math:`\sqrt{x}`
    * ``pow`` (:math:`{x}` , :math:`{y}`) - Returns :math:`x^y`
-   * ``GetMean`` (*measurementVar*) - returns the arithmetic mean of *measurementVar*
+   * ``GetMean`` (*measurementVar*) - returns the arithmetic mean of *measurementVar* 
    * ``GetStdDev`` (*measurementVar*) - returns the standard deviation of *measurementVar*
    * ``GetMin`` (*measurementVar*) - returns the minimum value of *measurementVar*
    * ``GetMax`` (*measurementVar*) - returns the maximum value of *measurementVar*
+   * ``RequestRelearn``(*measurementVar*) - resets the statistics of *measurementVar* on the next image
   
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/MathFunc>`__
 ---------------------------------------------------------------------------------------------------------
@@ -127,7 +128,7 @@ Post Image Process
   
   * Note that these functions computes the statistical values over multiple runs ``RakeLong``, and in this solution there is only 1 image and hence the ``mean`` / ``standard deviation`` / ``minimum`` / ``maximum`` are of these values shown in the :ref:`variable list<varlist>` as high-lighted in yellow.
     
-    * You may reset the measurement statistics over multiple runs by the ``RequestRelearn`` (*measurementVar*) command. The statistic reset will be applied on the next image.
+    * You may reset the measurement statistics over multiple runs by the ``RequestRelearn`` (*measurementVar*) command. For example ``RequestRelearn(RakeLong)`` resets the statistics for ``RakeLong`` on the next image.
   
   * If you require the statistics of the individual 11 rakes for ``RakeLong``, you may make use of the relevant properties in ``Rake`` tool
 
