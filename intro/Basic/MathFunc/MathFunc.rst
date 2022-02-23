@@ -127,7 +127,7 @@ Post Image Process
   
   * Note that these functions computes the statistical values over multiple runs ``RakeLong``, and in this solution there is only 1 image and hence the ``mean`` / ``standard deviation`` / ``minimum`` / ``maximum`` are of these values shown in the :ref:`variable list<varlist>` as high-lighted in yellow.
     
-    * You may reset the measurement statistics over multiple runs by the ``RequestRelearn``(*measurementVar*) command. The statistic reset will be applied on the next image.
+    * You may reset the measurement statistics over multiple runs by the ``RequestRelearn`` (*measurementVar*) command. The statistic reset will be applied on the next image.
   
   * If you require the statistics of the individual 11 rakes for ``RakeLong``, you may make use of the relevant properties in ``Rake`` tool
 
