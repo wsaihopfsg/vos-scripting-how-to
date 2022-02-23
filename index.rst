@@ -22,7 +22,7 @@ Please note the following constraints for VOS Scripting:
 * There is a **60-character** limit for variable names.
 * There is a **256-character** limit for each line of script. 
 * The number of lines per script is limited by your computer's memory.
-* Variable and function names are non case-sensitive!!
+* Variable and function names are not case-sensitive!!
 
 As always, we would be happy to hear your comments and receive your contributions on any tutorial.
 

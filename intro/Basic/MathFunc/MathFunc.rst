@@ -123,7 +123,15 @@ Post Image Process
 * Line 8: Return the theoretical value of ``Slant`` based on Pythagoras theorem
 * Line 9: Return the value of 2 x 3 using logarithm
 * Line 10: Return results of ``atan`` of 1/2
-* Line 11-14: Return the mean, standard deviation, minimum and maximum of ``RakeLong`` respectively
+* Line 11-14: Return the ``mean``, ``standard deviation``, ``minimum`` and ``maximum`` of ``RakeLong`` respectively
+  
+  * Note that these functions computes the statistical values over multiple runs ``RakeLong``, and in this solution there is only 1 image and hence the ``mean`` / ``standard deviation`` / ``minimum`` / ``maximum`` are of these values shown in the :ref:`variable list<varlist>` as high-lighted in yellow.
+    
+    * You may reset the measurement statistics over multiple runs by the ``RequestRelearn``(*measurementVar*) command. The statistic reset will be applied on the next image.
+  
+  * If you require the statistics of the individual 11 rakes for ``RakeLong``, you may make use of the relevant properties in ``Rake`` tool
+
+.. image:: /intro/Basic/MathFunc/rakeproperties.jpg
 
 Running the solution
 --------------------
@@ -132,7 +140,8 @@ Running the solution
   
   .. image:: /intro/Basic/MathFunc/MathFunc.jpg
 
-  
+.. _varlist:
+
 * Insepction of the ``Variable List`` the results for the various variables can be seen.
  
   .. image:: /intro/Basic/MathFunc/varlist.jpg
