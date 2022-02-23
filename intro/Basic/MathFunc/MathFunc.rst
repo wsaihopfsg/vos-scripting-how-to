@@ -25,6 +25,10 @@ This sample demonstrates
    * ``logn`` (:math:`{x}`) - Returns :math:`ln(x)`
    * ``sqrt`` (:math:`{x}`) - Returns :math:`\sqrt{x}`
    * ``pow`` (:math:`{x}` , :math:`{y}`) - Returns :math:`x^y`
+   * ``GetMean`` (*measurementVar*) - returns the arithmetic mean of *measurementVar*
+   * ``GetStdDev`` (*measurementVar*) - returns the standard deviation of *measurementVar*
+   * ``GetMin`` (*measurementVar*) - returns the minimum value of *measurementVar*
+   * ``GetMax`` (*measurementVar*) - returns the maximum value of *measurementVar*
   
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/MathFunc>`__
 ---------------------------------------------------------------------------------------------------------
@@ -104,6 +108,10 @@ Post Image Process
     xSlantTheory = sqrt(pow(RakeShort,2)+pow(RakeLong,2))
     x2Times3 = exp(logn(2)+logn(3))
     xAtan2 = atan2(1,2)
+    xMeanRakeLong = GETMEAN(RakeLong)
+    xSDRakeLong = GetStdDev(RakeLong)
+    xMinRakeLong = GetMin(RakeLong)
+    xMaxRakeLong = GetMax(RakeLong)
 
 * Line 1: Sum ``A0`` , ``A1`` & ``A2``, should be close to 180
 * Line 2: Return results of ``sin`` of ``A0`` in radians to ``xA0sin`` 
@@ -115,6 +123,7 @@ Post Image Process
 * Line 8: Return the theoretical value of ``Slant`` based on Pythagoras theorem
 * Line 9: Return the value of 2 x 3 using logarithm
 * Line 10: Return results of ``atan`` of 1/2
+* Line 11-14: Return the mean, standard deviation, minimum and maximum of ``RakeLong`` respectively
 
 Running the solution
 --------------------
@@ -122,7 +131,7 @@ Running the solution
 * At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button
   
   .. image:: /intro/Basic/MathFunc/MathFunc.jpg
-   :width: 320pt
+
   
 * Insepction of the ``Variable List`` the results for the various variables can be seen.
  

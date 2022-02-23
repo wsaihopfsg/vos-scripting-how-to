@@ -195,6 +195,15 @@ Post Image Process
 * Lines 26-29 outputs the ``opStr`` to the screen with ``SetDisplayStatus`` if there is error index indicates no error.
 * Line 31 outputs the ``opStr`` error message to the screen with ``SetDisplayStatus`` in red. 
 * Lines 32-34 overwrites the ``Result`` variable to ``FAIL``. Note that all 3 built-in variables ``PASS``, ``FAIL`` & ``RECYCLE`` must be in CAPS.
+
+  * The ``Special Global Variable`` named ``Result`` returns the overall inspection result, defined as
+    
+    * ``PASS``: Result = 1
+    * ``RECYCLE``: Result =2
+    * ``FAIL``: REsult =3
+  
+  * Note that ``Result.0`` returns the value of ``Result`` before it is output, allowing the script to make changes before sending the final ``Result`` to the screen & decision I/Os. ``Result.0`` takes the same values as defined above for ``PASS`` , ``FAIL`` & ``RECYCLE``
+  
 * Line 36 writes the ``opStr`` to the TCP socket ``TcpP5025``
 
 findLeftMostShape()

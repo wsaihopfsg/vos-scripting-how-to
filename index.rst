@@ -13,9 +13,16 @@ The following links describe a set of basic VOS tutorials. Please note that thei
 
 You should have downloaded and installed the ``Pepperl-Fuchs Vision Configuration Tool`` as described in the manual. 
 
-The ``VOS emulator`` is the only program that we will be using in this tutorial, which is launched through ``VOS Emulator Config`` 
+We will be using the ``VOS emulator`` mostly in this tutorial, which is launched through ``VOS Emulator Config`` 
 
 .. image:: /img/emulatorConfig.JPG
+
+Please note the following constraints for VOS Scripting:
+
+* There is a **60-character** limit for variable names.
+* There is a **256-character** limit for each line of script. 
+* The number of lines per script is limited by your computer's memory.
+* Variable and function names are non case-sensitive!!
 
 As always, we would be happy to hear your comments and receive your contributions on any tutorial.
 
