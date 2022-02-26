@@ -104,7 +104,7 @@ rad2deg(p1)
 ##################
 * Choose the user-defined function ``rad2deg(p1)`` at the bottom left 
 
-  .. image:: /intro/Basic/MathFunc/rad2deg.jpg
+  .. image:: /intro/Basic/MathFunc/rad2deg2.jpg
 
 * In the Script Function window we see a line of code that converts radians into degrees
 
