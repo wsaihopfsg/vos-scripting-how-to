@@ -222,7 +222,7 @@ String Formatting
 
 [``VariableName`` %{``width``} {. ``precision``} ``type``]. Items in {} are optional
 
-* ``width`` //todo: example
+* ``width`` 
   
   * Optional positive decimal, specifying minimum number of characters in the formatted text.
   * Padding is done if the number of characters is less than ``width``, by
@@ -230,7 +230,7 @@ String Formatting
     * 0 if ``width`` is prefixed with 0
     * space otherwise
 
-* ``precision``  //todo: example
+* ``precision``  
   
   * For types ``d``, ``i``, ``u``, ``o``, ``x`` & ``X``: Minimum digits output, default = 1
     
@@ -278,7 +278,6 @@ String Formatting
 |      |* dd[d] is 2 or 3 decimal digits                                       |
 +------+-----------------------------------------------------------------------+
 |``g`` |Signed value in ``f`` or ``e`` format, whichever is more compact.      |
-|      |todo: example                                                          |
 +------+-----------------------------------------------------------------------+
 |``G`` |Identical to ``g``, except for ``E`` instead of ``e`` for exponent     |
 +------+-----------------------------------------------------------------------+
@@ -288,6 +287,13 @@ String Formatting
 |      |                                                                       |
 |      |* precision value is reached                                           |
 +------+-----------------------------------------------------------------------+
+
+* eg: Angle = 45.73
+  
+  * string("[Angle%5.1f]")  = " 45.4"
+  * string("[Angle%05.1f]") = "045.4"
+  * string("[Angle%5.1e]")  = "4.5e+001" 
+  * string("[Angle%5.1g]")  = "5e+001"
 
 #string #upper-case #lower-case #remove #space 
 
