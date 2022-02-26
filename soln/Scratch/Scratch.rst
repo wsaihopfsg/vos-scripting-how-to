@@ -115,7 +115,8 @@ Post Image Process
         SetDisplayStatus("Fail with "+N+" scratches detected","red")
     endif
 
-* The code uses the count value ``N`` to decide whether to pass or fail the scratch inspection, and output by ``SetDisplayStatus`` with the number of scratches detected.
+.. note::
+  * The code uses the count value ``N`` to decide whether to pass or fail the scratch inspection, and output by ``SetDisplayStatus`` with the number of scratches detected.
 
 Running the solution
 --------------------
@@ -130,7 +131,8 @@ Running the solution
 ||fail|                   |
 +-------------------------+
 
-#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
+.. tip::
+  #multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
 
 .. |pass| image:: /soln/Scratch/pass.jpg
 

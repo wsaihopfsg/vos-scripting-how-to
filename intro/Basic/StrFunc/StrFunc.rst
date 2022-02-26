@@ -295,7 +295,9 @@ String Formatting
   * string("[Angle%5.1e]")  = "4.5e+001" 
   * string("[Angle%5.1g]")  = "5e+001"
 
-#string #upper-case #lower-case #remove #space 
+.. tip::
+  
+  #string #upper-case #lower-case #remove #space #format #formatting 
 
 .. |0| image:: /intro/Basic/StrFunc/0.jpg
    :width: 80pt

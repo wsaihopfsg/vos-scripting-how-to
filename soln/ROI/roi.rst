@@ -116,7 +116,7 @@ Periodic Function
   
   0. Name of the parameter being set, ``setroi``
   1. Tool name, ``B2d0``
-  2. CamID, always ``0`` for VOS 
+  2. CamID 
   3. ROI Type, ``rect``
   4. x1 is the x-coordinate of the top left corner
   5. y1 is the y-coordinate of the top left corner
@@ -162,7 +162,8 @@ Running the solution
 
   |VOSROX|
 
-#dynamic #ROI #setparam #sequential #shift #region-of-interest #region #interest
+.. tip::
+  #dynamic #ROI #setparam #sequential #shift #region-of-interest #region #interest
 
 .. |QR1| image:: /code/Soln/ROI/QR1.bmp
    :width: 480pt

@@ -18,12 +18,13 @@ This sample demonstrates
 #. String formatting in VOS scripting
 #. Overwriting ``PASS``. ``FAIL`` & ``RECYCLE`` results
 
-The solution uses a circle, placed at the most left position, as having an user-supplied reference diameter of ``cirD`` units. Rectangles of random sizes and orientation are place at random, and the following properties will be computed for these rectangles.
+.. note::
+  The solution uses a circle, placed at the most left position, as having an user-supplied reference diameter of ``cirD`` units. Rectangles of random sizes and orientation are place at random, and the following properties will be computed for these rectangles.
 
-* L: Length in units
-* W: Width in units
-* R: Rotation angle in degree
-* D: Distance of the centre of the rectangle from the centre of the reference circle, in units
+  * L: Length in units
+  * W: Width in units
+  * R: Rotation angle in degree
+  * D: Distance of the centre of the rectangle from the centre of the reference circle, in units
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/RefCirSizeRect>`__
 -------------------------------------------------------------------------------------------------------------
@@ -65,9 +66,12 @@ Tools Explanation
 
 Connections
 -----------
-* Click on ``Setup Connections`` |conn|. We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``. Note that the ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. 
+* Click on ``Setup Connections`` |conn|. We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``.  
 
 .. image:: /soln/RefCirSizeRect/tcp5025.jpg 
+
+.. note::
+  The ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup.
 
 Code Walk-Through
 -----------------
@@ -125,7 +129,8 @@ Periodic Function
 * Line 4 (high-lighted): Read from ``CommandString`` from character 0 for 1 chracter and output to ``CommandCharacter``
 * Line 6 (high-lighted):  Read from ``CommandString`` from character 1 for 1 chracter and output to ``ProgramNumber``
 * Line 7: Check if ``ProgramNumber``>0, if so pass the value to ``cirD`` in Line 8
-  
+
+.. note::  
   * In this version, only single digit diameter is used
   
 * Line 10: Check if ``CommandCharacter`` = ``T``, if perform software ``trigger()`` in Line 11
@@ -196,13 +201,14 @@ Post Image Process
 * Line 31 outputs the ``opStr`` error message to the screen with ``SetDisplayStatus`` in red. 
 * Lines 32-34 overwrites the ``Result`` variable to ``FAIL``. Note that all 3 built-in variables ``PASS``, ``FAIL`` & ``RECYCLE`` must be in CAPS.
 
+.. note::
   * The ``Special Global Variable`` named ``Result`` returns the overall inspection result, defined as
     
     * ``PASS``: Result = 1
     * ``RECYCLE``: Result =2
     * ``FAIL``: REsult =3
   
-  * Note that ``Result.0`` returns the value of ``Result`` before it is output, allowing the script to make changes before sending the final ``Result`` to the screen & decision I/Os. ``Result.0`` takes the same values as defined above for ``PASS`` , ``FAIL`` & ``RECYCLE``
+  * ``Result.0`` returns the value of ``Result`` before it is output, allowing the script to make changes before sending the final ``Result`` to the screen & decision I/Os. ``Result.0`` takes the same values as defined above for ``PASS`` , ``FAIL`` & ``RECYCLE``
   
 * Line 36 writes the ``opStr`` to the TCP socket ``TcpP5025``
 
@@ -328,9 +334,11 @@ Running the solution
 |Phone                    |VOS Emulator             |
 +-------------------------+-------------------------+
 
-`An advanced tutorial for integrating this solution with c# can be found ...todo....`
+.. note::
+  An advanced tutorial for integrating this solution with c# can be found :ref:`here <csharp>`.
 
-#scale-invariant #socket #tcp #remote #trigger #user-defined #function #string #format #results #over-writing
+.. tip::
+  #scale-invariant #socket #tcp #remote #trigger #user-defined #function #string #format #results #over-writing
 
 .. |fn_init_here| image:: /soln/RefCirSizeRect/fnSolnInit.jpg
 

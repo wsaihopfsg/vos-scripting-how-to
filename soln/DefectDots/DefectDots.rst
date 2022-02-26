@@ -100,7 +100,9 @@ Post Image Process
         SetDisplayStatus("Fail with "+N+" patches detected","red")
     endif
 
-* The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output by ``SetDisplayStatus`` with the number of defects detected .
+.. note::
+  
+  * The code uses the count value ``N`` to decide whether to pass or fail the defect inspection, and output by ``SetDisplayStatus`` with the number of defects detected .
 
 Running the solution
 --------------------
@@ -111,7 +113,8 @@ Running the solution
   
   .. image:: /soln/DefectDots/passPatches.jpg    
 
-#remove #blob #defect #detection #preprocessor
+.. tip::
+  #remove #blob #defect #detection #preprocessor
 
 .. |CountPreview| image:: /soln/DefectDots/CountPreview.jpg
 
