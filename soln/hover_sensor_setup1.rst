@@ -2,4 +2,4 @@
 
 .. _hover_sensor_setup:
 
-.. image:: /img/emulator/hover_sensor_setup.jpg
+.. image:: ./img/hover_sensor_setup1.jpg
