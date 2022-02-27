@@ -1,9 +1,10 @@
 :orphan:
 
-.. _hover_sensor_setup:
+======
 
-Sensor Setup button
-+++++++++++++++++++
+Sensor
+
+======
 
 * some text
   
