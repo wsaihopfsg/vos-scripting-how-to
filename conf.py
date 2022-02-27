@@ -30,6 +30,7 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+#'sphinx.ext.autosectionlabel'
 extensions = [
     'hoverxref.extension',
 ]
@@ -49,7 +50,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-hoverxref_auto_ref = False
+hoverxref_auto_ref = True
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
