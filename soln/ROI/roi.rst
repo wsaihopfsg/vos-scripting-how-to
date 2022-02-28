@@ -23,7 +23,7 @@ This sample demonstrates
   
 #. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__ with 6 QR codes, with an alphabet encoded in each.
 
-   * At the :hoverxref:`Sensor Setup page <soln/ROI/sensor1:Sensor Setup>` |sensorsetup|, set |demoimg| to the folder where ``QR1.bmp`` has been saved 
+   * At the :hoverxref:`Sensor Setup page <soln/sensor1:Sensor Setup>` |sensorsetup|, set |demoimg| to the folder where ``QR1.bmp`` has been saved 
 
 Tools Explanation
 -----------------
