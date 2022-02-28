@@ -69,7 +69,7 @@ This sample demonstrates
   
 2. ``card.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/card.bmp?raw=true>`__ with a rotated rectangle
 
-   * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``vosrox.bmp`` have been saved 
+   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
 
 Tools Explanation
 -----------------

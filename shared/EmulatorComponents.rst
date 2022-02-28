@@ -80,7 +80,7 @@
    :width: 25px
 
 .. |cir2| image:: /img/cirnum/2.jpg
-   :width: 25px
+   :width: 20px
 
 .. |cir3| image:: /img/cirnum/3.jpg   
    :width: 25px

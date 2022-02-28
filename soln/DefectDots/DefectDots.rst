@@ -24,7 +24,7 @@ This sample demonstrates
 2. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
 3. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
 
-   * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved 
+   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved 
 
 Tools Explanation
 -----------------

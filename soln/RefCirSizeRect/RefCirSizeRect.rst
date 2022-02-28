@@ -38,7 +38,7 @@ This sample demonstrates
 #. ``test2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test2.bmp?raw=true>`__ reference circle with diameter of 3 unit.
 #. ``test3.bmp``: `Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test3.bmp?raw=true>`__ reference circle with diameter of 3 unit.
 
-   * At the Sensor Setup page |sensorsetup|, set |demoimg| to the folder where the image files have been saved.
+   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where the image files have been saved.
 
 Tools Explanation
 -----------------
