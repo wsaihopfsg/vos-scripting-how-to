@@ -1,8 +1,8 @@
 :orphan:
 
-.. _test:
+.. .. _test:
 
-Sensor
+sensor
 ======
 
 Some text
