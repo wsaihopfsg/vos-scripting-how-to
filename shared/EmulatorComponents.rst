@@ -76,3 +76,11 @@
 
 .. |fn_init| image:: /img/emulator/fn_init.jpg    
 
+.. |cir1| image:: /img/cirnum/1.jpg
+   :width: 25px
+
+.. |cir2| image:: /img/cirnum/2.jpg
+   :width: 25px
+
+.. |cir3| image:: /img/cirnum/3.jpg   
+   :width: 25px

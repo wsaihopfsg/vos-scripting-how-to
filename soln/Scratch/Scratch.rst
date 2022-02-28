@@ -24,7 +24,7 @@ This sample demonstrates
 #. ``unscratched.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
 #. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
 
-   * At the :hoverxref:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup|, set |demoimg| to the folder where the image files have been saved.
+   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where the image files have been saved.
 
 Tools Explanation
 -----------------
