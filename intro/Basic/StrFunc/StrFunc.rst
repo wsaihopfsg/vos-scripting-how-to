@@ -75,7 +75,7 @@ This sample demonstrates
   
 2. ``vosrox.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__ with a rotated QR code
 
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
+   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/StrFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
 
 Tools Explanation
 -----------------
