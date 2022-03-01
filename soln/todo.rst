@@ -17,7 +17,13 @@ Summary of todo
   * Pulsed GPO for pass/fail/recycle
   * difference between Equalize & Normalize
   * Image correction with brightness & contrast?
+    * https://dsp.stackexchange.com/questions/46564/what-is-the-difference-between-image-normalization-contrast-stretching-and 
   * Tolerance settings, p19-21 in Bible
+  * Preprocessors
+    * Kernels https://setosa.io/ev/image-kernels/
+    * Subtract
+    * ...
+  * Tools 
 
 3. HKID...?  
 

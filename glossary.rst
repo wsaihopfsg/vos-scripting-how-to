@@ -12,20 +12,20 @@ Glossary
 Tools  
 +++++++++++++++++
 +----------------------------------------------+------------------------------------------------+
-|* Match                                       |* Preprocessing                                 |
+|* |match|_                                    |* Preprocessing                                 |
 |                                              |                                                |
 |* ``Count``                                   |  * Convolve 3x3                                |
 |                                              |                                                |
 |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect` |  * Dilate                                      |
 |  * :doc:`soln/DefectDots/DefectDots`         |                                                |
-|  * :doc:`soln/ROI/roi`                       |  * Equalize                                    |
+|  * :doc:`soln/ROI/roi`                       |  * |equalize|_                                 |
 |  * :doc:`soln/Scratch/Scratch`               |                                                |
 |                                              |                                                |
 |* Edge Count                                  |  * |erode|_                                    |
 |                                              |                                                |
-|* Intensity                                   |  * Gaussian                                    |
+|* |intensity|_                                |  * Gaussian                                    |
 |                                              |                                                |
-|* Caliper                                     |  * High-pass                                   |
+|* Caliper                                     |  * High-pass (Sharpen)                         |
 |                                              |                                                |
 |* Point                                       |  * ``Invert``                                  |
 |                                              |                                                |
@@ -33,7 +33,7 @@ Tools
 |                                              |    * :doc:`soln/DefectDots/DefectDots`         |
 |* Pencil                                      |                                                |
 |                                              |                                                |
-|* |distance|_                                 |  * Low-pass                                    |
+|* |distance|_                                 |  * Low-pass (Blur)                             |
 |                                              |                                                |
 |* |rake|_                                     |  * Mask                                        |
 |                                              |                                                |
@@ -88,6 +88,12 @@ Tools
 .. _normalize: soln/Scratch/Scratch.html
 .. |thres| replace:: ``Threshold``
 .. _thres: soln/Scratch/Scratch.html
+.. |match| replace:: ``Threshold``
+.. _match: intro/Basic/GPIO/GPIO.html
+.. |intensity| replace:: ``Intensity``
+.. _intensity: intro/Basic/GPIO/GPIO.html
+.. |equalize| replace:: ``Equalize``
+.. _equalize: intro/Basic/GPIO/GPIO.html
 
 Predefined Functions
 ++++++++++++++++++++++++

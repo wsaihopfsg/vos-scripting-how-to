@@ -6,7 +6,7 @@
 
 .. include:: /shared/EmulatorComponents.rst
 
-Presence / Absence Detection with GPO & Bit Functions 
+Presence / Absence Detection with GPO 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This sample demonstrates

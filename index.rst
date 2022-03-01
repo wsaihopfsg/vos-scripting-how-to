@@ -52,17 +52,17 @@ Basic Topics
 || |mathfunc|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Presence / Absence Detection with GPO & Bit Functions <intro/Basic/GPIO/GPIO>`
+:doc:`Presence / Absence Detection with GPO <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|(WIP)                                                                                                      |  
+|Detection of Plastic Cap with Intensity Tool                                                               |  
 +===========================================================================================================+
-|| "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  |
-|| dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  |
-|| ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu |
-|| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt| 
-|| mollit anim id est laborum."                                                                             |
+|| This example makes use of the ``Match`` Tool to serve as a locator for other image processing tools.     |
+|| To detect whether the insulation cap has been installed on the 3-pin plug, the ROI is first preprocessed |
+|| by an ``equalizer`` before the value compared to a threshold. A pulse will be issued at the GPO ports    |
+|| depending on the inspection results.                                                                     | 
+|| |matchpix|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
 :ref:`Statistics & Attribute Functions (WIP) <todo>`
@@ -294,3 +294,5 @@ User contributions
 
 .. |mathfunc| image:: /intro/Basic/MathFunc/MathFunc.jpg
    :width: 320pt
+
+.. |matchpix| image:: /intro/Basic/GPIO/CapPresenceAbsence.png
