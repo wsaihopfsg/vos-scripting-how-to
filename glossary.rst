@@ -9,13 +9,83 @@ Glossary
 
 Tools  
 +++++++++++++++++
++----------------------------------------------+------------------------------------------------+
+|* Match                                       |* Preprocessing                                 |
+|                                              |                                                |
+|* ``Count``                                   |  * Convolve 3x3                                |
+|                                              |                                                |
+|  * :doc:`soln/RefCirSizeRect/RefCirSizeRect` |  * Dilate                                      |
+|  * :doc:`soln/DefectDots/DefectDots`         |                                                |
+|  * :doc:`soln/ROI/roi`                       |  * Equalize                                    |
+|  * :doc:`soln/Scratch/Scratch`               |                                                |
+|                                              |                                                |
+|* Edge Count                                  |  * |erode|_                                    |
+|                                              |                                                |
+|* Intensity                                   |  * Gaussian                                    |
+|                                              |                                                |
+|* Caliper                                     |  * High-pass                                   |
+|                                              |                                                |
+|* Point                                       |  * ``Invert``                                  |
+|                                              |                                                |
+|* Tip                                         |    * :doc:`soln/Scratch/Scratch`               |
+|                                              |    * :doc:`soln/DefectDots/DefectDots`         |
+|* Pencil                                      |                                                |
+|                                              |                                                |
+|* |distance|_                                 |  * Low-pass                                    |
+|                                              |                                                |
+|* |rake|_                                     |  * Mask                                        |
+|                                              |                                                |
+|* Contour                                     |  * |median|_                                   |
+|                                              |                                                |
+|* |angle|_                                    |  * |normalize|_                                |
+|                                              |                                                |
+|* Arc                                         |  * Project H                                   |
+|                                              |                                                |
+|* Circle                                      |  * Project V                                   |
+|                                              |                                                |
+|* Concentric                                  |  * ``Remove blobs``                            |
+|                                              |                                                |
+|                                              |    * :doc:`soln/Scratch/Scratch`               |
+|                                              |    * :doc:`soln/DefectDots/DefectDots`         |
+|                                              |                                                |
+|* Graphics                                    |  * Shear X                                     |
+|                                              |                                                |
+|* ``Barcode``                                 |  * Shear Y                                     |
+|                                              |                                                |
+|  * :doc:`soln/ROI/roi`                       |  * Sobel                                       |
+|  * :doc:`intro/Basic/StrFunc/StrFunc`        |                                                |
+|                                              |                                                |
+|* ``QR Code``                                 |  * Subtract                                    |
+|                                              |                                                |
+|  * :doc:`soln/ROI/roi`                       |  * |thres|_                                    |
+|  * :doc:`intro/Basic/StrFunc/StrFunc`        |                                                |
+|                                              |                                                |
+|* OCR                                         |  * ``Threshold (band)``                        |
+|                                              |                                                |
+|                                              |    * :doc:`soln/Scratch/Scratch`               |
+|                                              |    * :doc:`soln/DefectDots/DefectDots`         |
+|                                              |                                                |
+|                                              |                                                |
+|* Verify                                      |  * Thresh (adaptive)                           |
+|                                              |                                                |
+|* Color Meter                                 |  * Zoom                                        |
+|                                              |                                                |
++----------------------------------------------+------------------------------------------------+
 
-* Count
-  
-  * :doc:<soln/DefectDots/DefectDots>
-
-* some other tools
-* ...
+.. |distance| replace:: ``Distance``
+.. _distance: intro/Basic/MathFunc/MathFunc.html
+.. |rake| replace:: ``Rake``
+.. _rake: intro/Basic/MathFunc/MathFunc.html
+.. |angle| replace:: ``Angle``
+.. _angle: intro/Basic/MathFunc/MathFunc.html
+.. |erode| replace:: ``Erode``
+.. _erode: soln/Scratch/Scratch.html
+.. |median| replace:: ``Median``
+.. _median: soln/RefCirSizeRect/RefCirSizeRect.html
+.. |normalize| replace:: ``Normalize``
+.. _normalize: soln/Scratch/Scratch.html
+.. |thres| replace:: ``Threshold``
+.. _thres: soln/Scratch/Scratch.html
 
 Predefined Functions
 ++++++++++++++++++++++++
@@ -204,9 +274,11 @@ System Functions
 * TimeMillisec
 * WriteCell
 * return
+  
   * :doc:`soln/RefCirSizeRect/RefCirSizeRect`
   * :doc:`intro/Basic/StrFunc/StrFunc`
   * :doc:`intro/Basic/MathFunc/MathFunc`
+
 
 
 .. |sin| replace:: ``sin``

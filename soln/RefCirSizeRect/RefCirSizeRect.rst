@@ -6,7 +6,7 @@
   
 .. include:: /shared/EmulatorComponents.rst
 
-Using a Reference Circle to Compute Size of Rectangles 
+Use Reference Circle to Compute Size of Rectangles 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This sample demonstrates
