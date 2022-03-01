@@ -7,6 +7,8 @@
 Glossary
 ===========
 
+.. _tools:
+
 Tools  
 +++++++++++++++++
 +----------------------------------------------+------------------------------------------------+
@@ -90,196 +92,24 @@ Tools
 Predefined Functions
 ++++++++++++++++++++++++
 
+.. _maths:
+
 Mathematical Functions
 ----------------------
-* |acos|_  
-* |asin|_  
-* |atan|_
-* |atan2|_
-* ClearBit
-* |cos|_  
-* |exp|_  
-* GetBit
-* |logn|_
-* |pow|_
-* SetBit
-* |sin|_
-* |sqrt|_
-* |tan|_
 
-String Functions
----------------------
-* ``char``
-
-  *  :doc:`intro/Basic/StrFunc/StrFunc`
-  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-
-* |find|_
-
-* |float|_
-
-* ``FormatString``
-
-  *  :doc:`intro/Basic/StrFunc/StrFunc`
-  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-
-* |getchar|_
-
-* ``int``
-
-  *  :doc:`intro/Basic/StrFunc/StrFunc`
-  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-
-* |setchar|_
-
-* |string|_
-
-* ``StrLen``
-
-  * :doc:`intro/Basic/StrFunc/StrFunc`
-  * :doc:`soln/ROI/roi`
-
-* ``Substring``
-  
-  * :doc:`intro/Basic/StrFunc/StrFunc`
-  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-
-
-Statistical Functions
-----------------------
-* |getmean|_
-* |getmin|_
-* |getmax|_
-* |getstddev|_
-* |reqrelearn|_
-* ResetVarStats
-  
-Attribute Functions
-----------------------
-* DeleteVar
-* EnableFormat
-* GetNthToolType
-* GetNumElements
-* |setmatchstr|_
-* SetNthTolerances
-* GetNthTolerances
-* GetTolerances
-* GetToolName
-* GetToolResult
-* GetToolType
-* GetToolValue
-* GetVarDimension
-* ReadVar
-* |setparam|_
-* SetTolerances
-* SetToolFill
-* SetToolPenColor
-* SetToolText
-* Sort
-* WriteVar
- 
-
-IOs
-----------------------
-* GetBrightness
-* GetCamBrightness
-* GetCamExposure
-* GetContrast
-* GetExposure
-* GetFrameTime
-* GetImageFileName
-* GetNumCameras
-* GetSrcCamID
-* NewImageReady
-* Pulse
-* QueueResult
-* |retrigger|_
-* SetBrightness
-* SetCamBrightness
-* SetCamExposure
-* SetContrast
-* SetDisplayCam
-* SetExposure
-* SetImageSource
-* SetStrobeEnable
-* |trigger|_
-* TriggerCam
-* TriggerSource
-
-
-Logger
-----------------------
-* AppendFile
-* DriveConnnect
-* GetFtpStatus
-* LogStart
-* LogStop
-* LogImage
-* WriteImageFile
-* WriteImageTools
-* WriteHistoryImage
-
-Communication Functions
---------------------------
-* Disconnect
-* GetKey
-* GetPortChar
-* GetPortString
-* IsConnected
-* PutPortString
-* ReadByte
-* |rstr|_
-* SendEmail
-* SendEmailInfo
-* WriteBytes
-* |wformatstr|_
-* WriteString
-
-System Functions
---------------------------
-* AutoSaveEnable
-* ChangeSolution
-* ChangeStartupSolution
-* Copy
-* |delay|_
-* FormatTime
-* GetColor
-* GetMaxInspectTime
-* GetMinInspectTime
-* GetPixel
-* GetSolutionID
-* GetTime
-* GetTimeString
-* GetUserName
-* GetVersion
-* Print
-* ReadCell
-* RefreshExcel
-* ResetHistory
-* ResetStatistics
-* ResetRejector
-* ``SetDisplayStatus``
-
-  * :doc:`intro/Basic/StrFunc/StrFunc`
-  * :doc:`soln/DefectDots/DefectDots`
-  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-  * :doc:`soln/ROI/roi`
-  * :doc:`soln/Scratch/Scratch`
-
-* SetAppButton
-* SetImageEncode
-* StartInspect
-* StopInspect
-* SwitchingIsEnabled
-* TimeMillisec
-* WriteCell
-* return
-  
-  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`
-  * :doc:`intro/Basic/StrFunc/StrFunc`
-  * :doc:`intro/Basic/MathFunc/MathFunc`
-
-
++-----------------------------------------------+-----------------------------------------------+
+|* |acos|_                                      |* GetBit                                       |  
+|* |asin|_                                      |* |logn|_                                      |  
+|* |atan|_                                      |* |pow|_                                       |
+|* |atan2|_                                     |* SetBit                                       |
+|* ClearBit                                     |* |sin|_                                       |
+|* |cos|_                                       |* ``sqrt``                                     |
+|                                               |                                               |
+|                                               |  * :doc:`intro/Basic/MathFunc/MathFunc`       |
+|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
+|                                               |                                               |
+|* |exp|_                                       |* |tan|_                                       |
++-----------------------------------------------+-----------------------------------------------+
 
 .. |sin| replace:: ``sin``
 .. _sin: intro/Basic/MathFunc/MathFunc.html
@@ -304,6 +134,35 @@ System Functions
 .. |pow| replace:: ``pow``
 .. _pow: intro/Basic/MathFunc/MathFunc.html
 
+
+.. _strings:
+
+String Functions
+---------------------
+
++-------------------------------------------------------+-------------------------------------------------------+
+|* ``char``                                             |* ``int``                                              |
+|                                                       |                                                       |
+|  *  :doc:`intro/Basic/StrFunc/StrFunc`                |  *  :doc:`intro/Basic/StrFunc/StrFunc`                | 
+|  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |
+|                                                       |                                                       |
+|* |find|_                                              |* |setchar|_                                           |
+|                                                       |                                                       |
+|* |float|_                                             |* |string|_                                            |
+|                                                       |                                                       |
+|* ``FormatString``                                     |* ``StrLen``                                           |
+|                                                       |                                                       |
+|  *  :doc:`intro/Basic/StrFunc/StrFunc`                |  * :doc:`intro/Basic/StrFunc/StrFunc`                 |
+|  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |  * :doc:`soln/ROI/roi`                                |
+|                                                       |                                                       |
+|* |getchar|_                                           |* ``Substring``                                        |
+|                                                       |                                                       |
+|                                                       |  * :doc:`intro/Basic/StrFunc/StrFunc`                 |                                                
+|                                                       |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`          |
+|                                                       |                                                       |
+|                                                       |                                                       |
++-------------------------------------------------------+-------------------------------------------------------+
+
 .. |find| replace:: ``Find``
 .. _find: intro/Basic/StrFunc/StrFunc.html
 .. |getchar| replace:: ``GetChar``
@@ -314,6 +173,18 @@ System Functions
 .. _float: intro/Basic/StrFunc/StrFunc.html
 .. |string| replace:: ``string``
 .. _string: intro/Basic/StrFunc/StrFunc.html
+  
+  
+.. _stats:
+
+Statistical Functions
+----------------------
+* |getmean|_
+* |getmin|_
+* |getmax|_
+* |getstddev|_
+* |reqrelearn|_
+* ResetVarStats
 
 .. |getmean| replace:: ``GetMean``
 .. _getmean: intro/Basic/MathFunc/MathFunc.html
@@ -326,20 +197,125 @@ System Functions
 .. |reqrelearn| replace:: ``RequestRelearn``
 .. _reqrelearn: intro/Basic/MathFunc/MathFunc.html
 
+
+.. _attrs:
+
+Attribute Functions
+----------------------
+
++-----------------------------------------------+-----------------------------------------------+
+|* DeleteVar                                    |* ReadVar                                      |
+|* EnableFormat                                 |* |setmatchstr|_                               |
+|* GetNthToolType                               |* |setparam|_                                  |
+|* GetNumElements                               |* SetNthTolerances                             |
+|* GetNthTolerances                             |* SetTolerances                                |
+|* GetTolerances                                |* SetToolFill                                  |
+|* GetToolName                                  |* SetToolPenColor                              |
+|* GetToolResult                                |* SetToolText                                  |
+|* GetToolType                                  |* Sort                                         |
+|* GetToolValue                                 |* WriteVar                                     |
+|* GetVarDimension                              |                                               |
++-----------------------------------------------+-----------------------------------------------+
+
 .. |setmatchstr| replace:: ``SetMatchString``
 .. _setmatchstr: intro/Basic/MathFunc/MathFunc.html
 .. |setparam| replace:: ``SetParam``
 .. _setparam: soln/ROI/roi.html
+ 
+.. _ios:
+
+IOs
+----------------------
+
++-----------------------------------------------+-----------------------------------------------+
+|* GetBrightness                                |* |retrigger|_                                 |
+|* GetCamBrightness                             |* SetBrightness                                |
+|* GetCamExposure                               |* SetCamBrightness                             |
+|* GetContrast                                  |* SetCamExposure                               |
+|* GetExposure                                  |* SetContrast                                  |
+|* GetFrameTime                                 |* SetDisplayCam                                |
+|* GetImageFileName                             |* SetExposure                                  |
+|* GetNumCameras                                |* SetImageSource                               |
+|* GetSrcCamID                                  |* SetStrobeEnable                              |
+|* NewImageReady                                |* |trigger|_                                   |
+|* Pulse                                        |* TriggerCam                                   |
+|* QueueResult                                  |* TriggerSource                                |
++-----------------------------------------------+-----------------------------------------------+
 
 .. |retrigger| replace:: ``ReTrigger``
 .. _retrigger: soln/ROI/roi.html
 .. |trigger| replace:: ``Trigger``
 .. _trigger: soln/RefCirSizeRect/RefCirSizeRect.html
 
+
+.. _logs:
+
+Logger
+----------------------
+
++-----------------------------------------------+-----------------------------------------------+
+|* AppendFile                                   |* LogImage                                     |
+|* DriveConnnect                                |* WriteImageFile                               |
+|* GetFtpStatus                                 |* WriteImageTools                              |
+|* LogStart                                     |* WriteHistoryImage                            |
+|* LogStop                                      |                                               |
++-----------------------------------------------+-----------------------------------------------+
+
+.. _comms:
+
+Communication Functions
+--------------------------
+
++-----------------------------------------------+-----------------------------------------------+
+|* Disconnect                                   |* |rstr|_                                      |
+|* GetKey                                       |* SendEmail                                    |
+|* GetPortChar                                  |* SendEmailInfo                                |
+|* GetPortString                                |* WriteBytes                                   |
+|* IsConnected                                  |* |wformatstr|_                                |
+|* PutPortString                                |* WriteString                                  |
+|* ReadByte                                     |                                               |
++-----------------------------------------------+-----------------------------------------------+
+
 .. |wformatstr| replace:: ``WriteFormatString``
 .. _wformatstr: soln/RefCirSizeRect/RefCirSizeRect.html
 .. |rstr| replace:: ``ReadString``
 .. _rstr: soln/RefCirSizeRect/RefCirSizeRect.html
+
+.. _sys:
+
+System Functions
+--------------------------
+
++-----------------------------------------------+-----------------------------------------------+
+|* AutoSaveEnable                               |* Print                                        |
+|* ChangeSolution                               |* ReadCell                                     |
+|* ChangeStartupSolution                        |* RefreshExcel                                 |
+|* Copy                                         |* ResetHistory                                 |
+|* |delay|_                                     |* ResetStatistics                              |
+|* FormatTime                                   |* ResetRejector                                |
+|* GetColor                                     |* ``SetDisplayStatus``                         |
+|                                               |                                               |
+|                                               |  * :doc:`intro/Basic/StrFunc/StrFunc`         |
+|                                               |  * :doc:`soln/DefectDots/DefectDots`          |
+|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
+|                                               |  * :doc:`soln/ROI/roi`                        |
+|                                               |  * :doc:`soln/Scratch/Scratch`                |
+|                                               |                                               |
+|* GetMaxInspectTime                            |* SetAppButton                                 |
+|* GetMinInspectTime                            |* SetImageEncode                               |
+|* GetPixel                                     |* StartInspect                                 |
+|* GetSolutionID                                |* StopInspect                                  |
+|* GetTime                                      |* SwitchingIsEnabled                           |
+|* GetTimeString                                |* TimeMillisec                                 |
+|* GetUserName                                  |* WriteCell                                    |
+|* GetVersion                                   |* return                                       |
+|                                               |                                               |
+|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
+|                                               |  * :doc:`intro/Basic/StrFunc/StrFunc`         |
+|                                               |  * :doc:`intro/Basic/MathFunc/MathFunc`       |
+|                                               |                                               |
++-----------------------------------------------+-----------------------------------------------+
+  
 
 .. |delay| replace:: ``Delay``
 .. _delay: soln/ROI/roi.html

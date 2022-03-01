@@ -254,6 +254,17 @@ User contributions
 :doc:`Glossary <glossary>`
 ============================
 
+* :ref:`Tools <tools>`
+* :ref:`Mathematical Functions <maths>`
+* :ref:`String Functions <strings>`
+* :ref:`Statistical Functions <stats>`
+* :ref:`Attribute Functions <attrs>`
+* :ref:`IOs <ios>`
+* :ref:`Logger <logs>`
+* :ref:`Communication Functions <comms>`
+* :ref:`System Functions <sys>`
+
+
 
 .. |refCir| image:: /soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
