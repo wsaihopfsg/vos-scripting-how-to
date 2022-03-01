@@ -251,6 +251,10 @@ User contributions
 || |OCR57|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
+:doc:`Glossary <glossary>`
+============================
+
+
 .. |refCir| image:: /soln/RefCirSizeRect/refCirManyRect.JPG
    :width: 480pt
    :height: 480pt

@@ -1,6 +1,6 @@
 :orphan:
 
-.. _todo:
+.. _todo:  
 
 .. toctree::
 
@@ -9,10 +9,17 @@
 TODO 
 +++++++++++++++++
 
-This sample demonstrates
+Summary of todo
 
-#. 1st point
-#. 2nd point
+1. Script panel run through, same as Bible p6-8
+2. Intensity based GPO; locator based on CE mark
+  
+  * Pulsed GPO for pass/fail/recycle
+  * difference between Equalize & Normalize
+  * Image correction with brightness & contrast?
+  * Tolerance settings, p19-21 in Bible
+
+3. HKID...?  
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
 ------------------------------------------------------------------------------------------------------
