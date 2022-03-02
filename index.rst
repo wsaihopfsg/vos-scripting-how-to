@@ -61,7 +61,7 @@ Basic Topics
 || This example makes use of the ``Match`` Tool to serve as a locator for other image processing tools.     |
 || To detect whether the insulation cap has been installed on the 3-pin plug, the ROI is first preprocessed |
 || by an ``equalizer`` before the value compared to a threshold. A pulse will be issued at the GPO ports    |
-|| depending on the inspection results.                                                                     | 
+|| depending on the inspection results. Bit functions are demonstrated too.                                 | 
 || |matchpix|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
@@ -251,8 +251,8 @@ User contributions
 || |OCR57|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Glossary <glossary>`
-============================
+:doc:`Glossary <Glossary/Glossary>`
+========================================
 
 * :ref:`Tools <tools>`
 * :ref:`Mathematical Functions <maths>`
