@@ -95,11 +95,7 @@ Mathematical Functions
 |* |atan|_                                      |* |pow|_                                       |
 |* |atan2|_                                     |* SetBit                                       |
 |* ClearBit                                     |* |sin|_                                       |
-|* |cos|_                                       |* ``sqrt``                                     |
-|                                               |                                               |
-|                                               |  * :doc:`intro/Basic/MathFunc/MathFunc`       |
-|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
-|                                               |                                               |
+|* |cos|_                                       |* :confval:`sqrt <sqrt>`                       |
 |* |exp|_                                       |* |tan|_                                       |
 +-----------------------------------------------+-----------------------------------------------+
 
@@ -133,25 +129,15 @@ String Functions
 ---------------------
 
 +-------------------------------------------------------+-------------------------------------------------------+
-|* ``char``                                             |* ``int``                                              |
-|                                                       |                                                       |
-|  *  :doc:`intro/Basic/StrFunc/StrFunc`                |  *  :doc:`intro/Basic/StrFunc/StrFunc`                | 
-|  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |
+|* :confval:`char <char>`                               |* :confval:`int <int>`                                 |
 |                                                       |                                                       |
 |* |find|_                                              |* |setchar|_                                           |
 |                                                       |                                                       |
 |* |float|_                                             |* |string|_                                            |
 |                                                       |                                                       |
-|* ``FormatString``                                     |* ``StrLen``                                           |
+|* :confval:`FormatString <FormatString>`               |* :confval:`StrLen <StrLen>`                           |
 |                                                       |                                                       |
-|  *  :doc:`intro/Basic/StrFunc/StrFunc`                |  * :doc:`intro/Basic/StrFunc/StrFunc`                 |
-|  *  :doc:`soln/RefCirSizeRect/RefCirSizeRect`         |  * :doc:`soln/ROI/roi`                                |
-|                                                       |                                                       |
-|* |getchar|_                                           |* ``Substring``                                        |
-|                                                       |                                                       |
-|                                                       |  * :doc:`intro/Basic/StrFunc/StrFunc`                 |                                                
-|                                                       |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`          |
-|                                                       |                                                       |
+|* |getchar|_                                           |* :confval:`Substring <Substring>`                     |
 |                                                       |                                                       |
 +-------------------------------------------------------+-------------------------------------------------------+
 
@@ -171,12 +157,12 @@ String Functions
 
 Statistical Functions
 ----------------------
-* |getmean|_
-* |getmin|_
-* |getmax|_
-* |getstddev|_
-* |reqrelearn|_
-* ResetVarStats
+
++--------------------+--------------------+
+|* |getmean|_        |* |getstddev|_      |
+|* |getmin|_         |* |reqrelearn|_     |
+|* |getmax|_         |* ResetVarStats     |
++--------------------+--------------------+
 
 .. |getmean| replace:: ``GetMean``
 .. _getmean: intro/Basic/MathFunc/MathFunc.html
@@ -285,14 +271,7 @@ System Functions
 |* Copy                                         |* ResetHistory                                 |
 |* |delay|_                                     |* ResetStatistics                              |
 |* FormatTime                                   |* ResetRejector                                |
-|* GetColor                                     |* ``SetDisplayStatus``                         |
-|                                               |                                               |
-|                                               |  * :doc:`intro/Basic/StrFunc/StrFunc`         |
-|                                               |  * :doc:`soln/DefectDots/DefectDots`          |
-|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
-|                                               |  * :doc:`soln/ROI/roi`                        |
-|                                               |  * :doc:`soln/Scratch/Scratch`                |
-|                                               |                                               |
+|* GetColor                                     |* :confval:`SetDisplayStatus<SetDisplayStatus>`|
 |* GetMaxInspectTime                            |* SetAppButton                                 |
 |* GetMinInspectTime                            |* SetImageEncode                               |
 |* GetPixel                                     |* StartInspect                                 |
@@ -301,11 +280,6 @@ System Functions
 |* GetTimeString                                |* TimeMillisec                                 |
 |* GetUserName                                  |* WriteCell                                    |
 |* GetVersion                                   |* return                                       |
-|                                               |                                               |
-|                                               |  * :doc:`soln/RefCirSizeRect/RefCirSizeRect`  |
-|                                               |  * :doc:`intro/Basic/StrFunc/StrFunc`         |
-|                                               |  * :doc:`intro/Basic/MathFunc/MathFunc`       |
-|                                               |                                               |
 +-----------------------------------------------+-----------------------------------------------+
   
 
