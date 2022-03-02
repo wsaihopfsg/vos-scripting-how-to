@@ -14,12 +14,12 @@ Tools
 +-----------------------------------------------------------+------------------------------------------------+
 |* |match|_                                                 |* Preprocessing                                 |
 |                                                           |                                                |
-|* :confval:`Count <Glossary/Count:Count>`                  |  * Convolve 3x3                                |
+|* :confval:`Count <conf-title>`                            |  * Convolve 3x3                                |
 |                                                           |                                                |
-|  * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`             |  * Dilate                                      |
-|  * :doc:`/soln/DefectDots/DefectDots`                     |                                                |
-|  * :doc:`/soln/ROI/roi`                                   |  * |equalize|_                                 |
-|  * :doc:`/soln/Scratch/Scratch`                           |                                                |
+|                                                           |  * Dilate                                      |
+|                                                           |                                                |
+|                                                           |  * |equalize|_                                 |
+|                                                           |                                                |
 |                                                           |                                                |
 |* Edge Count                                               |  * |erode|_                                    |
 |                                                           |                                                |
@@ -52,15 +52,15 @@ Tools
 |                                                           |                                                |
 |* Graphics                                                 |  * Shear X                                     |
 |                                                           |                                                |
-|* ``Barcode``                                              |  * Shear Y                                     |
+|* :hoverxreftooltip:`Barcode <Glossary/barQR:1&2-D Codes>` |  * Shear Y                                     |
 |                                                           |                                                |
-|  * :doc:`soln/ROI/roi`                                    |  * Sobel                                       |
-|  * :doc:`intro/Basic/StrFunc/StrFunc`                     |                                                |
+|                                                           |  * Sobel                                       |
 |                                                           |                                                |
-|* ``QR Code``                                              |  * Subtract                                    |
 |                                                           |                                                |
-|  * :doc:`soln/ROI/roi`                                    |  * |thres|_                                    |
-|  * :doc:`intro/Basic/StrFunc/StrFunc`                     |                                                |
+|* :hoverxreftooltip:`QR Code <Glossary/barQR:1&2-D Codes>` |  * Subtract                                    |
+|                                                           |                                                |
+|                                                           |  * |thres|_                                    |
+|                                                           |                                                |
 |                                                           |                                                |
 |* OCR                                                      |  * ``Threshold (band)``                        |
 |                                                           |                                                |

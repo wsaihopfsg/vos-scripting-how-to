@@ -66,16 +66,19 @@ html_theme_options = {
 }
 
 hoverxref_roles = [
-    'confval'
+    'confval',
+    'numref',
 ]
 
-hoverxref_role_types={
-    'hoverxref': 'modal',
-    'ref': 'modal',  # for hoverxref_auto_ref config
-    'confval': 'tooltip',  # for custom object
-    'mod': 'tooltip',  # for Python Sphinx Domain
-    'class': 'tooltip',  # for Python Sphinx Domain
-}
+#hoverxref_role_types={
+#    'hoverxref': 'modal',
+#    'ref': 'modal',  # for hoverxref_auto_ref config
+#    'confval': 'tooltip',  # for custom object
+#    'mod': 'tooltip',  # for Python Sphinx Domain
+#    'class': 'tooltip',  # for Python Sphinx Domain
+#}
+
+numfig = True
 
 def setup(app):
     app.add_object_type(
