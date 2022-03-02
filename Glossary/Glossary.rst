@@ -11,68 +11,54 @@ Glossary
 
 Tools  
 +++++++++++++++++
-+-----------------------------------------------------------+------------------------------------------------+
-|* |match|_                                                 |* Preprocessing                                 |
-|                                                           |                                                |
-|* :confval:`Count <counts>`                                |  * Convolve 3x3                                |
-|                                                           |                                                |
-|                                                           |  * Dilate                                      |
-|                                                           |                                                |
-|                                                           |  * |equalize|_                                 |
-|                                                           |                                                |
-|                                                           |                                                |
-|* Edge Count                                               |  * |erode|_                                    |
-|                                                           |                                                |
-|* |intensity|_                                             |  * Gaussian                                    |
-|                                                           |                                                |
-|* Caliper                                                  |  * High-pass (Sharpen)                         |
-|                                                           |                                                |
-|* Point                                                    |  * ``Invert``                                  |
-|                                                           |                                                |
-|* Tip                                                      |    * :doc:`soln/Scratch/Scratch`               |
-|                                                           |    * :doc:`soln/DefectDots/DefectDots`         |
-|* Pencil                                                   |                                                |
-|                                                           |                                                |
-|* |distance|_                                              |  * Low-pass (Blur)                             |
-|                                                           |                                                |
-|* |rake|_                                                  |  * Mask                                        |
-|                                                           |                                                |
-|* Contour                                                  |  * |median|_                                   |
-|                                                           |                                                |
-|* |angle|_                                                 |  * |normalize|_                                |
-|                                                           |                                                |
-|* Arc                                                      |  * Project H                                   |
-|                                                           |                                                |
-|* Circle                                                   |  * Project V                                   |
-|                                                           |                                                |
-|* Concentric                                               |  * ``Remove blobs``                            |
-|                                                           |                                                |
-|                                                           |    * :doc:`soln/Scratch/Scratch`               |
-|                                                           |    * :doc:`soln/DefectDots/DefectDots`         |
-|                                                           |                                                |
-|* Graphics                                                 |  * Shear X                                     |
-|                                                           |                                                |
-|* :hoverxreftooltip:`Barcode <Glossary/barQR:1&2-D Codes>` |  * Shear Y                                     |
-|                                                           |                                                |
-|                                                           |  * Sobel                                       |
-|                                                           |                                                |
-|                                                           |                                                |
-|* :hoverxreftooltip:`QR Code <Glossary/barQR:1&2-D Codes>` |  * Subtract                                    |
-|                                                           |                                                |
-|                                                           |  * |thres|_                                    |
-|                                                           |                                                |
-|                                                           |                                                |
-|* OCR                                                      |  * ``Threshold (band)``                        |
-|                                                           |                                                |
-|                                                           |    * :doc:`soln/Scratch/Scratch`               |
-|                                                           |    * :doc:`soln/DefectDots/DefectDots`         |
-|                                                           |                                                |
-|                                                           |                                                |
-|* Verify                                                   |  * Thresh (adaptive)                           |
-|                                                           |                                                |
-|* Color Meter                                              |  * Zoom                                        |
-|                                                           |                                                |
-+-----------------------------------------------------------+------------------------------------------------+
++-----------------------------------------------------------+--------------------------------------------------------+
+|* |match|_                                                 |* Preprocessing                                         |
+|                                                           |                                                        |
+|* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
+|                                                           |                                                        |
+|* Edge Count                                               |  * Dilate                                              |
+|                                                           |                                                        |
+|* |intensity|_                                             |  * |equalize|_                                         |
+|                                                           |                                                        |
+|* Caliper                                                  |  * |erode|_                                            |
+|                                                           |                                                        |
+|* Point                                                    |  * Gaussian                                            |
+|                                                           |                                                        |
+|* Tip                                                      |  * High-pass (Sharpen)                                 |
+|                                                           |                                                        |
+|* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
+|                                                           |                                                        |
+|* |distance|_                                              |  * Low-pass (Blur)                                     |
+|                                                           |                                                        |
+|* |rake|_                                                  |  * Mask                                                |
+|                                                           |                                                        |
+|* Contour                                                  |  * |median|_                                           |
+|                                                           |                                                        |
+|* |angle|_                                                 |  * |normalize|_                                        |
+|                                                           |                                                        |
+|* Arc                                                      |  * Project H                                           |
+|                                                           |                                                        |
+|* Circle                                                   |  * Project V                                           |
+|                                                           |                                                        |
+|* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
+|                                                           |                                                        |
+|* Graphics                                                 |  * Shear X                                             |
+|                                                           |                                                        |
+|* :confval:`Barcode <Barcode>`                             |  * Shear Y                                             |
+|                                                           |                                                        |
+|                                                           |  * Sobel                                               |
+|                                                           |                                                        |
+|* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
+|                                                           |                                                        |
+|                                                           |  * |thres|_                                            |
+|                                                           |                                                        |
+|* OCR                                                      |  * :confval:`Threshold (band) <Threshold (band)>`      |
+|                                                           |                                                        |
+|* Verify                                                   |  * Thresh (adaptive)                                   |
+|                                                           |                                                        |
+|* Color Meter                                              |  * Zoom                                                |
+|                                                           |                                                        |
++-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |distance| replace:: ``Distance``
 .. _distance: intro/Basic/MathFunc/MathFunc.html

@@ -3,7 +3,7 @@
 Configuration
 =============
 
-.. confval:: counts
+.. confval:: Count
 
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
    * :doc:`/soln/DefectDots/DefectDots`
@@ -11,6 +11,27 @@ Configuration
    * :doc:`/soln/Scratch/Scratch`
 
 
-.. confval:: conf-another-title
+.. confval:: Barcode 
 
-   This is another description.
+   * :doc:`/soln/ROI/roi`
+   * :doc:`/intro/Basic/StrFunc/StrFunc`
+
+.. confval:: QR Code 
+
+   * :doc:`/soln/ROI/roi`
+   * :doc:`/intro/Basic/StrFunc/StrFunc`
+
+.. confval:: Invert
+
+   * :doc:`soln/Scratch/Scratch`
+   * :doc:`soln/DefectDots/DefectDots` 
+
+.. confval:: Remove blobs
+    
+   * :doc:`soln/Scratch/Scratch`
+   * :doc:`soln/DefectDots/DefectDots` 
+
+.. confval:: Threshold (band)
+    
+   * :doc:`soln/Scratch/Scratch`
+   * :doc:`soln/DefectDots/DefectDots` 
