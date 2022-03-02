@@ -86,3 +86,4 @@ def setup(app):
         'confval',  # rolename
         'pair: %s; configuration value',  # indextemplate
     ) 
+    app.add_css_file('css/custom.css')

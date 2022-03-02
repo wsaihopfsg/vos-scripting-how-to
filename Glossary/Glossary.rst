@@ -11,54 +11,36 @@ Glossary
 
 Tools  
 +++++++++++++++++
-+-----------------------------------------------------------+--------------------------------------------------------+
-|* |match|_                                                 |* Preprocessing                                         |
-|                                                           |                                                        |
-|* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
-|                                                           |                                                        |
-|* Edge Count                                               |  * Dilate                                              |
-|                                                           |                                                        |
-|* |intensity|_                                             |  * |equalize|_                                         |
-|                                                           |                                                        |
-|* Caliper                                                  |  * |erode|_                                            |
-|                                                           |                                                        |
-|* Point                                                    |  * Gaussian                                            |
-|                                                           |                                                        |
-|* Tip                                                      |  * High-pass (Sharpen)                                 |
-|                                                           |                                                        |
-|* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
-|                                                           |                                                        |
-|* |distance|_                                              |  * Low-pass (Blur)                                     |
-|                                                           |                                                        |
-|* |rake|_                                                  |  * Mask                                                |
-|                                                           |                                                        |
-|* Contour                                                  |  * |median|_                                           |
-|                                                           |                                                        |
-|* |angle|_                                                 |  * |normalize|_                                        |
-|                                                           |                                                        |
-|* Arc                                                      |  * Project H                                           |
-|                                                           |                                                        |
-|* Circle                                                   |  * Project V                                           |
-|                                                           |                                                        |
-|* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
-|                                                           |                                                        |
-|* Graphics                                                 |  * Shear X                                             |
-|                                                           |                                                        |
-|* :confval:`Barcode <Barcode>`                             |  * Shear Y                                             |
-|                                                           |                                                        |
-|                                                           |  * Sobel                                               |
-|                                                           |                                                        |
-|* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
-|                                                           |                                                        |
-|                                                           |  * |thres|_                                            |
-|                                                           |                                                        |
-|* OCR                                                      |  * :confval:`Threshold (band) <Threshold (band)>`      |
-|                                                           |                                                        |
-|* Verify                                                   |  * Thresh (adaptive)                                   |
-|                                                           |                                                        |
-|* Color Meter                                              |  * Zoom                                                |
-|                                                           |                                                        |
-+-----------------------------------------------------------+--------------------------------------------------------+
+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------------------+--------------------------------------------------------+
+   |* |match|_                                                 |* Preprocessing                                         |
+   |                                                           |                                                        |
+   |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
+   |* Edge Count                                               |  * Dilate                                              |
+   |* |intensity|_                                             |  * |equalize|_                                         |
+   |* Caliper                                                  |  * |erode|_                                            |
+   |* Point                                                    |  * Gaussian                                            |
+   |* Tip                                                      |  * High-pass (Sharpen)                                 |
+   |* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
+   |* |distance|_                                              |  * Low-pass (Blur)                                     |
+   |* |rake|_                                                  |  * Mask                                                |
+   |* Contour                                                  |  * |median|_                                           |
+   |* |angle|_                                                 |  * |normalize|_                                        |
+   |* Arc                                                      |  * Project H                                           |
+   |* Circle                                                   |  * Project V                                           |
+   |* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
+   |* Graphics                                                 |  * Shear X                                             |
+   |* :confval:`Barcode <Barcode>`                             |  * Shear Y                                             |
+   |                                                           |  * Sobel                                               |
+   |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
+   |                                                           |  * |thres|_                                            |
+   |* OCR                                                      |  * :confval:`Threshold (band) <Threshold (band)>`      |
+   |* Verify                                                   |  * Thresh (adaptive)                                   |
+   |* Color Meter                                              |  * Zoom                                                |
+   +-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |distance| replace:: ``Distance``
 .. _distance: intro/Basic/MathFunc/MathFunc.html
@@ -89,15 +71,18 @@ Predefined Functions
 Mathematical Functions
 ----------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* |acos|_                                      |* GetBit                                       |  
-|* |asin|_                                      |* |logn|_                                      |  
-|* |atan|_                                      |* |pow|_                                       |
-|* |atan2|_                                     |* SetBit                                       |
-|* ClearBit                                     |* |sin|_                                       |
-|* |cos|_                                       |* :confval:`sqrt <sqrt>`                       |
-|* |exp|_                                       |* |tan|_                                       |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* |acos|_                                      |* GetBit                                       |  
+   |* |asin|_                                      |* |logn|_                                      |  
+   |* |atan|_                                      |* |pow|_                                       |
+   |* |atan2|_                                     |* SetBit                                       |
+   |* ClearBit                                     |* |sin|_                                       |
+   |* |cos|_                                       |* :confval:`sqrt <sqrt>`                       |
+   |* |exp|_                                       |* |tan|_                                       |
+   +-----------------------------------------------+-----------------------------------------------+
 
 .. |sin| replace:: ``sin``
 .. _sin: intro/Basic/MathFunc/MathFunc.html
@@ -128,18 +113,21 @@ Mathematical Functions
 String Functions
 ---------------------
 
-+-------------------------------------------------------+-------------------------------------------------------+
-|* :confval:`char <char>`                               |* :confval:`int <int>`                                 |
-|                                                       |                                                       |
-|* |find|_                                              |* |setchar|_                                           |
-|                                                       |                                                       |
-|* |float|_                                             |* |string|_                                            |
-|                                                       |                                                       |
-|* :confval:`FormatString <FormatString>`               |* :confval:`StrLen <StrLen>`                           |
-|                                                       |                                                       |
-|* |getchar|_                                           |* :confval:`Substring <Substring>`                     |
-|                                                       |                                                       |
-+-------------------------------------------------------+-------------------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-------------------------------------------------------+-------------------------------------------------------+
+   |* :confval:`char <char>`                               |* :confval:`int <int>`                                 |
+   |                                                       |                                                       |
+   |* |find|_                                              |* |setchar|_                                           |
+   |                                                       |                                                       |
+   |* |float|_                                             |* |string|_                                            |
+   |                                                       |                                                       |
+   |* :confval:`FormatString <FormatString>`               |* :confval:`StrLen <StrLen>`                           |
+   |                                                       |                                                       |
+   |* |getchar|_                                           |* :confval:`Substring <Substring>`                     |
+   |                                                       |                                                       |
+   +-------------------------------------------------------+-------------------------------------------------------+
 
 .. |find| replace:: ``Find``
 .. _find: intro/Basic/StrFunc/StrFunc.html
@@ -158,11 +146,14 @@ String Functions
 Statistical Functions
 ----------------------
 
-+--------------------+--------------------+
-|* |getmean|_        |* |getstddev|_      |
-|* |getmin|_         |* |reqrelearn|_     |
-|* |getmax|_         |* ResetVarStats     |
-+--------------------+--------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +--------------------+--------------------+
+   |* |getmean|_        |* |getstddev|_      |
+   |* |getmin|_         |* |reqrelearn|_     |
+   |* |getmax|_         |* ResetVarStats     |
+   +--------------------+--------------------+
 
 .. |getmean| replace:: ``GetMean``
 .. _getmean: intro/Basic/MathFunc/MathFunc.html
@@ -181,19 +172,22 @@ Statistical Functions
 Attribute Functions
 ----------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* DeleteVar                                    |* ReadVar                                      |
-|* EnableFormat                                 |* |setmatchstr|_                               |
-|* GetNthToolType                               |* |setparam|_                                  |
-|* GetNumElements                               |* SetNthTolerances                             |
-|* GetNthTolerances                             |* SetTolerances                                |
-|* GetTolerances                                |* SetToolFill                                  |
-|* GetToolName                                  |* SetToolPenColor                              |
-|* GetToolResult                                |* SetToolText                                  |
-|* GetToolType                                  |* Sort                                         |
-|* GetToolValue                                 |* WriteVar                                     |
-|* GetVarDimension                              |                                               |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* DeleteVar                                    |* ReadVar                                      |
+   |* EnableFormat                                 |* |setmatchstr|_                               |
+   |* GetNthToolType                               |* |setparam|_                                  |
+   |* GetNumElements                               |* SetNthTolerances                             |
+   |* GetNthTolerances                             |* SetTolerances                                |
+   |* GetTolerances                                |* SetToolFill                                  |
+   |* GetToolName                                  |* SetToolPenColor                              |
+   |* GetToolResult                                |* SetToolText                                  |
+   |* GetToolType                                  |* Sort                                         |
+   |* GetToolValue                                 |* WriteVar                                     |
+   |* GetVarDimension                              |                                               |
+   +-----------------------------------------------+-----------------------------------------------+
 
 .. |setmatchstr| replace:: ``SetMatchString``
 .. _setmatchstr: intro/Basic/MathFunc/MathFunc.html
@@ -205,20 +199,23 @@ Attribute Functions
 IOs
 ----------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* GetBrightness                                |* |retrigger|_                                 |
-|* GetCamBrightness                             |* SetBrightness                                |
-|* GetCamExposure                               |* SetCamBrightness                             |
-|* GetContrast                                  |* SetCamExposure                               |
-|* GetExposure                                  |* SetContrast                                  |
-|* GetFrameTime                                 |* SetDisplayCam                                |
-|* GetImageFileName                             |* SetExposure                                  |
-|* GetNumCameras                                |* SetImageSource                               |
-|* GetSrcCamID                                  |* SetStrobeEnable                              |
-|* NewImageReady                                |* |trigger|_                                   |
-|* Pulse                                        |* TriggerCam                                   |
-|* QueueResult                                  |* TriggerSource                                |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* GetBrightness                                |* |retrigger|_                                 |
+   |* GetCamBrightness                             |* SetBrightness                                |
+   |* GetCamExposure                               |* SetCamBrightness                             |
+   |* GetContrast                                  |* SetCamExposure                               |
+   |* GetExposure                                  |* SetContrast                                  |
+   |* GetFrameTime                                 |* SetDisplayCam                                |
+   |* GetImageFileName                             |* SetExposure                                  |
+   |* GetNumCameras                                |* SetImageSource                               |
+   |* GetSrcCamID                                  |* SetStrobeEnable                              |
+   |* NewImageReady                                |* |trigger|_                                   |
+   |* Pulse                                        |* TriggerCam                                   |
+   |* QueueResult                                  |* TriggerSource                                |
+   +-----------------------------------------------+-----------------------------------------------+
 
 .. |retrigger| replace:: ``ReTrigger``
 .. _retrigger: soln/ROI/roi.html
@@ -231,28 +228,34 @@ IOs
 Logger
 ----------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* AppendFile                                   |* LogImage                                     |
-|* DriveConnnect                                |* WriteImageFile                               |
-|* GetFtpStatus                                 |* WriteImageTools                              |
-|* LogStart                                     |* WriteHistoryImage                            |
-|* LogStop                                      |                                               |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* AppendFile                                   |* LogImage                                     |
+   |* DriveConnnect                                |* WriteImageFile                               |
+   |* GetFtpStatus                                 |* WriteImageTools                              |
+   |* LogStart                                     |* WriteHistoryImage                            |
+   |* LogStop                                      |                                               |
+   +-----------------------------------------------+-----------------------------------------------+
 
 .. _comms:
 
 Communication Functions
 --------------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* Disconnect                                   |* |rstr|_                                      |
-|* GetKey                                       |* SendEmail                                    |
-|* GetPortChar                                  |* SendEmailInfo                                |
-|* GetPortString                                |* WriteBytes                                   |
-|* IsConnected                                  |* |wformatstr|_                                |
-|* PutPortString                                |* WriteString                                  |
-|* ReadByte                                     |                                               |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* Disconnect                                   |* |rstr|_                                      |
+   |* GetKey                                       |* SendEmail                                    |
+   |* GetPortChar                                  |* SendEmailInfo                                |
+   |* GetPortString                                |* WriteBytes                                   |
+   |* IsConnected                                  |* |wformatstr|_                                |
+   |* PutPortString                                |* WriteString                                  |
+   |* ReadByte                                     |                                               |
+   +-----------------------------------------------+-----------------------------------------------+
 
 .. |wformatstr| replace:: ``WriteFormatString``
 .. _wformatstr: soln/RefCirSizeRect/RefCirSizeRect.html
@@ -264,23 +267,26 @@ Communication Functions
 System Functions
 --------------------------
 
-+-----------------------------------------------+-----------------------------------------------+
-|* AutoSaveEnable                               |* Print                                        |
-|* ChangeSolution                               |* ReadCell                                     |
-|* ChangeStartupSolution                        |* RefreshExcel                                 |
-|* Copy                                         |* ResetHistory                                 |
-|* |delay|_                                     |* ResetStatistics                              |
-|* FormatTime                                   |* ResetRejector                                |
-|* GetColor                                     |* :confval:`SetDisplayStatus<SetDisplayStatus>`|
-|* GetMaxInspectTime                            |* SetAppButton                                 |
-|* GetMinInspectTime                            |* SetImageEncode                               |
-|* GetPixel                                     |* StartInspect                                 |
-|* GetSolutionID                                |* StopInspect                                  |
-|* GetTime                                      |* SwitchingIsEnabled                           |
-|* GetTimeString                                |* TimeMillisec                                 |
-|* GetUserName                                  |* WriteCell                                    |
-|* GetVersion                                   |* return                                       |
-+-----------------------------------------------+-----------------------------------------------+
+.. table::
+   :class: wy-table-responsive table
+
+   +-----------------------------------------------+-----------------------------------------------+
+   |* AutoSaveEnable                               |* Print                                        |
+   |* ChangeSolution                               |* ReadCell                                     |
+   |* ChangeStartupSolution                        |* RefreshExcel                                 |
+   |* Copy                                         |* ResetHistory                                 |
+   |* |delay|_                                     |* ResetStatistics                              |
+   |* FormatTime                                   |* ResetRejector                                |
+   |* GetColor                                     |* :confval:`SetDisplayStatus<SetDisplayStatus>`|
+   |* GetMaxInspectTime                            |* SetAppButton                                 |
+   |* GetMinInspectTime                            |* SetImageEncode                               |
+   |* GetPixel                                     |* StartInspect                                 |
+   |* GetSolutionID                                |* StopInspect                                  |
+   |* GetTime                                      |* SwitchingIsEnabled                           |
+   |* GetTimeString                                |* TimeMillisec                                 |
+   |* GetUserName                                  |* WriteCell                                    |
+   |* GetVersion                                   |* :confval:`Return <Return>`                   |
+   +-----------------------------------------------+-----------------------------------------------+
   
 
 .. |delay| replace:: ``Delay``
