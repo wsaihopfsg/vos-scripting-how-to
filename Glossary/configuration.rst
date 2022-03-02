@@ -3,9 +3,12 @@
 Configuration
 =============
 
-.. confval:: conf-title
+.. confval:: counts
 
-   This is the description.
+   * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
+   * :doc:`/soln/DefectDots/DefectDots`
+   * :doc:`/soln/ROI/roi`
+   * :doc:`/soln/Scratch/Scratch`
 
 
 .. confval:: conf-another-title

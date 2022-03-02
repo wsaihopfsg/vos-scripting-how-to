@@ -14,7 +14,7 @@ Tools
 +-----------------------------------------------------------+------------------------------------------------+
 |* |match|_                                                 |* Preprocessing                                 |
 |                                                           |                                                |
-|* :confval:`Count <conf-title>`                            |  * Convolve 3x3                                |
+|* :confval:`Count <counts>`                                |  * Convolve 3x3                                |
 |                                                           |                                                |
 |                                                           |  * Dilate                                      |
 |                                                           |                                                |
