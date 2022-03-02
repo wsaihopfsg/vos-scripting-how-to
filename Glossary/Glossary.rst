@@ -57,7 +57,7 @@ Tools
 .. |thres| replace:: ``Threshold``
 .. _thres: soln/Scratch/Scratch.html
 .. |match| replace:: ``Match``
-.. _match: intro/Basic/GPIO/GPIO.html
+.. _match: ../intro/Basic/GPIO/GPIO.html
 .. |intensity| replace:: ``Intensity``
 .. _intensity: intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
