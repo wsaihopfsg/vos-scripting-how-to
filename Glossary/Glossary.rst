@@ -43,25 +43,25 @@ Tools
    +-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |distance| replace:: ``Distance``
-.. _distance: intro/Basic/MathFunc/MathFunc.html
+.. _distance: ../intro/Basic/MathFunc/MathFunc.html
 .. |rake| replace:: ``Rake``
-.. _rake: intro/Basic/MathFunc/MathFunc.html
+.. _rake: ../intro/Basic/MathFunc/MathFunc.html
 .. |angle| replace:: ``Angle``
-.. _angle: intro/Basic/MathFunc/MathFunc.html
+.. _angle: ../intro/Basic/MathFunc/MathFunc.html
 .. |erode| replace:: ``Erode``
-.. _erode: soln/Scratch/Scratch.html
+.. _erode: ../soln/Scratch/Scratch.html
 .. |median| replace:: ``Median``
-.. _median: soln/RefCirSizeRect/RefCirSizeRect.html
+.. _median: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |normalize| replace:: ``Normalize``
-.. _normalize: soln/Scratch/Scratch.html
+.. _normalize: ../soln/Scratch/Scratch.html
 .. |thres| replace:: ``Threshold``
-.. _thres: soln/Scratch/Scratch.html
+.. _thres: ../soln/Scratch/Scratch.html
 .. |match| replace:: ``Match``
 .. _match: ../intro/Basic/GPIO/GPIO.html
 .. |intensity| replace:: ``Intensity``
-.. _intensity: intro/Basic/GPIO/GPIO.html
+.. _intensity: ../intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
-.. _equalize: intro/Basic/GPIO/GPIO.html
+.. _equalize: ../intro/Basic/GPIO/GPIO.html
 
 Predefined Functions
 ++++++++++++++++++++++++
@@ -85,27 +85,27 @@ Mathematical Functions
    +-----------------------------------------------+-----------------------------------------------+
 
 .. |sin| replace:: ``sin``
-.. _sin: intro/Basic/MathFunc/MathFunc.html
+.. _sin: ../intro/Basic/MathFunc/MathFunc.html
 .. |cos| replace:: ``cos``
-.. _cos: intro/Basic/MathFunc/MathFunc.html
+.. _cos: ../intro/Basic/MathFunc/MathFunc.html
 .. |tan| replace:: ``tan``
-.. _tan: intro/Basic/MathFunc/MathFunc.html
+.. _tan: ../intro/Basic/MathFunc/MathFunc.html
 .. |asin| replace:: ``asin``
-.. _asin: intro/Basic/MathFunc/MathFunc.html
+.. _asin: ../intro/Basic/MathFunc/MathFunc.html
 .. |acos| replace:: ``acos``
-.. _acos: intro/Basic/MathFunc/MathFunc.html
+.. _acos: ../intro/Basic/MathFunc/MathFunc.html
 .. |atan| replace:: ``atan``
-.. _atan: intro/Basic/MathFunc/MathFunc.html
+.. _atan: ../intro/Basic/MathFunc/MathFunc.html
 .. |atan2| replace:: ``atan2``
-.. _atan2: intro/Basic/MathFunc/MathFunc.html
+.. _atan2: ../intro/Basic/MathFunc/MathFunc.html
 .. |exp| replace:: ``exp``
-.. _exp: intro/Basic/MathFunc/MathFunc.html
+.. _exp: ../intro/Basic/MathFunc/MathFunc.html
 .. |logn| replace:: ``logn``
-.. _logn: intro/Basic/MathFunc/MathFunc.html
+.. _logn: ../intro/Basic/MathFunc/MathFunc.html
 .. |sqrt| replace:: ``sqrt``
-.. _sqrt: intro/Basic/MathFunc/MathFunc.html
+.. _sqrt: ../intro/Basic/MathFunc/MathFunc.html
 .. |pow| replace:: ``pow``
-.. _pow: intro/Basic/MathFunc/MathFunc.html
+.. _pow: ../intro/Basic/MathFunc/MathFunc.html
 
 
 .. _strings:
@@ -130,15 +130,15 @@ String Functions
    +-------------------------------------------------------+-------------------------------------------------------+
 
 .. |find| replace:: ``Find``
-.. _find: intro/Basic/StrFunc/StrFunc.html
+.. _find: ../intro/Basic/StrFunc/StrFunc.html
 .. |getchar| replace:: ``GetChar``
-.. _getchar: intro/Basic/StrFunc/StrFunc.html
+.. _getchar: ../intro/Basic/StrFunc/StrFunc.html
 .. |setchar| replace:: ``SetChar``
-.. _setchar: intro/Basic/StrFunc/StrFunc.html
+.. _setchar: ../intro/Basic/StrFunc/StrFunc.html
 .. |float| replace:: ``float``
-.. _float: intro/Basic/StrFunc/StrFunc.html
+.. _float: ../intro/Basic/StrFunc/StrFunc.html
 .. |string| replace:: ``string``
-.. _string: intro/Basic/StrFunc/StrFunc.html
+.. _string: ../intro/Basic/StrFunc/StrFunc.html
   
   
 .. _stats:
@@ -156,15 +156,15 @@ Statistical Functions
    +--------------------+--------------------+
 
 .. |getmean| replace:: ``GetMean``
-.. _getmean: intro/Basic/MathFunc/MathFunc.html
+.. _getmean: ../intro/Basic/MathFunc/MathFunc.html
 .. |getstddev| replace:: ``GetStdDev``
-.. _getstddev: intro/Basic/MathFunc/MathFunc.html
+.. _getstddev: ../intro/Basic/MathFunc/MathFunc.html
 .. |getmin| replace:: ``GetMin``
-.. _getmin: intro/Basic/MathFunc/MathFunc.html
+.. _getmin: ../intro/Basic/MathFunc/MathFunc.html
 .. |getmax| replace:: ``GetMax``
-.. _getmax: intro/Basic/MathFunc/MathFunc.html
+.. _getmax: ../intro/Basic/MathFunc/MathFunc.html
 .. |reqrelearn| replace:: ``RequestRelearn``
-.. _reqrelearn: intro/Basic/MathFunc/MathFunc.html
+.. _reqrelearn: ../intro/Basic/MathFunc/MathFunc.html
 
 
 .. _attrs:
@@ -190,9 +190,9 @@ Attribute Functions
    +-----------------------------------------------+-----------------------------------------------+
 
 .. |setmatchstr| replace:: ``SetMatchString``
-.. _setmatchstr: intro/Basic/MathFunc/MathFunc.html
+.. _setmatchstr: ../intro/Basic/MathFunc/MathFunc.html
 .. |setparam| replace:: ``SetParam``
-.. _setparam: soln/ROI/roi.html
+.. _setparam: ../soln/ROI/roi.html
  
 .. _ios:
 
@@ -218,9 +218,9 @@ IOs
    +-----------------------------------------------+-----------------------------------------------+
 
 .. |retrigger| replace:: ``ReTrigger``
-.. _retrigger: soln/ROI/roi.html
+.. _retrigger: ../soln/ROI/roi.html
 .. |trigger| replace:: ``Trigger``
-.. _trigger: soln/RefCirSizeRect/RefCirSizeRect.html
+.. _trigger: ../soln/RefCirSizeRect/RefCirSizeRect.html
 
 
 .. _logs:
@@ -258,9 +258,9 @@ Communication Functions
    +-----------------------------------------------+-----------------------------------------------+
 
 .. |wformatstr| replace:: ``WriteFormatString``
-.. _wformatstr: soln/RefCirSizeRect/RefCirSizeRect.html
+.. _wformatstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |rstr| replace:: ``ReadString``
-.. _rstr: soln/RefCirSizeRect/RefCirSizeRect.html
+.. _rstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
 
 .. _sys:
 
@@ -290,4 +290,4 @@ System Functions
   
 
 .. |delay| replace:: ``Delay``
-.. _delay: soln/ROI/roi.html
+.. _delay: ../soln/ROI/roi.html
