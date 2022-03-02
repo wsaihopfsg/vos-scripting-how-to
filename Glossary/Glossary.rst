@@ -14,7 +14,7 @@ Tools
 +-----------------------------------------------------------+------------------------------------------------+
 |* |match|_                                                 |* Preprocessing                                 |
 |                                                           |                                                |
-|* :hoverxreftooltip:`Count <Glossary/Count:Count>`         |  * Convolve 3x3                                |
+|* :confval:`Count <Glossary/Count:Count>`                  |  * Convolve 3x3                                |
 |                                                           |                                                |
 |  * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`             |  * Dilate                                      |
 |  * :doc:`/soln/DefectDots/DefectDots`                     |                                                |

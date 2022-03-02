@@ -65,6 +65,10 @@ html_theme_options = {
     "collapse_navigation" : False
 }
 
+hoverxref_roles = [
+    'confval'
+]
+
 hoverxref_role_types={
     'hoverxref': 'modal',
     'ref': 'modal',  # for hoverxref_auto_ref config
@@ -72,3 +76,10 @@ hoverxref_role_types={
     'mod': 'tooltip',  # for Python Sphinx Domain
     'class': 'tooltip',  # for Python Sphinx Domain
 }
+
+def setup(app):
+    app.add_object_type(
+        'confval',  # directivename
+        'confval',  # rolename
+        'pair: %s; configuration value',  # indextemplate
+    ) 
