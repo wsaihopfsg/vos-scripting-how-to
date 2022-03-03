@@ -230,6 +230,10 @@ Running the solution
 |``rmlight2.bmp``                                 |``rmlight3.bmp``                                 |
 +-------------------------------------------------+-------------------------------------------------+
 
+* in the ``Variable List`` the results of array ``a`` can be found
+
+.. image:: /intro/Basic/GPIO/varlist.jpg
+  :width: 300px
 
 .. Tip::
   #lighting #preprocessor #erode #normalize #GPO #GPI #GPIO #bit-functions #intensity
