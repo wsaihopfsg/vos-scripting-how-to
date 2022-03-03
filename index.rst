@@ -52,16 +52,16 @@ Basic Topics
 || |mathfunc|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Presence / Absence Detection with GPO <intro/Basic/GPIO/GPIO>`
+:doc:`Presence / Absence Detection with GPO In Diverse Lighting <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Detection of Plastic Cap with Intensity Tool                                                               |  
+|Detection of Plastic Cover In Various Lighting With Intensity Tool                                         |  
 +===========================================================================================================+
 || This example makes use of the ``Match`` Tool to serve as a locator for other image processing tools.     |
 || To detect whether the insulation cap has been installed on the 3-pin plug, the ROI is first preprocessed |
-|| by an ``equalizer`` before the value compared to a threshold. A pulse will be issued at the GPO ports    |
-|| depending on the inspection results. Bit functions are demonstrated too.                                 | 
+|| by an ``erode`` followed by a ``normalize`` before the value compared to a threshold. A pulse will be    |
+|| issued at the GPO ports depending on the inspection results. Bit functions are demonstrated too.         | 
 || |matchpix|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
@@ -295,4 +295,4 @@ User contributions
 .. |mathfunc| image:: /intro/Basic/MathFunc/MathFunc.jpg
    :width: 320pt
 
-.. |matchpix| image:: /intro/Basic/GPIO/CapPresenceAbsence.png
+.. |matchpix| image:: /intro/Basic/GPIO/coverUN.jpg

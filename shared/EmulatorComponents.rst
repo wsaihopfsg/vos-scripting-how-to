@@ -84,3 +84,47 @@
 
 .. |cir3| image:: /img/cirnum/3.jpg   
    :width: 25px
+
+.. |matchtool| image:: /img/emulator/tools/match.png
+
+.. |counttool| image:: /img/emulator/tools/count.png
+
+.. |edgecounttool| image:: /img/emulator/tools/edgecount.png
+
+.. |intensitytool| image:: /img/emulator/tools/intensity.png
+
+.. |calipertool| image:: /img/emulator/tools/caliper.png
+
+.. |pointtool| image:: /img/emulator/tools/point.png
+
+.. |tiptool| image:: /img/emulator/tools/tip.png
+
+.. |penciltool| image:: /img/emulator/tools/pencil.png
+
+.. |distancetool| image:: /img/emulator/tools/distance.png
+
+.. |raketool| image:: /img/emulator/tools/rake.png
+
+.. |contourtool| image:: /img/emulator/tools/contour.png
+
+.. |angletool| image:: /img/emulator/tools/angle.png
+
+.. |arctool| image:: /img/emulator/tools/arc.png
+
+.. |circletool| image:: /img/emulator/tools/circle.png
+
+.. |concentrictool| image:: /img/emulator/tools/concentric.png
+
+.. |graphicstool| image:: /img/emulator/tools/graphics.png
+
+.. |preprocessortool| image:: /img/emulator/tools/preprocessor.png
+
+.. |barcodetool| image:: /img/emulator/tools/barcode.png
+
+.. |qrcodetool| image:: /img/emulator/tools/qrcode.png
+
+.. |ocrtool| image:: /img/emulator/tools/OCR.png
+
+.. |verifytool| image:: /img/emulator/tools/verify.png
+
+.. |ocvtool| image:: /img/emulator/tools/OCV.png

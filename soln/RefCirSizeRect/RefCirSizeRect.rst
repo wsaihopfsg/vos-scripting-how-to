@@ -49,7 +49,7 @@ Tools Explanation
 * From the ``Tool List``, 2 tools have been used
 
   * A ``Preprocess`` tool named ``Pre`` whose region-of-interest (ROI) covers the whole picture
-  * A ``Count`` tool named ``N`` with the following properties enabled
+  * A ``Count`` tool |counttool| named ``N`` with the following properties enabled
 
     * Area
     * Major

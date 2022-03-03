@@ -28,7 +28,7 @@ Tools
    |* |distance|_                                              |  * Low-pass (Blur)                                     |
    |* |rake|_                                                  |  * Mask                                                |
    |* Contour                                                  |  * |median|_                                           |
-   |* |angle|_                                                 |  * |normalize|_                                        |
+   |* |angle|_                                                 |  * :confval:`Normalize`                                |
    |* Arc                                                      |  * Project H                                           |
    |* Circle                                                   |  * Project V                                           |
    |* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
@@ -75,11 +75,11 @@ Mathematical Functions
    :class: wy-table-responsive table
 
    +-----------------------------------------------+-----------------------------------------------+
-   |* |acos|_                                      |* GetBit                                       |  
+   |* |acos|_                                      |* |getbit|_                                    |  
    |* |asin|_                                      |* |logn|_                                      |  
    |* |atan|_                                      |* |pow|_                                       |
-   |* |atan2|_                                     |* SetBit                                       |
-   |* ClearBit                                     |* |sin|_                                       |
+   |* |atan2|_                                     |* |setbit|_                                    |
+   |* |clearbit|_                                  |* |sin|_                                       |
    |* |cos|_                                       |* :confval:`sqrt <sqrt>`                       |
    |* |exp|_                                       |* |tan|_                                       |
    +-----------------------------------------------+-----------------------------------------------+
@@ -106,6 +106,12 @@ Mathematical Functions
 .. _sqrt: ../intro/Basic/MathFunc/MathFunc.html
 .. |pow| replace:: ``pow``
 .. _pow: ../intro/Basic/MathFunc/MathFunc.html
+.. |getbit| replace:: ``getbit``
+.. _getbit: ../intro/Basic/GPIO/GPIO.html
+.. |setbit| replace:: ``setbit``
+.. _setbit: ../intro/Basic/GPIO/GPIO.html
+.. |clearbit| replace:: ``clearbit``
+.. _clearbit: ../intro/Basic/GPIO/GPIO.html
 
 
 .. _strings:

@@ -10,6 +10,10 @@ Configuration
    * :doc:`/soln/ROI/roi`
    * :doc:`/soln/Scratch/Scratch`
 
+.. confval:: Normalize
+
+   * :doc:`/soln/Scratch/Scratch`
+   * :doc:`/intro/Basic/GPIO/GPIO`
 
 .. confval:: Barcode 
 
