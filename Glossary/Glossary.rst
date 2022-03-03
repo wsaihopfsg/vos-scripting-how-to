@@ -19,9 +19,9 @@ Tools
    |* |match|_                                                 |* Preprocessing                                         |
    |                                                           |                                                        |
    |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
-   |* Edge Count                                               |  * Dilate                                              |
+   |* Edge Count                                               |  * |dilate|_                                           |
    |* |intensity|_                                             |  * |equalize|_                                         |
-   |* Caliper                                                  |  * |erode|_                                            |
+   |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
    |* Point                                                    |  * Gaussian                                            |
    |* Tip                                                      |  * High-pass (Sharpen)                                 |
    |* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
@@ -48,8 +48,8 @@ Tools
 .. _rake: ../intro/Basic/MathFunc/MathFunc.html
 .. |angle| replace:: ``Angle``
 .. _angle: ../intro/Basic/MathFunc/MathFunc.html
-.. |erode| replace:: ``Erode``
-.. _erode: ../soln/Scratch/Scratch.html
+.. |dilate| replace:: ``Dilate``
+.. _dilate: ../intro/Basic/GPIO/GPIO.html
 .. |median| replace:: ``Median``
 .. _median: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |normalize| replace:: ``Normalize``
@@ -219,7 +219,7 @@ IOs
    |* GetNumCameras                                |* SetImageSource                               |
    |* GetSrcCamID                                  |* SetStrobeEnable                              |
    |* NewImageReady                                |* |trigger|_                                   |
-   |* Pulse                                        |* TriggerCam                                   |
+   |* |pulse|_                                     |* TriggerCam                                   |
    |* QueueResult                                  |* TriggerSource                                |
    +-----------------------------------------------+-----------------------------------------------+
 
@@ -227,7 +227,8 @@ IOs
 .. _retrigger: ../soln/ROI/roi.html
 .. |trigger| replace:: ``Trigger``
 .. _trigger: ../soln/RefCirSizeRect/RefCirSizeRect.html
-
+.. |pulse| replace:: ``Pulse``
+.. _pulse: ../intro/Basic/GPIO/GPIO.html   
 
 .. _logs:
 

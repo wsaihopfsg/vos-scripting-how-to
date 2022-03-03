@@ -77,6 +77,7 @@ Configuration
    * :doc:`/soln/DefectDots/DefectDots`
    * :doc:`/soln/ROI/roi`
    * :doc:`/soln/Scratch/Scratch`
+   * :doc:`/intro/Basic/GPIO/GPIO`
 
 .. confval:: Return
    
@@ -84,3 +85,7 @@ Configuration
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
    * :doc:`/intro/Basic/MathFunc/MathFunc`
    
+.. confval:: Erode
+
+   * :doc:`/soln/Scratch/Scratch`
+   * :doc:`/intro/Basic/GPIO/GPIO`

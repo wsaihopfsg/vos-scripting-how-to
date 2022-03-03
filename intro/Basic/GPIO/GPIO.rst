@@ -230,7 +230,9 @@ Running the solution
 |``rmlight2.bmp``                                 |``rmlight3.bmp``                                 |
 +-------------------------------------------------+-------------------------------------------------+
 
-* in the ``Variable List`` the results of array ``a`` can be found
+* in the ``Variable List`` the results of bit-functions can be found in array ``a`` 
+
+//todo: image Logging
 
 .. image:: /intro/Basic/GPIO/varlist.jpg
   :width: 300px
