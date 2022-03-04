@@ -225,19 +225,24 @@ Image Logging
   Click on |imglogen| to toggle between enabling/disabling image file Logging
 
 .. Note::
-  Check the |gfxcbox| to save measurement graphics. If the box is cleared, only camera images will be saved.
+  Check the |gfxchked| to save measurement graphics. If |gfxcbox|, only camera images will be saved.
 
-+-----------------------------------------+------------------------------------------+
-||ambi0|                                  ||ambi1|                                   |
-|                                         |                                          |
-|Output with |gfxcbox| (Click to enlarge) |Output with |gfxchked| (Click to enlarge) |
-+-----------------------------------------+------------------------------------------+
++-----------------------------------------------------------------------------------+
+|(Click to enlarge)                                                                 |
+|                                                                                   |
+||ambi|                                                                             |
+|                                                                                   |
++-----------------------------------------------------------------------------------+
+|Output of |gfxcbox| & |gfxchked|                                                   |
++-----------------------------------------------------------------------------------+
 
 .. |ambi0| image:: /intro/Basic/GPIO/ambi0.jpg
   :width: 280px
 
 .. |ambi1| image:: /intro/Basic/GPIO/ambi1.jpg
   :width: 280px
+
+.. |ambi| image:: /intro/Basic/GPIO/ambi.jpg
 
 Running the solution
 --------------------

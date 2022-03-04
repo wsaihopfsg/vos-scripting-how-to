@@ -24,7 +24,8 @@ Summary of todo
     * Subtract
     * ...
   * Tools
-  * Calibration how to 
+  * Calibration how-to
+  * FTP server 
 
 3. HKID...?  
 
