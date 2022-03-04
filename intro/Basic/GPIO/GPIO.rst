@@ -81,10 +81,11 @@ This sample demonstrates
   |                                     |                                                                                                                                                    |
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                |
   |                                     |                                                                                                                                                    |
-  |                                     |  set |demoimg| |cir2| to the folder where these images have been saved                                                                             |
+  |                                     |  set |demoimg| |cir2|                                                                                                                              |
+  |                                     |                                                                                                                                                    |  
+  |                                     |  to the folder where these images have been saved                                                                                                  |
   |                                     |                                                                                                                                                    |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-
 
 
     
