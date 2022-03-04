@@ -23,7 +23,8 @@ Summary of todo
     * Kernels https://setosa.io/ev/image-kernels/
     * Subtract
     * ...
-  * Tools 
+  * Tools
+  * Calibration how to 
 
 3. HKID...?  
 

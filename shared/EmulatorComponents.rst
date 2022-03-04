@@ -128,3 +128,6 @@
 .. |verifytool| image:: /img/emulator/tools/verify.png
 
 .. |ocvtool| image:: /img/emulator/tools/OCV.png
+
+.. |imglog| image::  /img/emulator/buttons/imgloggingbut.jpg
+   :width: 150px

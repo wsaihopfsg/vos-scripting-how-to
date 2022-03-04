@@ -52,7 +52,7 @@ Basic Topics
 || |mathfunc|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Presence / Absence Detection with GPO In Diverse Lighting <intro/Basic/GPIO/GPIO>`
+:doc:`Working with Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -61,7 +61,8 @@ Basic Topics
 || This example makes use of the ``Match`` Tool to serve as a locator for other image processing tools.     |
 || To detect whether the insulation cap has been installed on the 3-pin plug, the ROI is first preprocessed |
 || by an ``erode`` followed by a ``normalize`` before the value compared to a threshold. A pulse will be    |
-|| issued at the GPO ports depending on the inspection results. Bit functions are demonstrated too.         | 
+|| issued at the GPO ports depending on the inspection results, and the images that failed inspection are   | 
+|| logged. Bit functions are demonstrated too.                                                              |
 || |matchpix|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 

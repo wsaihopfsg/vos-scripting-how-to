@@ -12,7 +12,10 @@ Sequential reading of QR codes
 This sample demonstrates
 
 #. How to dynamically change ROI through VOS script
-#. Reading of QR codes
+#. Reading of QR codes sequentially through ROI (region-of-interest) adjustment 
+
+.. Note::
+  Without any scripting, VOS is able to read up to 64 codes simultaneously at one go within the ROI.  
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
 --------------------------------------------------------------------------------------------------
@@ -28,7 +31,10 @@ This sample demonstrates
 Tools Explanation
 -----------------
 * At the ``Tool Setup`` page |toolsetup|, click on |takepic| if ``QR1.bmp`` is not loaded
-* Only a ``2D Barcode`` tool called ``B2d0`` is used with the region-of-interest (ROI) set at one of the QR codes. Note that the actual QR code that lies within the ROI in this ``Tool Setup`` page may be different, depending on when the emulator was stopped in the previous run.
+* Only a ``2D Barcode`` tool called ``B2d0`` is used with the region-of-interest (ROI) set at one of the QR codes. 
+
+.. Note::
+  The actual QR code that lies within the ROI in this ``Tool Setup`` page may be different, depending on when the emulator was stopped in the previous run.
 
 |BC2d_ROI|
 

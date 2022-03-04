@@ -48,6 +48,7 @@ This sample demonstrates
 #. ``bright2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/bright2.bmp?raw=true>`__ without plastic cover taken in a room with natural window light and ceiling light on
 #. ``rmFlash1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1.bmp?raw=true>`__ without plastic cover taken in a totally dark room with camera flash
 #. ``rmFlash1a.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1a.bmp?raw=true>`__ is a rotated version of ``rmFlash1.bmp`` and serves as the template for Tool Setup |toolsetup|
+#. ``rmFlash2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash2.bmp?raw=true>`__ with plastic cover taken in a totally dark room with camera flash
 #. ``rmLight1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight1.bmp?raw=true>`__ with plastic cover taken in a windowless room with ceiling light
 #. ``rmLight2.bmp``: `Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight2.bmp?raw=true>`__ taken in the same conditions as ``rmLight1.bmp``
 #. ``rmLight3.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight3.bmp?raw=true>`__ without plastic cover taken in a windowless room with ceiling light
@@ -203,6 +204,12 @@ Post Image Process
 
 * Lines 36-38: Bit-functions 
 
+
+Image Logging
+--------------------
+
+* Click on ``Setup Connections`` |conn|, and then on ``Setup Image Logging`` |imglog|
+
 Running the solution
 --------------------
 
@@ -229,10 +236,22 @@ Running the solution
 |                                                 |                                                 |
 |``rmlight2.bmp``                                 |``rmlight3.bmp``                                 |
 +-------------------------------------------------+-------------------------------------------------+
+||11|                                             |                                                 |
+|                                                 |                                                 |
+|``rmFlash2.bmp``                                 |                                                 |
++-------------------------------------------------+-------------------------------------------------+
 
-* in the ``Variable List`` the results of bit-functions can be found in array ``a`` 
 
-//todo: image Logging
+.. Note::
+  * For ``rmFlash2.bmp``, the results are classified as ``RECYCLED`` with the Live-pin below the threshold value despite it being covered. 
+
+* In the ``Variable List`` the results of bit-functions can be found in array ``a`` 
+
+
+
+
+
+
 
 .. image:: /intro/Basic/GPIO/varlist.jpg
   :width: 300px
@@ -271,3 +290,5 @@ Running the solution
 
 .. |10| image:: /intro/Basic/GPIO/rmlight3.jpg
   :width: 400px
+
+.. |11| image:: /intro/Basic/GPIO/rmFlash2.jpg
