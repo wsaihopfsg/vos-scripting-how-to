@@ -38,23 +38,55 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/GPIO>`__
 ------------------------------------------------------------------------------------------------------
 
-#. ``preAbsence.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__
+.. table::
+  :class: tight-table 
 
-   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution 
-  
-#. ``nolight1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1.bmp?raw=true>`__ without plastic cover taken in a room with natural window light but no ceiling light
-#. ``nolight1a.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1a.bmp?raw=true>`__ is a rotated version of ``nolight1.bmp``
-#. ``nolight2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight2.bmp?raw=true>`__ with plastic cover taken in a room with no ceiling light
-#. ``bright1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/bright1.bmp?raw=true>`__ with plastic cover taken in a room with natural window light and ceiling light on
-#. ``bright2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/bright2.bmp?raw=true>`__ without plastic cover taken in a room with natural window light and ceiling light on
-#. ``rmFlash1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1.bmp?raw=true>`__ without plastic cover taken in a totally dark room with camera flash
-#. ``rmFlash1a.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1a.bmp?raw=true>`__ is a rotated version of ``rmFlash1.bmp`` and serves as the template for Tool Setup |toolsetup|
-#. ``rmFlash2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash2.bmp?raw=true>`__ with plastic cover taken in a totally dark room with camera flash
-#. ``rmLight1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight1.bmp?raw=true>`__ with plastic cover taken in a windowless room with ceiling light
-#. ``rmLight2.bmp``: `Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight2.bmp?raw=true>`__ taken in the same conditions as ``rmLight1.bmp``
-#. ``rmLight3.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight3.bmp?raw=true>`__ without plastic cover taken in a windowless room with ceiling light
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__                      |
+  |                                     |                                                                                                                                                    |
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution          |  
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |2. ``nolight1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1.bmp?raw=true>`__ without plastic cover     |
+  |                                     |taken in a room with natural window light but no ceiling light                                                                                      |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |3. ``nolight1a.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1a.bmp?raw=true>`__ is a rotated version of  |
+  |                                     |``nolight1.bmp``                                                                                                                                    |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |4. ``nolight2.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight2.bmp?raw=true>`__ with plastic cover taken  |
+  |                                     |in a room with no ceiling light                                                                                                                     |               
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |5. ``bright1.bmp``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/bright1.bmp?raw=true>`__ with plastic cover taken in| 
+  |                                     |a room with natural window light and ceiling light on                                                                                               |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |6. ``bright2.bmp``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/bright2.bmp?raw=true>`__ without plastic cover taken| 
+  |                                     |in a room with natural window light and ceiling light on                                                                                            |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |7. ``rmFlash1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1.bmp?raw=true>`__ without plastic cover     |
+  |                                     |taken in a totally dark room with camera flash                                                                                                      |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``rmFlash2.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash2.bmp?raw=true>`__ with plastic cover taken  |
+  |                                     |in a totally dark room with camera flash                                                                                                            |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |9. ``rmLight1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight1.bmp?raw=true>`__ with plastic cover taken  |
+  |                                     |in a windowless room with ceiling light                                                                                                             |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |10. ``rmLight2.bmp``                 |`Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight2.bmp?raw=true>`__ taken in the same     |
+  |                                     |conditions as ``rmLight1.bmp``                                                                                                                      |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |11. ``rmLight3.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight3.bmp?raw=true>`__ without plastic cover     |
+  |                                     |taken in a windowless room with ceiling light                                                                                                       |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+  |12. ``rmFlash1a.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1a.bmp?raw=true>`__ is a rotated version of  |
+  |                                     |``rmFlash1.bmp`` and serves as the template for Tool Setup |toolsetup|                                                                              |
+  |                                     |                                                                                                                                                    |
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the    |
+  |                                     |  folder where these images have been saved                                                                                                         |
+  |                                     |                                                                                                                                                    |
+  +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where these images have been saved 
+
+
+    
 
 Tools Explanation
 -----------------

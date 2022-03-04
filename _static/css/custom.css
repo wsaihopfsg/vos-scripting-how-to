@@ -1,3 +1,7 @@
 .wy-table-responsive table td {
     vertical-align: top !important; 
  }
+
+ .tight-table td {
+     white-space: normal !important;
+ }
