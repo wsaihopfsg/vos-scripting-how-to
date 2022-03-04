@@ -129,5 +129,14 @@
 
 .. |ocvtool| image:: /img/emulator/tools/OCV.png
 
-.. |imglog| image::  /img/emulator/buttons/imgloggingbut.jpg
+.. |imglogbut| image:: /img/emulator/buttons/imgloggingbut.jpg
    :width: 150px
+
+.. |imglog| image:: /img/emulator/imgLogging.jpg
+
+.. |imglogen| image:: /img/emulator/buttons/enimglog.png
+   :width: 40px
+
+.. |gfxcbox| image:: /img/emulator/buttons/gfxchkbox.jpg
+
+.. |gfxchked| image:: /img/emulator/buttons/gfxchked.jpg

@@ -14,7 +14,8 @@ This sample demonstrates
 1. Use of the  ``Match`` tool |matchtool| and ``Locator`` to deal with position and rotation of the object-of-interest
 2. Use of the ``erode`` & ``normalize`` preprocessor for dealing with diverse lighting conditions 
 3. Use of the ``Intensity`` tool |intensitytool| for plastic cover presence detection
-4. Use the the ``GetBit``, ``SetBit`` , ``ClearBit`` & ``pulse`` functions
+4. Image logging 
+5. Use the the ``GetBit``, ``SetBit`` , ``ClearBit`` & ``pulse`` functions
 
 +------------------+----------------------------------+------------------------------------------------------------------+
 |**Function**      |**Parameters**                    |**Explanation**                                                   |
@@ -53,7 +54,7 @@ This sample demonstrates
 #. ``rmLight2.bmp``: `Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight2.bmp?raw=true>`__ taken in the same conditions as ``rmLight1.bmp``
 #. ``rmLight3.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmLight3.bmp?raw=true>`__ without plastic cover taken in a windowless room with ceiling light
 
-   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``QR1.bmp`` has been saved 
+   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where these images have been saved 
 
 Tools Explanation
 -----------------
@@ -208,7 +209,35 @@ Post Image Process
 Image Logging
 --------------------
 
-* Click on ``Setup Connections`` |conn|, and then on ``Setup Image Logging`` |imglog|
+* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99.
+  |imglog| 
+
+.. Caution::
+  The sequenctial counter ``XX`` for filename resets at every ``Run Solution`` |runsoln| invocation, and files of the same name will be overwritten without warning. 
+
+.. Note::
+  User may choose between ``.bmp`` or ``jpg`` as the image logging format.
+
+.. Note::
+  File names can be substituted a different name for one image using LogImage/WriteImageFile/WriteImageTools/WriteHistoryImage. //todo: wat are the differences?
+
+.. Note::
+  Click on |imglogen| to toggle between enabling/disabling image file Logging
+
+.. Note::
+  Check the |gfxcbox| to save measurement graphics. If the box is cleared, only camera images will be saved.
+
++-----------------------------------------+------------------------------------------+
+||ambi0|                                  ||ambi1|                                   |
+|                                         |                                          |
+|Output with |gfxcbox| (Click to enlarge) |Output with |gfxchked| (Click to enlarge) |
++-----------------------------------------+------------------------------------------+
+
+.. |ambi0| image:: /intro/Basic/GPIO/ambi0.jpg
+  :width: 280px
+
+.. |ambi1| image:: /intro/Basic/GPIO/ambi1.jpg
+  :width: 280px
 
 Running the solution
 --------------------
@@ -246,10 +275,6 @@ Running the solution
   * For ``rmFlash2.bmp``, the results are classified as ``RECYCLED`` with the Live-pin below the threshold value despite it being covered. 
 
 * In the ``Variable List`` the results of bit-functions can be found in array ``a`` 
-
-
-
-
 
 
 
