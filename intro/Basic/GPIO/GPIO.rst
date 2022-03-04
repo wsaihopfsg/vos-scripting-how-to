@@ -79,8 +79,9 @@ This sample demonstrates
   |12. ``rmFlash1a.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1a.bmp?raw=true>`__ is a rotated version of  |
   |                                     |``rmFlash1.bmp`` and serves as the template for Tool Setup |toolsetup|                                                                              |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the    |
-  |                                     |  folder where these images have been saved                                                                                                         |
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                |
+  |                                     |                                                                                                                                                    |
+  |                                     |  set |demoimg| |cir2| to the folder where these images have been saved                                                                             |
   |                                     |                                                                                                                                                    |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
