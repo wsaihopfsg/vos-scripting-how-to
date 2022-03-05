@@ -332,7 +332,7 @@ Running the solution
   :width: 300px
 
 .. Note::
- With ``Image Logging`` |imglogen| enabled, we can invoke the ``History Recall`` |history| button. The buttons in the panel are self-explanatory and are omitted for brevity. |historypanel| 
+ With ``Image Logging`` |imglogen| enabled, we can invoke the ``History Recall`` |history| button. The buttons in the panel are self-explanatory and are omitted here for brevity. Invoke the ``Return`` |return| button to return to monitor. |historypanel| 
 
 
 .. Tip::

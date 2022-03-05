@@ -148,4 +148,7 @@
    :width: 40px
 
 .. |historypanel| image:: /img/emulator/historyPanel.png
-   :width: 400px
+   :width: 500px
+
+.. |return| image:: /img/emulator/buttons/return.png
+   :width: 40px
