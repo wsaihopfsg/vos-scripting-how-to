@@ -245,15 +245,18 @@ Image Logging
 * Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown.
 
 .. Note::
-  Click on |imglogen| to toggle between enabling/disabling image Logging
+  Click on |imglogen| to toggle between enabling/disabling ``Image Logging``
 
 .. Note::
-  Difference between ``Image Logging`` and ``Image File Logging`` is //todo
+  The difference between ``Image Logging`` and ``Image File Logging`` 
+  
+  *  ``Image Logging`` : Images saved in memory, with a limit of xx //todo
+  *  ``Image File Logging`` : Images saved to PC location
 
 Image File Logging
 --------------------
 
-* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99.
+* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99 since ``#images`` are set to 100.
   |imglog| 
 
 .. Caution::
@@ -266,7 +269,7 @@ Image File Logging
   File names can be substituted a different name for one image using LogImage/WriteImageFile/WriteImageTools/WriteHistoryImage. //todo: wat are the differences?
 
 .. Note::
-  Click on |imgfilelogen| to toggle between enabling/disabling image file Logging
+  Click on |imgfilelogen| to toggle between enabling/disabling ``Image File Logging``
 
 .. Note::
   Check the |gfxchked| to save measurement graphics. If |gfxcbox|, only camera images will be saved.
@@ -367,4 +370,4 @@ Running the solution
 .. |10| image:: /intro/Basic/GPIO/rmlight3.jpg
   :width: 400px
 
-.. |11| image:: /intro/Basic/GPIO/rmFlash2.jpg
+.. |11| image:: /intro/Basic/GPIO/rmFlash2_.jpg
