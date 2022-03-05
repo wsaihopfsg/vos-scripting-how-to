@@ -42,7 +42,7 @@ This sample demonstrates
   :class: tight-table 
 
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__                      |
+  |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__   //todo:update soln |
   |                                     |                                                                                                                                                    |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution          |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -197,13 +197,13 @@ Post Image Process
             PASS = 1
             RECYCLE = 0
             FAIL = 0
-            SetDisplayStatus( "Covered", "DARKGREEN")
+            SetDisplayStatus( "Covered", "green")
             GLOBAL.GPO[1] = pulse(1,0,600)
         else
             PASS = 0
             RECYCLE = 1
             FAIL = 0
-            SetDisplayStatus( "Ambiguous", "red")
+            SetDisplayStatus( "Ambiguous", "magenta")
             GLOBAL.GPO[2] = pulse(1,0,600)
         endif
     endif
@@ -228,19 +228,29 @@ Post Image Process
 * Lines 22-27: Sum=0, meaning all 3 pins are 1 (covered)
   
   * Set ``Result`` to ``PASS``
-  * Display "Covered" on screen in ``darkgreen``
+  * Display "Covered" on screen in ``green``
   * Send a pulse for 600ms on ``GLOBAL.GPO[1]``
 
 * Lines 29-33: Sum is either 1 or 2, inspection outcome is not unanimous among the 3 pins
   
   * Set ``Result`` to ``RECYCLE``
-  * Display "Ambiguous" on screen in ``red``
+  * Display "Ambiguous" on screen in ``magenta``
   * Send a pulse for 600ms on ``GLOBAL.GPO[2]``
 
 * Lines 36-38: Bit-functions 
 
-
 Image Logging
+----------------
+
+* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown.
+
+.. Note::
+  Click on |imglogen| to toggle between enabling/disabling image Logging
+
+.. Note::
+  Difference between ``Image Logging`` and ``Image File Logging`` is //todo
+
+Image File Logging
 --------------------
 
 * Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99.
@@ -256,7 +266,7 @@ Image Logging
   File names can be substituted a different name for one image using LogImage/WriteImageFile/WriteImageTools/WriteHistoryImage. //todo: wat are the differences?
 
 .. Note::
-  Click on |imglogen| to toggle between enabling/disabling image file Logging
+  Click on |imgfilelogen| to toggle between enabling/disabling image file Logging
 
 .. Note::
   Check the |gfxchked| to save measurement graphics. If |gfxcbox|, only camera images will be saved.
@@ -315,10 +325,12 @@ Running the solution
 
 * In the ``Variable List`` the results of bit-functions can be found in array ``a`` 
 
-
-
 .. image:: /intro/Basic/GPIO/varlist.jpg
   :width: 300px
+
+.. Note::
+ With ``Image Logging`` |imglogen| enabled, we can invoke the ``History Recall`` |history| button. The buttons in the panel are self-explanatory and are omitted for brevity. |historypanel| 
+
 
 .. Tip::
   #lighting #preprocessor #erode #normalize #GPO #GPI #GPIO #bit-functions #intensity

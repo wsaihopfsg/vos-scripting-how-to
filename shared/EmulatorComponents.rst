@@ -134,9 +134,18 @@
 
 .. |imglog| image:: /img/emulator/imgLogging.jpg
 
-.. |imglogen| image:: /img/emulator/buttons/enimglog.png
+.. |imgfilelogen| image:: /img/emulator/buttons/enimgfilelog.png
    :width: 40px
 
 .. |gfxcbox| image:: /img/emulator/buttons/gfxchkbox.jpg
 
 .. |gfxchked| image:: /img/emulator/buttons/gfxchked.jpg
+
+.. |imglogen| image:: /img/emulator/buttons/enimglog.png
+   :width: 40px
+
+.. |history| image:: /img/emulator/buttons/history.png
+   :width: 40px
+
+.. |historypanel| image:: /img/emulator/historyPanel.png
+   :width: 400px
