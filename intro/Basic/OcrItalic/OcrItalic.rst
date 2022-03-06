@@ -88,7 +88,7 @@ Template-Based OCR
 ######################################
 
 .. Note::
-  This section describes how template matching is conceptually applied in OCR. The authors have no idea how VOS actually implements OCR.
+  This section describes how template matching is applied in OCR conceptually. The authors have no idea how VOS actually implements OCR.
 
 * In template-based OCR, the taught-in characters served as templates for detection of the unknown character. For example, we have taught-in 3 characters A, B, C and their binary representation shown below.
   
@@ -96,7 +96,7 @@ Template-Based OCR
   ||A|                    ||B|                     ||C|                     |
   +-----------------------+------------------------+------------------------+
 
-* The unknown character will be compred against the available template and a score will be given. In this case, the percentage of pixels that are the same or a :math:`{bitwise XOR/30}`. 
+* The unknown character will be compred against the available template and a score will be given. In this case, the percentage of pixels that are the same or a :math:`{pixelwise XOR/30}`. 
 
   +-----------------------+------------------------+------------------------+------------------------+
   ||unknown|              | Template **A**         | Template **B**         | Template **C**         |
@@ -111,6 +111,9 @@ Template-Based OCR
 
 .. Note::
   Since ``Grayscale`` method in VOS has an extra degree-of-freedom in terms of individual pixel's intensity, ``Grayscale`` is usually preferred over ``Binary`` OCR.
+
+.. Warning::
+  Like most tools in VOS, template-based OCR is not scale invariant. Same font type of other sizes near to the taught-in size may still work if the threshold is low enough, but if the size differs too much you will have to teach-in the other font size too. 
 
 .. |A| image:: /intro/Basic/OcrItalic/A.jpg
   :width: 100px
@@ -156,19 +159,14 @@ Running the solution
 +-------------------------------------------------+-------------------------------------------------+
 
 .. Note::
-  * For ``rmFlash2.bmp``, the results are classified as ``RECYCLED`` with the Live-pin below the threshold value despite it being covered. 
-
-* In the ``Variable List`` the results of bit-functions can be found in array ``a`` 
-
-.. image:: /intro/Basic/GPIO/varlist.jpg
-  :width: 300px
-
-.. Note::
- With ``Image Logging`` |imglogen| enabled, we can invoke the ``History Recall`` |history| button. The buttons in the panel are self-explanatory and are omitted here for brevity. Invoke the ``Return`` |return| button to return to monitor. |historypanel| 
-
-
+  * In this case where ``All characters same size`` are unchecked in the ``font editor`` |fonteditor|,
+    
+    * Spaces may become hard to detect
+    * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
+      
+  
 .. Tip::
-  #lighting #preprocessor #erode #normalize #GPO #GPI #GPIO #bit-functions #intensity
+  #OCR #preprocessor #shear #italic #template #AI #grayscale #intensity
 
 .. |1| image:: /intro/Basic/OcrItalic/85.jpg
   :width: 400px

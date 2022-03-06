@@ -152,3 +152,5 @@
 
 .. |return| image:: /img/emulator/buttons/return.png
    :width: 40px
+
+.. |fonteditor| image:: /img/emulator/buttons/fonteditor.png
