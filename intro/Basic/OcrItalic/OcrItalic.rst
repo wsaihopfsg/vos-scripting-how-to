@@ -159,7 +159,7 @@ Running the solution
 +-------------------------------------------------+-------------------------------------------------+
 
 .. Note::
-  * In this case where |charsamesize| are unchecked in the ``font editor`` |fonteditor|,
+  * In this case where |charsamesize| is unchecked in the ``font editor`` |fonteditor|,
     
     * Spaces may become hard to detect
     * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
