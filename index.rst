@@ -70,7 +70,7 @@ Basic Topics
 ------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Using ShearX Preprocessor to Facilitate Italic Font OCR teach-in                                           |  
+|Using Shear X Preprocessor to Facilitate Italic Font OCR Teach-In                                          |  
 +===========================================================================================================+
 || Italic fonts can be tricky for teach-in because their characters may not fit into rectangles used for    |
 || manual region-of-interest (ROI) indication due to kerning. The ``Shear X`` preprocessor is ideal for     |

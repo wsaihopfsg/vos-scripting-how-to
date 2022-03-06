@@ -6,7 +6,7 @@
 
 .. include:: /shared/EmulatorComponents.rst
 
-OCR teach-in for Italic Font 
+OCR Teach-In for Italic Font 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This sample demonstrates
@@ -20,7 +20,7 @@ This sample demonstrates
 +------------------+----------------------------------+------------------------------------------------------------------+
 |``LogStart``      |``fileName``, ``onClient``        |Commence logging of processed data the specified ``fileName``     |
 +------------------+----------------------------------+------------------------------------------------------------------+
-|``LogStop``       |()                                |Stop data logging                                                 |
+|``LogStop``       |( )                               |Stop data logging                                                 |
 +------------------+----------------------------------+------------------------------------------------------------------+
 |``LogImage``      |``fileName``                      |Save image to ``fileName`` .... //todo                            |
 |                  |                                  |to 0 in ``value``                                                 |
@@ -65,44 +65,72 @@ Tools Explanation
 
     * The taught-in characters boundaries are as shown. Notice that due to italics and kerning, the boundary for some characters cannot be properly defined with rectangles.
 
-      .. image:: /intro/Basic/OcrItalic/fontedit1.jpg
+      .. image:: /intro/Basic/OcrItalic/fontedit2.jpg
         :width: 500px   
   
   * Another named ``OsheaR`` with its properties same as above but with its ``Shear X`` preprocessor |preprocess| turned on.
   
     .. image:: /intro/Basic/OcrItalic/shearx.jpg
 
-    * As we can observe the text with the red border below, the italic effects have been removed by an appropriate ``Angle``
+    * As we can observe the text with the red border below, the italic effects have been removed by an appropriate ``Angle`` in ``Shear X``
 
       .. image:: /intro/Basic/OcrItalic/deitalic.jpg
 
     * The taught-in characters boundaries are as shown, with a much better character boundary definition than before.
   
-      .. image:: /intro/Basic/OcrItalic/fontedit2.jpg
+      .. image:: /intro/Basic/OcrItalic/fontedit1.jpg
         :width: 500px
 
     .. note::  
       The ``Shear Y`` preprocessor works in similar way but in the y-direction, which is not needed in this example
 
+Template-Based OCR
+######################################
 
+.. Note::
+  This section describes how template matching is conceptually applied in OCR. The authors have no idea how VOS actually implements OCR.
+
+* In template-based OCR, the taught-in characters served as templates for detection of the unknown character. For example, we have taught-in 3 characters A, B, C and their binary representation shown below.
+  
+  +-----------------------+------------------------+------------------------+
+  ||A|                    ||B|                     ||C|                     |
+  +-----------------------+------------------------+------------------------+
+
+* The unknown character will be compred against the available template and a score will be given. In this case, the percentage of pixels that are the same or a :math:`{bitwise XOR/30}`. 
+
+  +-----------------------+------------------------+------------------------+------------------------+
+  ||unknown|              | Template **A**         | Template **B**         | Template **C**         |
+  +                       +------------------------+------------------------+------------------------+
+  |                       |83%                     |53%                     |57%                     |
+  +-----------------------+------------------------+------------------------+------------------------+
+
+* The condition for a decalring a match is the highest score that is over a preset threshold. Therefore in this case if the threshold is 
+  
+  * 50%, the result will be output as **A** 
+  * 90%, unrecognized character
+
+.. Note::
+  Since ``Grayscale`` method in VOS has an extra degree-of-freedom in terms of individual pixel's intensity, ``Grayscale`` is usually preferred over ``Binary`` OCR.
+
+.. |A| image:: /intro/Basic/OcrItalic/A.jpg
+  :width: 100px
+
+.. |B| image:: /intro/Basic/OcrItalic/B.jpg
+  :width: 100px
+
+.. |C| image:: /intro/Basic/OcrItalic/C.jpg
+  :width: 100px
+
+.. |unknown| image:: /intro/Basic/OcrItalic/char.jpg
+    :width: 100px
+ 
 Code Walk-Through
 -----------------
 * There is no scripting involved in this example 
 
 CSV Logging
 ----------------
-
-* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown.
-
-.. Note::
-  Click on |imglogen| to toggle between enabling/disabling ``Image Logging``
-
-.. Note::
-  The difference between ``Image Logging`` and ``Image File Logging`` 
-  
-  *  ``Image Logging`` : Images saved in memory, with a limit of xx //todo
-  *  ``Image File Logging`` : Images saved to PC location
-
+//todo
 
 Running the solution
 --------------------
