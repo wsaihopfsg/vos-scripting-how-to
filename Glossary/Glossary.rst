@@ -32,8 +32,8 @@ Tools
    |* Arc                                                      |  * Project H                                           |
    |* Circle                                                   |  * Project V                                           |
    |* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
-   |* Graphics                                                 |  * Shear X                                             |
-   |* :confval:`Barcode <Barcode>`                             |  * Shear Y                                             |
+   |* Graphics                                                 |  * |shearx|_                                           |
+   |* :confval:`Barcode <Barcode>`                             |  * |sheary|_                                           |
    |                                                           |  * Sobel                                               |
    |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
    |                                                           |  * |thres|_                                            |
@@ -62,6 +62,10 @@ Tools
 .. _intensity: ../intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
 .. _equalize: ../intro/Basic/GPIO/GPIO.html
+.. |shearx| replace:: ``Shear X``
+.. _shearx: ../intro/Basic/OcrItalic/OcrItalic.html
+.. |sheary| replace:: ``Shear Y``
+.. _sheary: ../intro/Basic/OcrItalic/OcrItalic.html
 
 Predefined Functions
 ++++++++++++++++++++++++
