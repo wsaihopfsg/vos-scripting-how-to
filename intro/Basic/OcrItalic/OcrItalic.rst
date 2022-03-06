@@ -135,7 +135,8 @@ CSV Logging
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button. While 
+* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button. While
+   
   * ``OsheaR`` is able to recognize the alphabets with 100% accuracy, 
   * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` does not seem to help as summarize in the following table.
     
