@@ -159,7 +159,7 @@ Running the solution
 +-------------------------------------------------+-------------------------------------------------+
 
 .. Note::
-  * In this case where ``All characters same size`` are unchecked in the ``font editor`` |fonteditor|,
+  * In this case where |charsamesize| are unchecked in the ``font editor`` |fonteditor|,
     
     * Spaces may become hard to detect
     * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
@@ -174,9 +174,10 @@ Running the solution
 .. |2| image:: /intro/Basic/OcrItalic/50.jpg
   :width: 400px
 
-.. |3| image:: /intro/Basic/OcrItalic/40.jpg
+.. |3| image:: /intro/Basic/OcrItalic/40_.jpg
   :width: 400px
 
 .. |4| image:: /intro/Basic/OcrItalic/10.jpg
   :width: 400px
 
+.. |charsamesize| image:: /intro/Basic/OcrItalic/charsamesize.jpg
