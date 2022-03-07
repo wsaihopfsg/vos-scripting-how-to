@@ -29,20 +29,33 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/RefCirSizeRect>`__
 -------------------------------------------------------------------------------------------------------------
 
-#. ``RefCirSizeRect.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/RefCirSizeRect.bin?raw=true>`__
-
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-#. ``test0.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test0.bmp?raw=true>`__ reference circle with diameter of 1 unit.
-#. ``test1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test1.bmp?raw=true>`__ for reference shape failure
-#. ``test2.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test2.bmp?raw=true>`__ reference circle with diameter of 3 unit.
-#. ``test3.bmp``: `Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test3.bmp?raw=true>`__ reference circle with diameter of 3 unit.
-
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where the image files have been saved.
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|1.``RefCirSizeRect.bin``       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/RefCirSizeRect.bin?raw=true>`__            |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| ,                                            |
+|                               |                                                                                                                                                       |
+|                               |  import |import| |cir2| the solution                                                                                                                  |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2.``test0.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test0.bmp?raw=true>`__                        |   
+|                               |reference circle with diameter of 1 unit.                                                                                                              |    
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+ 
+|3.``test1.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test1.bmp?raw=true>`__                        |
+|                               |for reference shape failure.                                                                                                                           |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|4.``test2.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test2.bmp?raw=true>`__                        | 
+|                               |reference circle with diameter of 3 unit.                                                                                                              |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|5.``test3.bmp``                |`Another image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/RefCirSizeRect/test3.bmp?raw=true>`__                    |
+|                               |reference circle with diameter of 3 unit.                                                                                                              |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
+|                               |                                                                                                                                                       |
+|                               |  set |demoimg| |cir2| to the folder where the image files have been saved.                                                                            |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``test0.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``test0.bmp`` is loaded. 
 
 .. image:: /soln/RefCirSizeRect/test0.jpg
 
@@ -66,7 +79,7 @@ Tools Explanation
 
 Connections
 -----------
-* Click on ``Setup Connections`` |conn|. We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``.  
+* Click on :hoverxreftooltip:`Setup Connections <soln/Hover/setupconntcp:Setup Connections>` |conn| |cir1|. We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5025`` with the name ``TcpP5025``.  
 
 .. image:: /soln/RefCirSizeRect/tcp5025.jpg 
 
@@ -75,7 +88,7 @@ Connections
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit|. Notice that in addition to the 4 standard functions, there are 2 user-defined functions 
+* Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1|. Notice that in addition to the 4 standard functions, there are 2 user-defined functions 
   
   #. findLeftMostShape()
   #. calcRectSizeDist() 
@@ -281,7 +294,7 @@ calcRectSizeDist()
 Running the solution
 --------------------
 
-* Click on the ``Run Solution`` |runsoln|
+* Click on the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|
 * Get a phone connected as the same WiFi network as the PC. Download app that, for example ``Simple TCP Socket Tester`` for Android
 
 .. image:: /soln/RefCirSizeRect/tcpSocketApp.jpg

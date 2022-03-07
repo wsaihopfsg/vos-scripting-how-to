@@ -20,7 +20,9 @@ This sample demonstrates
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |1. ``detectpatches.bin``       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__                 |
 |                               |                                                                                                                                                       |
-|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| ,                                            |  
+|                               |                                                                                                                                                       |
+|                               |  import |import| |cir2| the solution                                                                                                                  |
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |2. ``mpsmok.bmp``              |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch    |   
 |                               |detected.                                                                                                                                              |
@@ -30,16 +32,18 @@ This sample demonstrates
 |                               |                                                                                                                                                       |
 |                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
 |                               |                                                                                                                                                       |
-|                               |  set |demoimg| |cir2| to the folder where                                                                                                             |
+|                               |  set |demoimg| |cir2|                                                                                                                                 |
 |                               |                                                                                                                                                       |
-|                               |  ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved                                                                                                    |
+|                               |  to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved                                                                                |
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
 * At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``mpsmdots.bmp`` is loaded.
 * Only a ``Count`` tool called ``N`` is used with the region-of-interest (ROI) set to the area where defect detection is to be performed.
+  
   * The ``Tolerance`` of the tool is set to all zeros because we want to trigger a failure when N>0 
+
 * Hovering the mouse over the green line denoting the ROI, the count tool gives a preview of the output after preprocessing has been applied. |CountPreview|
 * Right-clicking on the border which has turned red, the ``Count Properties`` window will be shown |CountProp| 
 
