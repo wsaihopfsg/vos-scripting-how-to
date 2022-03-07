@@ -35,7 +35,7 @@ This sample demonstrates
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |1. ``OcrItalic.bin``                 |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/OcrItalic/OcrItalic.bin?raw=true>`__                  |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution          |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution             |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``OcrItalic.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/OcrItalic/OcrItalic.bmp?raw=true>`__ OCR text in size 11 |
   |                                     |Times New Roman Font in italic.                                                                                                                     |
@@ -45,7 +45,7 @@ This sample demonstrates
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` page |toolsetup|, click on |takepic| until ``OcrItalic.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``OcrItalic.bmp`` is loaded. 
 
 .. image:: /intro/Basic/OcrItalic/toolsetup.jpg
 ..  :width: 400px
@@ -127,9 +127,6 @@ Template-Based OCR
 .. |unknown| image:: /intro/Basic/OcrItalic/char.jpg
     :width: 100px
  
-Code Walk-Through
------------------
-* There is no scripting involved in this example 
 
 CSV Logging
 ----------------
@@ -138,7 +135,7 @@ CSV Logging
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button. While
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. While
    
   * ``OsheaR`` is able to recognize the alphabets with 100% accuracy, 
   * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` does not seem to help as summarize in the following table.
