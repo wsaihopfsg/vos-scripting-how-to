@@ -20,17 +20,25 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
 --------------------------------------------------------------------------------------------------
 
-#. ``roishift.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__
-
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-#. ``QR1.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__ with 6 QR codes, with an alphabet encoded in each.
-
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``QR1.bmp`` has been saved 
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|1. ``roishift.bin``            |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__       |
+|                               |                                                                                                                                 |
+|                               |* At the Solution Setup page |solnsetup|, import |import| the solution                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|2. ``QR1.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__               |
+|                               |with 6 QR codes, with an alphabet encoded in each.                                                                               |
+|                               |                                                                                                                                 |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                       | 
+|                               |                                                                                                                                 |
+|                               |  set |demoimg| |cir2| to the folder                                                                                             |
+|                               |                                                                                                                                 |
+|                               |  where ``QR1.bmp`` has been saved                                                                                               |
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+    
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| if ``QR1.bmp`` is not loaded
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``QR1.bmp`` is loaded
 * Only a ``2D Barcode`` tool called ``B2d0`` is used with the region-of-interest (ROI) set at one of the QR codes. 
 
 .. Note::
@@ -40,7 +48,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1| 
 
 Solution Initialize
 ###################
@@ -164,7 +172,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button.
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|
 
   |VOSROX|
 
