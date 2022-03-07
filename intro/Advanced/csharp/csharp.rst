@@ -19,12 +19,18 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/csharp>`__
 ---------------------------------------------------------------------------------------------------------
 
-* ``CsClient.csproj``: The `c# project file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/CsClient.csproj?raw=true>`__
-* ``Form1.cs``: Main Form `source code <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/Form1.cs?raw=true>`__
-* ``iClientApi.cs``: VOS `wrapper for c# <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/iClientApi.cs?raw=true>`__
-* ``App.config``: The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__
-* Explanations of other files are left out for brevity
-  
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|1. ``CsClient.csproj``         |The `c# project file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/CsClient.csproj?raw=true>`__     |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|2. ``Form1.cs``                |Main Form `source code <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/Form1.cs?raw=true>`__          |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|3. ``iClientApi.cs``           |VOS `wrapper for c# <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/iClientApi.cs?raw=true>`__        |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|4. ``App.config``              |The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__       | 
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|Explanation of other files are left out for brevity                                                                                                                        |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+ 
 Running iServer.exe
 ===================
 

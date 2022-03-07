@@ -35,7 +35,7 @@ This sample demonstrates
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |1. ``OcrItalic.bin``                 |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/OcrItalic/OcrItalic.bin?raw=true>`__                  |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution             |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup|, import |import| the solution             |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``OcrItalic.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/OcrItalic/OcrItalic.bmp?raw=true>`__ OCR text in size 11 |
   |                                     |Times New Roman Font in italic.                                                                                                                     |
