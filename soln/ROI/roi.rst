@@ -17,7 +17,7 @@ This sample demonstrates
 //todo: parameter table for setparam
 
 .. Note::
-  Without any scripting, VOS is able to read up to 64 codes simultaneously at one go within the ROI.  
+  Without any scripting, VOS is able to read up to 64 QR codes simultaneously at one go within the ROI.  
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
 --------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ This sample demonstrates
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |1. ``roishift.bin``            |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__                             |
 |                               |                                                                                                                                                       |
-|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |                                                          
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |                                                          
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |2. ``QR1.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__                                     |
 |                               |with 6 QR codes, with an alphabet encoded in each.                                                                                                     |

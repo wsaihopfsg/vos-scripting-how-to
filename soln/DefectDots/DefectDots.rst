@@ -17,18 +17,27 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/DetectDots>`__
 ---------------------------------------------------------------------------------------------------------
 
-1. ``detectpatches.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__
-
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-2. ``mpsmok.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch detected.
-3. ``mpsmdots.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect detected.
-
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved 
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|1. ``detectpatches.bin``       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/detectpatches.bin?raw=true>`__                 |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2. ``mpsmok.bmp``              |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmok.bmp?raw=true>`__ for PASS with no patch    |   
+|                               |detected.                                                                                                                                              |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+ 
+|3. ``mpsmdots.bmp``            |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/DetectDots/mpsmdots.bmp?raw=true>`__ for FAIL due to defect  |
+|                               |detected.                                                                                                                                              |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
+|                               |                                                                                                                                                       |
+|                               |  set |demoimg| |cir2| to the folder where                                                                                                             |
+|                               |                                                                                                                                                       |
+|                               |  ``mpsmdots.bmp`` & ``mpsmok.bmp`` have been saved                                                                                                    |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``mpsmdots.bmp`` is loaded.
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``mpsmdots.bmp`` is loaded.
 * Only a ``Count`` tool called ``N`` is used with the region-of-interest (ROI) set to the area where defect detection is to be performed.
   * The ``Tolerance`` of the tool is set to all zeros because we want to trigger a failure when N>0 
 * Hovering the mouse over the green line denoting the ROI, the count tool gives a preview of the output after preprocessing has been applied. |CountPreview|
@@ -82,7 +91,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1| 
 
 Post Image Process
 ##################
@@ -107,7 +116,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
+* At the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2| to toggle between the 2 pictures
   
   .. image:: /soln/DefectDots/failedPatches.jpg
   
