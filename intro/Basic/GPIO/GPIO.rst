@@ -44,7 +44,7 @@ This sample demonstrates
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__   //todo:update soln |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution          |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution             |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``nolight1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1.bmp?raw=true>`__ without plastic cover     |
   |                                     |taken in a room with natural window light but no ceiling light                                                                                      |
@@ -79,7 +79,7 @@ This sample demonstrates
   |12. ``rmFlash1a.bmp``                |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/rmFlash1a.bmp?raw=true>`__ is a rotated version of  |
   |                                     |``rmFlash1.bmp`` and serves as the template for Tool Setup |toolsetup|                                                                              |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                |
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                   |
   |                                     |                                                                                                                                                    |
   |                                     |  set |demoimg| |cir2|                                                                                                                              |
   |                                     |                                                                                                                                                    |  
@@ -92,7 +92,7 @@ This sample demonstrates
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` page |toolsetup|, click on |takepic| until ``rmFlash1a.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``rmFlash1a.bmp`` is loaded. 
 
 .. image:: /intro/Basic/GPIO/toolsetup.png
 
@@ -144,7 +144,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
 
 
 Solution Initialize
@@ -242,7 +242,7 @@ Post Image Process
 Image Logging
 ----------------
 
-* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown.
+* Click on :hoverxreftooltip:`Setup Connections <intro/Basic/Hover/setupconn:Setup Connections>` |conn| |cir1|, then on ``Setup Image Logging`` |imglogbut| |cir2| and the ``Image Logging`` panel will be shown.
 
 .. Note::
   Click on |imglogen| to toggle between enabling/disabling ``Image Logging``
@@ -256,7 +256,7 @@ Image Logging
 Image File Logging
 --------------------
 
-* Click on ``Setup Connections`` |conn|, then on ``Setup Image Logging`` |imglogbut| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99 since ``#images`` are set to 100.
+* Click on :hoverxreftooltip:`Setup Connections <intro/Basic/Hover/setupconn:Setup Connections>` |conn| |cir1|, then on ``Setup Image Logging`` |imglogbut| |cir2| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``recycle`` will be saved to ``c:\Users`` with file names ``imageXX.bmp`` where ``XX`` is a sequential counter from 00 to 99 since ``#images`` are set to 100.
   |imglog| 
 
 .. Caution::
@@ -294,7 +294,7 @@ Image File Logging
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button 
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2| 
 
 +-------------------------------------------------+-------------------------------------------------+
 ||1|                                              ||2|                                              |
