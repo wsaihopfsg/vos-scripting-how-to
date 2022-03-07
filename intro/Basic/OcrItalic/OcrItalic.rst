@@ -39,8 +39,14 @@ This sample demonstrates
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``OcrItalic.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/OcrItalic/OcrItalic.bmp?raw=true>`__ OCR text in size 11    |
   |                                     |Times New Roman Font in italic.                                                                                                                        |
+  |                                     |                                                                                                                                                       |   
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
+  |                                     |                                                                                                                                                       |
+  |                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
+  |                                     |                                                                                                                                                       |
+  |                                     |  where ``OcrItalic.bmp`` have been saved                                                                                                              |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  
+
  
 
 Tools Explanation

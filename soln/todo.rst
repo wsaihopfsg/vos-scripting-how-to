@@ -29,21 +29,40 @@ Summary of todo
 
 3. HKID...?  
 
++------------------+----------------------------------+------------------------------------------------------------------+
+|**Function**      |**Parameters**                    |**Explanation**                                                   |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``LogStart``      |``fileName``, ``onClient``        |Commence logging of processed data the specified ``fileName``     |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``LogStop``       |( )                               |Stop data logging                                                 |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``LogImage``      |``fileName``                      |Save image to ``fileName`` for 1 image. ``Image file logging``    |
+|                  |                                  ||imgfilelogen| must be enabled                                    |
++------------------+----------------------------------+------------------------------------------------------------------+
+
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
 ------------------------------------------------------------------------------------------------------
 
-#. ``todo.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__
-
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-#. ``todo.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``todo.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
-
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``QR1.bmp`` has been saved 
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|1.``todo.bin``                       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__                          |
+|                                     |                                                                                                                                                       |
+|                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
+|                                     |for PASS with no patch detected.                                                                                                                       |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|3.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
+|                                     |                                                                                                                                                       |   
+|                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
+|                                     |                                                                                                                                                       |
+|                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
+|                                     |                                                                                                                                                       |
+|                                     |  where ``todo.bmp`` have been saved                                                                                                                   |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``todo.bmp`` is loaded. 
+* * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``todo.bmp`` is loaded. 
 
 //.. image:: /code/Soln/Scratch/scratched_hidden.bmp
 
@@ -68,7 +87,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
 
 Post Image Process
 ##################
@@ -88,8 +107,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button 
-
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
 #multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
 

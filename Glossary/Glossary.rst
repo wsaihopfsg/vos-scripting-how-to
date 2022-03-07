@@ -243,12 +243,19 @@ Logger
    :class: wy-table-responsive table
 
    +-----------------------------------------------+-----------------------------------------------+
-   |* AppendFile                                   |* LogImage                                     |
+   |* AppendFile                                   |* |logimage|_                                  |
    |* DriveConnnect                                |* WriteImageFile                               |
    |* GetFtpStatus                                 |* WriteImageTools                              |
-   |* LogStart                                     |* WriteHistoryImage                            |
-   |* LogStop                                      |                                               |
+   |* |logstart|_                                  |* WriteHistoryImage                            |
+   |* |logstop|_                                   |                                               |
    +-----------------------------------------------+-----------------------------------------------+
+
+.. |logstart| replace:: ``LogStart``
+.. _logstart: ../intro/Basic/OcrItalic/OcrItalic.html   
+.. |logstop| replace:: ``LogStop``
+.. _logstop: ../intro/Basic/OcrItalic/OcrItalic.html
+.. |logimage| replace:: ``LogImage``
+.. _logimage: ../intro/Basic/OcrItalic/OcrItalic.html
 
 .. _comms:
 
