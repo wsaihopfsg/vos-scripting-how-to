@@ -63,24 +63,37 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/MathFunc>`__
 ---------------------------------------------------------------------------------------------------------
 
-1. ``mathFunc.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/mathFunc.bin?raw=true>`__
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|1. ``mathFunc.bin``            ||download1|                                                                                                                      |
+|                               |                                                                                                                                 |      
+|                               |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1|, import |import||
+|                               |  the solution |cir2|                                                                                                            |
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|2. ``card.bmp``                ||download2| with a rotated rectangle                                                                                             |
+|                               |                                                                                                                                 |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                |
+|                               |                                                                                                                                 |
+|                               |  set |demoimg| |cir2| to the folder                                                                                             |
+|                               |                                                                                                                                 |
+|                               |  where ``vosrox.bmp`` have been saved                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-2. ``card.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/card.bmp?raw=true>`__ with a rotated rectangle
+.. |download1| replace:: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/mathFunc.bin?raw=true>`__
+.. |download2| replace:: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/card.bmp?raw=true>`__
 
-   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
+.. .. |test| replace:: ``Download``
+.. .. _test: https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/MathFunc/mathFunc.bin?raw=true
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``card.bmp`` is loaded.
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``card.bmp`` is loaded.
 * 3 ``Angle`` tools named ``A0`` , ``A1`` & ``A2`` are used
 * 2 ``Rake`` tools named ``RakeShort`` & ``RakeLong`` with 7 and 11 rakes for the width and length of the rectangle respectively.
 * 1 ``Distance`` tool named ``Slant`` for the length of the diagonal.
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
 
 
 .. _deg2rad:
@@ -164,7 +177,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2| 
   
   .. image:: /intro/Basic/MathFunc/MathFunc.jpg
 

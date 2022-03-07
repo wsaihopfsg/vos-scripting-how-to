@@ -69,13 +69,21 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/StrFunc>`__
 ---------------------------------------------------------------------------------------------------------
 
-1. ``strFunc.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/strFunc.bin?raw=true>`__
-
-   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1|, import |import| |cir2| the solution 
-  
-2. ``vosrox.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__ with a rotated QR code
-
-   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|1. ``strFunc.bin``             |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/strFunc.bin?raw=true>`__   |
+|                               |                                                                                                                                 |   
+|                               |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1|,                | 
+|                               |  import |import| |cir2| the solution                                                                                            | 
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+   
+|2. ``vosrox.bmp``              |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__       |  
+|                               |with a rotated QR code                                                                                                           |
+|                               |                                                                                                                                 |   
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                | 
+|                               |                                                                                                                                 |
+|                               |  set |demoimg| |cir2| to the folder                                                                                             |
+|                               |                                                                                                                                 |   
+|                               |  where ``vosrox.bmp`` have been saved                                                                                           |
++-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
