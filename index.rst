@@ -75,9 +75,11 @@ Basic Topics
 || Italic fonts can be tricky for teach-in because their characters may not fit into rectangles used for    |
 || manual region-of-interest (ROI) indication due to kerning. The ``Shear X`` preprocessor is ideal for     |
 || making the italic characters up-right so that they fit into rectangles. This tutorial shows an example   |
-|| where the italic font, even with perfect teach-in, gives errorneous results even with a high threshold.  | 
-|| On the other hand with shear correction, the OCR is able to perform perfectly with a low threshold       |
+|| where the italic font, gives errorneous results even after tweaking with the ``Required score``          | 
+|| threshold. On the other hand with shear correction, the OCR is able to perform perfectly.                |
+|| |deitalic|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
+
 
 :ref:`Attribute Functions (WIP) <todo>`
 ------------------------------------------------------------
@@ -311,4 +313,5 @@ User contributions
 
 .. |matchpix| image:: /intro/Basic/GPIO/coverUN.jpg
 
-.. |italicOCR| replace:: *italic font OCR*
+.. |deitalic| image:: /intro/Basic/OcrItalic/deitalic.jpg
+

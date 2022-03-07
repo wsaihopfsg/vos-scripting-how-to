@@ -12,10 +12,10 @@ String Manipulations
 This sample demonstrates
 
 1. Reading a QR Code 
-2. Built-in string functions; all indices are zero-based
+2. Built-in string functions
 
 +-----------------+----------------------------------+------------------------------------------------------------------+
-|**Function**     |**Parameters**                    |**Explanation**                                                   |
+|**Function**     |**Parameters**                    |**Explanation** (All indices are zero-based)                      |
 +-----------------+----------------------------------+------------------------------------------------------------------+
 |``Find``         |``substring``,                    |Return the first occurance of ``substring`` within ``inString``.  |
 |                 |                                  |                                                                  |
@@ -71,7 +71,7 @@ This sample demonstrates
 
 1. ``strFunc.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/strFunc.bin?raw=true>`__
 
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
+   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/solnsetup:Solution Setup>` |solnsetup|, import |import| the solution 
   
 2. ``vosrox.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__ with a rotated QR code
 
