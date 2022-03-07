@@ -71,15 +71,15 @@ This sample demonstrates
 
 1. ``strFunc.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/strFunc.bin?raw=true>`__
 
-   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/MathFunc/solnsetup:Solution Setup>` |solnsetup|, import |import| the solution 
+   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup|, import |import| the solution 
   
 2. ``vosrox.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__ with a rotated QR code
 
-   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/MathFunc/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
+   * At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where ``vosrox.bmp`` have been saved 
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``vosrox.bmp`` is loaded.
+* At the :hoverxreftooltip:`Tool Setup <intro/Basic/Hover/toolsetup:Tool Setup>` page |toolsetup|, click on |takepic| until ``vosrox.bmp`` is loaded.
 * Only a ``2D Barcode`` tool named ``B2d`` is used with the region-of-interest (ROI) set to almost the whole field-of-view.
   
   * The ``Angle`` property named ``Angle`` is enabled to obtained the angle of rotation of the QR code.
