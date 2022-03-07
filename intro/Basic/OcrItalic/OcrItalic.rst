@@ -13,7 +13,7 @@ This sample demonstrates
 
 1. Use of the  ``OCR`` tool |ocrtool| with teach-in of characters
 2. Use of the ``Shear X`` preprocessor to facilitate the teach-in process of the italic fonts 
-3. Logging results to .csv file  //todo
+3. Logging results to a configured .csv file  and substituting configured filename of ``Image File Logging``
 
 +------------------+----------------------------------+------------------------------------------------------------------+
 |**Function**      |**Parameters**                    |**Explanation**                                                   |
@@ -22,8 +22,8 @@ This sample demonstrates
 +------------------+----------------------------------+------------------------------------------------------------------+
 |``LogStop``       |( )                               |Stop data logging                                                 |
 +------------------+----------------------------------+------------------------------------------------------------------+
-|``LogImage``      |``fileName``                      |Save image to ``fileName`` .... //todo                            |
-|                  |                                  |to 0 in ``value``                                                 |
+|``LogImage``      |``fileName``                      |Save image to ``fileName`` for 1 image. ``Image file logging``    |
+|                  |                                  ||imgfilelogen| must be enabled                                    |
 +------------------+----------------------------------+------------------------------------------------------------------+
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/OcrItalic>`__
@@ -127,18 +127,86 @@ Template-Based OCR
 .. |unknown| image:: /intro/Basic/OcrItalic/char.jpg
     :width: 100px
  
+Image File Logging
+--------------------
 
-CSV Logging
-----------------
-//todo
+* Click on :hoverxreftooltip:`Setup Connections <intro/Basic/Hover/setupconn:Setup Connections>` |conn| |cir1|, then on ``Setup Image Logging`` |imglogbut| |cir2| and the ``Image Logging`` panel will be shown. In this solution, the images that are classified as ``pass`` will be saved but we will overwrite the filename settings with scripting.
+
+.. image:: /intro/Basic/OcrItalic/imglog.jpg
+
+
+Code Walk-Through
+-----------------
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
+
+Solution Initialize
+###################
+* Choose the predefined function ``Solution Initialize`` at the bottom left 
+  |fn_init|
+
+* In the Script Function window we see 2 lines of code
+
+.. code-block::
+  :linenos:
+    
+    nowCtr = 0
+    logstart("C:\Users\temp\test.csv",1) 
+
+* Line 1: Counter initialization
+* Line 2: Start file logging to ``test.csv`` 
+
+Post Image Process
+##################
+
+* Choose the predefined function ``Post Image Process`` at the bottom left 
+  |fn_post|
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  saveStr = "C:\Users\temp\now"+nowCtr+".jpg"
+  logimage(saveStr)
+  nowCtr = nowCtr+1
+  if(nowCtr>5) 
+      logstop()
+  endif
+
+* Line 1: Changing image file name based on ``nowCtr``
+* Line 2: Overwriting the image file logging name with ``saveStr``
+* Line 3: Counter increament
+* Lines 4-6: Stop logging criterion  
+
+
+.. note::
+  LogImage only works when ``Image File Logging`` |imgfilelogen| is enabled and filename substitution only works for the current filename. 
 
 Running the solution
 --------------------
 
-* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. While
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
+* Clicking on ``Manual Trigger`` |manTrig| repeatedly we will see files created 
+  
+  * As many .jpg files as ``Manual Trigger`` |manTrig| clicks    
+  * A .csv file with 5 entries
+
+.. code-block::
+  :linenos:
+  
+  "Frame Number","TimeStamp","Result","OsheaR","OCR",
+
+  1, 17:58:04, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
+  2, 17:58:04, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
+  3, 17:58:05, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
+  4, 17:58:05, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
+  5, 17:58:06, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
+
+
+* We can observe that
    
   * ``OsheaR`` is able to recognize the alphabets with 100% accuracy, 
-  * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` does not seem to help as summarize in the following table.
+  * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` manually does not seem to help as summarize in the following table.
     
     * 85: italicfontOC
     * 50: italicfontOCI
@@ -161,7 +229,7 @@ Running the solution
     * Spaces may become hard to detect
     * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
       
-  
+
 .. Tip::
   #OCR #preprocessor #shear #italic #template #AI #grayscale #intensity
 
