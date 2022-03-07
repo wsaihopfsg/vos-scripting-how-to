@@ -71,7 +71,7 @@ This sample demonstrates
 
 1. ``strFunc.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/strFunc.bin?raw=true>`__
 
-   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup|, import |import| the solution 
+   * At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1|, import |import| |cir2| the solution 
   
 2. ``vosrox.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/StrFunc/vosrox.bmp?raw=true>`__ with a rotated QR code
 
@@ -79,14 +79,14 @@ This sample demonstrates
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup <intro/Basic/Hover/toolsetup:Tool Setup>` page |toolsetup|, click on |takepic| until ``vosrox.bmp`` is loaded.
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``vosrox.bmp`` is loaded.
 * Only a ``2D Barcode`` tool named ``B2d`` is used with the region-of-interest (ROI) set to almost the whole field-of-view.
   
   * The ``Angle`` property named ``Angle`` is enabled to obtained the angle of rotation of the QR code.
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1| 
 
 Post Image Process
 ##################
@@ -199,7 +199,7 @@ up2low(p1)
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|
   
   .. image:: /intro/Basic/StrFunc/strFunc.jpg
    :width: 320pt
