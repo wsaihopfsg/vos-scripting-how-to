@@ -17,18 +17,29 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
 ------------------------------------------------------------------------------------------------------
 
-#. ``scratch.bin``: `The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__
-
-   * At the Solution Setup page |solnsetup|, import |import| the solution 
-  
-#. ``unscratched.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__ for PASS with no patch detected.
-#. ``scratched_hidden.bmp``: `The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__ for FAIL due to scratch detected.
-
-   * At the :hoverxreftooltip:`Sensor Setup page <soln/ROI/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|, set |demoimg| |cir2| to the folder where the image files have been saved.
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|1.``scratch.bin``              |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__                          |       
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| ,                                            |  
+|                               |                                                                                                                                                       |
+|                               |  import |import| |cir2| the solution                                                                                                                  |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2.``unscratched.bmp``          |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |
+|                               |for PASS with no patch detected.                                                                                                                       |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+  
+|3.``scratched_hidden.bmp``     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
+|                               |for FAIL due to scratch detected.                                                                                                                      |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
+|                               |                                                                                                                                                       |
+|                               |  set |demoimg| |cir2|                                                                                                                                 |
+|                               |                                                                                                                                                       |
+|                               |  to the folder where the image files have been saved.                                                                                                 |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
-* At the ``Tool Setup`` page |toolsetup|, click on |takepic| until ``scratched_hidden.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``scratched_hidden.bmp`` is loaded. 
 
 .. image:: /code/Soln/Scratch/scratched_hidden.bmp
 
@@ -97,7 +108,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on ``Edit Script`` |edit| 
+* Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1| 
 
 Post Image Process
 ##################
@@ -121,7 +132,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the ``Run Solution`` |runsoln| page, click on ``Manual Trigger`` |manTrig| button to toggle between the 2 pictures
+* At the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2| to toggle between the 2 pictures
 
 +-------------------------+
 ||pass|                   |

@@ -50,7 +50,9 @@ This sample demonstrates
 |                               |                                                                                                                                                       |
 |                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
 |                               |                                                                                                                                                       |
-|                               |  set |demoimg| |cir2| to the folder where the image files have been saved.                                                                            |
+|                               |  set |demoimg| |cir2|                                                                                                                                 |
+|                               |                                                                                                                                                       |
+|                               |  to the folder where the image files have been saved.                                                                                                 |
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
