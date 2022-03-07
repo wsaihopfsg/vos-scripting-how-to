@@ -44,7 +44,7 @@ This sample demonstrates
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__   //todo:update soln |
   |                                     |                                                                                                                                                    |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup|, import |import| the solution             |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup| |cir1|, import |import| |cir2| solution   |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``nolight1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/nolight1.bmp?raw=true>`__ without plastic cover     |
   |                                     |taken in a room with natural window light but no ceiling light                                                                                      |

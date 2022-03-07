@@ -11,8 +11,10 @@ Sequential reading of QR codes
 
 This sample demonstrates
 
-#. How to dynamically change ROI through VOS script
-#. Reading of QR codes sequentially through ROI (region-of-interest) adjustment 
+1. How to dynamically change ROI through VOS script
+2. Reading of QR codes sequentially through ROI (region-of-interest) adjustment 
+
+//todo: parameter table for setparam
 
 .. Note::
   Without any scripting, VOS is able to read up to 64 codes simultaneously at one go within the ROI.  
@@ -20,20 +22,20 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ROI>`__
 --------------------------------------------------------------------------------------------------
 
-+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-|1. ``roishift.bin``            |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__       |
-|                               |                                                                                                                                 |
-|                               |* At the Solution Setup page |solnsetup|, import |import| the solution                                                           |
-+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-|2. ``QR1.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__               |
-|                               |with 6 QR codes, with an alphabet encoded in each.                                                                               |
-|                               |                                                                                                                                 |
-|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                       | 
-|                               |                                                                                                                                 |
-|                               |  set |demoimg| |cir2| to the folder                                                                                             |
-|                               |                                                                                                                                 |
-|                               |  where ``QR1.bmp`` has been saved                                                                                               |
-+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|1. ``roishift.bin``            |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/roishift.bin?raw=true>`__                             |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |                                                          
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|2. ``QR1.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ROI/QR1.bmp?raw=true>`__                                     |
+|                               |with 6 QR codes, with an alphabet encoded in each.                                                                                                     |
+|                               |                                                                                                                                                       |
+|                               |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             | 
+|                               |                                                                                                                                                       |
+|                               |  set |demoimg| |cir2| to the folder                                                                                                                   |
+|                               |                                                                                                                                                       |
+|                               |  where ``QR1.bmp`` has been saved                                                                                                                     |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
     
 
 Tools Explanation
@@ -48,7 +50,7 @@ Tools Explanation
 
 Code Walk-Through
 -----------------
-* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1| 
+* Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1| 
 
 Solution Initialize
 ###################
@@ -104,6 +106,8 @@ Periodic Function
 
 * The shift ROI operation is performed by the ``setparam`` function as high-lighted aboved in line 13. The following table is copied from the VOS online help page; for QR code reading however, ``rect`` will suffice.
 
+//todo: shift table up, and line #: code explanation
+ 
  +----------------+--------------------+---------------------------------------------------------------------------------------------+
  | ROI Type       | Points             | Explanation                                                                                 |
  +----------------+--------------------+---------------------------------------------------------------------------------------------+
@@ -172,7 +176,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|
+* At the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|
 
   |VOSROX|
 
