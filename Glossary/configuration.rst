@@ -89,3 +89,8 @@ Configuration
 
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Basic/GPIO/GPIO`
+
+.. confval:: OCR
+
+   * :doc:`/intro/Basic/OcrItalic/OcrItalic`
+   * :doc:`/intro/Advanced/SolnSwitch/SolnSwitch`

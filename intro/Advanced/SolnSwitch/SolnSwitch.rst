@@ -10,53 +10,53 @@ Scale-Invariant OCR On a Rim with 2 Solutions Working in Tandem
 This sample demonstrates
 
 1. Scale-invariant OCR on a rim
-2.  
-  
-  * Pulsed GPO for pass/fail/recycle
-  * difference between Equalize & Normalize
-  * Image correction with brightness & contrast?
-    * https://dsp.stackexchange.com/questions/46564/what-is-the-difference-between-image-normalization-contrast-stretching-and 
-  * Tolerance settings, p19-21 in Bible
-  * Preprocessors
-    * Kernels https://setosa.io/ev/image-kernels/
-    * Subtract
-    * ...
-  * Tools
-  * Calibration how-to
-  * FTP server 
-
-3. HKID...?  
+2. Use of multi solutions for solving vision problems  
+3. Use of ``persistent variables``
+     
 
 +------------------+----------------------------------+------------------------------------------------------------------+
 |**Function**      |**Parameters**                    |**Explanation**                                                   |
 +------------------+----------------------------------+------------------------------------------------------------------+
-|``LogStart``      |``fileName``, ``onClient``        |Commence logging of processed data the specified ``fileName``     |
+|``ChangeSolution``|``requestedSolutionID``           |Load a the Solution file specified by ``requestedSolutionID``     |
 +------------------+----------------------------------+------------------------------------------------------------------+
-|``LogStop``       |( )                               |Stop data logging                                                 |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``LogImage``      |``fileName``                      |Save image to ``fileName`` for 1 image. ``Image file logging``    |
-|                  |                                  ||imgfilelogen| must be enabled                                    |
+|``ReTrigger``     |``camID``                         |Reprocessing of the last image at ``camID``                       |
 +------------------+----------------------------------+------------------------------------------------------------------+
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
-------------------------------------------------------------------------------------------------------
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/SolnSwitch>`__
+----------------------------------------------------------------------------------------------------------------------
 
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|1.``todo.bin``                       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__                          |
-|                                     |                                                                                                                                                       |
-|                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|2.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
-|                                     |for PASS with no patch detected.                                                                                                                       |
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|3.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
-|                                     |                                                                                                                                                       |   
-|                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
-|                                     |                                                                                                                                                       |
-|                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
-|                                     |                                                                                                                                                       |
-|                                     |  where ``todo.bmp`` have been saved                                                                                                                   |
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. table::
+  :class: tight-table
+
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |1.``00.bin``                         |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/00.bin?raw=true>`__ that performs          |
+  |                                     |                                                                                                                                                       |
+  |                                     |* Circle detection                                                                                                                                     |
+  |                                     |* Inner & outer diamters computation                                                                                                                   |
+  |                                     |* Coordinates of the centre of circle                                                                                                                  |
+  |                                     |* Switching to solution ``01.bin``                                                                                                                     |
+  |                                     |                                                                                                                                                       |
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |2.``01.bin``                         |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/01.bin?raw=true>`__  that performs         |
+  |                                     |                                                                                                                                                       |
+  |                                     |* Region-of-interest (ROI) adjustment base on the values found in solution ``00.bin``                                                                  |
+  |                                     |* ``Retrigger`` for evaluation of the same image based on the newly adjusted ROI                                                                       |
+  |                                     |* Switching back to solution ``00.bin``                                                                                                                |
+  |                                     |                                                                                                                                                       |
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |3.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
+  |                                     |for PASS with no patch detected.                                                                                                                       |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |4.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
+  |                                     |                                                                                                                                                       |   
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
+  |                                     |                                                                                                                                                       |
+  |                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
+  |                                     |                                                                                                                                                       |
+  |                                     |  where ``todo.bmp`` have been saved                                                                                                                   |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------

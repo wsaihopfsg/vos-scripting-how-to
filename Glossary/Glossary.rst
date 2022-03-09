@@ -37,9 +37,9 @@ Tools
    |                                                           |  * Sobel                                               |
    |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
    |                                                           |  * |thres|_                                            |
-   |* OCR                                                      |  * :confval:`Threshold (band) <Threshold (band)>`      |
+   |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
-   |* Color Meter                                              |  * Zoom                                                |
+   |                                                           |  * Zoom                                                |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |distance| replace:: ``Distance``
@@ -290,7 +290,7 @@ System Functions
 
    +-----------------------------------------------+-----------------------------------------------+
    |* AutoSaveEnable                               |* Print                                        |
-   |* ChangeSolution                               |* ReadCell                                     |
+   |* |changesoln|_                                |* ReadCell                                     |
    |* ChangeStartupSolution                        |* RefreshExcel                                 |
    |* Copy                                         |* ResetHistory                                 |
    |* |delay|_                                     |* ResetStatistics                              |
@@ -309,3 +309,6 @@ System Functions
 
 .. |delay| replace:: ``Delay``
 .. _delay: ../soln/ROI/roi.html
+
+.. |changesoln| replace:: ``ChangeSolution``
+.. _changesoln: ../intro/Advanced/SolnSwitch/SolnSwitch.html
