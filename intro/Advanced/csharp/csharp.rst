@@ -28,9 +28,12 @@ This sample demonstrates
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 |4. ``App.config``              |The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__       | 
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|5. ``VBAPI_EN.chm``            |The `help file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/VBAPI_EN.chm?raw=true>`__ for VOS API  | 
+|                               |which seems to absent in newer VOS software installation.                                                                                  |
++-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 |Explanation of other files are left out for brevity                                                                                                                        |
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
- 
+
 Running iServer.exe
 ===================
 
