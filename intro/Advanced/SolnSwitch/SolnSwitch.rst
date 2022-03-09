@@ -68,37 +68,175 @@ This sample demonstrates
   |                                     |  where these images have been saved                                                                                                                   |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Tools Explanation
+Tool Explanation
 -----------------
-* * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``todo.bmp`` is loaded. 
 
-//.. image:: /code/Soln/Scratch/scratched_hidden.bmp
+* * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| and load any of the above ``.bmp`` image. 
 
 * 3 tools have been used
 
-  * A ``todo`` tool named ``Pre``
-  * Another ``todo`` tool named ``Pre1`` 
-  * A ``todo`` tool named ``N`` 
+  * A ``Count`` tool named ``OuterC``, where the ``Object type`` has been set to ``Bright`` which detects the outer ring in ``00.bin``
+  * Another ``Count`` tool named ``InnerC``, where the ``Object type`` has been set to ``Dark`` which detects the inner ring in ``00.bin``
 
+  +-------------------+--------------------+
+  ||inner|            ||outer|             |
+  +-------------------+--------------------+
+  |InnerC's properties|OuterC's properties |
+  +-------------------+--------------------+
+
+  * An ``OCR`` tool named ``OCR`` with these properties for ``01.bin``
   
-+-------------------+--------------------+-----------------------------+
-|                   |Pic. above, removes |Pic. below, removes          |
-|                   |                    |                             |              
-|                   |small patches only  |big & small patches together |
-+-------------------+--------------------+-----------------------------+
-|Max Area           |400                 |1500                         |
-+-------------------+--------------------+-----------------------------+
-|Max Width          |30                  |100                          |
-+-------------------+--------------------+-----------------------------+
-|Max Height         |30                  |100                          |
-+-------------------+--------------------+-----------------------------+
+    .. image:: /intro/Advanced/SolnSwitch/OCRprop.jpg
+      :width: 300px
+
+    * In the ``font editor`` |fonteditor|, we would have observed that 2 font sizes have been taught-in.
+  
+.. |inner| image:: /intro/Advanced/SolnSwitch/InnerCprop.jpg
+  :width: 300px
+
+.. |outer| image:: /intro/Advanced/SolnSwitch/OuterCprop.jpg  
+  :width: 300px
 
 Code Walk-Through
 -----------------
-* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
 
-Post Image Process
-##################
+* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|. There are 5 user-defined functions in addition to the 4 predefined functions.  
+
+User-Defined function ``parseIn()``
+####################################
+
+* Choose the User-function ``parseIn()`` at the bottom left 
+
+.. image:: /intro/Advanced/SolnSwitch/parseIn.jpg
+
+* In the Script Function window we see
+
+.. code-block:: 
+  :linenos:
+
+  nowCtr = 0
+  cirIndex = -1
+  while( nowCtr < InnerC )
+      if(InMinor.[nowCtr] >  cirMinD) 
+          MajMinRatio = InMajor.[nowCtr]/InMinor.[nowCtr] * 1.0
+          if(MajMinRatio < cirMajMinRatio) 
+              //opStr = FormatString("[MajMinRatio%.2f]")
+              cirIndex = nowCtr
+              nowCtr = InnerC
+          endif
+      endif
+    nowCtr = nowCtr+1
+  endwhile
+  return(cirIndex)
+
+.. _parseInCode:
+
+* Line 1: Initialize counter ``nowCtr``
+* Line 2: Initialize index of circle ``cirIndex``
+* Lines 3-13: Loop to look for circular Object
+* Line 4: Length of the minor axis has to be greater than the minimum circle diameter ``cirMinD``
+* Line 5: Computer ratio between Major and minor axes
+* Line 6: Check if the above ratio is smaller than threshold ``cirMajMinRatio``. 
+* Line 8: Set the circle index ``cirIndex`` to ``nowCtr`` because a circle has been found
+* Lines 9 & 12: Counter operations
+* Line 14: Function return
+
+User-Defined function ``parseOut()``
+####################################
+
+* Choose the User-function ``parseOut()`` at the bottom left 
+
+.. image:: /intro/Advanced/SolnSwitch/parseOut.jpg
+
+* In the Script Function window we see
+
+.. code-block:: 
+  :linenos:
+
+  nowCtr = 0
+  cirIndex = -1
+  while( nowCtr < OuterC )
+      if(OutMinor.[nowCtr] >  cirMinD) 
+          MajMinRatio = OutMajor.[nowCtr]/OutMinor.[nowCtr] * 1.0
+          if(MajMinRatio < cirMajMinRatio) 
+              //opStr = FormatString("[MajMinRatio%.2f]")
+              cirIndex = nowCtr
+              nowCtr = OuterC
+          endif
+      endif
+      nowCtr = nowCtr+1
+  endwhile
+  return(cirIndex)
+
+* This code is almost identical to ``parseIn``. Please refer to :ref:`above for explanation <parseInCode>`.
+
+User-Defined function ``findMean2Num(p1,p2)``
+###################################################
+
+* Choose the User-function ``findMean2Num(p1,p2)`` at the bottom left 
+
+.. image:: /intro/Advanced/SolnSwitch/mean.jpg
+
+* In the Script Function window we see only 1 line of code which returns the average of the 2 input parameters.
+
+.. code-block:: 
+  :linenos:
+
+  return((p1+p2)*0.5)
+
+User-Defined function ``setOcROI()``
+####################################
+
+* Choose the User-function ``setOcROI()`` at the bottom left 
+
+.. image:: /intro/Advanced/SolnSwitch/setROI.jpg
+
+* In the Script Function window we see
+
+.. code-block:: 
+  :linenos:
+
+  Tool1Pos[0] = "setroi"
+  Tool1Pos[1] = "OCR" 
+  Tool1Pos[2] = 0
+  Tool1Pos[3] = "annulus"
+  Tool1Pos[4] = xx
+  Tool1Pos[5] = yy
+  Tool1Pos[6] = xx
+  Tool1Pos[7] = yy + (OutDiameter * 0.5)
+  Tool1Pos[8] = xx
+  Tool1Pos[9] = yy + (InDiameter * 0.5)
+  setParam(10,Tool1Pos)
+  return(0)
+
+* Lines 1-10: Parameters for setting ROI
+  
+  0. Name of the parameter being set, ``setroi``
+  1. Tool name, ``OCr``
+  2. CamID 
+  3. ROI Type, ``annulus``
+  4. xx is the x-coordinate of the centre of the concentric circles
+  5. yy is the y-coordinate of the centre of the concentric circles
+  6. x-coordinate of a point on the outer diameter of the ``annulus``
+  7. y-coordinate of a point on the outer diameter of the ``annulus``
+  8. x-coordinate of a point on the inner diameter of the ``annulus``
+  9. y-coordinate of a point on the inner diameter of the ``annulus``
+   
+* Line 11: Changing ROI 
+* Please refer to :ref:`here for more details <setRoiTable>`
+  
+User-Defined function ``removeChar(p1,p2)``
+##############################################
+
+* Choose the User-function ``removeChar(p1,p2)`` at the bottom left 
+
+.. image:: /intro/Advanced/SolnSwitch/removeChar.jpg
+
+* The code and explanation is :ref:`identical to here <removechar>`.  
+
+Post Image Process (``00.bin``)
+####################################
+
 * Choose the predefined function ``Post Image Process`` at the bottom left 
   |fn_post|
 

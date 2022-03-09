@@ -106,6 +106,8 @@ Periodic Function
 
 * The shift ROI operation is performed by the ``setparam`` function as high-lighted aboved in line 13. The following table is copied from the VOS online help page; for QR code reading however, ``rect`` will suffice.
 
+.. _setRoiTable:
+
 //todo: shift table up, and line #: code explanation
  
  +----------------+--------------------+---------------------------------------------------------------------------------------------+
