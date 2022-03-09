@@ -19,20 +19,25 @@ This sample demonstrates
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/csharp>`__
 ---------------------------------------------------------------------------------------------------------
 
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|1. ``CsClient.csproj``         |The `c# project file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/CsClient.csproj?raw=true>`__     |
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|2. ``Form1.cs``                |Main Form `source code <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/Form1.cs?raw=true>`__          |
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|3. ``iClientApi.cs``           |VOS `wrapper for c# <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/iClientApi.cs?raw=true>`__        |
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|4. ``App.config``              |The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__       | 
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|5. ``VBAPI_EN.chm``            |The `help file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/VBAPI_EN.chm?raw=true>`__ for VOS API  | 
-|                               |which seems to absent in newer VOS software installation.                                                                                  |
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-|Explanation of other files are left out for brevity                                                                                                                        |
-+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+.. _vbgithub:
+
+.. table::
+  :class: tight-table 
+  
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |1. ``CsClient.csproj``         |The `c# project file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/CsClient.csproj?raw=true>`__     |
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |2. ``Form1.cs``                |Main Form `source code <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/Form1.cs?raw=true>`__          |
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |3. ``iClientApi.cs``           |VOS `wrapper for c# <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/iClientApi.cs?raw=true>`__        |
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |4. ``App.config``              |The `configuration file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/App.config?raw=true>`__       | 
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |5. ``VBAPI_EN.chm``            |The `help file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/csharp/VBAPI_EN.chm?raw=true>`__ for VOS API  | 
+  |                               |which seems to absent in newer VOS software installation.                                                                                  |
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+  |Explanation of other files are left out for brevity                                                                                                                        |
+  +-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 Running iServer.exe
 ===================
@@ -52,7 +57,7 @@ Code Walk-Through
 
 * ``API Help`` 
 
-  * The ``iClient API for VOS`` help |APIhelp| is installed together with the ``VOS emulator`` and other VOS programs.
+  * The ``iClient API for VOS`` help |APIhelp| is installed together with the ``VOS emulator`` and other VOS programs. If not you may get it :ref:`here. <vbgithub>`
   * It is an important reference for c# programming.
   
 * ``App.config``
