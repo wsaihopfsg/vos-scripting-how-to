@@ -43,7 +43,7 @@ Basic Topics
 +-----------------------------------------------------------------------------------------------------------+
 
 :doc:`Math Functions <intro/Basic/MathFunc/MathFunc>`
-------------------------------------------------------
+------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
 |Mathematical Functions                                                                                     |
@@ -174,17 +174,17 @@ Advanced Topics
 || |UI|                                                                                                     | 
 +-----------------------------------------------------------------------------------------------------------+
 
-:ref:`Branching to Multiple Solutions (WIP) <todo>`
------------------------------------------------------
+:doc:`Scale-Invariant OCR On a Rim with 2 Solutions Working in Tandem <intro/Advanced/SolnSwitch/SolnSwitch>`
+-------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|C# client switches to another solution based on current image                                              |       
+|Scale-Invariant OCR With Multiple Taught-In Font Sizes                                                     |       
 +===========================================================================================================+
-|| A single solution may not be able to handle complicated vision problems. The C# client can load the      |
-|| appropriate solution based on the image information from VOS. This greatly expands the capability and    |
-|| flexibility of VOS. Note that solution switching can be achieved with a PLC also, which is not within the| 
-|| purview of this tutorial.                                                                                |
-|| |branch|                                                                                                 |
+|| scale-invariant OCR is achieved by teaching-in 2 font sizes.                                             |
+|| 2 solutions are used cyclically                                                                          |
+|| 1. Detection of concentric circle diameters & centre of circle based on 2 count tools                    |
+|| 2. The OCR ROI is adjusted based on previous solution's values and the current image is ``ReTrigger``.   |
+|| |OCR57|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
 :ref:`Integration with ROS (WIP) <todo>`
@@ -256,21 +256,10 @@ User contributions
 || |scratch_hi|                                                                                  |
 +------------------------------------------------------------------------------------------------+
 
-:ref:`Scale-Invariant OCR On a Rim (WIP) <todo>`
-----------------------------------------------------------------------------------------
-
-+-----------------------------------------------------------------------------------------------------------+
-|Scale-Invariant OCR With Multiple Taught-In Font Sizes                                                     |       
-+===========================================================================================================+
-|| This solution uses 2 taught in font sizes to achieve scale-invariant OCR. The OCR ROI is adjusted based  |
-|| on 2 count tools' output.                                                                                |
-|| |OCR57|                                                                                                  |
-+-----------------------------------------------------------------------------------------------------------+
-
 :doc:`Glossary <Glossary/Glossary>`
 ========================================
 
-* :ref:`Tools <tools>`
+* :ref:`Tools <toolss>`
 * :ref:`Mathematical Functions <maths>`
 * :ref:`String Functions <strings>`
 * :ref:`Statistical Functions <stats>`
@@ -298,9 +287,6 @@ User contributions
 .. |pNp| image:: /intro/Advanced/ROS/pickNplace.jpg  
    :width: 320pt
 
-.. |branch| image:: /intro/Advanced/SolnSwitch/Overview.jpg
-   :width: 320pt
-   
 .. |OCR57| image:: /soln/OCRim/ocr57.JPG
 
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf

@@ -119,7 +119,7 @@ Template-Based OCR
   Since ``Grayscale`` method in VOS has an extra degree-of-freedom in terms of individual pixel's intensity, ``Grayscale`` is usually preferred over ``Binary`` OCR.
 
 .. Warning::
-  Like most tools in VOS, template-based OCR is not scale invariant. Same font type of other sizes near to the taught-in size may still work if the threshold is low enough, but if the size differs too much you will have to teach-in the other font size too. 
+  Like most tools in VOS, template-based OCR is not scale invariant. Same font type of other sizes near to the taught-in size may still work if the threshold is low enough, but if the size differs too much you will have to |teachsizes| too. 
 
 .. |A| image:: /intro/Basic/OcrItalic/A.jpg
   :width: 100px
@@ -252,3 +252,6 @@ Running the solution
   :width: 400px
 
 .. |charsamesize| image:: /intro/Basic/OcrItalic/charsamesize.jpg
+
+.. |teachsizes| replace:: teach-in the other font size
+
