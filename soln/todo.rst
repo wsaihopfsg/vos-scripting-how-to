@@ -46,7 +46,7 @@ Summary of todo
 +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |1.``todo.bin``                       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__                          |
 |                                     |                                                                                                                                                       |
-|                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
+|                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
 +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |2.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
 |                                     |for PASS with no patch detected.                                                                                                                       |

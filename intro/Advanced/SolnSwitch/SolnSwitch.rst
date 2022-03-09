@@ -29,33 +29,43 @@ This sample demonstrates
   :class: tight-table
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1.``00.bin``                         |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/00.bin?raw=true>`__ that performs          |
+  |1. ``00.bin``                        |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/00.bin?raw=true>`__ that performs          |
   |                                     |                                                                                                                                                       |
   |                                     |* Circle detection                                                                                                                                     |
   |                                     |* Inner & outer diamters computation                                                                                                                   |
   |                                     |* Coordinates of the centre of circle                                                                                                                  |
   |                                     |* Switching to solution ``01.bin``                                                                                                                     |
   |                                     |                                                                                                                                                       |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2.``01.bin``                         |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/01.bin?raw=true>`__  that performs         |
+  |2. ``01.bin``                        |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/01.bin?raw=true>`__  that performs         |
   |                                     |                                                                                                                                                       |
   |                                     |* Region-of-interest (ROI) adjustment base on the values found in solution ``00.bin``                                                                  |
   |                                     |* ``Retrigger`` for evaluation of the same image based on the newly adjusted ROI                                                                       |
   |                                     |* Switching back to solution ``00.bin``                                                                                                                |
   |                                     |                                                                                                                                                       |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
-  |                                     |for PASS with no patch detected.                                                                                                                       |
+  |3. ``pic4pt5.bmp``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic4pt5.bmp?raw=true>`__                      |  
+  |                                     |with an inner diameter of ~4.5cm.                                                                                                                      |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |4.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
-  |                                     |                                                                                                                                                       |   
+  |4. ``pic5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic5.bmp?raw=true>`__                         |  
+  |                                     |with an inner diameter of ~5.0cm.                                                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |5 ``pic6.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic6.bmp?raw=true>`__                         |  
+  |                                     |with an inner diameter of ~6.0cm.                                                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |6. ``pic6pt5.bmp``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic6pt5.bmp?raw=true>`__                      |  
+  |                                     |with an inner diameter of ~6.5cm.                                                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |7. ``pic7.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic7.bmp?raw=true>`__                         |
+  |                                     |with an inner diameter of ~6.0cm.                                                                                                                      |   
+  |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
   |                                     |                                                                                                                                                       |
   |                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
   |                                     |                                                                                                                                                       |
-  |                                     |  where ``todo.bmp`` have been saved                                                                                                                   |
+  |                                     |  where these images have been saved                                                                                                                   |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
