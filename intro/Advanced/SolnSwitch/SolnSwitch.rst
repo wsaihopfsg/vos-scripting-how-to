@@ -10,7 +10,7 @@ Scale-Invariant OCR On a Rim with 2 Solutions Working in Tandem
 This sample demonstrates
 
 1. Scale-invariant OCR on a rim
-2. Use of multi solutions for solving vision problems  
+2. Use of multi-solutions for solving vision problems  
 3. Use of ``persistent variables``
      
 
@@ -59,7 +59,7 @@ This sample demonstrates
   |                                     |with an inner diameter of ~6.5cm.                                                                                                                      |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |7. ``pic7.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic7.bmp?raw=true>`__                         |
-  |                                     |with an inner diameter of ~6.0cm.                                                                                                                      |   
+  |                                     |with an inner diameter of ~7.0cm.                                                                                                                      |   
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
   |                                     |                                                                                                                                                       |
