@@ -134,12 +134,17 @@ User-Defined function ``parseIn()``
 * Line 1: Initialize counter ``nowCtr``
 * Line 2: Initialize index of circle ``cirIndex``
 * Lines 3-13: Loop to look for circular Object
-* Line 4: Length of the minor axis has to be greater than the minimum circle diameter ``cirMinD``
+* Line 4: Length of the minor axis has to be greater than the minimum circle diameter |cirmind|_
 * Line 5: Computer ratio between Major and minor axes
-* Line 6: Check if the above ratio is smaller than threshold ``cirMajMinRatio``. 
+* Line 6: Check if the above ratio is smaller than threshold |cirmajminratio|_ 
 * Line 8: Set the circle index ``cirIndex`` to ``nowCtr`` because a circle has been found
 * Lines 9 & 12: Counter operations
 * Line 14: Function return
+
+.. |cirmind| replace:: ``cirMinD``
+.. _cirmind: #solution-initialize-00-bin  
+.. |cirmajminratio| replace:: ``cirMajMinRatio``
+.. _cirmajminratio: #solution-initialize-00-bin
 
 User-Defined function ``parseOut()``
 ####################################
@@ -234,21 +239,111 @@ User-Defined function ``removeChar(p1,p2)``
 
 * The code and explanation is :ref:`identical to here <removechar>`.  
 
+.. _solninit:
+
+Solution Initialize 
+####################################
+
+* Choose the predefined function ``Solution Initialize`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/mean.jpg
+
+* In the Script Function window we see  
+
+.. code-block::
+  :linenos:
+
+  cirMajMinRatio = 1.01 // major/minor must be smaller than this
+  cirMinD = 300 //minimum value for minor axis
+  postImg = 0
+
+* Lines 1-2: Used in |parse|_
+* Line 3: Indicator for ``ChangeSolution``. When ``postImg=1``, the properties of the annulus are done in the post image processing and |changesoln|_ 
+
+.. |parse| replace:: user-defined functions ``parseIn`` & ``parseOut``
+.. _parse: #user-defined-function-parsein 
+.. |changesoln| replace:: ``ChangeSolution`` is invoked
+.. _changesoln: #periodic-200ms-00-bin
+
+Pre Image Process (``00.bin``)
+####################################
+
+* Choose the predefined function ``Pre Image Process`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/preimage.jpg
+
+* In the Script Function window we see only 1 line, which resets the ``ChangeSolution`` indicator``postImg`` to 0
+
+.. code-block::
+  :linenos:
+
+  postImg = 0
+
+Periodic: 200ms (``00.bin``)
+####################################
+
+* Choose the predefined function ``Periodic: 200ms`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/periodic.jpg
+
+* In the Script Function window we see that ``ChangeSolution`` is only invoked when ``postImg=1``
+
+.. code-block::
+  :linenos:
+
+  if(postImg=1) 
+    ChangeSolution(01)
+  endif
+  
+.. Warning::
+  Parameter ``requestedSolutionID`` is hardcoded in this tutorial. Please change accordingly 
+
 Post Image Process (``00.bin``)
 ####################################
 
 * Choose the predefined function ``Post Image Process`` at the bottom left 
-  |fn_post|
+  
+  .. image:: /intro/Advanced/SolnSwitch/postimg.jpg
 
 * In the Script Function window we see 
 
 .. code-block::
-    :linenos:
+  :linenos:
 
-    //todo
+  InIdx = parseIn()
+  OutIdx = parseOut()
+  //Common centre of 2 circles
+  xx = findMean2Num(InX.[InIdx], OutX.[OutIdx])
+  yy = findMean2Num(InY.[InIdx], OutY.[OutIdx])
+  InDiameter = findMean2Num(InMinor.[InIdx], InMajor.[InIdx])
+  OutDiameter = findMean2Num(OutMinor.[OutIdx], OutMajor.[OutIdx])
+  prog.xx = xx
+  prog.yy = yy
+  prog.In = InDiameter
+  prog.Out = OutDiameter
+  postImg = 1
 
-* Line 1: todo
-* Line 2: todo
+
+* Line 1: |parseIn()|_ and output the index for the inner circle to ``InIdx``
+* Line 2: |parseOut()|_ and output the index for the outer circle to ``OutIdx``
+* Lines 4-5: Compute the coordinates ( ``xx`` , ``yy`` ) of the common centre by the avaerage value of the inner and outer circle centres
+* Lines 6: Output the diameter of the inner circle to ``InDiameter`` by averaging the value of the ``minor`` and ``major`` axes 
+* Lines 7: Output the diameter of the outer circle to ``OutDiameter`` by averaging the value of the ``minor`` and ``major`` axes 
+* Lines 8-11: Store ``xx`` , ``yy`` ,  ``InDiameter`` , ``OutDiameter`` to persistent variables so that these values are still available when ``ChangeSolution`` is invoked
+  
+.. note:: 
+  Persistent Variables
+  
+  * System variables instread of the usual solution-specific variables
+  * Persist even when a different solution is loaded
+  * Persist until VOS is power-cycled
+  * Variable names are prefix by ``Prog``
+  * Persistent variables are not visible in the ``Variable List`` in runtime
+
+.. |parseIn()| replace:: Call user-defined function ``parseIn()``
+.. _parseIn(): #user-defined-function-parsein
+.. |parseOut()| replace:: Call user-defined function ``parseOut()``
+.. _parseOut(): #user-defined-function-parseout
 
 Running the solution
 --------------------
