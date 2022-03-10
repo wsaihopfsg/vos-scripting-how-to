@@ -235,7 +235,7 @@ User-Defined function ``removeChar(p1,p2)``
 
 * Choose the User-function ``removeChar(p1,p2)`` at the bottom left 
 
-.. image:: /intro/Advanced/SolnSwitch/removeChar.jpg
+.. image:: /intro/Advanced/SolnSwitch/removeChar.jpg 
 
 * The code and explanation is :ref:`identical to here <removechar>`.  
 
