@@ -154,3 +154,8 @@
    :width: 40px
 
 .. |fonteditor| image:: /img/emulator/buttons/fonteditor.png
+
+.. |running| image:: /img/emulator/running.jpg
+  :width: 250px
+
+.. |loadsoln| image:: /img/emulator/buttons/loadsoln.jpg

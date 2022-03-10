@@ -52,7 +52,7 @@ This sample demonstrates
   |4. ``pic5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic5.bmp?raw=true>`__                         |  
   |                                     |with an inner diameter of ~5.0cm.                                                                                                                      |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |5 ``pic6.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic6.bmp?raw=true>`__                         |  
+  |5. ``pic6.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic6.bmp?raw=true>`__                         |  
   |                                     |with an inner diameter of ~6.0cm.                                                                                                                      |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |6. ``pic6pt5.bmp``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/SolnSwitch/pic6pt5.bmp?raw=true>`__                      |  
@@ -83,6 +83,21 @@ Tool Explanation
   +-------------------+--------------------+
   |InnerC's properties|OuterC's properties |
   +-------------------+--------------------+
+
+  * Names for other properties in the 2 ``Count`` tools are summarized below
+
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+  |                                       |Outer Circle                           |Inner Circle                           |
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+  |``Major``                              |``OutMajor``                           |``OutMajor``                           |
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+  |``Minor``                              |``OutMinor``                           |``OutMinor``                           |
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+  |``X``                                  |``OutX``                               |``InX``                                |
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+  |``Y``                                  |``OutY``                               |``InY``                                |
+  +---------------------------------------+---------------------------------------+---------------------------------------+
+
 
   * An ``OCR`` tool named ``OCR`` with these properties for ``01.bin``
   
@@ -220,8 +235,8 @@ User-Defined function ``setOcROI()``
   1. Tool name, ``OCr``
   2. CamID 
   3. ROI Type, ``annulus``
-  4. xx is the x-coordinate of the centre of the concentric circles
-  5. yy is the y-coordinate of the centre of the concentric circles
+  4. xx is the x-coordinate of the centre of the ``annulus``
+  5. yy is the y-coordinate of the centre of the ``annulus``
   6. x-coordinate of a point on the outer diameter of the ``annulus``
   7. y-coordinate of a point on the outer diameter of the ``annulus``
   8. x-coordinate of a point on the inner diameter of the ``annulus``
@@ -375,7 +390,7 @@ Pre Image Process (``01.bin``)
   OutDiameter = prog.out
   setOcROI( )
 
-* Lines 1-4: Load the relevant ``Peristent Variables``
+* Lines 1-4: Populate from the relevant ``Peristent Variables``
 * Line 5: |setOcROI()|_ to change the ROI of the OCR  
 
 .. |setOcROI()| replace:: Invoke ``setOcROI()`` 
@@ -402,6 +417,9 @@ Periodic: 200ms (``01.bin``)
 Line 1: Branching based on ``runOnceAlready``
 Line 2: From ``runOnceAlready``, the image has not been processed by this solution yet. To do that, ``Retrigger`` is invoked
 Line 4: From ``runOnceAlready``, the image has been processed by this solution already. Therefore we ``ChangeSolution`` back to ``00.bin``  
+
+.. Warning::
+  Parameter ``requestedSolutionID`` is hardcoded in this tutorial. Please change accordingly 
 
 Post Image Process (``01.bin``)
 ####################################
@@ -431,6 +449,9 @@ Post Image Process (``01.bin``)
 
 .. |removechar| replace:: user-defined function ``removeChar``
 .. _removechar: #user-defined-function-removechar-p1-p2
+
+.. note:: 
+  When ``01.bin`` is loaded |loadsoln|, the solution may go into |running| automatically and the ``ChangeSolution`` will eventually be invoked which loads ``00.bin``. To see the code in ``01.bin``, you may rename the ``Solution ID`` of ``00.bin`` to other values. When ``requestedSolutionID`` (in this case ``00``) is not found, the current solution ``01.bin`` carries on running without changing solution. After code inspection, remember to change ``00.bin`` back to its original name.   
 
 Running the solution
 --------------------
