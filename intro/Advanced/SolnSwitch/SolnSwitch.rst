@@ -134,17 +134,15 @@ User-Defined function ``parseIn()``
 * Line 1: Initialize counter ``nowCtr``
 * Line 2: Initialize index of circle ``cirIndex``
 * Lines 3-13: Loop to look for circular Object
-* Line 4: Length of the minor axis has to be greater than the minimum circle diameter |cirmind|_
+* Line 4: Length of the minor axis has to be greater than the minimum circle diameter ``cirMinD`` |cirmind|
 * Line 5: Computer ratio between Major and minor axes
-* Line 6: Check if the above ratio is smaller than threshold |cirmajminratio|_ 
+* Line 6: Check if the above ratio is smaller than threshold ``cirMajMinRatio``. 
 * Line 8: Set the circle index ``cirIndex`` to ``nowCtr`` because a circle has been found
 * Lines 9 & 12: Counter operations
 * Line 14: Function return
 
 .. |cirmind| replace:: ``cirMinD``
-.. _cirmind: #solution-initialize-00-bin  
-.. |cirmajminratio| replace:: ``cirMajMinRatio``
-.. _cirmajminratio: #solution-initialize-00-bin
+.. _cirmind: SolnSwitch  
 
 User-Defined function ``parseOut()``
 ####################################
@@ -235,16 +233,17 @@ User-Defined function ``removeChar(p1,p2)``
 
 * Choose the User-function ``removeChar(p1,p2)`` at the bottom left 
 
-.. image:: /intro/Advanced/SolnSwitch/removeChar.jpg 
+.. image:: /intro/Advanced/SolnSwitch/removeChar.jpg
 
 * The code and explanation is :ref:`identical to here <removechar>`.  
 
-Solution Initialize (``00.bin``) 
+.. _solninit:
+
+Solution Initialize (``00.bin``)
 ####################################
 
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/solninit.jpg
+  .. image:: /intro/Advanced/SolnSwitch/mean.jpg
 
 * In the Script Function window we see  
 
@@ -255,214 +254,27 @@ Solution Initialize (``00.bin``)
   cirMinD = 300 //minimum value for minor axis
   postImg = 0
 
-* Lines 1-2: Used in |parse|_
-* Line 3: Indicator for ``ChangeSolution``. When ``postImg=1``, the properties of the annulus are done in the post image processing and |changesoln|_ 
-
-.. |parse| replace:: user-defined functions ``parseIn`` & ``parseOut``
-.. _parse: #user-defined-function-parsein 
-.. |changesoln| replace:: ``ChangeSolution`` is invoked
-.. _changesoln: #periodic-200ms-00-bin
-
-Pre Image Process (``00.bin``)
-####################################
-
-* Choose the predefined function ``Pre Image Process`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/preimage.jpg
-
-* In the Script Function window we see only 1 line, which resets the ``ChangeSolution`` indicator``postImg`` to 0
-
-.. code-block::
-  :linenos:
-
-  postImg = 0
-
-Periodic: 200ms (``00.bin``)
-####################################
-
-* Choose the predefined function ``Periodic: 200ms`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/periodic.jpg
-
-* In the Script Function window we see that ``ChangeSolution`` is only invoked when ``postImg=1``
-
-.. code-block::
-  :linenos:
-
-  if(postImg=1) 
-    ChangeSolution(01)
-  endif
-  
-.. Warning::
-  Parameter ``requestedSolutionID`` is hardcoded in this tutorial. Please change accordingly 
 
 Post Image Process (``00.bin``)
 ####################################
 
 * Choose the predefined function ``Post Image Process`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/postimg.jpg
+  |fn_post|
 
 * In the Script Function window we see 
 
 .. code-block::
-  :linenos:
+    :linenos:
 
-  InIdx = parseIn()
-  OutIdx = parseOut()
-  //Common centre of 2 circles
-  xx = findMean2Num(InX.[InIdx], OutX.[OutIdx])
-  yy = findMean2Num(InY.[InIdx], OutY.[OutIdx])
-  InDiameter = findMean2Num(InMinor.[InIdx], InMajor.[InIdx])
-  OutDiameter = findMean2Num(OutMinor.[OutIdx], OutMajor.[OutIdx])
-  prog.xx = xx
-  prog.yy = yy
-  prog.In = InDiameter
-  prog.Out = OutDiameter
-  postImg = 1
+    //todo
 
-
-* Line 1: |parseIn()|_ and output the index for the inner circle to ``InIdx``
-* Line 2: |parseOut()|_ and output the index for the outer circle to ``OutIdx``
-* Lines 4-5: Compute the coordinates ( ``xx`` , ``yy`` ) of the common centre by the avaerage value of the inner and outer circle centres
-* Lines 6: Output the diameter of the inner circle to ``InDiameter`` by averaging the value of the ``minor`` and ``major`` axes 
-* Lines 7: Output the diameter of the outer circle to ``OutDiameter`` by averaging the value of the ``minor`` and ``major`` axes 
-* Lines 8-11: Store ``xx`` , ``yy`` ,  ``InDiameter`` , ``OutDiameter`` to persistent variables so that these values are still available when ``ChangeSolution`` is invoked
-  
-.. note:: 
-  Persistent Variables
-  
-  * System variables instread of the usual solution-specific variables
-  * Persist even when a different solution is loaded
-  * Persist until VOS is power-cycled
-  * Variable names are prefix by ``Prog``
-  * Persistent variables are not visible in the ``Variable List`` in runtime
-
-.. |parseIn()| replace:: Call user-defined function ``parseIn()``
-.. _parseIn(): #user-defined-function-parsein
-.. |parseOut()| replace:: Call user-defined function ``parseOut()``
-.. _parseOut(): #user-defined-function-parseout
-
-Solution Initialize (``01.bin``) 
-####################################
-
-* Choose the predefined function ``Solution Initialize`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/solninit.jpg
-
-* In the Script Function window we see Initialization for ``runOnceAlready`` to indicate if ``Retrigger`` has been invoked for the current image  
-
-.. code-block::
-  :linenos:
-
-  runOnceAlready = 0
-
-Pre Image Process (``01.bin``)
-####################################
-
-* Choose the predefined function ``Pre Image Process`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/preimage.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  xx = prog.xx
-  yy = prog.yy
-  InDiameter = prog.in
-  OutDiameter = prog.out
-  setOcROI( )
-
-* Lines 1-4: Load the relevant ``Peristent Variables``
-* Line 5: |setOcROI()|_ to change the ROI of the OCR  
-
-.. |setOcROI()| replace:: Invoke ``setOcROI()`` 
-.. _setOcROI(): #user-defined-function-setocroi
-
-Periodic: 200ms (``01.bin``)
-####################################
-
-* Choose the predefined function ``Periodic: 200ms`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/periodic.jpg
-
-* In the Script Function window we see that ``ChangeSolution`` is only invoked when ``postImg=1``
-
-.. code-block::
-  :linenos:
-
-  if(runOnceAlready=0) 
-      ReTrigger(0)
-  else
-      ChangeSolution(00)
-  endif
-
-Line 1: Branching based on ``runOnceAlready``
-Line 2: From ``runOnceAlready``, the image has not been processed by this solution yet. To do that, ``Retrigger`` is invoked
-Line 4: From ``runOnceAlready``, the image has been processed by this solution already. Therefore we ``ChangeSolution`` back to ``00.bin``  
-
-Post Image Process (``01.bin``)
-####################################
-
-* Choose the predefined function ``Post Image Process`` at the bottom left 
-  
-  .. image:: /intro/Advanced/SolnSwitch/postimg.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  ansStr = "13925890A476123"
-  stripOcr = removeChar(OCR," ")
-  if(stripOcr=ansStr) 
-      SetDisplayStatus("PASS","darkgreen" )
-  else
-      SetDisplayStatus(stripOcr,"red")
-  endif
-  runOnceAlready = 1
-
-* Line 1: The correct string with ``spaces`` removed
-* Line 2: Remove spaces from ``OCR`` with |removechar|_
-* Lines 3-7: Branching to check if the ``OCR`` is the same as ``ansStr`` and display the results
-* Line 8: Set indicator ``runOnceAlready``
-
-.. |removechar| replace:: user-defined function ``removeChar``
-.. _removechar: #user-defined-function-removechar-p1-p2
+* Line 1: todo
+* Line 2: todo
 
 Running the solution
 --------------------
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
-+------------------------------------------------------------------+------------------------------------------------------------------+
-||pass4pt5|                                                        ||pass5|                                                           |
-|                                                                  |                                                                  |
-|``pic4pt5.bmp``                                                   |``pic5.bmp``                                                      |
-+------------------------------------------------------------------+------------------------------------------------------------------+
-||pass6|                                                           ||pass6pt5|                                                        |
-|                                                                  |                                                                  |
-|``pic6.bmp``                                                      |``pic6pt5.bmp``                                                   |
-+------------------------------------------------------------------+------------------------------------------------------------------+
-||pass7|                                                           |                                                                  |
-|                                                                  |                                                                  |
-|``pic7.bmp``                                                      |                                                                  |
-+------------------------------------------------------------------+------------------------------------------------------------------+
-
-.. |pass4pt5| image:: /intro/Advanced/SolnSwitch/pass4pt5.jpg
-.. |pass5| image:: /intro/Advanced/SolnSwitch/pass5.jpg
-.. |pass6| image:: /intro/Advanced/SolnSwitch/pass6.jpg
-.. |pass6pt5| image:: /intro/Advanced/SolnSwitch/pass6pt5.jpg
-.. |pass7| image:: /intro/Advanced/SolnSwitch/pass7.jpg
-
-.. note::
-  There is a slight delay during the OCR due to solution Switching
-
-.. warning::
-  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics
-
-.. tip::
-  #multiple #solutions #switching #OCR #scale-invariant #roi #retrigger
+#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
 
