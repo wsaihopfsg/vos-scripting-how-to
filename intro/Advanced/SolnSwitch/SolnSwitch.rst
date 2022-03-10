@@ -239,14 +239,12 @@ User-Defined function ``removeChar(p1,p2)``
 
 * The code and explanation is :ref:`identical to here <removechar>`.  
 
-.. _solninit:
-
-Solution Initialize 
+Solution Initialize (``00.bin``) 
 ####################################
 
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
   
-  .. image:: /intro/Advanced/SolnSwitch/mean.jpg
+  .. image:: /intro/Advanced/SolnSwitch/solninit.jpg
 
 * In the Script Function window we see  
 
@@ -345,10 +343,126 @@ Post Image Process (``00.bin``)
 .. |parseOut()| replace:: Call user-defined function ``parseOut()``
 .. _parseOut(): #user-defined-function-parseout
 
+Solution Initialize (``01.bin``) 
+####################################
+
+* Choose the predefined function ``Solution Initialize`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/solninit.jpg
+
+* In the Script Function window we see Initialization for ``runOnceAlready`` to indicate if ``Retrigger`` has been invoked for the current image  
+
+.. code-block::
+  :linenos:
+
+  runOnceAlready = 0
+
+Pre Image Process (``01.bin``)
+####################################
+
+* Choose the predefined function ``Pre Image Process`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/preimage.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  xx = prog.xx
+  yy = prog.yy
+  InDiameter = prog.in
+  OutDiameter = prog.out
+  setOcROI( )
+
+* Lines 1-4: Load the relevant ``Peristent Variables``
+* Line 5: |setOcROI()|_ to change the ROI of the OCR  
+
+.. |setOcROI()| replace:: Invoke ``setOcROI()`` 
+.. _setOcROI(): #user-defined-function-setocroi
+
+Periodic: 200ms (``01.bin``)
+####################################
+
+* Choose the predefined function ``Periodic: 200ms`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/periodic.jpg
+
+* In the Script Function window we see that ``ChangeSolution`` is only invoked when ``postImg=1``
+
+.. code-block::
+  :linenos:
+
+  if(runOnceAlready=0) 
+      ReTrigger(0)
+  else
+      ChangeSolution(00)
+  endif
+
+Line 1: Branching based on ``runOnceAlready``
+Line 2: From ``runOnceAlready``, the image has not been processed by this solution yet. To do that, ``Retrigger`` is invoked
+Line 4: From ``runOnceAlready``, the image has been processed by this solution already. Therefore we ``ChangeSolution`` back to ``00.bin``  
+
+Post Image Process (``01.bin``)
+####################################
+
+* Choose the predefined function ``Post Image Process`` at the bottom left 
+  
+  .. image:: /intro/Advanced/SolnSwitch/postimg.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  ansStr = "13925890A476123"
+  stripOcr = removeChar(OCR," ")
+  if(stripOcr=ansStr) 
+      SetDisplayStatus("PASS","darkgreen" )
+  else
+      SetDisplayStatus(stripOcr,"red")
+  endif
+  runOnceAlready = 1
+
+* Line 1: The correct string with ``spaces`` removed
+* Line 2: Remove spaces from ``OCR`` with |removechar|_
+* Lines 3-7: Branching to check if the ``OCR`` is the same as ``ansStr`` and display the results
+* Line 8: Set indicator ``runOnceAlready``
+
+.. |removechar| replace:: user-defined function ``removeChar``
+.. _removechar: #user-defined-function-removechar-p1-p2
+
 Running the solution
 --------------------
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
-#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
++------------------------------------------------------------------+------------------------------------------------------------------+
+||pass4pt5|                                                        ||pass5|                                                           |
+|                                                                  |                                                                  |
+|``pic4pt5.bmp``                                                   |``pic5.bmp``                                                      |
++------------------------------------------------------------------+------------------------------------------------------------------+
+||pass6|                                                           ||pass6pt5|                                                        |
+|                                                                  |                                                                  |
+|``pic6.bmp``                                                      |``pic6pt5.bmp``                                                   |
++------------------------------------------------------------------+------------------------------------------------------------------+
+||pass7|                                                           |                                                                  |
+|                                                                  |                                                                  |
+|``pic7.bmp``                                                      |                                                                  |
++------------------------------------------------------------------+------------------------------------------------------------------+
+
+.. |pass4pt5| image:: /intro/Advanced/SolnSwitch/pass4pt5.jpg
+.. |pass5| image:: /intro/Advanced/SolnSwitch/pass5.jpg
+.. |pass6| image:: /intro/Advanced/SolnSwitch/pass6.jpg
+.. |pass6pt5| image:: /intro/Advanced/SolnSwitch/pass6pt5.jpg
+.. |pass7| image:: /intro/Advanced/SolnSwitch/pass7.jpg
+
+.. note::
+  There is a slight delay during the OCR due to solution Switching
+
+.. warning::
+  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics
+
+.. tip::
+  #multiple #solutions #switching #OCR #scale-invariant #roi #retrigger
 
