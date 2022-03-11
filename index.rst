@@ -180,12 +180,28 @@ Advanced Topics
 +-----------------------------------------------------------------------------------------------------------+
 |Scale-Invariant OCR With Multiple Taught-In Font Sizes                                                     |       
 +===========================================================================================================+
-|| scale-invariant OCR is achieved by teaching-in 2 font sizes.                                             |
-|| 2 solutions are used cyclically                                                                          |
+|| Two solutions are used cyclically                                                                        |
 || 1. Detection of concentric circle diameters & centre of circle based on 2 count tools                    |
 || 2. The OCR ROI is adjusted based on previous solution's values and the current image is ``ReTrigger``.   |
+||                                                                                                          |
+|| Scale-invariant OCR is achieved by teaching-in 2 font sizes.                                             |
 || |OCR57|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
+
+:ref:`OCR of Asian Scripts, Colour Discrimination & Publishing VOS Data to MQTT <todo>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Extracting & Sending Data from Sample Japanese Driving License 運転免許証                                  |
++===========================================================================================================+
+|| This tutorial demonstrates                                                                               |
+|| 1. OCR of Asian Scripts                                                                                  |
+|| 2. Discriminiating between the 3 colours for driving liceses with lighting                               |
+|| 3. Use of the |projectHV| preprocessors                                                                  |
+|| 4. Sending of VOS processed data to a mobile phone via MQTT through a public broker                      |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |projectHV| replace:: ``Project H`` & ``Project V``
 
 :ref:`Integration with ROS (WIP) <todo>`
 ----------------------------------------

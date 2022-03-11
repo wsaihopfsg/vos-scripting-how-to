@@ -71,7 +71,7 @@ This sample demonstrates
 Tool Explanation
 -----------------
 
-* * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| and load any of the above ``.bmp`` image. 
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| and load any of the above ``.bmp`` image. 
 
 * 3 tools have been used
 
@@ -358,6 +358,9 @@ Post Image Process (``00.bin``)
 .. |parseOut()| replace:: Call user-defined function ``parseOut()``
 .. _parseOut(): #user-defined-function-parseout
 
+.. note:: 
+  To inspect ``01.bin``, use ``Load for edit``|load4edit| instead of ``Load solution`` |loadsoln|. ``Load for edit``|load4edit| disables solution switching. If ``Load solution`` |loadsoln| has been used, the solution goes into |running| automatically and the ``ChangeSolution`` will eventually be invoked which loads ``00.bin`` with its associated code.
+
 Solution Initialize (``01.bin``) 
 ####################################
 
@@ -450,9 +453,6 @@ Post Image Process (``01.bin``)
 .. |removechar| replace:: user-defined function ``removeChar``
 .. _removechar: #user-defined-function-removechar-p1-p2
 
-.. note:: 
-  When ``01.bin`` is loaded |loadsoln|, the solution may go into |running| automatically and the ``ChangeSolution`` will eventually be invoked which loads ``00.bin``. To see the code in ``01.bin``, you may rename the ``Solution ID`` of ``00.bin`` to other values. When ``requestedSolutionID`` (in this case ``00``) is not found, the current solution ``01.bin`` carries on running without changing solution. After code inspection, remember to change ``00.bin`` back to its original name.   
-
 Running the solution
 --------------------
 
@@ -479,10 +479,10 @@ Running the solution
 .. |pass7| image:: /intro/Advanced/SolnSwitch/pass7.jpg
 
 .. note::
-  There is a slight delay during the OCR due to solution Switching
+  There is a artificially inserted delay by placing ``chanegSolution`` within the ``Periodic: 200ms`` function. You may choose a custom periodic function with a shorter interval to reduce this delay.
 
 .. warning::
-  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics
+  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics. //todo confirm this is really possible?
 
 .. tip::
   #multiple #solutions #switching #OCR #scale-invariant #roi #retrigger

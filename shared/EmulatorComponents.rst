@@ -159,3 +159,5 @@
   :width: 250px
 
 .. |loadsoln| image:: /img/emulator/buttons/loadsoln.jpg
+
+.. |load4edit| image:: /img/emulator/buttons/load4edit.jpg
