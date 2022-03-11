@@ -192,16 +192,18 @@ Advanced Topics
 ----------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Extracting & Sending Data from Sample Japanese Driving License 運転免許証                                  |
+|Extracting & Sending Data from Sample Japanese Driving Licenses 運転免許証                                 |
 +===========================================================================================================+
 || This tutorial demonstrates                                                                               |
 || 1. OCR of Asian Scripts                                                                                  |
-|| 2. Discriminiating between the 3 colours for driving liceses with lighting                               |
+|| 2. Discriminiating between the 3 colours for Japanese driving liceses with lighting                      |
 || 3. Use of the |projectHV| preprocessors                                                                  |
 || 4. Sending of VOS processed data to a mobile phone via MQTT through a public broker                      |
+|| |mihon|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
 .. |projectHV| replace:: ``Project H`` & ``Project V``
+.. |mihon| image:: /intro/Advanced/License/mihon.jpg
 
 :ref:`Integration with ROS (WIP) <todo>`
 ----------------------------------------
