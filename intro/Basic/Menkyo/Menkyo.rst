@@ -313,9 +313,9 @@ User-Defined Function chkLicType()
   endif
   return(licStr.[licType])
 
-Lines 1-2: Check if ``IntenAvg`` is less than ``thresLtIsGold``, if so set ``licType`` to ``0`` (Gold)
-Lines 4-5: Check if ``IntenAvg`` is less than ``thresGtIsGreen``, if so set ``licType`` to ``2`` (Green)
-Line 7: Set ``licType`` to ``1`` otherwise (Blue)
+* Lines 1-2: Check if ``IntenAvg`` is less than ``thresLtIsGold``, if so set ``licType`` to ``0`` (Gold)
+* Lines 4-5: Check if ``IntenAvg`` is less than ``thresGtIsGreen``, if so set ``licType`` to ``2`` (Green)
+* Line 7: Set ``licType`` to ``1`` otherwise (Blue)
 
 User-Defined Function chkCat()
 ##########################################
@@ -385,17 +385,17 @@ User-Defined Function convert2yr(p1)
   opStr = string(eraDay) + "/" + string(eraMth) + "/" + string(opYr)
   return(opStr)
 
-Line 1: Find the position of the *kanji* 年 (year) and return the position to ``nenPos``. The first year of any era is called 元年, the other years are numerated sequentially with a half-width number. 
-Line 2: Get the Japanese era name from the first 6-byte
+* Line 1: Find the position of the *kanji* 年 (year) and return the position to ``nenPos``. The first year of any era is called 元年, the other years are numerated sequentially with a half-width number. 
+* Line 2: Get the Japanese era name from the first 6-byte
 
 .. note:: 
   There are only 3 Japanese eras possible for driving licenses, either 昭和 (1926-1989), 平成(1989-2019) or 令和(2019-). Each era has 2 full-width *kanji*. Since each UTF-8 full-width character `takes 3-byte <https://en.wikipedia.org/wiki/UTF-8#Encoding>`__ , the era takes up the first 6-byte 
 
-Line 3: Check if the position of the *kanji* 年 from ``nenPos`` is 9, which means it is the first year of the era XX元年
-Lines 4-6: For the first year of the era, set ``eraYr`` to 0 since it is the first year of that era. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
-Lines 8-10: For other years of the era, set ``eraYr`` to the year value minus 1. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
-Lines 12-21: Set the first year to ``opYr`` based on the era information.
-Lines 22-23: Construct the Gregorian date string
+* Line 3: Check if the position of the *kanji* 年 from ``nenPos`` is 9, which means it is the first year of the era XX元年
+* Lines 4-6: For the first year of the era, set ``eraYr`` to 0 since it is the first year of that era. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
+* Lines 8-10: For other years of the era, set ``eraYr`` to the year value minus 1. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
+* Lines 12-21: Set the first year to ``opYr`` based on the era information.
+* Lines 22-23: Construct the Gregorian date string
 
 User-Defined Function extractSerial()
 ##########################################
@@ -411,8 +411,8 @@ User-Defined Function extractSerial()
   nichiPos = find("日",p1)
   return(int(substring(p1,nichiPos+3,0)))
 
-Line 1: Find the position of the *kanji* 日 (day) and return it to ``nichiPos``
-Line 2: Return the issuing number 
+* Line 1: Find the position of the *kanji* 日 (day) and return it to ``nichiPos``
+* Line 2: Return the issuing number 
 
 User-Defined Function parseCat()
 ##########################################
@@ -444,13 +444,13 @@ User-Defined Function parseCat()
   endif
   return(opStr)
 
-Line 1-3: initializations
-Line 4-14: ``while`` loop for each ``EEmpty`` array element
-Line 5: Branch if ``EEmpty`` array element is not empty
-Lines 6-7: If ``totalCtr`` is odd, concatenate to ``opStr`` based on ``vehCat``
-Line 9: If ``totalCtr`` is not odd, concatenate to ``opStr`` based on ``vehCat`` with a ``\`` as separator and line break at the end
-Lines 15-17: Remove last ``\``
-Line 18: Return ``opStr``
+* Line 1-3: initializations
+* Line 4-14: ``while`` loop for each ``EEmpty`` array element
+* Line 5: Branch if ``EEmpty`` array element is not empty
+* Lines 6-7: If ``totalCtr`` is odd, concatenate to ``opStr`` based on ``vehCat``
+* Line 9: If ``totalCtr`` is not odd, concatenate to ``opStr`` based on ``vehCat`` with a ``\`` as separator and line break at the end
+* Lines 15-17: Remove last ``\``
+* Line 18: Return ``opStr``
 
 Pre Image Process
 #####################
