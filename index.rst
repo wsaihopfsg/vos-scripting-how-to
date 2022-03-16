@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. include:: /shared/EmulatorComponents.rst
+   
 Welcome to VOS Scripting How-To!
 ================================
 
@@ -80,6 +82,18 @@ Basic Topics
 || |deitalic|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
+:doc:`OCR of Asian Scripts & Colour Discrimination <intro/Basic/Menkyo/Menkyo>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Extracting Data from Sample Japanese Driving Licenses 運転免許証                                           |
++===========================================================================================================+
+|| This tutorial using samples of Japanese driving licenses to demonstrate                                  |
+|| 1. OCR of Asian Scripts                                                                                  |
+|| 2. Discriminiating between the 3 colours for Japanese driving liceses with lighting                      |
+|| 3. Use of the Edge Count tool |edgecounttool|                                                            |
+|| |mihon|                                                                                                  |
++-----------------------------------------------------------------------------------------------------------+
 
 :ref:`Attribute Functions (WIP) <todo>`
 ------------------------------------------------------------
@@ -188,17 +202,17 @@ Advanced Topics
 || |OCR57|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
-:ref:`OCR of Asian Scripts, Colour Discrimination & Publishing VOS Data to MQTT <todo>`
+:ref:`Publishing VOS Data to MQTT <todo>`
 ----------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Extracting & Sending Data from Sample Japanese Driving Licenses 運転免許証                                 |
+|VOS & IIoT                                                                                                 |
 +===========================================================================================================+
-|| This tutorial demonstrates                                                                               |
-|| 1. OCR of Asian Scripts                                                                                  |
-|| 2. Discriminiating between the 3 colours for Japanese driving liceses with lighting                      |
-|| 3. Use of the |projectHV| preprocessors                                                                  |
-|| 4. Sending of VOS processed data to a mobile phone via MQTT through a public broker                      |
+|| Based on a basic tutorial, this advanced tutorial demonstrates                                           |
+|| 1. Sending of VOS processed data to a mobile screen through a public MQTT broker                         |
+|| 2.                                                                                                       |
+|| 3.                                                                                                       |
+|| 4.                                                                                                       |
 || |mihon|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
