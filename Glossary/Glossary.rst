@@ -19,8 +19,8 @@ Tools
    |* |match|_                                                 |* Preprocessing                                         |
    |                                                           |                                                        |
    |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
-   |* Edge Count                                               |  * |dilate|_                                           |
-   |* |intensity|_                                             |  * |equalize|_                                         |
+   |* |edgecount|                                              |  * |dilate|_                                           |
+   |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
    |* Point                                                    |  * Gaussian                                            |
    |* Tip                                                      |  * High-pass (Sharpen)                                 |
@@ -58,14 +58,14 @@ Tools
 .. _thres: ../soln/Scratch/Scratch.html
 .. |match| replace:: ``Match``
 .. _match: ../intro/Basic/GPIO/GPIO.html
-.. |intensity| replace:: ``Intensity``
-.. _intensity: ../intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
 .. _equalize: ../intro/Basic/GPIO/GPIO.html
 .. |shearx| replace:: ``Shear X``
 .. _shearx: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |sheary| replace:: ``Shear Y``
 .. _sheary: ../intro/Basic/OcrItalic/OcrItalic.html
+.. |edgecount| replace:: ``Edge Count``
+.. _edgecount: ../intro/Basic/Menkyo/Menkyo.html
 
 Predefined Functions
 ++++++++++++++++++++++++
@@ -79,7 +79,7 @@ Mathematical Functions
    :class: wy-table-responsive table
 
    +-----------------------------------------------+-----------------------------------------------+
-   |* |acos|_                                      |* |getbit|_                                    |  
+   |* |acos|_                                      |* :confval:`GetBit <GetBit>`                   |  
    |* |asin|_                                      |* |logn|_                                      |  
    |* |atan|_                                      |* |pow|_                                       |
    |* |atan2|_                                     |* |setbit|_                                    |
@@ -110,8 +110,6 @@ Mathematical Functions
 .. _sqrt: ../intro/Basic/MathFunc/MathFunc.html
 .. |pow| replace:: ``pow``
 .. _pow: ../intro/Basic/MathFunc/MathFunc.html
-.. |getbit| replace:: ``getbit``
-.. _getbit: ../intro/Basic/GPIO/GPIO.html
 .. |setbit| replace:: ``setbit``
 .. _setbit: ../intro/Basic/GPIO/GPIO.html
 .. |clearbit| replace:: ``clearbit``
@@ -129,7 +127,7 @@ String Functions
    +-------------------------------------------------------+-------------------------------------------------------+
    |* :confval:`char <char>`                               |* :confval:`int <int>`                                 |
    |                                                       |                                                       |
-   |* |find|_                                              |* |setchar|_                                           |
+   |* :confval:`find`                                      |* |setchar|_                                           |
    |                                                       |                                                       |
    |* |float|_                                             |* |string|_                                            |
    |                                                       |                                                       |

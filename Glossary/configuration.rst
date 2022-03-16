@@ -94,3 +94,19 @@ Configuration
 
    * :doc:`/intro/Basic/OcrItalic/OcrItalic`
    * :doc:`/intro/Advanced/SolnSwitch/SolnSwitch`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
+
+.. confval:: Intensity
+
+   * :doc:`/intro/Basic/GPIO/GPIO`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
+
+.. confval:: GetBit
+
+   * :doc:`/intro/Basic/GPIO/GPIO`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
+
+.. confval:: find
+
+   * :doc:`/intro/Basic/StrFunc/StrFunc`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
