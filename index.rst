@@ -217,7 +217,7 @@ Advanced Topics
 +-----------------------------------------------------------------------------------------------------------+
 
 .. |projectHV| replace:: ``Project H`` & ``Project V``
-.. |mihon| image:: /intro/Advanced/License/mihon.jpg
+.. |mihon| image:: /intro/Basic/Menkyo/mihon.jpg
 
 :ref:`Integration with ROS (WIP) <todo>`
 ----------------------------------------
