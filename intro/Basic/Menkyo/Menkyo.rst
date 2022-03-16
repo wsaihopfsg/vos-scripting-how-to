@@ -10,7 +10,7 @@ OCR of Asian Scripts & Colour Discrimination
 Summary of this tutorial
 
 1. OCR of Asian scripts
-2. Conversion of Japanese era dates to Julian Calendar
+2. Conversion of Japanese era dates to Gregorian Calendar
 3. Use of VOS lighting to discriminate the color-coded driving licenses with ``Intensity tool``
 4. Use of ``Edge Count Tool`` to detect presence and absence of Japanese words in a box
 5. Use of ``locator`` for all tool locations 
@@ -33,7 +33,7 @@ Components of the Japanese Driving License 運転免許証
 .. image:: /intro/Basic/Menkyo/components.jpg
 
 1. The date of birth in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
-2. The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
+2. The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__ The last 5 digits are the issuing number.
 3. The color-code. There are 3 colours
 
 .. _colortable:
@@ -240,6 +240,8 @@ Tools Explanation
 .. |emptybox| image:: /intro/Basic/Menkyo/emptybox.png
 .. |kanjibox| image:: /intro/Basic/Menkyo/kanjibox.png  
 
+* An ``Intensity`` tool |intensitytool| for color discrimination named ``IntenAvg``
+  
 Code Walk-Through
 -----------------
 * Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
@@ -248,6 +250,7 @@ Code Walk-Through
 Solution Initialize
 #####################
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
+
   .. image:: /intro/Basic/Menkyo/solninit.jpg
 
 * In the Script Function window we see 
@@ -288,10 +291,273 @@ Solution Initialize
 .. note:: 
   Since we are displaying the vehicle categories with ``SetDisplayStatus``, we need to ensure that the 256 character limit is not violated for someone that has obtained all the 14 vehicle categories. Hence shortforms are used.
 
+User-Defined Function chkLicType()
+##########################################
+* Choose the user-defined function ``chkLicType()`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/chklictype.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  if(IntenAvg<thresLtIsGold) 
+      licType = 0 //gold
+  else
+      if(IntenAvg>thresGtIsGreen) 
+          licType = 2 //Green
+      else
+          licType = 1 //Blue
+      endif
+  endif
+  return(licStr.[licType])
+
+Lines 1-2: Check if ``IntenAvg`` is less than ``thresLtIsGold``, if so set ``licType`` to ``0`` (Gold)
+Lines 4-5: Check if ``IntenAvg`` is less than ``thresGtIsGreen``, if so set ``licType`` to ``2`` (Green)
+Line 7: Set ``licType`` to ``1`` otherwise (Blue)
+
+User-Defined Function chkCat()
+##########################################
+* Choose the user-defined function ``chkCat()`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/chkcat.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  nowCtr = 0
+  while( nowCtr<14 )
+      nowEname = "E" + nowCtr
+      nowE = readVar(nowEname)
+      if(nowE = thresEEmpty ) 
+          EEmpty.[nowCtr] = TTrue
+      else
+          EEmpty.[nowCtr] = FFalse
+      endif
+      nowCtr = nowCtr+1
+  endwhile
+  return (EEmpty)
+
+* Line 1: Counter initialization
+* Lines 2-11: ``while`` loop to check for all 14 ``Edge Count`` Tools
+* Line 3: Set the ``varName``
+* Line 4: Read the variable and store as ``nowE``
+* Line 5: Check if ``nowE`` is equal to the threshold for empty vehicle category box ``thresEEmpty``
+* Line 6: If vehicle category box is empty, set the corresponding entry in ``EEmpty`` to ``TTrue``. 
+* Line 8: If vehicle category box is not empty, set the corresponding entry in ``EEmpty`` to ``FFalse``. 
+
+User-Defined Function convert2yr(p1)
+##########################################
+* Choose the user-defined function ``convert2yr(p1)`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/convert2yr.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  nenPos = find("年",p1)
+  era = substring(p1,0,6)
+  if(nenPos=9) //元年
+      eraYr = 0
+      eraMth = int(substring(p1,12,2))
+      eraDay = int(substring(p1,17,2))
+  else
+      eraYr = int(substring(p1,6,2)) -1
+      eraMth = int(substring(p1,11,2))
+      eraDay = int(substring(p1,16,2))
+  endif
+  if(era ="令和") 
+      opYr = 2019
+  else
+      if(era="平成") 
+          opYr = 1989
+      else
+          //昭和
+          opYr = 1926
+      endif
+  endif
+  opYr = opYr+eraYr
+  opStr = string(eraDay) + "/" + string(eraMth) + "/" + string(opYr)
+  return(opStr)
+
+Line 1: Find the position of the *kanji* 年 (year) and return the position to ``nenPos``. The first year of any era is called 元年, the other years are numerated sequentially with a half-width number. 
+Line 2: Get the Japanese era name from the first 6-byte
+
+.. note:: 
+  There are only 3 Japanese eras possible for driving licenses, either 昭和 (1926-1989), 平成(1989-2019) or 令和(2019-). Each era has 2 full-width *kanji*. Since each UTF-8 full-width character `takes 3-byte <https://en.wikipedia.org/wiki/UTF-8#Encoding>`__ , the era takes up the first 6-byte 
+
+Line 3: Check if the position of the *kanji* 年 from ``nenPos`` is 9, which means it is the first year of the era XX元年
+Lines 4-6: For the first year of the era, set ``eraYr`` to 0 since it is the first year of that era. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
+Lines 8-10: For other years of the era, set ``eraYr`` to the year value minus 1. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
+Lines 12-21: Set the first year to ``opYr`` based on the era information.
+Lines 22-23: Construct the Gregorian date string
+
+User-Defined Function extractSerial()
+##########################################
+* Choose the user-defined function ``extractSerial()`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/extractserial.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  nichiPos = find("日",p1)
+  return(int(substring(p1,nichiPos+3,0)))
+
+Line 1: Find the position of the *kanji* 日 (day) and return it to ``nichiPos``
+Line 2: Return the issuing number 
+
+User-Defined Function parseCat()
+##########################################
+* Choose the user-defined function ``parseCat()`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/parsecat.jpg
+
+* In the Script Function window we see 
+
+.. code-block::
+  :linenos:
+
+  nowCtr = 0
+  opStr = ""
+  totalCtr = 1
+  while(nowCtr<14 )
+      if(EEmpty.[nowCtr]=FFalse  ) 
+          if(GetBit(totalCtr,0)=1) 
+              opStr = opStr+vehCat.[nowCtr]
+          else
+              opStr = opStr+"/"+vehCat.[nowCtr] + "/\n"
+          endif
+          totalCtr = totalCtr+1
+      endif
+      nowCtr = nowCtr+1
+  endwhile
+  if(GetBit(totalCtr,0)=1) //was even
+      opStr = substring(opStr,0,strlen(opStr)-3)
+  endif
+  return(opStr)
+
+Line 1-3: initializations
+Line 4-14: ``while`` loop for each ``EEmpty`` array element
+Line 5: Branch if ``EEmpty`` array element is not empty
+Lines 6-7: If ``totalCtr`` is odd, concatenate to ``opStr`` based on ``vehCat``
+Line 9: If ``totalCtr`` is not odd, concatenate to ``opStr`` based on ``vehCat`` with a ``\`` as separator and line break at the end
+Lines 15-17: Remove last ``\``
+Line 18: Return ``opStr``
+
+Pre Image Process
+#####################
+* Choose the predefined function ``Pre Image Process`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/preimgproc.jpg
+
+* In the Script Function window we see only 1 line, which resets the ``Inspection Status Box``
+
+.. code-block::
+  :linenos:
+
+  SetDisplayStatus( 0,0 )
+
+.. note:: 
+  The ``Inspection Status Box`` can be reset by either ``SetDisplayStatus( 0,0 )`` or ``SetDisplayStatus( "","" )``
+
+Post Image Process
+#####################
+* Choose the predefined function ``Post Image Process`` at the bottom left 
+
+  .. image:: /intro/Basic/Menkyo/postimgproc.jpg
+
+* In the Script Function window we see
+
+.. code-block::
+  :linenos:
+
+  licColor = chkLicType()
+  chkCat()
+  regDate = convert2yr(ocrRegDate )
+  birthDate = convert2yr(ocrRegDate1 )
+  regSerial = extractSerial(ocrRegDate )
+  engCat = parseCat( )
+  if(licType=0) 
+      SetDisplayStatus(engCat  , "darkred")
+  else
+      if(licType=1  ) 
+          SetDisplayStatus( engCat , "blue")
+      else
+          SetDisplayStatus( engCat , "darkgreen")
+      endif
+  endif
+
+* Line 1: Call the ``chkLicType()`` function and return the license color code to ``licColor`` in string and ``licType`` as integer
+* Line 2: Call the ``chkCat()`` function and return the occuapncy status of the vehicle category to the ``EEmpty`` array
+* Line 3: Convert registration date from Japanese era to Gregorian and return it to ``regDate``
+* Line 4: Convert birth date from Japanese era to Gregorian and return it to ``birthDate``
+* Line 5: Return the issuing number to ``regSerial``
+* Line 6: Based on ``EEmpty`` array, construct a string ``engCat``
+* Lines 7-15: Display ``engCat`` based on the detected license color-code in the ``Inspection Status Box``
+
 Running the solution
 --------------------
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
-#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
++--------------+---------------+
+||green1l|     ||green1r|      |
++--------------+---------------+
+||green2l|     ||green2r|      |
++--------------+---------------+
+||green3l|     ||green3r|      |
++--------------+---------------+
+||blue1l|      ||blue1r|       |
++--------------+---------------+
+||blue2l|      ||blue2r|       |
++--------------+---------------+
+||blue3l|      ||blue3r|       |
++--------------+---------------+
+||gold1l|      ||gold1r|       |
++--------------+---------------+
+||gold2l|      ||gold2r|       |
++--------------+---------------+
+||gold3l|      ||gold3r|       |
++--------------+---------------+
+
+.. |green1l| image:: /intro/Basic/Menkyo/green1l.jpg
+  :width: 250px
+.. |green1r| image:: /intro/Basic/Menkyo/green1r.jpg
+.. |green2l| image:: /intro/Basic/Menkyo/green2l.jpg
+  :width: 250px  
+.. |green2r| image:: /intro/Basic/Menkyo/green2r.jpg
+.. |green3l| image:: /intro/Basic/Menkyo/green3l.jpg
+  :width: 250px
+.. |green3r| image:: /intro/Basic/Menkyo/green3r.jpg
+
+.. |blue1l| image:: /intro/Basic/Menkyo/blue1l.jpg
+  :width: 250px
+.. |blue1r| image:: /intro/Basic/Menkyo/blue1r.jpg
+.. |blue2l| image:: /intro/Basic/Menkyo/blue2l.jpg
+  :width: 250px
+.. |blue2r| image:: /intro/Basic/Menkyo/blue2r.jpg
+.. |blue3l| image:: /intro/Basic/Menkyo/blue3l.jpg
+  :width: 250px
+.. |blue3r| image:: /intro/Basic/Menkyo/blue3r.jpg
+
+.. |gold1l| image:: /intro/Basic/Menkyo/gold1l.jpg
+  :width: 250px
+.. |gold1r| image:: /intro/Basic/Menkyo/gold1r.jpg
+.. |gold2l| image:: /intro/Basic/Menkyo/gold2l.jpg
+  :width: 250px
+.. |gold2r| image:: /intro/Basic/Menkyo/gold2r.jpg
+.. |gold3l| image:: /intro/Basic/Menkyo/gold3l.jpg
+  :width: 250px
+.. |gold3r| image:: /intro/Basic/Menkyo/gold3r.jpg
+
+.. tip::
+  #japanese #OCR #teach-in #asian #script #edge #count 
 
