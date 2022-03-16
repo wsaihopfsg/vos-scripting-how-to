@@ -19,7 +19,7 @@ Tools
    |* |match|_                                                 |* Preprocessing                                         |
    |                                                           |                                                        |
    |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
-   |* |edgecount|                                              |  * |dilate|_                                           |
+   |* |edgecount|_                                             |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
    |* Point                                                    |  * Gaussian                                            |
@@ -184,7 +184,7 @@ Attribute Functions
    :class: wy-table-responsive table
 
    +-----------------------------------------------+-----------------------------------------------+
-   |* DeleteVar                                    |* ReadVar                                      |
+   |* DeleteVar                                    |* |readvar|_                                   |
    |* EnableFormat                                 |* |setmatchstr|_                               |
    |* GetNthToolType                               |* |setparam|_                                  |
    |* GetNumElements                               |* SetNthTolerances                             |
@@ -193,7 +193,7 @@ Attribute Functions
    |* GetToolName                                  |* SetToolPenColor                              |
    |* GetToolResult                                |* SetToolText                                  |
    |* GetToolType                                  |* Sort                                         |
-   |* GetToolValue                                 |* WriteVar                                     |
+   |* GetToolValue                                 |* |writevar|_                                  |
    |* GetVarDimension                              |                                               |
    +-----------------------------------------------+-----------------------------------------------+
 
@@ -201,7 +201,12 @@ Attribute Functions
 .. _setmatchstr: ../intro/Basic/MathFunc/MathFunc.html
 .. |setparam| replace:: ``SetParam``
 .. _setparam: ../soln/ROI/roi.html
- 
+.. |readvar| replace:: `ReadVar`
+.. _readvar: ../intro/Basic/Menkyo/Menkyo.html
+.. |writevar| replace:: `WriteVar`
+.. _writevar: ../intro/Basic/Menkyo/Menkyo.html   
+
+
 .. _ios:
 
 IOs

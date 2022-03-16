@@ -19,7 +19,9 @@ Summary of this tutorial
 +------------------+----------------------------------+------------------------------------------------------------------+
 |**Function**      |**Parameters**                    |**Explanation**                                                   |
 +------------------+----------------------------------+------------------------------------------------------------------+
-|``readVar``       |``varName``                       |Return the value of ``varName``                                   |
+|``ReadVar``       |``varName``                       |Return the value of ``varName``                                   |
++------------------+----------------------------------+------------------------------------------------------------------+
+|``WriteVar``      |``varName`` , ``value``           |Write ``value`` to ``varName``                                    |
 +------------------+----------------------------------+------------------------------------------------------------------+
 
 Components of the Japanese Driving License 運転免許証
@@ -344,10 +346,13 @@ User-Defined Function chkCat()
 * Line 1: Counter initialization
 * Lines 2-11: ``while`` loop to check for all 14 ``Edge Count`` Tools
 * Line 3: Set the ``varName``
-* Line 4: Read the variable and store as ``nowE``
+* Line 4: Read the variable with ``ReadVar`` and store as ``nowE``
 * Line 5: Check if ``nowE`` is equal to the threshold for empty vehicle category box ``thresEEmpty``
 * Line 6: If vehicle category box is empty, set the corresponding entry in ``EEmpty`` to ``TTrue``. 
 * Line 8: If vehicle category box is not empty, set the corresponding entry in ``EEmpty`` to ``FFalse``. 
+
+.. note:: 
+  ``WriteVar`` performs similar function as ``ReadVar``, writing a value to a variable
 
 User-Defined Function convert2yr(p1)
 ##########################################

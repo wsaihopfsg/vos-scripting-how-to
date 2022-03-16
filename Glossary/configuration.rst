@@ -54,6 +54,7 @@ Configuration
    
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
 
 .. confval:: FormatString
    
@@ -64,11 +65,13 @@ Configuration
    
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/ROI/roi`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
 
 .. confval:: Substring
    
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
 
 .. confval:: SetDisplayStatus
    
@@ -78,6 +81,7 @@ Configuration
    * :doc:`/soln/ROI/roi`
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Basic/GPIO/GPIO`
+   * :doc:`/intro/Basic/Menkyo/Menkyo`
 
 .. confval:: Return
    
