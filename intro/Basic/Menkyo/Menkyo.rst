@@ -11,8 +11,8 @@ Summary of this tutorial
 
 1. OCR of Asian scripts
 2. Conversion of Japanese era dates to Gregorian Calendar
-3. Use of VOS lighting to discriminate the color-coded driving licenses with ``Intensity tool``
-4. Use of ``Edge Count Tool`` to detect presence and absence of Japanese words in a box
+3. Use of VOS lighting to discriminate the color-coded driving licenses with ``Intensity tool`` |intensitytool|
+4. Use of ``Edge Count Tool`` |edgecounttool| to detect presence and absence of Japanese words in a box
 5. Use of ``locator`` for all tool locations 
 6. Use of ``readVar`` function in a loop for variables with similar names in a loop
 
@@ -90,40 +90,33 @@ How to Discriminate License Colours in VOS
 --------------------------------------------
 
 * Most VOS variants can only "see" in grayscale
-* Without applying special lighting, using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ directly, we get the following grayscale intensity for the 3 license colors
+* Without applying special lighting, using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ directly, we get the following grayscale intensity in column 2 of :ref:`Table 1 <table1>`
 
-+-----------+------------+
-|Gold       |134         |
-+-----------+------------+
-|Blue       |145         |
-+-----------+------------+
-|Green      |209         |
-+-----------+------------+
+.. _table1:
 
-* We observe that the difference between Gold & Blue is too small and will be very hard to discriminate between them based on grayscale intensity
+.. table::
+  :class: tight-table 
+
+  +-----------+------------+---------------+-----------------+
+  |Table 1                                                   |
+  +-----------+------------+---------------+-----------------+
+  |Color      ||NTSC|      ||greenlight|   |Chosen Threshold | 
+  +-----------+------------+---------------+-----------------+
+  |Gold       |134         |73             |< 90             |
+  +-----------+------------+---------------+-----------------+
+  |Blue       |145         |107            |Otherwise        |
+  +-----------+------------+---------------+-----------------+
+  |Green      |209         |143            |> 125            |
+  +-----------+------------+---------------+-----------------+
+
+.. |NTSC| replace:: NTSC Grayscale Intensity
+.. |greenlight| replace:: Green Light Grayscale Intensity
+
+* We observe that the intensity difference between Gold (134) & Blue (145) is too small and will be very hard to discriminate between them based on grayscale intensity
 * Referring to :ref:`the color table <colortable>` above, we can see that the green channel offers a relatively large separation for the 3 license color codes
-* When we use green lighting, the red and blue channels are effectively zero. Using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ on the green channel alone, we get the following grayscale intensity for the 3 license colors in green lighting
+* When we use green lighting, the red and blue channels are effectively zero. Using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ on the green channel alone, we get the following grayscale intensity for the 3 license colors in green lighting in column 3 of :ref:`Table 1 <table1>`
+* Using midpoints we can use the intensity values of column 3 of :ref:`Table 1 <table1>` as thresholds
 
-+-----------+------------+
-|Gold       |73          |
-+-----------+------------+
-|Blue       |107         |
-+-----------+------------+
-|Green      |143         |
-+-----------+------------+
-
-.. _threshold3:
-
-* Using midpoints we can use these intensity values as thresholds
-
-+-----------+------------+
-|Gold       |< 90        |
-+-----------+------------+
-|Green      |> 125       |
-+-----------+------------+
-|Blue       |Otherwise   |
-+-----------+------------+
-  
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/Menkyo>`__
 ------------------------------------------------------------------------------------------------------
@@ -222,8 +215,8 @@ Tools Explanation
 
    <br />
 
-* 14 ``Preprocessor`` tools for each box of the vehicle categories which is 5 in :ref:`License Components <menkyoComponents>` to remove the background pattern
-* 14 ``Edge Count`` tools named ``E0`` to ``E13`` for each box diagonally of the vehicle categories which is 5 in :ref:`License Components <menkyoComponents>` with these properties
+* 14 ``Preprocessor`` tools for each box of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) to remove the background pattern
+* 14 ``Edge Count`` tools named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) with these properties
 
   .. image:: /intro/Basic/Menkyo/edgecountprop.jpg
 
@@ -236,7 +229,7 @@ Tools Explanation
   +------------------------+-------------------------------------------+
   ||emptybox|              |2 for an empty box                         |
   +------------------------+-------------------------------------------+
-  ||kanjibox|              |> 2 for a box with kanji                   |
+  ||kanjibox|              |> 2 for a box with *kanji*                 |
   +------------------------+-------------------------------------------+
 
 .. |emptybox| image:: /intro/Basic/Menkyo/emptybox.png
@@ -284,7 +277,7 @@ Solution Initialize
   vehCat.13 = "Comm. Tractor-Trailer Veh."
 
 
-* Lines 1-2: :ref:`Thresholds <threshold3>` for gold and green
+* Lines 1-2: :ref:`Thresholds <table1>` for gold and green
 * Lines 3-5: Strings for the 3 license colors
 * Line 6: :ref:`Threshold <thresedgecount>` for an empty vehicle category
 * Lines 7-8: Self-defined values for ``TTrue`` and ``FFalse``. Used for indicating vehicle category box's occupancy
@@ -367,7 +360,7 @@ User-Defined Function convert2yr(p1)
 
   nenPos = find("年",p1)
   era = substring(p1,0,6)
-  if(nenPos=9) //元年
+  if(nenPos=9) //元年 first year of an era
       eraYr = 0
       eraMth = int(substring(p1,12,2))
       eraDay = int(substring(p1,17,2))
@@ -376,13 +369,13 @@ User-Defined Function convert2yr(p1)
       eraMth = int(substring(p1,11,2))
       eraDay = int(substring(p1,16,2))
   endif
-  if(era ="令和") 
+  if(era ="令和") //Reiwa
       opYr = 2019
   else
-      if(era="平成") 
+      if(era="平成") //Heisei
           opYr = 1989
       else
-          //昭和
+          //昭和 Showa
           opYr = 1926
       endif
   endif
@@ -394,7 +387,7 @@ User-Defined Function convert2yr(p1)
 * Line 2: Get the Japanese era name from the first 6-byte
 
 .. note:: 
-  There are only 3 Japanese eras possible for driving licenses, either 昭和 (1926-1989), 平成(1989-2019) or 令和(2019-). Each era has 2 full-width *kanji*. Since each UTF-8 full-width character `takes 3-byte <https://en.wikipedia.org/wiki/UTF-8#Encoding>`__ , the era takes up the first 6-byte 
+  There are only 3 Japanese eras possible for driving licenses, either 昭和 (Showa: 1926-1989), 平成 (Heisei: 1989-2019) or 令和 (Reiwa: 2019-). Each era has 2 full-width *kanji*. Since each UTF-8 full-width character `takes 3-byte <https://en.wikipedia.org/wiki/UTF-8#Encoding>`__ , the era takes up the first 6-byte 
 
 * Line 3: Check if the position of the *kanji* 年 from ``nenPos`` is 9, which means it is the first year of the era XX元年
 * Lines 4-6: For the first year of the era, set ``eraYr`` to 0 since it is the first year of that era. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
