@@ -82,18 +82,6 @@ Basic Topics
 || |deitalic|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`OCR of Asian Scripts & Colour Discrimination <intro/Basic/Menkyo/Menkyo>`
-----------------------------------------------------------------------------------------------------------------
-
-+-----------------------------------------------------------------------------------------------------------+
-|Extracting Data from Sample Japanese Driving Licenses 運転免許証                                           |
-+===========================================================================================================+
-|| This tutorial using samples of Japanese driving licenses to demonstrate                                  |
-|| 1. OCR of Asian Scripts                                                                                  |
-|| 2. Discriminiating between the 3 colours for Japanese driving liceses with lighting                      |
-|| 3. Use of the Edge Count tool |edgecounttool|                                                            |
-|| |mihon|                                                                                                  |
-+-----------------------------------------------------------------------------------------------------------+
 
 :ref:`Attribute Functions (WIP) <todo>`
 ------------------------------------------------------------
@@ -213,11 +201,11 @@ Advanced Topics
 || 2.                                                                                                       |
 || 3.                                                                                                       |
 || 4.                                                                                                       |
-|| |mihon|                                                                                                  |
+||                                                                                                          |
 +-----------------------------------------------------------------------------------------------------------+
 
 .. |projectHV| replace:: ``Project H`` & ``Project V``
-.. |mihon| image:: /intro/Basic/Menkyo/mihon.jpg
+.. |mihon| image:: /soln/Menkyo/mihon.jpg
 
 :ref:`Integration with ROS (WIP) <todo>`
 ----------------------------------------
@@ -287,6 +275,19 @@ User contributions
 || * Remove blobs                                                                                |
 || |scratch_hi|                                                                                  |
 +------------------------------------------------------------------------------------------------+
+
+:doc:`OCR of Asian Scripts & Colour Discrimination <soln/Menkyo/Menkyo>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Extracting Data from Sample Japanese Driving Licenses 運転免許証                                           |
++===========================================================================================================+
+|| This tutorial using samples of Japanese driving licenses to demonstrate                                  |
+|| 1. OCR of Asian Scripts                                                                                  |
+|| 2. Discriminiating between the 3 colours for Japanese driving liceses with lighting                      |
+|| 3. Use of the Edge Count tool |edgecounttool|                                                            |
+|| |mihon|                                                                                                  |
++-----------------------------------------------------------------------------------------------------------+
 
 :doc:`Glossary <Glossary/Glossary>`
 ========================================

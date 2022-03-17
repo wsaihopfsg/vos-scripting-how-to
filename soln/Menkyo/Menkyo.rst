@@ -32,7 +32,7 @@ Components of the Japanese Driving License 運転免許証
 
 .. _menkyoComponents:
 
-.. image:: /intro/Basic/Menkyo/components.jpg
+.. image:: /soln/Menkyo/components.jpg
 
 1. The date of birth in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
 2. The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__ The last 5 digits are the issuing number.
@@ -50,20 +50,20 @@ Components of the Japanese Driving License 運転免許証
   |Green             |R:194 G:243 B:75   |greenbar|     |For newbie drivers                                                              |
   +------------------+----------------------------------+--------------------------------------------------------------------------------+
 
-.. |goldbar| image:: /intro/Basic/Menkyo/gold.png
+.. |goldbar| image:: /soln/Menkyo/gold.png
   :width: 20px
 
-.. |bluebar| image:: /intro/Basic/Menkyo/blue.png
+.. |bluebar| image:: /soln/Menkyo/blue.png
   :width: 20px
 
-.. |greenbar| image:: /intro/Basic/Menkyo/green.png
+.. |greenbar| image:: /soln/Menkyo/green.png
   :width: 20px
 
 4. The license number
 5. The vehicle categories that this license hold is qualified for. The positions for the different categories are fixed. ``-`` indicates that the category is not applicable. The translation for the different categories are
 
 .. _vehcat:
-.. image:: /intro/Basic/Menkyo/shurui.jpg
+.. image:: /soln/Menkyo/shurui.jpg
 
 .. table::
   :class: tight-table 
@@ -98,9 +98,7 @@ How to Discriminate License Colours in VOS
   :class: tight-table 
 
   +-----------+------------+---------------+-----------------+
-  |Table 1                                                   |
-  +-----------+------------+---------------+-----------------+
-  |Color      ||NTSC|      ||greenlight|   |Chosen Threshold | 
+  |Table 1    ||NTSC|      ||greenlight|   |Chosen Threshold | 
   +-----------+------------+---------------+-----------------+
   |Gold       |134         |73             |< 90             |
   +-----------+------------+---------------+-----------------+
@@ -167,11 +165,11 @@ Tools Explanation
 -----------------
 * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``blue1.bmp`` is loaded. 
 
-.. image:: /intro/Basic/Menkyo/blue_mono3.jpg
+.. image:: /soln/Menkyo/blue_mono3.jpg
 
 * A ``Match tool`` |matchtool| named ``MS`` with the region-of-interest (ROI) set to 6 in :ref:`License Components <menkyoComponents>` with properties set as shown
 
-  .. image:: /intro/Basic/Menkyo/matchToolProp.jpg
+  .. image:: /soln/Menkyo/matchToolProp.jpg
   
   * ``Rotation`` is set between ``0`` to ``360`` 
   * ``Method`` is ``Edges only`` 
@@ -183,10 +181,10 @@ Tools Explanation
 ||L1postext|        ||L1loctext|         |
 +-------------------+--------------------+
 
-.. |L1pos| image:: /intro/Basic/Menkyo/L1pos.jpg
+.. |L1pos| image:: /soln/Menkyo/L1pos.jpg
   :width: 300px
 
-.. |L1loc| image:: /intro/Basic/Menkyo/L1loc.jpg
+.. |L1loc| image:: /soln/Menkyo/L1loc.jpg
   :width: 300px
 
 .. |L1postext| replace:: Properties for point at ``Origin`` for Locator 1's position
@@ -215,10 +213,10 @@ Tools Explanation
 
    <br />
 
-* 14 ``Preprocessor`` tools for each box of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) to remove the background pattern
-* 14 ``Edge Count`` tools named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) with these properties
+* 14 ``Preprocessor`` tools |preprocessortool| for each box of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) to remove the background pattern
+* 14 ``Edge Count`` tools |edgecounttool| named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) with these properties
 
-  .. image:: /intro/Basic/Menkyo/edgecountprop.jpg
+  .. image:: /soln/Menkyo/edgecountprop.jpg
 
 .. _thresedgecount:
 
@@ -232,8 +230,8 @@ Tools Explanation
   ||kanjibox|              |> 2 for a box with *kanji*                 |
   +------------------------+-------------------------------------------+
 
-.. |emptybox| image:: /intro/Basic/Menkyo/emptybox.png
-.. |kanjibox| image:: /intro/Basic/Menkyo/kanjibox.png  
+.. |emptybox| image:: /soln/Menkyo/emptybox.png
+.. |kanjibox| image:: /soln/Menkyo/kanjibox.png  
 
 * An ``Intensity`` tool |intensitytool| for color discrimination named ``IntenAvg``
   
@@ -246,7 +244,7 @@ Solution Initialize
 #####################
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/solninit.jpg
+  .. image:: /soln/Menkyo/solninit.jpg
 
 * In the Script Function window we see 
 
@@ -290,7 +288,7 @@ User-Defined Function chkLicType()
 ##########################################
 * Choose the user-defined function ``chkLicType()`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/chklictype.jpg
+  .. image:: /soln/Menkyo/chklictype.jpg
 
 * In the Script Function window we see 
 
@@ -316,7 +314,7 @@ User-Defined Function chkCat()
 ##########################################
 * Choose the user-defined function ``chkCat()`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/chkcat.jpg
+  .. image:: /soln/Menkyo/chkcat.jpg
 
 * In the Script Function window we see 
 
@@ -351,7 +349,7 @@ User-Defined Function convert2yr(p1)
 ##########################################
 * Choose the user-defined function ``convert2yr(p1)`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/convert2yr.jpg
+  .. image:: /soln/Menkyo/convert2yr.jpg
 
 * In the Script Function window we see 
 
@@ -399,7 +397,7 @@ User-Defined Function extractSerial()
 ##########################################
 * Choose the user-defined function ``extractSerial()`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/extractserial.jpg
+  .. image:: /soln/Menkyo/extractserial.jpg
 
 * In the Script Function window we see 
 
@@ -416,7 +414,7 @@ User-Defined Function parseCat()
 ##########################################
 * Choose the user-defined function ``parseCat()`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/parsecat.jpg
+  .. image:: /soln/Menkyo/parsecat.jpg
 
 * In the Script Function window we see 
 
@@ -454,7 +452,7 @@ Pre Image Process
 #####################
 * Choose the predefined function ``Pre Image Process`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/preimgproc.jpg
+  .. image:: /soln/Menkyo/preimgproc.jpg
 
 * In the Script Function window we see only 1 line, which resets the ``Inspection Status Box``
 
@@ -470,7 +468,7 @@ Post Image Process
 #####################
 * Choose the predefined function ``Post Image Process`` at the bottom left 
 
-  .. image:: /intro/Basic/Menkyo/postimgproc.jpg
+  .. image:: /soln/Menkyo/postimgproc.jpg
 
 * In the Script Function window we see
 
@@ -526,35 +524,35 @@ Running the solution
 ||gold3l|      ||gold3r|       |
 +--------------+---------------+
 
-.. |green1l| image:: /intro/Basic/Menkyo/green1l.jpg
+.. |green1l| image:: /soln/Menkyo/green1l.jpg
   :width: 250px
-.. |green1r| image:: /intro/Basic/Menkyo/green1r.jpg
-.. |green2l| image:: /intro/Basic/Menkyo/green2l.jpg
+.. |green1r| image:: /soln/Menkyo/green1r.jpg
+.. |green2l| image:: /soln/Menkyo/green2l.jpg
   :width: 250px  
-.. |green2r| image:: /intro/Basic/Menkyo/green2r.jpg
-.. |green3l| image:: /intro/Basic/Menkyo/green3l.jpg
+.. |green2r| image:: /soln/Menkyo/green2r.jpg
+.. |green3l| image:: /soln/Menkyo/green3l.jpg
   :width: 250px
-.. |green3r| image:: /intro/Basic/Menkyo/green3r.jpg
+.. |green3r| image:: /soln/Menkyo/green3r.jpg
 
-.. |blue1l| image:: /intro/Basic/Menkyo/blue1l.jpg
+.. |blue1l| image:: /soln/Menkyo/blue1l.jpg
   :width: 250px
-.. |blue1r| image:: /intro/Basic/Menkyo/blue1r.jpg
-.. |blue2l| image:: /intro/Basic/Menkyo/blue2l.jpg
+.. |blue1r| image:: /soln/Menkyo/blue1r.jpg
+.. |blue2l| image:: /soln/Menkyo/blue2l.jpg
   :width: 250px
-.. |blue2r| image:: /intro/Basic/Menkyo/blue2r.jpg
-.. |blue3l| image:: /intro/Basic/Menkyo/blue3l.jpg
+.. |blue2r| image:: /soln/Menkyo/blue2r.jpg
+.. |blue3l| image:: /soln/Menkyo/blue3l.jpg
   :width: 250px
-.. |blue3r| image:: /intro/Basic/Menkyo/blue3r.jpg
+.. |blue3r| image:: /soln/Menkyo/blue3r.jpg
 
-.. |gold1l| image:: /intro/Basic/Menkyo/gold1l.jpg
+.. |gold1l| image:: /soln/Menkyo/gold1l.jpg
   :width: 250px
-.. |gold1r| image:: /intro/Basic/Menkyo/gold1r.jpg
-.. |gold2l| image:: /intro/Basic/Menkyo/gold2l.jpg
+.. |gold1r| image:: /soln/Menkyo/gold1r.jpg
+.. |gold2l| image:: /soln/Menkyo/gold2l.jpg
   :width: 250px
-.. |gold2r| image:: /intro/Basic/Menkyo/gold2r.jpg
-.. |gold3l| image:: /intro/Basic/Menkyo/gold3l.jpg
+.. |gold2r| image:: /soln/Menkyo/gold2r.jpg
+.. |gold3l| image:: /soln/Menkyo/gold3l.jpg
   :width: 250px
-.. |gold3r| image:: /intro/Basic/Menkyo/gold3r.jpg
+.. |gold3r| image:: /soln/Menkyo/gold3r.jpg
 
 .. tip::
   #japanese #OCR #teach-in #asian #script #edge #count 

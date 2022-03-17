@@ -65,7 +65,7 @@ Tools
 .. |sheary| replace:: ``Shear Y``
 .. _sheary: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |edgecount| replace:: ``Edge Count``
-.. _edgecount: ../intro/Basic/Menkyo/Menkyo.html
+.. _edgecount: ../soln/Menkyo/Menkyo.html
 
 Predefined Functions
 ++++++++++++++++++++++++
@@ -202,9 +202,9 @@ Attribute Functions
 .. |setparam| replace:: ``SetParam``
 .. _setparam: ../soln/ROI/roi.html
 .. |readvar| replace:: `ReadVar`
-.. _readvar: ../intro/Basic/Menkyo/Menkyo.html
+.. _readvar: ../soln/Menkyo/Menkyo.html
 .. |writevar| replace:: `WriteVar`
-.. _writevar: ../intro/Basic/Menkyo/Menkyo.html   
+.. _writevar: ../soln/Menkyo/Menkyo.html   
 
 
 .. _ios:
