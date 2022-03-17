@@ -98,6 +98,8 @@ How to Discriminate License Colours in VOS
   :class: tight-table 
 
   +-----------+------------+---------------+-----------------+
+  |Col. 1     |Col. 2      |Col. 3         |Col. 4           | 
+  +-----------+------------+---------------+-----------------+
   |Table 1    ||NTSC|      ||greenlight|   |Chosen Threshold | 
   +-----------+------------+---------------+-----------------+
   |Gold       |134         |73             |< 90             |
@@ -125,7 +127,7 @@ How to Discriminate License Colours in VOS
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |1. ``menkyo.bin``                    |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/menkyo.bin?raw=true>`__                           |
   |                                     |                                                                                                                                                       |
-  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``green1.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/green1.bmp?raw=true>`__                              |  
   |                                     |for an unrotated green color-coded driving license under green lighting.                                                                               |
@@ -154,7 +156,7 @@ How to Discriminate License Colours in VOS
   |10. ``gold3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/gold3.bmp?raw=true>`__                               |
   |                                     |for another rotated gold color-coded driving license under green lighting.                                                                             |   
   |                                     |                                                                                                                                                       |   
-  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
   |                                     |                                                                                                                                                       |
   |                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
   |                                     |                                                                                                                                                       |
@@ -163,7 +165,7 @@ How to Discriminate License Colours in VOS
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``blue1.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``blue1.bmp`` is loaded. 
 
 .. image:: /soln/Menkyo/blue_mono3.jpg
 
@@ -237,7 +239,7 @@ Tools Explanation
   
 Code Walk-Through
 -----------------
-* Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
+* Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1|  
 
 
 Solution Initialize
@@ -502,7 +504,7 @@ Post Image Process
 Running the solution
 --------------------
 
-* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
+* At the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
 +--------------+---------------+
 ||green1l|     ||green1r|      |
