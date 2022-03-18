@@ -98,7 +98,7 @@ How to Discriminate License Colours in VOS
   :class: tight-table 
 
   +-----------+------------+---------------+-----------------+
-  |Col. 1     |Col. 2      |Col. 3         |Col. 4           | 
+  |Column 1   |Column 2    |Column 3       |Column 4         | 
   +-----------+------------+---------------+-----------------+
   |Table 1    ||NTSC|      ||greenlight|   |Chosen Threshold | 
   +-----------+------------+---------------+-----------------+
@@ -115,7 +115,7 @@ How to Discriminate License Colours in VOS
 * We observe that the intensity difference between Gold (134) & Blue (145) is too small and will be very hard to discriminate between them based on grayscale intensity
 * Referring to :ref:`the color table <colortable>` above, we can see that the green channel offers a relatively large separation for the 3 license color codes
 * When we use green lighting, the red and blue channels are effectively zero. Using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ on the green channel alone, we get the following grayscale intensity for the 3 license colors in green lighting in column 3 of :ref:`Table 1 <table1>`
-* Using midpoints we can use the intensity values of column 3 of :ref:`Table 1 <table1>` as thresholds
+* Using midpoints we can use the intensity values of column 4 of :ref:`Table 1 <table1>` as thresholds
 
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/Menkyo>`__
@@ -125,35 +125,35 @@ How to Discriminate License Colours in VOS
   :class: tight-table 
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``menkyo.bin``                    |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/menkyo.bin?raw=true>`__                           |
+  |1. ``menkyo.bin``                    |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/menkyo.bin?raw=true>`__                            |
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``green1.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/green1.bmp?raw=true>`__                              |  
+  |2. ``green1.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green1.bmp?raw=true>`__                               |  
   |                                     |for an unrotated green color-coded driving license under green lighting.                                                                               |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``green2.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/green2.bmp?raw=true>`__                              |  
+  |3. ``green2.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green2.bmp?raw=true>`__                               |  
   |                                     |for a rotated green color-coded driving license under green lighting.                                                                                  |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |4. ``green3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/green3.bmp?raw=true>`__                              |  
+  |4. ``green3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green3.bmp?raw=true>`__                               |  
   |                                     |for another rotated green color-coded driving license under green lighting.                                                                            |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |5. ``blue1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/blue1.bmp?raw=true>`__                               |  
+  |5. ``blue1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue1.bmp?raw=true>`__                                |  
   |                                     |for an unrotated blue color-coded driving license under green lighting.                                                                                |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |6. ``blue2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/blue2.bmp?raw=true>`__                               |  
+  |6. ``blue2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue2.bmp?raw=true>`__                                |  
   |                                     |for a rotated blue color-coded driving license under green lighting.                                                                                   |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |7. ``blue3.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/blue3.bmp?raw=true>`__                               |  
+  |7. ``blue3.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue3.bmp?raw=true>`__                                |  
   |                                     |for another rotated blue color-coded driving license under green lighting.                                                                             |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |8. ``gold1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/gold1.bmp?raw=true>`__                               |  
+  |8. ``gold1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold1.bmp?raw=true>`__                                |  
   |                                     |for an unrotated gold color-coded driving license under green lighting.                                                                                |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |9. ``gold2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/gold2.bmp?raw=true>`__                               |  
+  |9. ``gold2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold2.bmp?raw=true>`__                                |  
   |                                     |for a rotated gold color-coded driving license under green lighting.                                                                                   |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |10. ``gold3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/Menkyo/gold3.bmp?raw=true>`__                               |
+  |10. ``gold3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold3.bmp?raw=true>`__                                |
   |                                     |for another rotated gold color-coded driving license under green lighting.                                                                             |   
   |                                     |                                                                                                                                                       |   
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
@@ -555,6 +555,10 @@ Running the solution
 .. |gold3l| image:: /soln/Menkyo/gold3l.jpg
   :width: 250px
 .. |gold3r| image:: /soln/Menkyo/gold3r.jpg
+
+.. note:: 
+  Please refer to :doc:`here </intro/Advanced/MQTT/MQTT>` for sending the data extracted from this tutorial to a mobile phone through MQTT
+
 
 .. tip::
   #japanese #OCR #teach-in #asian #script #edge #count 
