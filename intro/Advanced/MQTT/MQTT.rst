@@ -44,6 +44,12 @@ Tools Explanation
 -----------------
 * Refer to :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>`
 
+Connections
+-----------
+* Click on :hoverxreftooltip:`Setup Connections <soln/Hover/setupconntcp:Setup Connections>` |conn| |cir1|. We are using the ``VOS emulator`` as a ``TCP socket client``, with the socket server's ``Device IP 192.168.10.126`` at ``port 5025`` with the name ``TcpC126P5025``.  
+
+.. image:: /intro/Advanced/MQTT/tcpclient.jpg
+
 Code Walk-Through
 -----------------
 
@@ -57,7 +63,7 @@ User-Defined Function write2Socket()
   .. image:: /intro/Advanced/MQTT/write2socket.jpg
 
 
-* The code in the Script Function window generates a JSON-formatted file as below.
+* The code in the Script Function window generates a JSON-formatted file as below and sent to ``TcpC126P5025``.
 
 .. code-block:: 
   :linenos:
@@ -90,6 +96,28 @@ Post Image Process
 
 * In the Script Function window we see almost the same code as :ref:`here <menkyopost>`, except for the last line that invokes the user-defined Function ``write2Socket()`` above.
 
+Node-Red Setup
+--------------------
+* We use Node-Red to
+
+  1. Perform the role of the socket server, and receive the JSON-formatted data sent from ``TcpC126P5025``
+  2. Publish the received data to topic ``vos/menkyo`` of a configured MQTT broker
+
+.. image:: /intro/Advanced/MQTT/flow.jpg
+
+* The properties for ``tcp in`` node are
+
+.. image:: /intro/Advanced/MQTT/tcpinprop.jpg
+
+* The properties for ``mqtt out`` node are
+
+.. image:: /intro/Advanced/MQTT/mqttpubprop.jpg
+
+IoT MQTT Panel Setup
+--------------------
+* We use an Android app called ``IoT MQTT Panel`` to subscribe to the ``vox/menkyo`` topic and display the relevant data on the screen
+
+.. image:: /intro/Advanced/MQTT/iotMQTTpanel.jpg
 
 Running the solution
 --------------------

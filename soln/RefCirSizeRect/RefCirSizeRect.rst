@@ -86,7 +86,7 @@ Connections
 .. image:: /soln/RefCirSizeRect/tcp5025.jpg 
 
 .. note::
-  The ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup.
+  The ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. Please refer to :doc:`Publishing VOS Data to MQTT </intro/Advanced/MQTT/MQTT>`
 
 Code Walk-Through
 -----------------
