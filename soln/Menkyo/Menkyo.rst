@@ -34,9 +34,9 @@ Components of the Japanese Driving License 運転免許証
 
 .. image:: /soln/Menkyo/components.jpg
 
-1. The date of birth in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
-2. The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__ The last 5 digits are the issuing number.
-3. The color-code. There are 3 colours
+* |cir1| The date of birth in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
+* |cir2| The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__ The last 5 digits are the issuing number.
+* |cir3| The color-code. There are 3 colours
 
 .. _colortable:
 .. table::
@@ -59,8 +59,8 @@ Components of the Japanese Driving License 運転免許証
 .. |greenbar| image:: /soln/Menkyo/green.png
   :width: 20px
 
-4. The license number
-5. The vehicle categories that this license hold is qualified for. The positions for the different categories are fixed. ``-`` indicates that the category is not applicable. The translation for the different categories are
+* |cir4| The license number
+* |cir5| The vehicle categories that this license hold is qualified for. The positions for the different categories are fixed. ``-`` indicates that the category is not applicable. The translation for the different categories are
 
 .. _vehcat:
 .. image:: /soln/Menkyo/shurui.jpg
@@ -84,7 +84,7 @@ Components of the Japanese Driving License 運転免許証
   |12                |Ordinary motocycle                |13                |Commercial tractor-trailer vehicle|
   +------------------+----------------------------------+------------------+----------------------------------+
 
-6. The words "Driving License" in Japanese which is constant in all variation of licenses.
+* |cir6| The words "Driving License" in Japanese which is constant in all variation of licenses.
 
 How to Discriminate License Colours in VOS
 --------------------------------------------
@@ -120,6 +120,8 @@ How to Discriminate License Colours in VOS
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/Menkyo>`__
 ------------------------------------------------------------------------------------------------------
+
+.. _menkyobmp:
 
 .. table::
   :class: tight-table 
@@ -169,7 +171,7 @@ Tools Explanation
 
 .. image:: /soln/Menkyo/blue_mono3.jpg
 
-* A ``Match tool`` |matchtool| named ``MS`` with the region-of-interest (ROI) set to 6 in :ref:`License Components <menkyoComponents>` with properties set as shown
+* A ``Match tool`` |matchtool| named ``MS`` with the region-of-interest (ROI) set to |cir6| in :ref:`License Components <menkyoComponents>` with properties set as shown
 
   .. image:: /soln/Menkyo/matchToolProp.jpg
   
@@ -200,11 +202,11 @@ Tools Explanation
   +----------------------+--------------------+--------------------------------------------------------------------------------------------+
   |Locations in |lic|_   |Name                |Description                                                                                 |
   +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-  |1                     |ocrRegDate1         ||desp1|                                                                                     |
+  ||cir1|                |ocrRegDate1         ||desp1|                                                                                     |
   +----------------------+--------------------+                                                                                            +
-  |2                     |ocrRegDate          |                                                                                            |
+  ||cir2|                |ocrRegDate          |                                                                                            |
   +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-  |4                     |OCR                 ||desp2|                                                                                     |
+  ||cir4|                |OCR                 ||desp2|                                                                                     |
   +----------------------+--------------------+--------------------------------------------------------------------------------------------+
 
 .. |lic| replace:: ``License Components``
@@ -215,8 +217,8 @@ Tools Explanation
 
    <br />
 
-* 14 ``Preprocessor`` tools |preprocessortool| for each box of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) to remove the background pattern
-* 14 ``Edge Count`` tools |edgecounttool| named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (5 in :ref:`License Components <menkyoComponents>`) with these properties
+* 14 ``Preprocessor`` tools |preprocessortool| for each box of the vehicle categories (|cir5| in :ref:`License Components <menkyoComponents>`) to remove the background pattern
+* 14 ``Edge Count`` tools |edgecounttool| named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (|cir5| in :ref:`License Components <menkyoComponents>`) with these properties
 
   .. image:: /soln/Menkyo/edgecountprop.jpg
 
@@ -465,6 +467,8 @@ Pre Image Process
 
 .. note:: 
   The ``Inspection Status Box`` can be reset by either ``SetDisplayStatus( 0,0 )`` or ``SetDisplayStatus( "","" )``
+
+.. _menkyopost:
 
 Post Image Process
 #####################

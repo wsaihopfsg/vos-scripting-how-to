@@ -7,100 +7,89 @@
 Publishing VOS Data to MQTT & Displaying On Mobile
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Summary of todo
-
-1. Script panel run through, same as Bible p6-8
-2. Intensity based GPO; locator based on CE mark
+1. Reusing the tools and functions from :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>` tutorial.
+2. Sending serialized JSON data to a socket server
+3. Socket server publishes the data to a topic on a public MQTT broker 
+4. Mobile phone subcribes to the same topic and displays the data
   
-  * Pulsed GPO for pass/fail/recycle
-  * difference between Equalize & Normalize
-  * Image correction with brightness & contrast?
-    * https://dsp.stackexchange.com/questions/46564/what-is-the-difference-between-image-normalization-contrast-stretching-and 
-  * Tolerance settings, p19-21 in Bible
-  * Preprocessors
-    * Kernels https://setosa.io/ev/image-kernels/
-    * Subtract
-    * ...
-  * Tools
-  * Calibration how-to
-  * FTP server 
 
-3. HKID...?  
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/MQTT>`__
+-----------------------------------------------------------------------------------------------------------
 
-+------------------+----------------------------------+------------------------------------------------------------------+
-|**Function**      |**Parameters**                    |**Explanation**                                                   |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``LogStart``      |``fileName``, ``onClient``        |Commence logging of processed data the specified ``fileName``     |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``LogStop``       |( )                               |Stop data logging                                                 |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``LogImage``      |``fileName``                      |Save image to ``fileName`` for 1 image. ``Image file logging``    |
-|                  |                                  ||imgfilelogen| must be enabled                                    |
-+------------------+----------------------------------+------------------------------------------------------------------+
+.. table::
+  :class: tight-table 
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Scratch>`__
-------------------------------------------------------------------------------------------------------
-
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|1.``todo.bin``                       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratch.bin?raw=true>`__                          |
-|                                     |                                                                                                                                                       |
-|                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|2.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/unscratched.bmp?raw=true>`__                         |  
-|                                     |for PASS with no patch detected.                                                                                                                       |
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-|3.``todo.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Scratch/scratched_hidden.bmp?raw=true>`__                    |
-|                                     |                                                                                                                                                       |   
-|                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
-|                                     |                                                                                                                                                       |
-|                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
-|                                     |                                                                                                                                                       |
-|                                     |  where ``todo.bmp`` have been saved                                                                                                                   |
-+-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |1. ``mqtt.bin``                      |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/MQTT/mqtt.bin?raw=true>`__                            |
+  |                                     |                                                                                                                                                       |
+  |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution |  
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |2. ``green2.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/MQTT/green2.bmp?raw=true>`__                             |  
+  |                                     |is the same image as :ref:`here<menkyobmp>` for a rotated green color-coded driving license under green lighting.                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |3. ``blue2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/MQTT/blue2.bmp?raw=true>`__                              |  
+  |                                     |is the same image as :ref:`here<menkyobmp>` for a rotated blue color-coded driving license under green lighting.                                       |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |4. ``gold2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/MQTT/gold2.bmp?raw=true>`__                              |  
+  |                                     |is the same image as :ref:`here<menkyobmp>` for a rotated gold color-coded driving license under green lighting.                                       |
+  |                                     |                                                                                                                                                       |   
+  |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
+  |                                     |                                                                                                                                                       |
+  |                                     |  set |demoimg| |cir2| to the folder                                                                                                                   |
+  |                                     |                                                                                                                                                       |
+  |                                     |  where the images have been saved                                                                                                                     |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Tools Explanation
 -----------------
-* * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``todo.bmp`` is loaded. 
-
-//.. image:: /code/Soln/Scratch/scratched_hidden.bmp
-
-* 3 tools have been used
-
-  * A ``todo`` tool named ``Pre``
-  * Another ``todo`` tool named ``Pre1`` 
-  * A ``todo`` tool named ``N`` 
-
-  
-+-------------------+--------------------+-----------------------------+
-|                   |Pic. above, removes |Pic. below, removes          |
-|                   |                    |                             |              
-|                   |small patches only  |big & small patches together |
-+-------------------+--------------------+-----------------------------+
-|Max Area           |400                 |1500                         |
-+-------------------+--------------------+-----------------------------+
-|Max Width          |30                  |100                          |
-+-------------------+--------------------+-----------------------------+
-|Max Height         |30                  |100                          |
-+-------------------+--------------------+-----------------------------+
+* Refer to :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>`
 
 Code Walk-Through
 -----------------
+
 * Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
+* All functions are the same as :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>`, except for 1 extra user-defined function
+  
+User-Defined Function write2Socket()
+####################################
+* Choose the user-defined function ``write2Socket`` at the bottom left 
+  
+  .. image:: /intro/Advanced/MQTT/write2socket.jpg
+
+
+* The code in the Script Function window generates a JSON-formatted file as below.
+
+.. code-block:: 
+  :linenos:
+
+  {
+      "LicenseNo": "012345678900",
+      "LicColor": "Gold",
+      "RegSerial": "01234",
+      "Date": {
+          "Birth": "18/3/1977",
+          "Reg": "20/12/2010"
+      },
+      "VehCatEmpty": [ 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1 ]
+  }
+
+.. image:: /soln/Menkyo/components.jpg
+
+* Line 2: The license number |cir4|
+* Line 3: The license color |cir3|
+* Line 4: The 5-digit issuing number at the end of |cir2|
+* Line 6: The birth date converted from the Japanese era format at |cir1|
+* Line 7: The registration date converted from the Japanese era format at |cir2|
+* Line 9: The vehicle category qualifications, based on |cir5|
 
 Post Image Process
-##################
+#####################
 * Choose the predefined function ``Post Image Process`` at the bottom left 
-  |fn_post|
 
-* In the Script Function window we see 
+  .. image:: /soln/Menkyo/postimgproc.jpg
 
-.. code-block::
-    :linenos:
+* In the Script Function window we see almost the same code as :ref:`here <menkyopost>`, except for the last line that invokes the user-defined Function ``write2Socket()`` above.
 
-    //todo
-
-* Line 1: todo
-* Line 2: todo
 
 Running the solution
 --------------------

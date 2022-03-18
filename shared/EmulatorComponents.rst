@@ -83,7 +83,16 @@
    :width: 23px
 
 .. |cir3| image:: /img/cirnum/3.jpg   
-   :width: 25px
+   :width: 22px
+
+.. |cir4| image:: /img/cirnum/4.jpg   
+   :width: 23px
+
+.. |cir5| image:: /img/cirnum/5.jpg   
+   :width: 22px
+
+.. |cir6| image:: /img/cirnum/6.jpg   
+   :width: 22px
 
 .. |matchtool| image:: /img/emulator/tools/match.png
 
