@@ -119,7 +119,7 @@ Advanced Topics
 |VOS & IIoT                                                                                                 |
 +===========================================================================================================+
 || Extending on :doc:`OCR of Asian Scripts & Colour Discrimination <soln/Menkyo/Menkyo>`, this tutorial     |
-|| shows                                                                                                    |
+| shows                                                                                                     |
 || 1. Sending of VOS processed data as JSON-formatted string to a socket server                             |
 || 2. Publishing of the JSON string to a topic ``vos/menkyo`` on a public MQTT broker through Node-red      |
 || 3. Subscribing to the ``vos/menkyo`` topic and display of the VOS data on an android phone               |

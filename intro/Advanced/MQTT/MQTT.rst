@@ -170,7 +170,7 @@ IoT MQTT Panel Setup
 Running the solution
 --------------------
 
-* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
+* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. You will observe the phone's screen is updated with each ``Manual Trigger`` |manTrig|.
 
 .. youtube:: qylTNJB3DmI
 
