@@ -279,7 +279,7 @@ Communication Functions
    +-----------------------------------------------+-----------------------------------------------+
 
 .. |wformatstr| replace:: ``WriteFormatString``
-.. _wformatstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
+.. _wformatstr: ../intro/Advanced/MQTT/MQTT.html
 .. |rstr| replace:: ``ReadString``
 .. _rstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
 

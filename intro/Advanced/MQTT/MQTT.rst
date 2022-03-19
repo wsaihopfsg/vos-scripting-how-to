@@ -54,7 +54,7 @@ Code Walk-Through
 -----------------
 
 * Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
-* All functions are the same as :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>`, except for 1 extra user-defined function
+* All functions are the same as :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>`, except for 1 extra user-defined function ``write2Socket()``
   
 User-Defined Function write2Socket()
 ####################################
@@ -63,7 +63,7 @@ User-Defined Function write2Socket()
   .. image:: /intro/Advanced/MQTT/write2socket.jpg
 
 
-* The code in the Script Function window generates a JSON-formatted file as below and sent to ``TcpC126P5025``.
+* The code in the Script Function window generates a JSON-formatted file as below and sent to ``TcpC126P5025``. We will skip the code and show only the JSON string in pretty-formatting.
 
 .. _JSONstr:
 
