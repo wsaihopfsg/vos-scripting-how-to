@@ -8,7 +8,7 @@ Publishing VOS Data to MQTT & Displaying On Mobile
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Reusing the tools and functions from :doc:`OCR of Asian Scripts & Colour Discrimination </soln/Menkyo/Menkyo>` tutorial.
-2. Sending serialized JSON data to a socket server
+2. Sending serialized JSON data to a socket server at an edge device
 3. Socket server publishes the data to a topic on a public MQTT broker 
 4. Mobile phone subcribes to the same topic and displays the data
   
@@ -102,7 +102,7 @@ Post Image Process
 
 Node-Red Setup
 --------------------
-* We use Node-Red to
+* We use Node-Red at the edge device to
 
   1. Perform the role of the socket server, and receive the JSON-formatted data sent from ``TcpC126P5025``
   2. Publish the received data to topic ``vos/menkyo`` of a configured MQTT broker
@@ -175,5 +175,5 @@ Running the solution
 .. youtube:: qylTNJB3DmI
 
 .. Tip::
-  #MQTT #JSON #publish #subscribe #mobile #Android #IoT #IIOT 
+  #MQTT #JSON #publish #subscribe #mobile #Android #IoT #IIOT #edge #device
 
