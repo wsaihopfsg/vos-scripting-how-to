@@ -46,7 +46,7 @@ Tools Explanation
 
 Connections
 -----------
-* Click on :hoverxreftooltip:`Setup Connections <soln/Hover/setupconntcp:Setup Connections>` |conn| |cir1|. We are using the ``VOS emulator`` as a ``TCP socket client``, with the socket server's ``Device IP 192.168.10.126`` at ``port 5025`` with the name ``TcpC126P5025``.  
+* Click on :hoverxreftooltip:`Setup Connections <intro/Basic/Hover/setupconntcp:Setup Connections>` |conn| |cir1|. We are using the ``VOS emulator`` as a ``TCP socket client``, with the socket server's ``Device IP 192.168.10.126`` at ``port 5025`` with the name ``TcpC126P5025``.  
 
 .. image:: /intro/Advanced/MQTT/tcpclient.jpg
 
@@ -155,15 +155,15 @@ IoT MQTT Panel Setup
 
 .. |licolor| image:: /intro/Advanced/MQTT/licolor.jpg
 .. |licenseno| image:: /intro/Advanced/MQTT/licenseno.jpg
-  :width: 320px
+  :width: 300px
 .. |birthdate| image:: /intro/Advanced/MQTT/birthdate.jpg
   :width: 300px
 .. |issuedate| image:: /intro/Advanced/MQTT/issuedate.jpg
   :width: 300px
 .. |issue| image:: /intro/Advanced/MQTT/issue.jpg  
-  :width: 350px
+  :width: 300px
 .. |cat0| image:: /intro/Advanced/MQTT/cat0.jpg
-  :width: 320px
+  :width: 300px
 .. |cat13| image:: /intro/Advanced/MQTT/cat13.jpg   
   :width: 300px
 
