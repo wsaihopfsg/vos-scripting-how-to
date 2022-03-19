@@ -172,5 +172,8 @@ Running the solution
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
-#multiple #preprocessor #scratch #detection #remove #blob #erode #dilate #stacking #stack
+.. youtube:: qylTNJB3DmI
+
+.. Tip::
+  #MQTT #JSON #publish #subscribe #mobile #Android #IoT #IIOT 
 
