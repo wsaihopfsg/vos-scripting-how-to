@@ -118,15 +118,17 @@ Advanced Topics
 +-----------------------------------------------------------------------------------------------------------+
 |VOS & IIoT                                                                                                 |
 +===========================================================================================================+
-|| Based on a basic tutorial, this advanced tutorial demonstrates                                           |
-|| 1. Sending of VOS processed data to a mobile screen through a public MQTT broker                         |
-|| 2.                                                                                                       |
-|| 3.                                                                                                       |
-|| 4.                                                                                                       |
-||                                                                                                          |
+|| Extending on :doc:`OCR of Asian Scripts & Colour Discrimination <soln/Menkyo/Menkyo>`, this tutorial     |
+|| shows                                                                                                    |
+|| 1. Sending of VOS processed data as JSON-formatted string to a socket server                             |
+|| 2. Publishing of the JSON string to a topic ``vos/menkyo`` on a public MQTT broker through Node-red      |
+|| 3. Subscribing to the ``vos/menkyo`` topic and display of the VOS data on an android phone               |
+|                                                                                                           |
+||vosiot|                                                                                                   |
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |projectHV| replace:: ``Project H`` & ``Project V``
+.. |vosiot| image:: /intro/Advanced/MQTT/overview.jpg
+
 .. |mihon| image:: /soln/Menkyo/mihon.jpg
 
 :ref:`Integration with ROS (WIP) <todo>`

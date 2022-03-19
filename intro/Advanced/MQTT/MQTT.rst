@@ -107,7 +107,7 @@ Node-Red Setup
   1. Perform the role of the socket server, and receive the JSON-formatted data sent from ``TcpC126P5025``
   2. Publish the received data to topic ``vos/menkyo`` of a configured MQTT broker
 
-.. image:: /intro/Advanced/MQTT/flow.jpg
+.. image:: /intro/Advanced/MQTT/flow1.jpg
 
 * The properties for ``tcp in`` node are
 
