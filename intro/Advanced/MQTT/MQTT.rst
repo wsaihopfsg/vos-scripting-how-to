@@ -65,6 +65,8 @@ User-Defined Function write2Socket()
 
 * The code in the Script Function window generates a JSON-formatted file as below and sent to ``TcpC126P5025``.
 
+.. _JSONstr:
+
 .. code-block:: 
   :linenos:
 
@@ -78,6 +80,8 @@ User-Defined Function write2Socket()
       },
       "VehCatEmpty": [ 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1 ]
   }
+
+.. _hanako:
 
 .. image:: /soln/Menkyo/components.jpg
 
@@ -108,16 +112,60 @@ Node-Red Setup
 * The properties for ``tcp in`` node are
 
 .. image:: /intro/Advanced/MQTT/tcpinprop.jpg
+  :width: 400px
 
 * The properties for ``mqtt out`` node are
 
 .. image:: /intro/Advanced/MQTT/mqttpubprop.jpg
-
+  :width: 400px
+  
 IoT MQTT Panel Setup
 --------------------
-* We use an Android app called ``IoT MQTT Panel`` to subscribe to the ``vox/menkyo`` topic and display the relevant data on the screen
+* We use an Android app called ``IoT MQTT Panel`` to subscribe to the ``vox/menkyo`` topic and display the relevant data on the screen. The numbering shown here has an one-to-one correspondence to :ref:`the sample Japanese Dirving License<hanako>` 
 
 .. image:: /intro/Advanced/MQTT/iotMQTTpanel.jpg
+
+* The setup of the various panels are as shown below
+
++------------------------------------+-----------------------------------------+
+||birthdate|                         ||licenseno|                              |
++------------------------------------+-----------------------------------------+
+||issuedate|                         ||issue|                                  |
++------------------------------------+-----------------------------------------+
+||licolor|                           |                                         |
++------------------------------------+-----------------------------------------+
+||cat0|                              ||cat13|                                  |
++------------------------------------+-----------------------------------------+
+|.. Note:: Only the first and last categories are shown for |cir5| for brevity |
++------------------------------------+-----------------------------------------+  
+
+.. Note:: 
+  Since data is sent as JSON format, the relevant data is extracted using `JSON Path <https://jsonpath.com/>`__. The correspondence of the :ref:`JSON formatted string <JSONstr>` with its JSON path is summarized here
+  
+  ============= ===================
+  Line Number   JSON Path
+  2             $.LicenseNo
+  3             $.LicColor
+  4             $.RegSerial
+  6             $.Date.Birth
+  7             $.Date.Reg
+  9, element 0  $.VehCatEmpty[0]
+  9, element 13 $.VehCatEmpty[13]           
+  ============= =================== 
+
+.. |licolor| image:: /intro/Advanced/MQTT/licolor.jpg
+.. |licenseno| image:: /intro/Advanced/MQTT/licenseno.jpg
+  :width: 320px
+.. |birthdate| image:: /intro/Advanced/MQTT/birthdate.jpg
+  :width: 300px
+.. |issuedate| image:: /intro/Advanced/MQTT/issuedate.jpg
+  :width: 300px
+.. |issue| image:: /intro/Advanced/MQTT/issue.jpg  
+  :width: 350px
+.. |cat0| image:: /intro/Advanced/MQTT/cat0.jpg
+  :width: 320px
+.. |cat13| image:: /intro/Advanced/MQTT/cat13.jpg   
+  :width: 300px
 
 Running the solution
 --------------------
