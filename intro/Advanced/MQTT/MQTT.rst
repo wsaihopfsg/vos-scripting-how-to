@@ -123,7 +123,7 @@ IoT MQTT Panel Setup
 --------------------
 * We use an Android app called ``IoT MQTT Panel`` to subscribe to the ``vox/menkyo`` topic and display the relevant data on the screen. The numbering shown here has an one-to-one correspondence to :ref:`the sample Japanese Dirving License<hanako>` 
 
-.. image:: /intro/Advanced/MQTT/iotMQTTpanel.jpg
+.. image:: /intro/Advanced/MQTT/iotMQTTpanel1.jpg
 
 * The setup of the various panels are as shown below
 
