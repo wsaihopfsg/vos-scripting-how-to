@@ -82,8 +82,6 @@ Basic Topics
 || |deitalic|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-
-
 Advanced Topics
 ===============
 
@@ -131,6 +129,20 @@ Advanced Topics
 .. |vosiot| image:: /intro/Advanced/MQTT/overview.jpg
 
 .. |mihon| image:: /soln/Menkyo/mihon.jpg
+
+:doc:`FTP Logging & Viewing of Images on Web Browser <intro/Advanced/FTP/FTP>`
+--------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Viewing of Inspection Images and Results on Web Browser                                                    |  
++===========================================================================================================+
+|| VOS serves as a FTP client, and logs images to a configured FTP server on Node-Red. The image and its    |
+|| associated tools together with the inspection results are displayed in the web broswer of any            |
+|| phone/tablet/computer within the same intranet through the Node-Red dashboard.                           |
+|| |ftpviewer|                                                                                              |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |ftpviewer| image:: /intro/Advanced/FTP/overview.png
 
 :ref:`Integration with ROS (WIP) <todo>`
 ----------------------------------------

@@ -1,7 +1,5 @@
 :orphan:
 
-.. _gpio:
-
 .. toctree::
 
 .. include:: /shared/EmulatorComponents.rst
