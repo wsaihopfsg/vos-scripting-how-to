@@ -303,7 +303,7 @@ Running the solution
 * If we compare the diameter results against Wikipedia's record, we can see that the measurement from VOS is quite accurate indeed.
 
 .. table::
-  :class: textcentre 
+  :class: wy-table-responsive textcentre 
 
   +----------------+----------------+----------------+----------------+----------------+
   |                |*5yen*                           |*50yen*                          |
