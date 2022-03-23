@@ -36,16 +36,16 @@ Tools
    |* :confval:`Barcode <Barcode>`                             |  * |sheary|_                                           |
    |                                                           |  * Sobel                                               |
    |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
-   |                                                           |  * :confval:`Threshold <thres>`                        |
+   |                                                           |  * :confval:`Threshold <Threshold>`                        |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
    |                                                           |  * Zoom                                                |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |circle| replace:: ``Circle``
-.. _circle: ../intro/Advanced/FTP/Ftp.html
+.. _circle: ../intro/Advanced/FTP/FTP.html
 .. |concent| replace:: ``Concentric Circles``
-.. _concent: ../intro/Advanced/FTP/Ftp.html
+.. _concent: ../intro/Advanced/FTP/FTP.html
 .. |distance| replace:: ``Distance``
 .. _distance: ../intro/Basic/MathFunc/MathFunc.html
 .. |rake| replace:: ``Rake``
@@ -264,11 +264,11 @@ Logger
 .. |logimage| replace:: ``LogImage``
 .. _logimage: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |writeimagefile| replace:: ``WriteImageFile``
-.. _writeimagefile: ../intro/Advanced/FTP/Ftp.html
+.. _writeimagefile: ../intro/Advanced/FTP/FTP.html
 .. |writeimagetool| replace:: ``WriteImageTools``
-.. _writeimagetool: ../intro/Advanced/FTP/Ftp.html
+.. _writeimagetool: ../intro/Advanced/FTP/FTP.html
 .. |writehistoryimage| replace:: ``WriteHistoryImage``
-.. _writehistoryimage: ../intro/Advanced/FTP/Ftp.html
+.. _writehistoryimage: ../intro/Advanced/FTP/FTP.html
 
 .. _comms:
 
@@ -293,7 +293,7 @@ Communication Functions
 .. |rstr| replace:: ``ReadString``
 .. _rstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |writestring| replace:: ``WriteString``
-.. _writestring: ../intro/Advanced/FTP/Ftp.html
+.. _writestring: ../intro/Advanced/FTP/FTP.html
 
 .. _sys:
 

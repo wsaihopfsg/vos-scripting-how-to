@@ -82,6 +82,7 @@ Configuration
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Basic/GPIO/GPIO`
    * :doc:`/soln/Menkyo/Menkyo`
+   * :doc:`/intro/Advanced/FTP/FTP`
 
 .. confval:: Return
    
@@ -115,7 +116,7 @@ Configuration
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/Menkyo/Menkyo`
 
-.. confval:: thres
+.. confval:: Threshold
 
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Advanced/FTP/FTP`
