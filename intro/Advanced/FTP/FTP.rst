@@ -43,7 +43,7 @@ This sample demonstrates
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``vosftp.json``                   |`The Node Red Flow <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/vosftp.json?raw=true>`__                          |
+  |2. ``flows.json``                    |`The Node Red Flow <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/flows.json?raw=true>`__                           |
   |                                     |                                                                                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |3. ``50+5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/50+5.bmp?raw=true>`__ Picture of a *50yen* and a     |
@@ -68,21 +68,21 @@ Tools Explanation
 .. image:: /intro/Advanced/FTP/tools.png
 ..  :width: 400px
 
-* 1 preprocessor with only ``Threshold`` set to 38
+* A preprocessor with only ``Threshold`` set to 38
 
 .. image:: /intro/Advanced/FTP/preproc.jpg
 
 * For the *5yen* coin on the left
   
-  * 1 ``circle`` tool |circletool| to measure the outer circle's  diameter named ``CDiam``
-  * 1 ``circle`` tool |circletool| to measure the inner circle's  diameter named ``CDiam1``
-  * 1 ``Concentric Circles`` tool |concentrictool| to calculate the concentricity of the outer & inner circles named ``CC``
+  * A ``circle`` tool |circletool| to measure the outer circle's  diameter named ``CDiam``
+  * A ``circle`` tool |circletool| to measure the inner circle's  diameter named ``CDiam1``
+  * A ``Concentric Circles`` tool |concentrictool| to calculate the concentricity of the outer & inner circles named ``CC``
 
 * For the *50yen* coin on the right
   
-  * 1 ``circle`` tool |circletool| to measure the outer circle's  diameter named ``CDiam2``
-  * 1 ``circle`` tool |circletool| to measure the inner circle's  diameter named ``CDiam3``
-  * 1 ``Concentric Circles`` tool |concentrictool| to calculate the concentricity of the outer & inner circles named ``CC1``
+  * A ``circle`` tool |circletool| to measure the outer circle's  diameter named ``CDiam2``
+  * A ``circle`` tool |circletool| to measure the inner circle's  diameter named ``CDiam3``
+  * A ``Concentric Circles`` tool |concentrictool| to calculate the concentricity of the outer & inner circles named ``CC1``
 
 
   .. Tip::
@@ -142,6 +142,8 @@ Node-Red Flow
   .. image:: /intro/Advanced/FTP/ftpmuspro.jpg
     :width: 500px
 
+  |
+  
   .. code-block::
     :linenos:
 
@@ -152,6 +154,8 @@ Node-Red Flow
   .. image:: /intro/Advanced/FTP/ftpuipro.jpg
     :width: 500px
 
+  |
+  
   .. code-block::
     :linenos:
     
@@ -171,6 +175,8 @@ Node-Red Flow
     .. image:: /intro/Advanced/FTP/tcpreplacepro.jpg
       :width: 500px
 
+    |
+  
     .. code-block::
       :linenos:
     
@@ -182,6 +188,8 @@ Node-Red Flow
     .. image:: /intro/Advanced/FTP/tcpmuspro.jpg
       :width: 500px
 
+    |
+  
     .. code-block::
       :linenos:
     
@@ -191,7 +199,9 @@ Node-Red Flow
 
     .. image:: /intro/Advanced/FTP/tcpuipro.jpg
       :width: 500px
-      
+
+    |
+  
     .. code-block::
       :linenos:
 
