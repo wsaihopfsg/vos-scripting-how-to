@@ -2,10 +2,10 @@
     vertical-align: top !important; 
  }
 
- .tight-table td {
+.tight-table td {
      white-space: normal !important;
- }
+}
 
- .textcentre td {
+.wy-table-responsive textcentre td {
     text-align: center !important;
  }
