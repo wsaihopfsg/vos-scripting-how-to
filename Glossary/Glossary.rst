@@ -30,18 +30,22 @@ Tools
    |* Contour                                                  |  * |median|_                                           |
    |* |angle|_                                                 |  * :confval:`Normalize`                                |
    |* Arc                                                      |  * Project H                                           |
-   |* Circle                                                   |  * Project V                                           |
-   |* Concentric                                               |  * :confval:`Remove blobs <Remove blobs>`              |
+   |* |circle|_                                                |  * Project V                                           |
+   |* |concent|_                                               |  * :confval:`Remove blobs <Remove blobs>`              |
    |* Graphics                                                 |  * |shearx|_                                           |
    |* :confval:`Barcode <Barcode>`                             |  * |sheary|_                                           |
    |                                                           |  * Sobel                                               |
    |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
-   |                                                           |  * |thres|_                                            |
+   |                                                           |  * :confval:`Threshold <thres>`                        |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
    |                                                           |  * Zoom                                                |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |circle| replace:: ``Circle``
+.. _circle: ../intro/Advanced/FTP/Ftp.html
+.. |concent| replace:: ``Concentric Circles``
+.. _concent: ../intro/Advanced/FTP/Ftp.html
 .. |distance| replace:: ``Distance``
 .. _distance: ../intro/Basic/MathFunc/MathFunc.html
 .. |rake| replace:: ``Rake``
@@ -54,8 +58,8 @@ Tools
 .. _median: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |normalize| replace:: ``Normalize``
 .. _normalize: ../soln/Scratch/Scratch.html
-.. |thres| replace:: ``Threshold``
-.. _thres: ../soln/Scratch/Scratch.html
+.. .. |thres| replace:: ``Threshold``
+.. .. _thres: ../soln/Scratch/Scratch.html
 .. |match| replace:: ``Match``
 .. _match: ../intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
@@ -247,9 +251,9 @@ Logger
 
    +-----------------------------------------------+-----------------------------------------------+
    |* AppendFile                                   |* |logimage|_                                  |
-   |* DriveConnnect                                |* WriteImageFile                               |
-   |* GetFtpStatus                                 |* WriteImageTools                              |
-   |* |logstart|_                                  |* WriteHistoryImage                            |
+   |* DriveConnnect                                |* |writeimagefile|_                            |
+   |* GetFtpStatus                                 |* |writeimagetool|_                            |
+   |* |logstart|_                                  |* |writehistoryimage|_                         |
    |* |logstop|_                                   |                                               |
    +-----------------------------------------------+-----------------------------------------------+
 
@@ -259,6 +263,12 @@ Logger
 .. _logstop: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |logimage| replace:: ``LogImage``
 .. _logimage: ../intro/Basic/OcrItalic/OcrItalic.html
+.. |writeimagefile| replace:: ``WriteImageFile``
+.. _writeimagefile: ../intro/Advanced/FTP/Ftp.html
+.. |writeimagetool| replace:: ``WriteImageTools``
+.. _writeimagetool: ../intro/Advanced/FTP/Ftp.html
+.. |writehistoryimage| replace:: ``WriteHistoryImage``
+.. _writehistoryimage: ../intro/Advanced/FTP/Ftp.html
 
 .. _comms:
 
@@ -274,7 +284,7 @@ Communication Functions
    |* GetPortChar                                  |* SendEmailInfo                                |
    |* GetPortString                                |* WriteBytes                                   |
    |* IsConnected                                  |* |wformatstr|_                                |
-   |* PutPortString                                |* WriteString                                  |
+   |* PutPortString                                |* |writestring|_                               |
    |* ReadByte                                     |                                               |
    +-----------------------------------------------+-----------------------------------------------+
 
@@ -282,6 +292,8 @@ Communication Functions
 .. _wformatstr: ../intro/Advanced/MQTT/MQTT.html
 .. |rstr| replace:: ``ReadString``
 .. _rstr: ../soln/RefCirSizeRect/RefCirSizeRect.html
+.. |writestring| replace:: ``WriteString``
+.. _writestring: ../intro/Advanced/FTP/Ftp.html
 
 .. _sys:
 

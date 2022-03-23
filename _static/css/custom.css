@@ -5,3 +5,7 @@
  .tight-table td {
      white-space: normal !important;
  }
+
+ .textcentre td {
+    text-align: center
+ }

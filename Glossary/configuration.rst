@@ -114,3 +114,8 @@ Configuration
 
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/Menkyo/Menkyo`
+
+.. confval:: thres
+
+   * :doc:`/soln/Scratch/Scratch`
+   * :doc:`/intro/Advanced/FTP/FTP`

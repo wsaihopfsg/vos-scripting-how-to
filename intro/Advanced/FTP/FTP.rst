@@ -15,19 +15,22 @@ This sample demonstrates
 4. Logging of images and the associated tools to a configured ftp server by ``WriteImageTools``
 5. Sending of the inspection results to a TCP client
 
-+---------------------+----------------------------------+-----------------------------------------------------------------------------+
-|**Function**         |**Parameters**                    |**Explanation**                                                              |
-+---------------------+----------------------------------+-----------------------------------------------------------------------------+
-|``WriteImageTools``  |``fileName``, ``camID``           |Write the current image with tools from the camera specified by ``camID`` to |
-|                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
-+---------------------+----------------------------------+-----------------------------------------------------------------------------+
-|``WriteImageFile``   |``fileName``, ``camID``           |Write the current image from the camera specified by ``camID`` to            |
-|                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
-+---------------------+----------------------------------+-----------------------------------------------------------------------------+
-|``WriteHistoryImage``|``fileName``, ``camID``,          |Write 1 image with tools from the Histroy Log of ``camID`` specified by      |
-|                     |``numImagesBack``                 |``numImagesBack`` to the ``fileName`` specified. ``numImagesBack=0`` is one  |
-|                     |                                  |image prior to the current image.                                            |
-+---------------------+----------------------------------+-----------------------------------------------------------------------------+
+.. table::
+  :class: tight-table 
+
+  +---------------------+----------------------------------+-----------------------------------------------------------------------------+
+  |**Function**         |**Parameters**                    |**Explanation**                                                              |
+  +---------------------+----------------------------------+-----------------------------------------------------------------------------+
+  |``WriteImageTools``  |``fileName``, ``camID``           |Write the current image with tools from the camera specified by ``camID`` to |
+  |                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
+  +---------------------+----------------------------------+-----------------------------------------------------------------------------+
+  |``WriteImageFile``   |``fileName``, ``camID``           |Write the current image from the camera specified by ``camID`` to            |
+  |                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
+  +---------------------+----------------------------------+-----------------------------------------------------------------------------+
+  |``WriteHistoryImage``|``fileName``, ``camID``,          |Write 1 image with tools from the Histroy Log of ``camID`` specified by      |
+  |                     |``numImagesBack``                 |``numImagesBack`` to the ``fileName`` specified. ``numImagesBack=0`` is one  |
+  |                     |                                  |image prior to the current image.                                            |
+  +---------------------+----------------------------------+-----------------------------------------------------------------------------+
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/FTP>`__
 -----------------------------------------------------------------------------------------------------------
@@ -40,13 +43,13 @@ This sample demonstrates
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``50+5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/50+5.bmp?raw=true>`__ Picture of a *50yen* and a     |
-  |                                     |*5yen* coin in normal lighting.                                                                                                                        |
-  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``vosftp.json``                   |`The Node Red Flow <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/vosftp.json?raw=true>`__                          |
+  |2. ``vosftp.json``                   |`The Node Red Flow <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/vosftp.json?raw=true>`__                          |
   |                                     |                                                                                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``backlite.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/backlite.bmp?raw=true>`__ Picture of a *50yen* and a |
+  |3. ``50+5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/50+5.bmp?raw=true>`__ Picture of a *50yen* and a     |
+  |                                     |*5yen* coin in normal lighting.                                                                                                                        |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |4. ``backlite.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/backlite.bmp?raw=true>`__ Picture of a *50yen* and a |
   |                                     |*5yen* coin in back-lighting.                                                                                                                          |
   |                                     |                                                                                                                                                       |   
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                      |
@@ -92,6 +95,9 @@ Communication Setup
   
   .. image:: /intro/Advanced/FTP/comms1.jpg
 
+.. warning:: 
+  The IP addresses have to be changed according to your network setup
+
 TCP Server Setup
 ###################
 
@@ -105,6 +111,7 @@ TCP Server Setup
 Node-Red Flow
 ###################
 
+* On any web browser within the same intranet, navigate to the IP where Node-Red is running. In this example it is ``http://192.168.10.126:1880``.
 * The Node-Red flow looks like this, with 2 branches
 
   * The FTP branch on top receives the post processed image with tools 
@@ -118,8 +125,11 @@ Node-Red Flow
   * ``node-red-contrib-ftp-server``
   * ``node-red-node-base64``
 
+.. _ftpbranch:
+
 * FTP Branch
-  * The properties of the ``VosFtpIn`` node are as shown below, in which the FTP server is configured at port 7021. The username and password will be needed at VOS scripting.
+  
+  * The properties of the ``VosFtpIn`` node are as shown below, in which the FTP server is configured at port 7021. The ``username`` and ``password`` will be needed at VOS' `Post Image Process <#post-image-process>`__ script.
 
   //todo image
 
@@ -148,7 +158,9 @@ Node-Red Flow
 
   // todo image
 
-  * The properties & code for the ``function`` node is shown here, which replaces all new line characters ``\n`` from VOS to HTML ``<br>``
+.. _newlinereplace:
+
+  * The properties & code for the ``function`` node is shown here, which replaces all new line character ``\n`` from VOS to HTML ``<br>``
 
   //todo image
     .. code-block::
@@ -169,6 +181,9 @@ Node-Red Flow
   .. code-block::
     :linenos:
 
+.. note:: 
+  To keep this tutorial simple, we have not shown how to save the transmitted image locally. 
+
 Code Walk-Through
 -----------------
 * Click on :hoverxreftooltip:`Edit Script <intro/Basic/Hover/editscript:Edit Script>` |edit| |cir1|  
@@ -188,8 +203,8 @@ Solution Initialize
     myFail = 3
     ctr=0
 
-  * Lines 1-3: Return values for ``pass``, ``fail`` & ``recycle`` values in VOS' ``Result.0``
-  * Line 4: Reset image counter
+* Lines 1-3: Return values for ``pass``, ``fail`` & ``recycle`` values in VOS' ``Result.0``
+* Line 4: Reset image counter
 
 Pre Image Process
 ##################
@@ -234,10 +249,14 @@ Post Image Process
     WriteString(TcpP5024,socketStr)
     SetDisplayStatus(socketStr , iColor)
 
-* Line 1: Setting the ftp path with the username and password, IP address and port, and the image name to ``ftpath``
+* Line 1: Setting the ftp path with the :ref:`username & password<ftpbranch>`, IP address and port, and the image name to ``ftpath``
 * Line 2: Writing the image file with tools
 * Line 3: Image counter increament
-* Lines 5-7: Branch when inspection result is ``pass``  
+* Lines 5-7: Branch when inspection result is ``pass``. Note the new line character ``\n`` :ref:`will be replaced by its html equivalent<newlinereplace>` by the Node-Red function node ``todo``
+* Lines 10-11: Branch when inspection result is ``recycle``  
+* Lines 13-14: Branch when inspection result is ``fail``
+* Line 17: Sending of ``socketStr`` to the configured TCP client
+* Line 18: Display ``socketStr`` in the ``Inspection Status`` window
 
 
 .. note::
@@ -247,66 +266,46 @@ Running the solution
 --------------------
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
-* Clicking on ``Manual Trigger`` |manTrig| repeatedly we will see files created 
-  
-  * As many .jpg files as ``Manual Trigger`` |manTrig| clicks    
-  * A .csv file with 5 entries
-
-.. code-block::
-  :linenos:
-  
-  "Frame Number","TimeStamp","Result","OsheaR","OCR",
-
-  1, 17:58:04, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
-  2, 17:58:04, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
-  3, 17:58:05, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
-  4, 17:58:05, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
-  5, 17:58:06, Pass, italicfontOCR fictionaltORC, italicfontOC fictionaltORC
-
-
-* We can observe that
-   
-  * ``OsheaR`` is able to recognize the alphabets with 100% accuracy, 
-  * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` manually does not seem to help as summarize in the following table.
-    
-    * 85: italicfontOC
-    * 50: italicfontOCI
-    * 40: italicfontOCIc
-    * 10: c italicfontOC     
+* On any web browser within the same intranet, navigate to the IP where Node-Red dashboard is running. In this example it is ``http://192.168.10.126:1880/ui``.
+* When ``backlite.bmp`` is being inspected, we see that the output at ``Vision Configuration Tool`` and web browser below. 
 
 +-------------------------------------------------+-------------------------------------------------+
 ||1|                                              ||2|                                              |
-|                                                 |                                                 |
-|``Required score`` = 85                          |``Required score`` = 50                          |
 +-------------------------------------------------+-------------------------------------------------+
-||3|                                              ||4|                                              |
-|                                                 |                                                 |
-|``Required score`` = 40                          |``Required score`` = 10                          |
+|In ``Vision Configuration Tool``                 |On web browser of a mobile phone                 |
 +-------------------------------------------------+-------------------------------------------------+
 
-.. Note::
-  * In this case where |charsamesize| is unchecked in the ``font editor`` |fonteditor|,
-    
-    * Spaces may become hard to detect
-    * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
-      
+* If we compare the diameter results against Wikipedia's record, we can see that the measurement from VOS is quite accurate indeed.
+
+.. table::
+  :class: textcentre 
+
+  +----------------+----------------+----------------+----------------+----------------+
+  |                |*5yen*                           |*50yen*                          |
+  +----------------+----------------+----------------+----------------+----------------+
+  |                |Inner Diameter  |Outer Diameter  |Inner Diameter  |Outer Diameter  |  
+  +----------------+----------------+----------------+----------------+----------------+
+  || Wikipedia     || 22mm          || 5mm           || 21mm          || 4mm           |
+  +----------------+----------------+----------------+----------------+----------------+
+  || Ratio In/Out  || 4.4                            || 5.25                           |        
+  +----------------+----------------+----------------+----------------+----------------+
+  || |vostext|     || 232.9 units   || 56.8 units    || 219.4 units   || 41.4 units    |
+  +----------------+----------------+----------------+----------------+----------------+
+  || Ratio In/Out  || 4.1                            || 5.3                            |        
+  +----------------+----------------+----------------+----------------+----------------+
+
+.. |vostext| replace:: VOS (back-light)
+
+
+
+* When ``50+5.bmp`` is being inspected, the results is ``Fail``. We note that in normal lighting, it may be challenging for the ``circle`` tool |circletool| to detect the actual edges due to the embossed designs on the coins. Therefore back-lighting is preferred this example.
 
 .. Tip::
-  #OCR #preprocessor #shear #italic #template #AI #grayscale #intensity
+  #circle #concentric #concentricity #remote #image #backlight #insepction 
 
-.. |1| image:: /intro/Basic/OcrItalic/85.jpg
+.. |1| image:: /intro/Advanced/FTP/vctpass1.jpg 
   :width: 400px
 
-.. |2| image:: /intro/Basic/OcrItalic/50.jpg
+.. |2| image:: /intro/Advanced/FTP/phonepass.jpg
   :width: 400px
-
-.. |3| image:: /intro/Basic/OcrItalic/40_.jpg
-  :width: 400px
-
-.. |4| image:: /intro/Basic/OcrItalic/10.jpg
-  :width: 400px
-
-.. |charsamesize| image:: /intro/Basic/OcrItalic/charsamesize.jpg
-
-.. |teachsizes| replace:: teach-in the other font size
 
