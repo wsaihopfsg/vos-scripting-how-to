@@ -36,7 +36,7 @@ Tools
    |* :confval:`Barcode <Barcode>`                             |  * |sheary|_                                           |
    |                                                           |  * Sobel                                               |
    |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
-   |                                                           |  * :confval:`Threshold <Threshold>`                        |
+   |                                                           |  * :confval:`Threshold <Threshold>`                    |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
    |                                                           |  * Zoom                                                |
