@@ -15,12 +15,19 @@ This sample demonstrates
 4. Logging of images and the associated tools to a configured ftp server by ``WriteImageTools``
 5. Sending of the inspection results to a TCP client
 
-+-------------------+----------------------------------+------------------------------------------------------------------+
-|**Function**       |**Parameters**                    |**Explanation**                                                   |
-+-------------------+----------------------------------+------------------------------------------------------------------+
-|``WriteImageTools``|``fileName``, ``camID``           |Write the current image from the camera specified by ``camID`` to |
-|                   |                                  |the ``fileName`` specified                                        |
-+-------------------+----------------------------------+------------------------------------------------------------------+
++---------------------+----------------------------------+-----------------------------------------------------------------------------+
+|**Function**         |**Parameters**                    |**Explanation**                                                              |
++---------------------+----------------------------------+-----------------------------------------------------------------------------+
+|``WriteImageTools``  |``fileName``, ``camID``           |Write the current image with tools from the camera specified by ``camID`` to |
+|                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
++---------------------+----------------------------------+-----------------------------------------------------------------------------+
+|``WriteImageFile``   |``fileName``, ``camID``           |Write the current image from the camera specified by ``camID`` to            |
+|                     |                                  |the ``fileName`` specified. Only to be used in ``Post image process``.       |
++---------------------+----------------------------------+-----------------------------------------------------------------------------+
+|``WriteHistoryImage``|``fileName``, ``camID``,          |Write 1 image with tools from the Histroy Log of ``camID`` specified by      |
+|                     |``numImagesBack``                 |``numImagesBack`` to the ``fileName`` specified. ``numImagesBack=0`` is one  |
+|                     |                                  |image prior to the current image.                                            |
++---------------------+----------------------------------+-----------------------------------------------------------------------------+
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Advanced/FTP>`__
 -----------------------------------------------------------------------------------------------------------
@@ -35,6 +42,9 @@ This sample demonstrates
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``50+5.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/50+5.bmp?raw=true>`__ Picture of a *50yen* and a     |
   |                                     |*5yen* coin in normal lighting.                                                                                                                        |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |3. ``vosftp.json``                   |`The Node Red Flow <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/vosftp.json?raw=true>`__                          |
+  |                                     |                                                                                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
   |2. ``backlite.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/backlite.bmp?raw=true>`__ Picture of a *50yen* and a |
   |                                     |*5yen* coin in back-lighting.                                                                                                                          |
@@ -80,7 +90,10 @@ Communication Setup
 
 * A summary of the communication setup is shown below
   
-  .. image:: /intro/Advanced/FTP/comms.jpg
+  .. image:: /intro/Advanced/FTP/comms1.jpg
+
+TCP Server Setup
+###################
 
 * Click on :hoverxreftooltip:`Setup Connections <intro/Basic/Hover/setupconn:Setup Connections>` |conn| |cir1|, We are using the ``VOS emulator`` as a ``TCP socket server``, at ``port 5024`` with the name ``TcpP5024``.  
 
@@ -88,6 +101,73 @@ Communication Setup
 
 .. warning:: 
   Firewalls may block incoming connections to your socket server. 
+
+Node-Red Flow
+###################
+
+* The Node-Red flow looks like this, with 2 branches
+
+  * The FTP branch on top receives the post processed image with tools 
+  * The TCP branch below receives the inspection results   
+
+//todo image
+
+.. note:: 
+  We have used the following Node-Red Palettes
+  
+  * ``node-red-contrib-ftp-server``
+  * ``node-red-node-base64``
+
+* FTP Branch
+  * The properties of the ``VosFtpIn`` node are as shown below, in which the FTP server is configured at port 7021. The username and password will be needed at VOS scripting.
+
+  //todo image
+
+  .. note:: 
+    The image sent from VOS will appear as ``msg.payload`` in Node-Red
+
+  * The properties & code for ``Mustache Template`` node is as shown here, where the html code displays the image with a certain width and height
+
+  //todo image
+
+  .. code-block::
+    :linenos:
+    
+
+  * The properties & code for the ``UI Template`` node is as shown below
+
+  //todo image
+
+  .. code-block::
+    :linenos:
+    
+
+* TCP branch
+
+  * The properties for the ``VosTcpIn`` node is as shown, a TCP client configured to connect to ``192.168.10.143:5024`` as configured at `TCP Server Setup <#tcp-server-setup>`__ above.
+
+  // todo image
+
+  * The properties & code for the ``function`` node is shown here, which replaces all new line characters ``\n`` from VOS to HTML ``<br>``
+
+  //todo image
+    .. code-block::
+      :linenos:
+    
+  * The properties & code for ``Mustache Template`` //todo change name node is as shown here, where the html code displays the image with a certain width and height
+
+  //todo image
+
+    .. code-block::
+      :linenos:
+    
+
+  * The properties & code for the ``UI Template`` //todo change name node is as shown below
+
+  //todo image
+
+  .. code-block::
+    :linenos:
 
 Code Walk-Through
 -----------------
@@ -98,16 +178,31 @@ Solution Initialize
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
   |fn_init|
 
-* In the Script Function window we see 2 lines of code
+* In the Script Function window we see the following lines of code
 
 .. code-block::
   :linenos:
     
-    nowCtr = 0
-    logstart("C:\Users\temp\test.csv",1) 
+    myPass = 1
+    myRecycle = 2
+    myFail = 3
+    ctr=0
 
-* Line 1: Counter initialization
-* Line 2: Start file logging to ``test.csv`` 
+  * Lines 1-3: Return values for ``pass``, ``fail`` & ``recycle`` values in VOS' ``Result.0``
+  * Line 4: Reset image counter
+
+Pre Image Process
+##################
+
+* Choose the predefined function ``Pre Image Process`` at the bottom left 
+  |fn_pre|
+
+* In the Script Function window we see a line of code which resets the variable ``socketStr``
+
+.. code-block::
+  :linenos:
+
+    socketStr = ""
 
 Post Image Process
 ##################
@@ -120,21 +215,33 @@ Post Image Process
 .. code-block::
   :linenos:
 
-  saveStr = "C:\Users\temp\now"+nowCtr+".jpg"
-  logimage(saveStr)
-  nowCtr = nowCtr+1
-  if(nowCtr>5) 
-      logstop()
-  endif
+    ftpath = "ftp://vos:rox@192.168.10.126:7021/img" + ctr + ".jpg"
+    WriteImageTools( ftpath,0 )
+    ctr = ctr+1
+    if(Result.0=myPass  ) 
+        socketStr = "Pass"+"\n"+"OuterL=" + FormatString("[CDiam%3.1f]") + ", InnerL=" + FormatString("[CDiam1%3.1f]") + ", ConcentricityL=" + FormatString("[CC%.2f]") + "\n"
+        socketStr = socketStr    +"OuterR=" + FormatString("[CDiam2%3.1f]") + ", InnerR=" + FormatString("[CDiam3%3.1f]") + ", ConcentricityR=" + FormatString("[CC1%.2f]")
+        iColor = "darkgreen"
+    else
+        if(Result.0=myRecycle) 
+            socketStr = "Recycle"
+            iColor = "magenta"
+        else
+            socketStr = "Fail"
+            iColor = "red"
+        endif
+    endif
+    WriteString(TcpP5024,socketStr)
+    SetDisplayStatus(socketStr , iColor)
 
-* Line 1: Changing image file name based on ``nowCtr``
-* Line 2: Overwriting the image file logging name with ``saveStr``
-* Line 3: Counter increament
-* Lines 4-6: Stop logging criterion  
+* Line 1: Setting the ftp path with the username and password, IP address and port, and the image name to ``ftpath``
+* Line 2: Writing the image file with tools
+* Line 3: Image counter increament
+* Lines 5-7: Branch when inspection result is ``pass``  
 
 
 .. note::
-  LogImage only works when ``Image File Logging`` |imgfilelogen| is enabled and filename substitution only works for the current filename. 
+  Other FTP related functions are ``WriteImageFile`` & ``WriteHistoryImage``
 
 Running the solution
 --------------------

@@ -76,6 +76,8 @@
 
 .. |fn_init| image:: /img/emulator/fn_init.jpg    
 
+.. |fn_pre| image:: /img/emulator/fn_pre.jpg       
+
 .. |cir1| image:: /img/cirnum/1.jpg
    :width: 25px
 
