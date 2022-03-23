@@ -6,11 +6,3 @@
      white-space: normal !important;
 }
 
-.textcentre td {
-    text-align: center !important;
- }
-
-table.align-center {
-    margin-left: auto;
-    margin-right: auto;
-}
