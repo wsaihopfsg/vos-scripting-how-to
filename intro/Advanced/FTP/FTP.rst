@@ -117,7 +117,7 @@ Node-Red Flow
   * The FTP branch on top receives the post processed image with tools 
   * The TCP branch below receives the inspection results   
 
-//todo image
+.. image:: /intro/Advanced/FTP/flow.jpg
 
 .. note:: 
   We have used the following Node-Red Palettes
@@ -129,57 +129,73 @@ Node-Red Flow
 
 * FTP Branch
   
-  * The properties of the ``VosFtpIn`` node are as shown below, in which the FTP server is configured at port 7021. The ``username`` and ``password`` will be needed at VOS' `Post Image Process <#post-image-process>`__ script.
+  * The properties of the ``Vos Ftp In`` node are as shown below, in which the FTP server is configured at port 7021. The ``username`` and ``password`` will be needed at VOS' `Post Image Process <#post-image-process>`__ script.
 
-  //todo image
+  .. image:: /intro/Advanced/FTP/ftpinpro.jpg
+    :width: 500px
 
   .. note:: 
-    The image sent from VOS will appear as ``msg.payload`` in Node-Red
+    The image sent from VOS will be passed as ``msg.payload`` in Node-Red
 
-  * The properties & code for ``Mustache Template`` node is as shown here, where the html code displays the image with a certain width and height
+  * The properties & code for ``ftp mustache template`` node is as shown here, where the html code displays the image with a certain width and height
 
-  //todo image
+  .. image:: /intro/Advanced/FTP/ftpmuspro.jpg
+    :width: 500px
+
+  .. code-block::
+    :linenos:
+
+    <img width="320px" height="240px" src="data:image/jpg;base64,{{{payload}}}">  
+
+  * The properties & code for the ``ftp ui template`` node is as shown below
+
+  .. image:: /intro/Advanced/FTP/ftpuipro.jpg
+    :width: 500px
 
   .. code-block::
     :linenos:
     
-
-  * The properties & code for the ``UI Template`` node is as shown below
-
-  //todo image
-
-  .. code-block::
-    :linenos:
-    
+    <div ng-bind-html="msg.payload",div style="text-align: center;"></div>
 
 * TCP branch
 
-  * The properties for the ``VosTcpIn`` node is as shown, a TCP client configured to connect to ``192.168.10.143:5024`` as configured at `TCP Server Setup <#tcp-server-setup>`__ above.
+  * The properties for the ``Vos Tcp In`` node is as shown, a TCP client configured to connect to ``192.168.10.143:5024`` as configured at `TCP Server Setup <#tcp-server-setup>`__ above.
 
-  // todo image
+  .. image:: /intro/Advanced/FTP/tcpinproc.jpg
+    :width: 500px
 
 .. _newlinereplace:
 
-  * The properties & code for the ``function`` node is shown here, which replaces all new line character ``\n`` from VOS to HTML ``<br>``
+  * The properties & code for the ``Replace new line with <br>`` function node is shown here, which replaces all new line character ``\n`` from VOS to HTML ``<br>``
 
-  //todo image
-    .. code-block::
-      :linenos:
-    
-  * The properties & code for ``Mustache Template`` //todo change name node is as shown here, where the html code displays the image with a certain width and height
-
-  //todo image
+    .. image:: /intro/Advanced/FTP/tcpreplacepro.jpg
+      :width: 500px
 
     .. code-block::
       :linenos:
     
+      msg.payload = msg.payload.replace(/\n/g,"<br/>");
+      return msg;
 
-  * The properties & code for the ``UI Template`` //todo change name node is as shown below
+  * The properties & code for ``tcp mustache template`` node is as shown here, where the html code displays the image with a certain width and height
 
-  //todo image
+    .. image:: /intro/Advanced/FTP/tcpmuspro.jpg
+      :width: 500px
 
-  .. code-block::
-    :linenos:
+    .. code-block::
+      :linenos:
+    
+      {{{payload}}} 
+
+  * The properties & code for the ``tcp ui template`` node is as shown below
+
+    .. image:: /intro/Advanced/FTP/tcpuipro.jpg
+      :width: 500px
+      
+    .. code-block::
+      :linenos:
+
+      <div ng-bind-html="msg.payload",div style="text-align: center;"></div>
 
 .. note:: 
   To keep this tutorial simple, we have not shown how to save the transmitted image locally. 
@@ -252,12 +268,11 @@ Post Image Process
 * Line 1: Setting the ftp path with the :ref:`username & password<ftpbranch>`, IP address and port, and the image name to ``ftpath``
 * Line 2: Writing the image file with tools
 * Line 3: Image counter increament
-* Lines 5-7: Branch when inspection result is ``pass``. Note the new line character ``\n`` :ref:`will be replaced by its html equivalent<newlinereplace>` by the Node-Red function node ``todo``
+* Lines 5-7: Branch when inspection result is ``pass``. Note the new line character ``\n`` :ref:`will be replaced by its html equivalent<newlinereplace>` by the Node-Red function node ``Replace new line with <br>``. Please refer to :doc:`here for string formatting tutorial </intro/Basic/StrFunc/StrFunc>`.
 * Lines 10-11: Branch when inspection result is ``recycle``  
 * Lines 13-14: Branch when inspection result is ``fail``
 * Line 17: Sending of ``socketStr`` to the configured TCP client
 * Line 18: Display ``socketStr`` in the ``Inspection Status`` window
-
 
 .. note::
   Other FTP related functions are ``WriteImageFile`` & ``WriteHistoryImage``
@@ -306,6 +321,6 @@ Running the solution
 .. |1| image:: /intro/Advanced/FTP/vctpass1.jpg 
   :width: 400px
 
-.. |2| image:: /intro/Advanced/FTP/phonepass.jpg
+.. |2| image:: /intro/Advanced/FTP/phonepass1.jpg
   :width: 400px
 
