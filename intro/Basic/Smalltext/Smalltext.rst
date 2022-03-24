@@ -51,7 +51,7 @@ Tools Explanation
 
     * The taught-in characters are as shown below. Notice that some characters barely satisfy the 4x4 pixels minimum teach-in size. 
 
-      .. image:: /intro/Basic/Smalltext/fontedit2.jpg
+      .. image:: /intro/Basic/Smalltext/fontedit2a.jpg
         :width: 500px   
   
   * Another named ``OCR1`` with its properties same as above but with its ``Zoom`` preprocessor |preprocess| turned on as shown here.
@@ -60,7 +60,7 @@ Tools Explanation
 
     * The taught-in characters boundaries are as shown, with more freedom available for the choosing of teach-in area as the chacrters appear larger.
   
-      .. image:: /intro/Basic/Smalltext/fontedit1.jpg
+      .. image:: /intro/Basic/Smalltext/fontedit1a.jpg
         :width: 500px
 
     .. note::  
