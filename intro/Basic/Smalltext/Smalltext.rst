@@ -37,12 +37,12 @@ This sample demonstrates
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``OcrItalic.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2|.
 
 .. image:: /intro/Basic/Smalltext/toolsetup.jpg
 ..  :width: 400px
 
-* 2 OCRs tools |ocrtool| have been used, both trying to recognize the same strings "Very Small Text"
+* 2 OCRs tools |ocrtool| have been used, both trying to recognize the same string "Very Small Text"
 
   * One named ``OCR``. As shown below, a ``Grayscale`` based template-based OCR with a treshold of ``85`` required with ``Very High`` effort has been configured. 
 
