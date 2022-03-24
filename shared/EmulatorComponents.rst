@@ -172,3 +172,5 @@
 .. |loadsoln| image:: /img/emulator/buttons/loadsoln.jpg
 
 .. |load4edit| image:: /img/emulator/buttons/load4edit.jpg
+
+.. |fontzoom| image:: /img/emulator/buttons/fontzoom.png

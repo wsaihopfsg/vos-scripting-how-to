@@ -88,6 +88,8 @@ Tools Explanation
     .. note::  
       The ``Shear Y`` preprocessor works in similar way but in the y-direction, which is not needed in this example
 
+.. _templateocr:
+
 Template-Based OCR
 ######################################
 

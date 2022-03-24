@@ -100,6 +100,7 @@ Configuration
    * :doc:`/intro/Basic/OcrItalic/OcrItalic`
    * :doc:`/intro/Advanced/SolnSwitch/SolnSwitch`
    * :doc:`/soln/Menkyo/Menkyo`
+   * :doc:`/intro/Basic/Smalltext/Smalltext`
 
 .. confval:: Intensity
 

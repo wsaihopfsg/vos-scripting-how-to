@@ -39,9 +39,11 @@ Tools
    |                                                           |  * :confval:`Threshold <Threshold>`                    |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
-   |                                                           |  * Zoom                                                |
+   |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |zoom| replace:: ``Zoom``
+.. _zoom: ../intro/Basic/Smalltext/Smalltext.html
 .. |circle| replace:: ``Circle``
 .. _circle: ../intro/Advanced/FTP/FTP.html
 .. |concent| replace:: ``Concentric Circles``
@@ -205,9 +207,9 @@ Attribute Functions
 .. _setmatchstr: ../intro/Basic/MathFunc/MathFunc.html
 .. |setparam| replace:: ``SetParam``
 .. _setparam: ../soln/ROI/roi.html
-.. |readvar| replace:: `ReadVar`
+.. |readvar| replace:: ``ReadVar``
 .. _readvar: ../soln/Menkyo/Menkyo.html
-.. |writevar| replace:: `WriteVar`
+.. |writevar| replace:: ``WriteVar``
 .. _writevar: ../soln/Menkyo/Menkyo.html   
 
 

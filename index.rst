@@ -82,6 +82,18 @@ Basic Topics
 || |deitalic|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
+:doc:`OCR for Small Font <intro/Basic/Smalltext/Smalltext>`
+------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Zoom Preprocessor to Facilitate OCR Teach-In for Small Font Sizes                                          |  
++===========================================================================================================+
+|| The minimum size for the teach-in area for OCR is 4x4 pixels, but we may often need to deal with font    |
+|| sizes that barely meet this limit. This tutorial shows how the ``Zoom`` preprocessor may be used to      |
+|| provide some extra freedom for teachi-in of small text.                                                  |
+|| |smalltext|                                                                                              |
++-----------------------------------------------------------------------------------------------------------+
+
 Advanced Topics
 ===============
 
@@ -271,3 +283,4 @@ User contributions
 
 .. |deitalic| image:: /intro/Basic/OcrItalic/deitalic.jpg
 
+.. |smalltext| image:: /intro/Basic/Smalltext/zoomed.jpg
