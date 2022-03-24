@@ -78,6 +78,7 @@ Running the solution
   * ``OCR1`` is able to recognize the alphabets with 100% accuracy, 
   * ``OCR`` has difficult to recognize some characters.
     
-  
+.. image:: /intro/Basic/Smalltext/outcome.jpg
+
 .. Tip::
   #OCR #preprocessor #zoom #small #template #font #interpolator #interpolation #rescaling
