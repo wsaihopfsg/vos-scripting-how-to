@@ -53,6 +53,9 @@ Tools Explanation
 
       .. image:: /intro/Basic/Smalltext/fontedit2a.jpg
         :width: 500px   
+
+      .. note::
+        Sometimes when a OCR teach-in fails, the user may retry at a slightly different teach-in boundary. However in very small fonts, there are just too few teach-in boundaries available that fulfills the minimum 4x4 pixels requirement.
   
   * Another named ``OCR1`` with its properties same as above but with its ``Zoom`` preprocessor |preprocess| turned on as shown here.
   
