@@ -22,14 +22,14 @@ Tools
    |* |edgecount|_                                             |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
-   |* Point                                                    |  * Gaussian                                            |
+   |* |point|_                                                 |  * Gaussian                                            |
    |* Tip                                                      |  * High-pass (Sharpen)                                 |
-   |* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
+   |* |pencil|_                                                |  * :confval:`Invert <Invert>`                          |
    |* |distance|_                                              |  * Low-pass (Blur)                                     |
    |* |rake|_                                                  |  * Mask                                                |
-   |* |contour|                                                |  * |median|_                                           |
+   |* |contour|_                                               |  * |median|_                                           |
    |* |angle|_                                                 |  * :confval:`Normalize`                                |
-   |* Arc                                                      |  * Project H                                           |
+   |* |arc|_                                                   |  * Project H                                           |
    |* |circle|_                                                |  * Project V                                           |
    |* |concent|_                                               |  * :confval:`Remove blobs <Remove blobs>`              |
    |* Graphics                                                 |  * |shearx|_                                           |
@@ -42,6 +42,12 @@ Tools
    |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |pencil| replace:: ``Pencil``
+.. _pencil: ../intro/Basic/PencilLocator/PencilLocator.html
+.. |point| replace:: ``Point``
+.. _point: ../intro/Basic/PencilLocator/PencilLocator.html
+.. |arc| replace:: ``Arc``
+.. _arc: ../intro/Basic/PencilLocator/PencilLocator.html
 .. |contour| replace:: ``Contour``
 .. _contour: ../intro/Basic/CountLocator/CountLocator.html
 .. |zoom| replace:: ``Zoom``
@@ -230,7 +236,7 @@ IOs
    |* GetContrast                                  |* SetCamExposure                               |
    |* GetExposure                                  |* SetContrast                                  |
    |* GetFrameTime                                 |* SetDisplayCam                                |
-   |* |getimg|                                     |* SetExposure                                  |
+   |* |getimg|_                                    |* SetExposure                                  |
    |* GetNumCameras                                |* SetImageSource                               |
    |* GetSrcCamID                                  |* SetStrobeEnable                              |
    |* NewImageReady                                |* |trigger|_                                   |

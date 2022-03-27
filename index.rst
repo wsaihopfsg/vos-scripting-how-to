@@ -33,7 +33,7 @@ As always, we would be happy to hear your comments and receive your contribution
 Basic Topics
 ============
 
-:doc:`Working with Count Locator <intro/Basic/CountLocator/CountLocator>`
+:doc:`Working with Locator Using Count Tool <intro/Basic/CountLocator/CountLocator>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -48,6 +48,20 @@ Basic Topics
 +-----------------------------------------------------------------------------------------------------------+
 
 .. |countloc| image:: /intro/Basic/CountLocator/overviewcl.jpg
+
+:doc:`Working with Locator Using Pencil Tool <intro/Basic/PencilLocator/PencilLocator>`
+------------------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Using Pencil Tool as Locator                                                                               |  
++===========================================================================================================+
+|| Small translation of (x,y) co-ordinates can be tracked using ``Pencil`` tool |penciltool|. However,      |
+|| another feature is needed to track rotation. This tutorial demonstrates using pencil tool as locator,    |
+|| and the use of the ``Arc`` tool |arctool|                                                                |
+|| |pencilloc|                                                                                              |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |pencilloc| image:: /intro/Basic/PencilLocator/penciloverview.jpg
 
 :doc:`Working with Match Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------

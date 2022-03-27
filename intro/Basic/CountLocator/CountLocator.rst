@@ -37,6 +37,7 @@ This sample demonstrates
 
 .. note:: 
   The main advanatge of using ``Count`` tool as locator is speed. However 
+  
   * It is only applicable to identification of simple shapes
   * Preprocessors may be needed to make sure a unique object is identified with a constant index as shown in this example.
   * To track rotation in addition to translation, 2 features are needed
