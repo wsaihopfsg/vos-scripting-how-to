@@ -4,159 +4,74 @@
 
 .. include:: /shared/EmulatorComponents.rst
 
-OCR of Asian Scripts & Colour Discrimination 
+Reading an Analog Dial Through VOS Tools
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Summary of this tutorial
 
-1. OCR of Asian scripts
-2. Conversion of Japanese era dates to Gregorian Calendar
-3. Use of VOS lighting to discriminate the color-coded driving licenses with ``Intensity tool`` |intensitytool|
-4. Use of ``Edge Count Tool`` |edgecounttool| to detect presence and absence of Japanese words in a box
-5. Use of ``locator`` for all tool locations 
-6. Use of ``readVar`` function in a loop for variables with similar names in a loop
+1. Using ``Count`` tool |counttool| as a position locator
+2. Using ``Match`` tool |matchtool| as rotation locator
+3. Use of ``Pencil`` tool |penciltool| to join 2 points
+4. Use of ``Angke`` tool |angletool| to detect the angle between the needle and some reference points
 
-+------------------+----------------------------------+------------------------------------------------------------------+
-|**Function**      |**Parameters**                    |**Explanation**                                                   |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``ReadVar``       |``varName``                       |Return the value of ``varName``                                   |
-+------------------+----------------------------------+------------------------------------------------------------------+
-|``WriteVar``      |``varName`` , ``value``           |Write ``value`` to ``varName``                                    |
-+------------------+----------------------------------+------------------------------------------------------------------+
-
-Components of the Japanese Driving License 運転免許証
--------------------------------------------------------
-
-.. note:: 
-  Images in this tutorial are adapted from `here <https://www.npa.go.jp/policies/application/license_renewal/img/license.jpg>`__
-
-.. _menkyoComponents:
-
-.. image:: /soln/Menkyo/components.jpg
-
-* |cir1| The date of birth in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__
-* |cir2| The date of issue in Japanese era format. Conversion table can be found `here. <http://www.tokyo-kuwano.com/postmail/nengou_kanzan.html>`__ The last 5 digits are the issuing number.
-* |cir3| The color-code. There are 3 colours
-
-.. _colortable:
-.. table::
-  :class: tight-table 
-
-  +------------------+----------------------------------+--------------------------------------------------------------------------------+
-  |Gold              |R:169 G:123 B:97   |goldbar|      |For excellent drivers who have not had a traffic offence or accident for 5 years|
-  +------------------+----------------------------------+--------------------------------------------------------------------------------+
-  |Blue              |R:44  G:183 B:215  |bluebar|      |For experienced drivers                                                         |
-  +------------------+----------------------------------+--------------------------------------------------------------------------------+
-  |Green             |R:194 G:243 B:75   |greenbar|     |For newbie drivers                                                              |
-  +------------------+----------------------------------+--------------------------------------------------------------------------------+
-
-.. |goldbar| image:: /soln/Menkyo/gold.png
-  :width: 20px
-
-.. |bluebar| image:: /soln/Menkyo/blue.png
-  :width: 20px
-
-.. |greenbar| image:: /soln/Menkyo/green.png
-  :width: 20px
-
-* |cir4| The license number
-* |cir5| The vehicle categories that this license hold is qualified for. The positions for the different categories are fixed. ``-`` indicates that the category is not applicable. The translation for the different categories are
-
-.. _vehcat:
-.. image:: /soln/Menkyo/shurui.jpg
-
-.. table::
-  :class: tight-table 
-
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |0                 |Heavy vehicle                     |6                 |Small special vehicle             |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |1                 |Medium vehicle                    |7                 |Moped                             |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |2                 |Semi-medium vehicle               |8                 |Commercial special vehicle        |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |3                 |Ordinary vehicle                  |9                 |Commercial medium vehicle         |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |4                 |Heavy special vehicle             |10                |Commercial ordinary vehicle       |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |5                 |Heavy motocycle                   |11                |Commercial heavy vehicle          |
-  +------------------+----------------------------------+------------------+----------------------------------+
-  |12                |Ordinary motocycle                |13                |Commercial tractor-trailer vehicle|
-  +------------------+----------------------------------+------------------+----------------------------------+
-
-* |cir6| The words "Driving License" in Japanese which is constant in all variation of licenses.
-
-How to Discriminate License Colours in VOS
---------------------------------------------
-
-* Most VOS variants can only "see" in grayscale
-* Without applying special lighting, using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ directly, we get the following grayscale intensity in column 2 of :ref:`Table 1 <table1>`
-
-.. _table1:
-
-.. table::
-  :class: tight-table 
-
-  +-----------+------------+---------------+-----------------+
-  |Column 1   |Column 2    |Column 3       |Column 4         | 
-  +-----------+------------+---------------+-----------------+
-  |Table 1    ||NTSC|      ||greenlight|   |Chosen Threshold | 
-  +-----------+------------+---------------+-----------------+
-  |Gold       |134         |73             |< 90             |
-  +-----------+------------+---------------+-----------------+
-  |Blue       |145         |107            |Otherwise        |
-  +-----------+------------+---------------+-----------------+
-  |Green      |209         |143            |> 125            |
-  +-----------+------------+---------------+-----------------+
-
-.. |NTSC| replace:: NTSC Grayscale Intensity
-.. |greenlight| replace:: Green Light Grayscale Intensity
-
-* We observe that the intensity difference between Gold (134) & Blue (145) is too small and will be very hard to discriminate between them based on grayscale intensity
-* Referring to :ref:`the color table <colortable>` above, we can see that the green channel offers a relatively large separation for the 3 license color codes
-* When we use green lighting, the red and blue channels are effectively zero. Using the `NTSC formula <http://support.ptc.com/help/mathcad/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html>`__ on the green channel alone, we get the following grayscale intensity for the 3 license colors in green lighting in column 3 of :ref:`Table 1 <table1>`
-* Using midpoints we can use the intensity values of column 4 of :ref:`Table 1 <table1>` as thresholds
-
-
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Menkyo>`__
-------------------------------------------------------------------------------------------------------
-
-.. _menkyobmp:
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ReadDial>`__
+----------------------------------------------------------------------------------------------------------
 
 .. table::
   :class: tight-table 
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``menkyo.bin``                    |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/menkyo.bin?raw=true>`__                            |
+  |1. ``solution11.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/solution11.bin?raw=true>`__                      |
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``green1.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green1.bmp?raw=true>`__                               |  
-  |                                     |for an unrotated green color-coded driving license under green lighting.                                                                               |
+  |2. ``0.bmp``                         |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/0.bmp?raw=true>`__                                  |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 0.                                                                                        |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``green2.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green2.bmp?raw=true>`__                               |  
-  |                                     |for a rotated green color-coded driving license under green lighting.                                                                                  |
+  |3. ``0r.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/0r.bmp?raw=true>`__                                 |  
+  |                                     |for a rotated image of a dial with the needle pointing at 0.                                                                                           |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |4. ``green3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/green3.bmp?raw=true>`__                               |  
-  |                                     |for another rotated green color-coded driving license under green lighting.                                                                            |
+  |4. ``15.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/15.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 15.                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |5. ``blue1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue1.bmp?raw=true>`__                                |  
-  |                                     |for an unrotated blue color-coded driving license under green lighting.                                                                                |
+  |5. ``20.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/20.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 20.                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |6. ``blue2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue2.bmp?raw=true>`__                                |  
-  |                                     |for a rotated blue color-coded driving license under green lighting.                                                                                   |
+  |6. ``20r.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/20r.bmp?raw=true>`__                                |  
+  |                                     |for a rotated image of a dial with the needle pointing at 20.                                                                                          |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |7. ``blue3.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/blue3.bmp?raw=true>`__                                |  
-  |                                     |for another rotated blue color-coded driving license under green lighting.                                                                             |
+  |7. ``25.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/25.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 25.                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |8. ``gold1.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold1.bmp?raw=true>`__                                |  
-  |                                     |for an unrotated gold color-coded driving license under green lighting.                                                                                |
+  |8. ``40.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/40.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 40.                                                                                       |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |9. ``gold2.bmp``                     |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold2.bmp?raw=true>`__                                |  
-  |                                     |for a rotated gold color-coded driving license under green lighting.                                                                                   |
+  |9. ``40r.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/40r.bmp?raw=true>`__                                |  
+  |                                     |for a rotated image of a dial with the needle pointing at 40.                                                                                          |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |10. ``gold3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Menkyo/gold3.bmp?raw=true>`__                                |
-  |                                     |for another rotated gold color-coded driving license under green lighting.                                                                             |   
+  |8. ``60.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/60.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 60.                                                                                       |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``80.bmp``                        |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/80.bmp?raw=true>`__                                 |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 80.                                                                                       |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``100.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/100.bmp?raw=true>`__                                |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 100.                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``120.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/120.bmp?raw=true>`__                                |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 120.                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``135.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/135.bmp?raw=true>`__                                |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 135.                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``140.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/140.bmp?raw=true>`__                                |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 140.                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |8. ``145.bmp``                       |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/145.bmp?raw=true>`__                                |  
+  |                                     |for an unrotated image of a dial with the needle pointing at 145.                                                                                      |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |10. ``160.bmp``                      |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/160.bmp?raw=true>`__                                |
+  |                                     |for an unrotated image of a dial with the needle pointing at 160.                                                                                      |   
   |                                     |                                                                                                                                                       |   
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
   |                                     |                                                                                                                                                       |
@@ -169,12 +84,7 @@ Tools Explanation
 -----------------
 * At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``blue1.bmp`` is loaded. 
 
-.. image:: /soln/Menkyo/blue_mono3.jpg
 
-* A ``Match tool`` |matchtool| named ``MS`` with the region-of-interest (ROI) set to |cir6| in :ref:`License Components <menkyoComponents>` with properties set as shown
-
-  .. image:: /soln/Menkyo/matchToolProp.jpg
-  
   * ``Rotation`` is set between ``0`` to ``360`` 
   * ``Method`` is ``Edges only`` 
   * ``Show points`` with ``Origin`` & ``Corner`` selected for position and rotation of Locator 1 respectively
@@ -193,8 +103,6 @@ Tools Explanation
 
 .. |L1postext| replace:: Properties for point at ``Origin`` for Locator 1's position
 .. |L1loctext| replace:: Properties for point at ``Corner`` for Locator 1's rotation
-
-* 3 ``OCR`` tools |ocrtool| at these locations of the :ref:`License Components <menkyoComponents>` 
 
 .. table::
   :class: tight-table 
@@ -217,12 +125,7 @@ Tools Explanation
 
    <br />
 
-* 14 ``Preprocessor`` tools |preprocessortool| for each box of the vehicle categories (|cir5| in :ref:`License Components <menkyoComponents>`) to remove the background pattern
-* 14 ``Edge Count`` tools |edgecounttool| named ``E0`` to ``E13`` for each box diagonally of the vehicle categories (|cir5| in :ref:`License Components <menkyoComponents>`) with these properties
-
   .. image:: /soln/Menkyo/edgecountprop.jpg
-
-.. _thresedgecount:
 
   * With the ``Edge`` property set to ``Either``, we can check if the box is marked with *kanji* or ``-`` 
   
@@ -279,11 +182,6 @@ Solution Initialize
   vehCat.13 = "Comm. Tractor-Trailer Veh."
 
 
-* Lines 1-2: :ref:`Thresholds <table1>` for gold and green
-* Lines 3-5: Strings for the 3 license colors
-* Line 6: :ref:`Threshold <thresedgecount>` for an empty vehicle category
-* Lines 7-8: Self-defined values for ``TTrue`` and ``FFalse``. Used for indicating vehicle category box's occupancy
-* Lines 9-22: The different :ref:`vehicle categories <vehcat>`.
 
 .. note:: 
   Since we are displaying the vehicle categories with ``SetDisplayStatus``, we need to ensure that the 256 character limit is not violated for someone that has obtained all the 14 vehicle categories. Hence shortforms are used.
@@ -468,8 +366,6 @@ Pre Image Process
 .. note:: 
   The ``Inspection Status Box`` can be reset by either ``SetDisplayStatus( 0,0 )`` or ``SetDisplayStatus( "","" )``
 
-.. _menkyopost:
-
 Post Image Process
 #####################
 * Choose the predefined function ``Post Image Process`` at the bottom left 
@@ -511,57 +407,45 @@ Running the solution
 * At the :hoverxreftooltip:`Run Solution page <soln/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
 +--------------+---------------+
-||green1l|     ||green1r|      |
+||dial0|       ||dial15|       |
 +--------------+---------------+
-||green2l|     ||green2r|      |
+||dial20|      ||dial25|       |
 +--------------+---------------+
-||green3l|     ||green3r|      |
+||dial40|      ||dial60|       |
 +--------------+---------------+
-||blue1l|      ||blue1r|       |
+||dial80|      ||dial100|      |
 +--------------+---------------+
-||blue2l|      ||blue2r|       |
+||dial120|     ||dial135|      |
 +--------------+---------------+
-||blue3l|      ||blue3r|       |
+||dial140|     ||dial145|      |
 +--------------+---------------+
-||gold1l|      ||gold1r|       |
+||dial160|     ||dial0r|       |
 +--------------+---------------+
-||gold2l|      ||gold2r|       |
-+--------------+---------------+
-||gold3l|      ||gold3r|       |
+||dial20r|     ||dial40r|      |
 +--------------+---------------+
 
-.. |green1l| image:: /soln/Menkyo/green1l.jpg
-  :width: 250px
-.. |green1r| image:: /soln/Menkyo/green1r.jpg
-.. |green2l| image:: /soln/Menkyo/green2l.jpg
-  :width: 250px  
-.. |green2r| image:: /soln/Menkyo/green2r.jpg
-.. |green3l| image:: /soln/Menkyo/green3l.jpg
-  :width: 250px
-.. |green3r| image:: /soln/Menkyo/green3r.jpg
+.. |dial0| image:: /soln/ReadDial/dial0.jpg
+.. |dial0r| image:: /soln/ReadDial/dial0r.jpg  
+.. |dial15| image:: /soln/ReadDial/dial15.jpg
+.. |dial20| image:: /soln/ReadDial/dial20.jpg
+.. |dial20r| image:: /soln/ReadDial/dial20r.jpg  
+.. |dial25| image:: /soln/ReadDial/dial25.jpg
+.. |dial40| image:: /soln/ReadDial/dial40.jpg
+.. |dial40r| image:: /soln/ReadDial/dial40r.jpg  
+.. |dial60| image:: /soln/ReadDial/dial60.jpg
 
-.. |blue1l| image:: /soln/Menkyo/blue1l.jpg
-  :width: 250px
-.. |blue1r| image:: /soln/Menkyo/blue1r.jpg
-.. |blue2l| image:: /soln/Menkyo/blue2l.jpg
-  :width: 250px
-.. |blue2r| image:: /soln/Menkyo/blue2r.jpg
-.. |blue3l| image:: /soln/Menkyo/blue3l.jpg
-  :width: 250px
-.. |blue3r| image:: /soln/Menkyo/blue3r.jpg
+.. |dial80| image:: /soln/ReadDial/dial80.jpg
+  
+.. |dial100| image:: /soln/ReadDial/dial100.jpg
+.. |dial120| image:: /soln/ReadDial/dial120.jpg
+  
+.. |dial135| image:: /soln/ReadDial/dial135.jpg
+.. |dial140| image:: /soln/ReadDial/dial140.jpg
+  
+.. |dial145| image:: /soln/ReadDial/dial145.jpg
 
-.. |gold1l| image:: /soln/Menkyo/gold1l.jpg
-  :width: 250px
-.. |gold1r| image:: /soln/Menkyo/gold1r.jpg
-.. |gold2l| image:: /soln/Menkyo/gold2l.jpg
-  :width: 250px
-.. |gold2r| image:: /soln/Menkyo/gold2r.jpg
-.. |gold3l| image:: /soln/Menkyo/gold3l.jpg
-  :width: 250px
-.. |gold3r| image:: /soln/Menkyo/gold3r.jpg
-
-.. note:: 
-  Please refer to :doc:`here </intro/Advanced/MQTT/MQTT>` for sending the data extracted from this tutorial to a mobile phone through MQTT
+.. |dial160| image:: /soln/ReadDial/dial160.jpg
+  
 
 
 .. tip::

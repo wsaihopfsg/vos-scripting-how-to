@@ -50,7 +50,7 @@ Basic Topics
 .. |countloc| image:: /intro/Basic/CountLocator/overviewcl.jpg
 
 :doc:`Working with Locator Using Pencil Tool <intro/Basic/PencilLocator/PencilLocator>`
-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
 |Using Pencil Tool as Locator                                                                               |  
@@ -270,6 +270,19 @@ User contributions
 || |mihon|                                                                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
+:doc:`Reading of a Analog Dial <soln/ReadDial/ReadDial>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Automatic Reading of an Analog Dial                                                                        |
++===========================================================================================================+
+|| With the help of the ``Angle`` tool |angletool|, VOS can be used to perform automatic dial reading on    |
+|| analog meters.                                                                                           |
+|| |readmeters|                                                                                             |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |readmeters| image:: /soln/ReadDial/readdialoverview.jpg
+
 :doc:`Glossary <Glossary/Glossary>`
 ========================================
 
@@ -301,7 +314,7 @@ User contributions
 .. |pNp| image:: /intro/Advanced/ROS/pickNplace.jpg  
    :width: 320pt
 
-.. |OCR57| image:: /soln/OCRim/ocr57.JPG
+.. |OCR57| image:: /intro/Advanced/SolnSwitch/ocr57.JPG
 
 .. _RobotArm: https://github.com/ros-industrial/industrial_training/blob/foxy/gh_pages/_downloads/slides/ROS-I%20Basic%20Developers%20Training%20-%20Session%204.pdf
 
