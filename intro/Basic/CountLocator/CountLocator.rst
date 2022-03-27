@@ -35,6 +35,12 @@ This sample demonstrates
 
 .. |getname| replace:: ``GetImageFileName``
 
+.. note:: 
+  The main advanatge of using ``Count`` tool as locator is speed. However 
+  * It is only applicable to identification of simple shapes
+  * Preprocessors may be needed to make sure a unique object is identified with a constant index as shown in this example.
+  * To track rotation in addition to translation, 2 features are needed
+
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/CountLocator>`__
 --------------------------------------------------------------------------------------------------------------
 
@@ -217,23 +223,23 @@ Running the solution
 .. Tip::
   #preprocessor #threshold #remove #blobs #locator #count #contour
 
-.. |1| image:: /intro/Basic/CountLocator/1.jpg
+.. |1| image:: /intro/Basic/CountLocator/cl1.jpg
   :width: 400px
 
-.. |2| image:: /intro/Basic/CountLocator/2.jpg
+.. |2| image:: /intro/Basic/CountLocator/cl2.jpg
   :width: 400px
 
-.. |3| image:: /intro/Basic/CountLocator/3.jpg
+.. |3| image:: /intro/Basic/CountLocator/cl3.jpg
   :width: 400px
 
-.. |4| image:: /intro/Basic/CountLocator/4.jpg
+.. |4| image:: /intro/Basic/CountLocator/cl4.jpg
   :width: 400px
 
-.. |5| image:: /intro/Basic/CountLocator/5.jpg
+.. |5| image:: /intro/Basic/CountLocator/cl5.jpg
   :width: 400px
 
-.. |6| image:: /intro/Basic/CountLocator/6.jpg
+.. |6| image:: /intro/Basic/CountLocator/cl6.jpg
   :width: 400px
 
-.. |7| image:: /intro/Basic/CountLocator/7.jpg
+.. |7| image:: /intro/Basic/CountLocator/cl7.jpg
   :width: 400px

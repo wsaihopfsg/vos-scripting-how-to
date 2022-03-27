@@ -47,7 +47,7 @@ Basic Topics
 || |countloc|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |countloc| image:: /intro/Basic/CountLocator/overview.jpg
+.. |countloc| image:: /intro/Basic/CountLocator/overviewcl.jpg
 
 :doc:`Working with Match Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
