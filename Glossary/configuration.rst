@@ -34,6 +34,7 @@ Configuration
     
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/soln/DefectDots/DefectDots` 
+   * :doc:`/intro/Basic/CountLocator/CountLocator`
 
 .. confval:: Threshold (band)
     
@@ -72,7 +73,8 @@ Configuration
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
    * :doc:`/soln/Menkyo/Menkyo`
-
+   * :doc:`/intro/Basic/CountLocator/CountLocator`
+  
 .. confval:: SetDisplayStatus
    
    * :doc:`/intro/Basic/StrFunc/StrFunc`
@@ -83,7 +85,8 @@ Configuration
    * :doc:`/intro/Basic/GPIO/GPIO`
    * :doc:`/soln/Menkyo/Menkyo`
    * :doc:`/intro/Advanced/FTP/FTP`
-
+   * :doc:`/intro/Basic/CountLocator/CountLocator`
+  
 .. confval:: Return
    
    * :doc:`/intro/Basic/StrFunc/StrFunc`
@@ -121,3 +124,4 @@ Configuration
 
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Advanced/FTP/FTP`
+   * :doc:`/intro/Basic/CountLocator/CountLocator`

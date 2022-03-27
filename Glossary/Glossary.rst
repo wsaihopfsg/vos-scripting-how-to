@@ -27,7 +27,7 @@ Tools
    |* Pencil                                                   |  * :confval:`Invert <Invert>`                          |
    |* |distance|_                                              |  * Low-pass (Blur)                                     |
    |* |rake|_                                                  |  * Mask                                                |
-   |* Contour                                                  |  * |median|_                                           |
+   |* |contour|                                                |  * |median|_                                           |
    |* |angle|_                                                 |  * :confval:`Normalize`                                |
    |* Arc                                                      |  * Project H                                           |
    |* |circle|_                                                |  * Project V                                           |
@@ -42,6 +42,8 @@ Tools
    |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |contour| replace:: ``Contour``
+.. _contour: ../intro/Basic/CountLocator/CountLocator.html
 .. |zoom| replace:: ``Zoom``
 .. _zoom: ../intro/Basic/Smalltext/Smalltext.html
 .. |circle| replace:: ``Circle``
@@ -228,7 +230,7 @@ IOs
    |* GetContrast                                  |* SetCamExposure                               |
    |* GetExposure                                  |* SetContrast                                  |
    |* GetFrameTime                                 |* SetDisplayCam                                |
-   |* GetImageFileName                             |* SetExposure                                  |
+   |* |getimg|                                     |* SetExposure                                  |
    |* GetNumCameras                                |* SetImageSource                               |
    |* GetSrcCamID                                  |* SetStrobeEnable                              |
    |* NewImageReady                                |* |trigger|_                                   |
@@ -236,6 +238,8 @@ IOs
    |* QueueResult                                  |* TriggerSource                                |
    +-----------------------------------------------+-----------------------------------------------+
 
+.. |getimg| replace:: ``GetImageFileName``
+.. _getimg: ../intro/Basic/CountLocator/CountLocator.html   
 .. |retrigger| replace:: ``ReTrigger``
 .. _retrigger: ../soln/ROI/roi.html
 .. |trigger| replace:: ``Trigger``
