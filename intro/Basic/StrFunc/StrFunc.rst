@@ -53,13 +53,13 @@ This sample demonstrates
 |                 |                                  |                                                                  |   
 |                 |                                  |below                                                             |
 +-----------------+----------------------------------+------------------------------------------------------------------+   
-||setmatch|       |``string``                        |Change the "perfect" value of the barcode/QR code/OCR             |
+||setmatch|       |``measurementVar``,               |Change the "perfect" value of the barcode/QR code/OCR             |
 |                 |                                  |                                                                  |
-|                 |                                  |``measurementVar`` to ``perfectMatch`` .                          |
+|                 |``perfectMatch``                  |``measurementVar`` to ``perfectMatch`` .                          |
 +-----------------+----------------------------------+------------------------------------------------------------------+   
-|``float``        |``measurementVar``,               |Return a floating point number after conversion of the input      |
+|``float``        |``string``                        |Return a floating point number after conversion of the input      |
 |                 |                                  |                                                                  |
-|                 |``perfectMatch``                  |``string``                                                        |
+|                 |                                  |``string``                                                        |
 +-----------------+----------------------------------+------------------------------------------------------------------+   
 |``FormatString`` |``stringForm``                    |Return formatted string using ``stringForm``. Refer to            |
 |                 |                                  |:ref:`string format <stringformat>`                               |

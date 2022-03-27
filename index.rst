@@ -33,28 +33,23 @@ As always, we would be happy to hear your comments and receive your contribution
 Basic Topics
 ============
 
-:doc:`String Functions <intro/Basic/StrFunc/StrFunc>`
------------------------------------------------------
+:doc:`Working with Count Locator <intro/Basic/CountLocator/CountLocator>`
+------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Formatting Strings                                                                                         |  
+|Using Count Tool as Locator                                                                                |  
 +===========================================================================================================+
-|| The user-defined function strips a certain a character in a string. May be useful in OCR/barcode/QR code |
-|| reading or dealing with any string.                                                                      |
-|| |strfunc|                                                                                                |
+|| A position ``position locator`` aligns the image area to the (x,y) coordinates, and a rotation           |
+|| ``rotation locator`` tracks the rotation of an image. Up to 16 locators can be defined in VOS. Each tool |
+|| gets its position and rotation fixed by following one of the defined locators. This tutorial demonstrates|
+|| the use of the ``Count`` |counttool| tools as locators to perform some inspection tasks with ``Barcode`` | 
+|| |barcodetool| & ``Contour`` |contourtool| tools.                                                         |
+|| |countloc|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
 
-:doc:`Math Functions <intro/Basic/MathFunc/MathFunc>`
-------------------------------------------------------------
+.. |countloc| image:: /intro/Basic/CountLocator/overview.jpg
 
-+-----------------------------------------------------------------------------------------------------------+
-|Mathematical Functions                                                                                     |
-+===========================================================================================================+
-|| Demonstrates built-in math functions with Rake, Distance and Angle tools                                 |
-|| |mathfunc|                                                                                               |
-+-----------------------------------------------------------------------------------------------------------+
-
-:doc:`Working with Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
+:doc:`Working with Match Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -67,6 +62,7 @@ Basic Topics
 || logged. Bit functions are demonstrated too.                                                              |
 || |matchpix|                                                                                               |
 +-----------------------------------------------------------------------------------------------------------+
+
 
 :doc:`OCR for Italic Font <intro/Basic/OcrItalic/OcrItalic>`
 ------------------------------------------------------------
@@ -93,6 +89,28 @@ Basic Topics
 || provide some extra freedom for teachi-in of small text.                                                  |
 || |smalltext|                                                                                              |
 +-----------------------------------------------------------------------------------------------------------+
+
+:doc:`String Functions <intro/Basic/StrFunc/StrFunc>`
+-----------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Formatting Strings                                                                                         |  
++===========================================================================================================+
+|| The user-defined function strips a certain a character in a string. May be useful in OCR/barcode/QR code |
+|| reading or dealing with any string.                                                                      |
+|| |strfunc|                                                                                                |
++-----------------------------------------------------------------------------------------------------------+
+
+:doc:`Math Functions <intro/Basic/MathFunc/MathFunc>`
+------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Mathematical Functions                                                                                     |
++===========================================================================================================+
+|| Demonstrates built-in math functions with Rake, Distance and Angle tools                                 |
+|| |mathfunc|                                                                                               |
++-----------------------------------------------------------------------------------------------------------+
+
 
 Advanced Topics
 ===============

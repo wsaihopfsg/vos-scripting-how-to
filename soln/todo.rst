@@ -11,23 +11,19 @@ TODO
 
 Summary of todo
 
-1. Script panel run through, same as Bible p6-8
-2. Intensity based GPO; locator based on CE mark
+* Tolerance settings, p19-21 in Bible
+* Preprocessors
+  * Kernels https://setosa.io/ev/image-kernels/
+  * Subtract
+  * sobel
+  * mask
+  * high / low pass
+* setbrightness/contrast
+* Tools
+  * Gfx
+  * Contour
+  * You can define up to four locators.
   
-  * Pulsed GPO for pass/fail/recycle
-  * difference between Equalize & Normalize
-  * Image correction with brightness & contrast?
-    * https://dsp.stackexchange.com/questions/46564/what-is-the-difference-between-image-normalization-contrast-stretching-and 
-  * Tolerance settings, p19-21 in Bible
-  * Preprocessors
-    * Kernels https://setosa.io/ev/image-kernels/
-    * Subtract
-    * ...
-  * Tools
-  * Calibration how-to
-  * FTP server 
-
-3. HKID...?  
 
 +------------------+----------------------------------+------------------------------------------------------------------+
 |**Function**      |**Parameters**                    |**Explanation**                                                   |
