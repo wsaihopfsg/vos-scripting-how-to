@@ -9,7 +9,8 @@ Configuration
    * :doc:`/soln/DefectDots/DefectDots`
    * :doc:`/soln/ROI/roi`
    * :doc:`/soln/Scratch/Scratch`
-
+   * :doc:`/soln/ReadDial/ReadDial` 
+  
 .. confval:: Normalize
 
    * :doc:`/soln/Scratch/Scratch`
@@ -35,6 +36,7 @@ Configuration
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/soln/DefectDots/DefectDots` 
    * :doc:`/intro/Basic/CountLocator/CountLocator`
+   * :doc:`/soln/ReadDial/ReadDial` 
 
 .. confval:: Threshold (band)
     
@@ -56,6 +58,7 @@ Configuration
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/RefCirSizeRect/RefCirSizeRect`
    * :doc:`/soln/Menkyo/Menkyo`
+   * :doc:`/soln/ReadDial/ReadDial`
 
 .. confval:: FormatString
    
@@ -86,6 +89,7 @@ Configuration
    * :doc:`/soln/Menkyo/Menkyo`
    * :doc:`/intro/Advanced/FTP/FTP`
    * :doc:`/intro/Basic/CountLocator/CountLocator`
+   * :doc:`/soln/ReadDial/ReadDial`
   
 .. confval:: Return
    
@@ -125,3 +129,35 @@ Configuration
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/intro/Advanced/FTP/FTP`
    * :doc:`/intro/Basic/CountLocator/CountLocator`
+   * :doc:`/soln/ReadDial/ReadDial` 
+  
+.. confval:: Match
+
+   * :doc:`/intro/Basic/GPIO/GPIO`
+   * :doc:`/soln/Menkyo/Menkyo`
+   * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: Edge Count
+
+   * :doc:`/soln/Menkyo/Menkyo`
+   * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: Point
+
+   * :doc:`/intro/Basic/PencilLocator/PencilLocator`
+   * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: Pencil
+
+   * :doc:`/intro/Basic/PencilLocator/PencilLocator`
+   * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: Angle
+
+   * :doc:`/intro/Basic/MathFunc/MathFunc`
+   * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: String
+
+   * :doc:`/intro/Basic/StrFunc/StrFunc`
+   * :doc:`/soln/ReadDial/ReadDial` 

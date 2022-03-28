@@ -95,7 +95,7 @@ Tools Explanation
   +-----------------------+
 
   .. |cprop| image:: /soln/ReadDial/countlocatorprop.jpg
-  .. |preprop| image:: /soln/ReadDial/countLocatorpre.jpg
+  .. |preprop| image:: /soln/ReadDial/countlocatorpre.jpg
 
   .. note::
     Use the ``Advanced`` button |advanced| to inspect the values to be entered into ``Remove blobs``. For details on using count tool as locator, please refer to :doc:`here </intro/Basic/CountLocator/CountLocator>`
@@ -139,7 +139,7 @@ Tools Explanation
   .. |ecneedleprop| image:: /soln/ReadDial/edgecountneedleprop.jpg
 
 .. note:: 
-  If the dial face has other objects in addition to the needle, it will be necessary to get rid of them using ``Remove blobs`` preprocessor.
+  If the dial face has other objects in addition to the needle, it will be necessary to get rid of them using preprocessors.
 
 * Multiple pencil tools for 2 angle calculations
   
@@ -239,11 +239,11 @@ Solution Initialize
   totalMark = 48
   oneMark = 360.0 / totalMark
 
-Line 1: red_threshold for ``A1`` disambiguity
-Line 2: green_threshold for ``A1`` disambiguity
-Line 3: Threshold for region determination
-Line 4: 12 big marks * 4 small marks
-Line 5: Angle for 1 small mark
+* Line 1: red_threshold for ``A1`` disambiguity
+* Line 2: green_threshold for ``A1`` disambiguity
+* Line 3: Threshold for region determination
+* Line 4: 12 big marks * 4 small marks
+* Line 5: Angle for 1 small mark
 
 Post Image Process
 #####################
@@ -274,13 +274,13 @@ Post Image Process
 * Line 1: Calculate how many marks the needle is away from the polar axis, ignoring ambiguity 
 * Lines 2-3: Rounding, assuming that the needle is always exactly on a mark
 
-* Line 4: For most values, we do not need special treatment as shown in white. Output to ``readVal``
+* Line 4: For most values, we do not need special treatment as shown in white. Output this temporary value to ``readVal``
 
   .. image:: /soln/ReadDial/ambiguouscode.jpg
 
 * Line 5: In white or red region
-* Line 7: In red region that requires recalculation, and output to ``readVal``
-* Line 11: In green region that requires recalculation, and output to ``readVal``
+* Line 7: In red region that requires recalculation, and output new result to ``readVal``
+* Line 11: In green region that requires recalculation, and output new result to ``readVal``
 * Line 14: Display ``readVal`` to the ``Inspection Status Box``
 
 Running the solution

@@ -16,19 +16,19 @@ Tools
    :class: wy-table-responsive table
 
    +-----------------------------------------------------------+--------------------------------------------------------+
-   |* |match|_                                                 |* Preprocessing                                         |
+   |* :confval:`Match <Match>`                                 |* Preprocessing                                         |
    |                                                           |                                                        |
    |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
-   |* |edgecount|_                                             |  * |dilate|_                                           |
+   |* :confval:`Edge Count <Edge Count>`                       |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
-   |* |point|_                                                 |  * Gaussian                                            |
+   |* :confval:`Point <Point>`                                 |  * Gaussian                                            |
    |* Tip                                                      |  * High-pass (Sharpen)                                 |
-   |* |pencil|_                                                |  * :confval:`Invert <Invert>`                          |
+   |* :confval:`Pencil <Pencil>`                               |  * :confval:`Invert <Invert>`                          |
    |* |distance|_                                              |  * Low-pass (Blur)                                     |
    |* |rake|_                                                  |  * Mask                                                |
    |* |contour|_                                               |  * |median|_                                           |
-   |* |angle|_                                                 |  * :confval:`Normalize`                                |
+   |* :confval:`Angle <Angle>`                                 |  * :confval:`Normalize`                                |
    |* |arc|_                                                   |  * Project H                                           |
    |* |circle|_                                                |  * Project V                                           |
    |* |concent|_                                               |  * :confval:`Remove blobs <Remove blobs>`              |
@@ -42,10 +42,6 @@ Tools
    |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
-.. |pencil| replace:: ``Pencil``
-.. _pencil: ../intro/Basic/PencilLocator/PencilLocator.html
-.. |point| replace:: ``Point``
-.. _point: ../intro/Basic/PencilLocator/PencilLocator.html
 .. |arc| replace:: ``Arc``
 .. _arc: ../intro/Basic/PencilLocator/PencilLocator.html
 .. |contour| replace:: ``Contour``
@@ -60,26 +56,18 @@ Tools
 .. _distance: ../intro/Basic/MathFunc/MathFunc.html
 .. |rake| replace:: ``Rake``
 .. _rake: ../intro/Basic/MathFunc/MathFunc.html
-.. |angle| replace:: ``Angle``
-.. _angle: ../intro/Basic/MathFunc/MathFunc.html
 .. |dilate| replace:: ``Dilate``
 .. _dilate: ../intro/Basic/GPIO/GPIO.html
 .. |median| replace:: ``Median``
 .. _median: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |normalize| replace:: ``Normalize``
 .. _normalize: ../soln/Scratch/Scratch.html
-.. .. |thres| replace:: ``Threshold``
-.. .. _thres: ../soln/Scratch/Scratch.html
-.. |match| replace:: ``Match``
-.. _match: ../intro/Basic/GPIO/GPIO.html
 .. |equalize| replace:: ``Equalize``
 .. _equalize: ../intro/Basic/GPIO/GPIO.html
 .. |shearx| replace:: ``Shear X``
 .. _shearx: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |sheary| replace:: ``Shear Y``
 .. _sheary: ../intro/Basic/OcrItalic/OcrItalic.html
-.. |edgecount| replace:: ``Edge Count``
-.. _edgecount: ../soln/Menkyo/Menkyo.html
 
 Predefined Functions
 ++++++++++++++++++++++++
@@ -143,7 +131,7 @@ String Functions
    |                                                       |                                                       |
    |* :confval:`find`                                      |* |setchar|_                                           |
    |                                                       |                                                       |
-   |* |float|_                                             |* |string|_                                            |
+   |* |float|_                                             |* :confval:`String <String>`                           |
    |                                                       |                                                       |
    |* :confval:`FormatString <FormatString>`               |* :confval:`StrLen <StrLen>`                           |
    |                                                       |                                                       |
@@ -159,8 +147,6 @@ String Functions
 .. _setchar: ../intro/Basic/StrFunc/StrFunc.html
 .. |float| replace:: ``float``
 .. _float: ../intro/Basic/StrFunc/StrFunc.html
-.. |string| replace:: ``string``
-.. _string: ../intro/Basic/StrFunc/StrFunc.html
   
   
 .. _stats:
