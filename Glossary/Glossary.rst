@@ -6,9 +6,12 @@
 
 Glossary
 ===========
-* Text in black: Multiple links for choosing when you hover your mouse over it
-* Text in red: Single link for direct clicking
-* Unaccented text: No tutorial for this funtion/tool yet
+
+======================= ==============================================================
+Accented text in black  Multiple links for choosing when you hover your mouse over it
+Accented text in red    Single link for direct clicking
+Unaccented text         No tutorial for this funtion/tool yet
+======================= ==============================================================
   
 .. _toolss:
 
