@@ -21,7 +21,7 @@ Tools
    |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
    |* :confval:`Edge Count <Edge Count>`                       |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
-   |* Caliper                                                  |  * :confval:`Erode <Erode>`                            |
+   |* |caliper|_                                               |  * :confval:`Erode <Erode>`                            |
    |* :confval:`Point <Point>`                                 |  * Gaussian                                            |
    |* Tip                                                      |  * High-pass (Sharpen)                                 |
    |* :confval:`Pencil <Pencil>`                               |  * :confval:`Invert <Invert>`                          |
@@ -42,6 +42,8 @@ Tools
    |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |caliper| replace:: ``Caliper``
+.. _caliper: ../intro/Basic/EdgeCountLocator/EdgeCountLocator.html
 .. |arc| replace:: ``Arc``
 .. _arc: ../intro/Basic/PencilLocator/PencilLocator.html
 .. |contour| replace:: ``Contour``

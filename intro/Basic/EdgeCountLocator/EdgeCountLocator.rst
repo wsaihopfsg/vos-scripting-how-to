@@ -6,39 +6,39 @@
 
 .. include:: /shared/EmulatorComponents.rst
 
-Using Count Tool as Locator  
+Using Edge Count Tool as Locator  
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This sample demonstrates
 
-1. Use of two  ``Pencil`` tools |penciltool| to deal with small translations of the object-of-interest.
-2. Use of the ``Arc`` tool |arctool| to check an arc of the object-of-interest. 
+1. Use of ``Edge Count`` tools |edgecounttool| to deal with small x-translations of the object-of-interest.
+2. Use of the ``Caliper`` tool |calipertool| to measure an irregular shape.
 
 .. note:: 
-  The main advanatge of using ``Pencil`` tool as locator is speed. However 
+  The main advanatge of using ``Edge Count`` tool as locator is speed. However 
   
-  * It is only applicable to small translations
-  * To track rotation also, another feature is needed
+  * It is only applicable to small translations in either x or y direction
+  * It is usually used for objects that are bigger than the current field-of-view.
 
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/PencilLocator>`__
---------------------------------------------------------------------------------------------------------------
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Basic/EdgeCountLocator>`__
+-------------------------------------------------------------------------------------------------------------------
 
 .. table::
   :class: tight-table 
 
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``solution10.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/PencilLocator/solution10.bin?raw=true>`__             |
+  |1. ``solution12.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/EdgeCountLocator/solution12.bin?raw=true>`__          |
   |                                     |                                                                                                                                                    |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup| |cir1|, import |import| |cir2| solution   |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``demo1280_01.bmp``               |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/PencilLocator/demo1280_01.bmp?raw=true>`__ is the same   |
+  |2. ``1.bmp``                         |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/EdgeCountLocator/1.bmp?raw=true>`__ is the same          |
   |                                     |example image provided by the VOS ``Vision Configuration Tool`` software                                                                            |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``demo1280_02.bmp``               |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/PencilLocator/demo1280_02.bmp?raw=true>`__ is the same   |
-  |                                     |image as  ``demo1280_01.bmp`` with a slight translation                                                                                             |
+  |3. ``2.bmp``                         |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/EdgeCountLocator/2.bmp?raw=true>`__ is the same          |
+  |                                     |image as  ``demo1280_01.bmp`` with a slight x-translation                                                                                           |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |4. ``demo1208_03.bmp``               |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/PencilLocator/demo1280_03.bmp?raw=true>`__ is the same   |
-  |                                     |image as  ``demo1280_01.bmp`` with a slight translation and an defect at the arc to be inspected                                                    |
+  |4. ``3.bmp``                         |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/EdgeCountLocator/3.bmp?raw=true>`__ is the same          |
+  |                                     |image as  ``demo1280_01.bmp`` with a slight x-translation                                                                                           |
   |                                     |                                                                                                                                                    |
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                   |
   |                                     |                                                                                                                                                    |
@@ -53,36 +53,22 @@ Tools Explanation
 -----------------
 * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``demo1280_01.bmp`` is loaded. 
 
-.. image:: /intro/Basic/PencilLocator/penciltoolsetup.jpg
+.. image:: /intro/Basic/EdgeCountLocator/edgecountlocatortooloverview.jpg
 
-* 2 ``Pencil`` tools |penciltool| have been used
+* An ``Edge Count`` tool |edgecounttool| named ``E`` has been used, with a search line that covers the expected movement of the image in the x-direction. 
 
-  * One named ``P`` along the horizontal edge
-    
-    * First point called ``PP``
-    * Second point called ``PP1``
+  .. image:: /intro/Basic/EdgeCountLocator/edgecountlocatorprop1.jpg
   
-  * Another named ``P1`` along the vertical edge
+  * At the intersection of the edge with the search line of ``E``, a point called ``PP`` is set to be the position anchor for ``Locator 1``.
   
-    * First point called ``PP2``
-    * Second point called ``PP3``
-    * Notice that their ROI has been enlarged to cater for the movement of the incoming images
-    
-    .. image:: /intro/Basic/PencilLocator/pp2roi.jpg
+    .. image:: /intro/Basic/EdgeCountLocator/edgecountloc.jpg
   
-  * Both ``P`` & ``P1`` are extended to meet at point ``PP4``, which is set as locator's 1 position anchor
-
-    .. image:: /intro/Basic/PencilLocator/PP4prop.jpg
-
-* An ``Arc`` tool |arctool| has been used along one edge of the pill shape. 
+* A ``Caliper`` tool |calipertool| has been defined to measure the irregular shape at the bottom of the figure. It is anchored to ``Locator 1`` with these properties
     
-      .. image:: /intro/Basic/PencilLocator/arcprop.jpg
+    .. image:: /intro/Basic/EdgeCountLocator/edgecountcaliper.jpg
 
-      * A ``threshold`` tool with threshold set at 128, converting the input image to binary
-      * A ``Remove Blobs`` tool with its properties set so that all other white blobs are removed except for the circle. This ensures that the ``Count`` |counttool| tool detects only the circle and not multiple shapes
-    
 .. note:: 
-  Please refer to the VOS manual for details on how to use the pencil tool.  
+  Please refer to the VOS manual for details on how to use the ``Caliper`` tool |calipertool|.  
 
 Code Walk-Through
 -----------------
@@ -97,26 +83,26 @@ Running the solution
 +-------------------------------------------------+
 ||1|                                              |
 |                                                 |
-|``demo1280_01.bmp``                              |
+|``1.bmp``                                        |
 +-------------------------------------------------+
 ||2|                                              |
 |                                                 |
-|``demo1280_02.bmp``                              |
+|``2.bmp``                                        |
 +-------------------------------------------------+
 ||3|                                              |
 |                                                 |
-|``demo1280_03.bmp``                              |
+|``3.bmp``                                        |
 +-------------------------------------------------+
 
 .. Tip::
-  #arc #pencil #locator #point
+  #caliper #edge #count #locator #point
 
-.. |1| image:: /intro/Basic/PencilLocator/pencil1.jpg
+.. |1| image:: /intro/Basic/EdgeCountLocator/edgecountlocator1.jpg
   
 
-.. |2| image:: /intro/Basic/PencilLocator/pencil2.jpg
+.. |2| image:: /intro/Basic/EdgeCountLocator/edgecountlocator2.jpg
   
 
-.. |3| image:: /intro/Basic/PencilLocator/pencil3.jpg
+.. |3| image:: /intro/Basic/EdgeCountLocator/edgecountlocator3.jpg
   
 

@@ -33,7 +33,7 @@ As always, we would be happy to hear your comments and receive your contribution
 Basic Topics
 ============
 
-:doc:`Working with Locator Using Count Tool <intro/Basic/CountLocator/CountLocator>`
+:doc:`Locator Using Count Tool <intro/Basic/CountLocator/CountLocator>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -49,7 +49,7 @@ Basic Topics
 
 .. |countloc| image:: /intro/Basic/CountLocator/overviewcl.jpg
 
-:doc:`Working with Locator Using Pencil Tool <intro/Basic/PencilLocator/PencilLocator>`
+:doc:`Locator Using Pencil Tool <intro/Basic/PencilLocator/PencilLocator>`
 -------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -63,7 +63,22 @@ Basic Topics
 
 .. |pencilloc| image:: /intro/Basic/PencilLocator/penciloverview.jpg
 
-:doc:`Working with Match Locator, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
+:doc:`Locator Using Edge Count Tool <intro/Basic/EdgeCountLocator/EdgeCountLocator>`
+-------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Using Edge Count Tool as Locator                                                                           |  
++===========================================================================================================+
+|| When the translation is in either x or y direction only, this can be tracked using ``Edge Count`` tool   |
+|| |edgecounttool|. This is useful when the object size is beyong the field-of-view. This tutorial          |
+|| demonstrates using ``Edge Count`` tool |edgecounttool| as locator, together with ``Caliper`` tool        |
+|| |calipertool|                                                                                            |
+|| |edgeloc|                                                                                                |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |edgeloc| image:: /intro/Basic/EdgeCountLocator/edgecountlocatoroverview.jpg
+
+:doc:`Locator Using Match Tool, Preprocessors & GPOs <intro/Basic/GPIO/GPIO>`
 ------------------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+

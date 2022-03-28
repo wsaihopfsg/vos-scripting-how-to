@@ -141,12 +141,14 @@ Configuration
 
    * :doc:`/soln/Menkyo/Menkyo`
    * :doc:`/soln/ReadDial/ReadDial` 
+   * :doc:`/intro/Basic/EdgeCountLocator/EdgeCountLocator`
 
 .. confval:: Point
 
    * :doc:`/intro/Basic/PencilLocator/PencilLocator`
    * :doc:`/soln/ReadDial/ReadDial` 
-
+   * :doc:`/intro/Basic/EdgeCountLocator/EdgeCountLocator`
+  
 .. confval:: Pencil
 
    * :doc:`/intro/Basic/PencilLocator/PencilLocator`
