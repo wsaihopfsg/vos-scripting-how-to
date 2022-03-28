@@ -51,7 +51,7 @@ This sample demonstrates
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``demo1280_01.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``1.bmp`` is loaded. 
 
 .. image:: /intro/Basic/EdgeCountLocator/edgecountlocatortooloverview.jpg
 
