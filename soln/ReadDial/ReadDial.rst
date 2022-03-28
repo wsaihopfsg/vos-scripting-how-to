@@ -12,7 +12,7 @@ Summary of this tutorial
 1. Using ``Count`` tool |counttool| as a position locator
 2. Using ``Match`` tool |matchtool| as rotation locator
 3. Use of ``Pencil`` tool |penciltool| to join 2 points
-4. Use of ``Angke`` tool |angletool| to detect the angle between the needle and some reference points
+4. Use of ``Angle`` tool |angletool| to detect the angle between the needle and some reference points
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ReadDial>`__
 ----------------------------------------------------------------------------------------------------------
@@ -82,66 +82,141 @@ Summary of this tutorial
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``blue1.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``0.bmp`` is loaded. 
 
+* First there is a ``Count`` tool |counttool| whose region-of-interest (ROI) covers the whole field-of-view with the following properties and preprocessor |preprocess| 
 
-  * ``Rotation`` is set between ``0`` to ``360`` 
-  * ``Method`` is ``Edges only`` 
-  * ``Show points`` with ``Origin`` & ``Corner`` selected for position and rotation of Locator 1 respectively
+  +-----------------------+
+  || |cprop|              |
+  || Count tool properties|
+  +-----------------------+
+  || |preprop|            |
+  || Preprocessor         |       
+  +-----------------------+
 
-+-------------------+--------------------+
-||L1pos|            ||L1loc|             |
-+-------------------+--------------------+
-||L1postext|        ||L1loctext|         |
-+-------------------+--------------------+
+  .. |cprop| image:: /soln/ReadDial/countlocatorprop.jpg
+  .. |preprop| image:: /soln/ReadDial/countLocatorpre.jpg
 
-.. |L1pos| image:: /soln/Menkyo/L1pos.jpg
-  :width: 300px
+  .. note::
+    Use the ``Advanced`` button |advanced| to inspect the values to be entered into ``Remove blobs``. For details on using count tool as locator, please refer to :doc:`here </intro/Basic/CountLocator/CountLocator>`
 
-.. |L1loc| image:: /soln/Menkyo/L1loc.jpg
-  :width: 300px
+  * At the centre point of the ``Count`` tool is set to be the position anchor for ``Locator 1``.
 
-.. |L1postext| replace:: Properties for point at ``Origin`` for Locator 1's position
-.. |L1loctext| replace:: Properties for point at ``Corner`` for Locator 1's rotation
+  .. image:: /soln/ReadDial/loc1pos.jpg
 
-.. table::
-  :class: tight-table 
-
-  +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-  |Locations in |lic|_   |Name                |Description                                                                                 |
-  +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-  ||cir1|                |ocrRegDate1         ||desp1|                                                                                     |
-  +----------------------+--------------------+                                                                                            +
-  ||cir2|                |ocrRegDate          |                                                                                            |
-  +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-  ||cir4|                |OCR                 ||desp2|                                                                                     |
-  +----------------------+--------------------+--------------------------------------------------------------------------------------------+
-
-.. |lic| replace:: ``License Components``
-.. _lic: #components-of-the-japanese-driving-license
-.. |desp1| replace:: The *kanji* relevant to the Japanese era dates are taught-in as full-width characters. |br| Numbers are taught-in as half-width characters.
-.. |desp2| replace:: Only numbers are taught-in. Preprocessor ``Threshold`` is applied to remove the background pattern for the 4 digits at the center.
-.. |br| raw:: html
-
-   <br />
-
-  .. image:: /soln/Menkyo/edgecountprop.jpg
-
-  * With the ``Edge`` property set to ``Either``, we can check if the box is marked with *kanji* or ``-`` 
+* There are 2 ``Match`` tools configured. 
   
-  +------------------------+-------------------------------------------+
-  |                        |**Edge Count Value**                       |
-  +------------------------+-------------------------------------------+
-  ||emptybox|              |2 for an empty box                         |
-  +------------------------+-------------------------------------------+
-  ||kanjibox|              |> 2 for a box with *kanji*                 |
-  +------------------------+-------------------------------------------+
-
-.. |emptybox| image:: /soln/Menkyo/emptybox.png
-.. |kanjibox| image:: /soln/Menkyo/kanjibox.png  
-
-* An ``Intensity`` tool |intensitytool| for color discrimination named ``IntenAvg``
+  * The first named ``MS`` has a bigger ROI and its matching template set at the number 20. 
   
+  .. image:: /soln/ReadDial/match20.jpg
+  
+  * The properties for ``MS`` are as shown
+  
+  .. image:: /soln/ReadDial/match20prop.jpg
+
+  .. note
+    The small dial marking to the left of number 20 is included to differentiate from the number 120
+
+  * The centre of the matched area ``PP2`` is used as the rotation anchor for ``Locator 1``.
+  
+  .. image:: /soln/ReadDial/pp2rotprop.jpg
+  
+* Another ``Match`` tool |matchtool| named ``MS1`` with a smaller ROI and its matching template set at the number 120. 
+  
+    .. image:: /soln/ReadDial/match120.jpg
+
+    * It is anchored to ``Locator 1``, with its centre point shown.
+   
+    .. image:: /soln/ReadDial/match120prop.jpg
+
+* An ``Edge Count`` tool |edgecounttool| that detects the location of the needle and indicate the detected edge with a point ``PP1``
+  
+  ====================== ======================
+  |ecneedle|             |ecneedleprop|  
+  ====================== ======================
+
+  .. |ecneedle| image:: /soln/ReadDial/edgecountneedle.jpg
+  .. |ecneedleprop| image:: /soln/ReadDial/edgecountneedleprop.jpg
+
+.. note:: 
+  If the dial face has other objects in addition to the needle, it will be necessary to get rid of them using ``Remove blobs`` preprocessor.
+
+* Multiple pencil tools for 2 angle calculations
+  
+  * Main angle ``A1`` w.r.t. polar axis 
+  
+    * One ``Pencil`` tool named ``P`` joining ``PP1`` (``Edge Count`` tool) to ``PP`` (position anchor of ``Locator 1``). Ideally it should overlap with the needle.
+  
+    * One ``Pencil`` tool named ``P1`` joining ``PP2`` (Centre of ``Match`` tool ``MS``) to ``PP`` (position anchor of ``Locator 1``). This line serves as the polar axis.
+
+    ====== ======
+    |p|    |p1|
+    ``P``  ``P1``
+    ====== ======
+
+    .. |p1| image:: /soln/ReadDial/pencilp1.jpg 
+      :width: 300px
+  
+    .. |p| image:: /soln/ReadDial/pencilp.jpg 
+      :width: 300px
+
+    * An ``angle`` tool |angletool| named ``A1`` that measures the angle between the pencil lines ``P`` & ``P1``. This measures the angle between the needle and the polar axis.
+  
+    .. image:: /soln/ReadDial/angleA1.jpg
+    
+  * A supplementary angle ``A2`` for deconflicting results from ``A1``
+  
+    * One ``Pencil`` tool named ``P2`` joining ``PP2`` (Centre of ``Match`` tool ``MS1``) to ``PP`` (position anchor of ``Locator 1``). 
+    * An ``angle`` tool |angletool| named ``A1`` that measures the angle between the pencil lines ``P`` & ``P2``. In ``0.bmp``, ``A2`` should appear as an 180° angle.
+  
+    ====== =======
+    |p2|    |A2|
+    ``P2``  ``A2``
+    ====== =======
+    
+    .. |p2| image:: /soln/ReadDial/pencilp2.jpg 
+      :width: 450px
+
+    .. |A2| image:: /soln/ReadDial/angleA2.jpg 
+      :width: 240px
+
+Why 2 angles are needed
+########################
+
+* The results for the measured ``A1`` & ``A2`` are summarized here
+
+  ============ ============ ============
+  **Image**    **A1**       **A2**  
+  ------------ ------------ ------------
+  ``0.bmp``     28.29       175.18
+  ``20.bmp``     1.77       145.07
+  ``40.bmp``    31.37       115.48
+  ``60.bmp``    61.03        85.95
+  ``80.bmp``    89.68        57.12
+  ``100.bmp``  118.44        28.51 
+  ``120.bmp``  149.26         2.35
+  ``140.bmp``  179.19        32.29 
+  ``160.bmp``  149.82        63.30
+  ============ ============ ============
+
+* Just looking at ``A1``, it can be observed that ambiguity arises by the angle reported by the ``Angle`` tool |angletool| in the shaded regions.
+  
+.. image:: /soln/ReadDial/ambiguousregion.jpg
+
+* Using ``A2`` together with ``A1``, we will be able to solve this ambiguity by the following psedo-code
+  
+  * Based on ``A1``, decide whether the needle is in the red, white or green region
+    
+    * If in red region, use ``A2`` to decide if the needle is above or below the 20 marking
+    
+      * > red_threshold, needle is below 20 
+      * < red_threshold, needle is above 20  
+    
+    * If in green region, use ``A2`` to decide if the needle is above or below the 140 marking
+
+      * > green_threshold, needle is above 140 
+      * < green_threshold, needle is below 140  
+
 Code Walk-Through
 -----------------
 * Click on :hoverxreftooltip:`Edit Script <soln/Hover/editscript:Edit Script>` |edit| |cir1|  
@@ -151,255 +226,62 @@ Solution Initialize
 #####################
 * Choose the predefined function ``Solution Initialize`` at the bottom left 
 
-  .. image:: /soln/Menkyo/solninit.jpg
+  |fn_init|
 
 * In the Script Function window we see 
 
 .. code-block::
   :linenos:
 
-  thresLtIsGold = 90 //below=gold
-  thresGtIsGreen = 125 //above=green
-  licStr.0 = "Gold"
-  licStr.1 = "Blue"
-  licStr.2 = "Green"
-  thresEEmpty = 2
-  TTrue = 1
-  FFalse = 0
-  vehCat.0 = "Heavy Veh."
-  vehCat.1 = "Med. Veh."
-  vehCat.2 = "Semi-Med. Veh."
-  vehCat.3 = "Ord. Veh."
-  vehCat.4 = "Heavy Special Veh."
-  vehCat.5 = "Heavy Motor."
-  vehCat.6 = "Small Special Veh."
-  vehCat.7 = "Moped"
-  vehCat.8 = "Comm. Heavy Veh."
-  vehCat.9 = "Comm. Med. Veh."
-  vehCat.10 = "Comm. Ord. Veh."
-  vehCat.11 = "Comm. Heavy Special Veh."
-  vehCat.12 = "Ord. Motor."
-  vehCat.13 = "Comm. Tractor-Trailer Veh."
+  thres.0 = 145.17 //red_threshold
+  thres.1 = 32.825 //green_threshold
+  thres.2 = 19 // if roundedMark < this, use thres.0 otherwise use thres.1
+  totalMark = 48
+  oneMark = 360.0 / totalMark
 
-
-
-.. note:: 
-  Since we are displaying the vehicle categories with ``SetDisplayStatus``, we need to ensure that the 256 character limit is not violated for someone that has obtained all the 14 vehicle categories. Hence shortforms are used.
-
-User-Defined Function chkLicType()
-##########################################
-* Choose the user-defined function ``chkLicType()`` at the bottom left 
-
-  .. image:: /soln/Menkyo/chklictype.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  if(IntenAvg<thresLtIsGold) 
-      licType = 0 //gold
-  else
-      if(IntenAvg>thresGtIsGreen) 
-          licType = 2 //Green
-      else
-          licType = 1 //Blue
-      endif
-  endif
-  return(licStr.[licType])
-
-* Lines 1-2: Check if ``IntenAvg`` is less than ``thresLtIsGold``, if so set ``licType`` to ``0`` (Gold)
-* Lines 4-5: Check if ``IntenAvg`` is less than ``thresGtIsGreen``, if so set ``licType`` to ``2`` (Green)
-* Line 7: Set ``licType`` to ``1`` otherwise (Blue)
-
-User-Defined Function chkCat()
-##########################################
-* Choose the user-defined function ``chkCat()`` at the bottom left 
-
-  .. image:: /soln/Menkyo/chkcat.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  nowCtr = 0
-  while( nowCtr<14 )
-      nowEname = "E" + nowCtr
-      nowE = readVar(nowEname)
-      if(nowE = thresEEmpty ) 
-          EEmpty.[nowCtr] = TTrue
-      else
-          EEmpty.[nowCtr] = FFalse
-      endif
-      nowCtr = nowCtr+1
-  endwhile
-  return (EEmpty)
-
-* Line 1: Counter initialization
-* Lines 2-11: ``while`` loop to check for all 14 ``Edge Count`` Tools
-* Line 3: Set the ``varName``
-* Line 4: Read the variable with ``ReadVar`` and store as ``nowE``
-* Line 5: Check if ``nowE`` is equal to the threshold for empty vehicle category box ``thresEEmpty``
-* Line 6: If vehicle category box is empty, set the corresponding entry in ``EEmpty`` to ``TTrue``. 
-* Line 8: If vehicle category box is not empty, set the corresponding entry in ``EEmpty`` to ``FFalse``. 
-
-.. note:: 
-  ``WriteVar`` performs similar function as ``ReadVar``, writing a value to a variable
-
-User-Defined Function convert2yr(p1)
-##########################################
-* Choose the user-defined function ``convert2yr(p1)`` at the bottom left 
-
-  .. image:: /soln/Menkyo/convert2yr.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  nenPos = find("年",p1)
-  era = substring(p1,0,6)
-  if(nenPos=9) //元年 first year of an era
-      eraYr = 0
-      eraMth = int(substring(p1,12,2))
-      eraDay = int(substring(p1,17,2))
-  else
-      eraYr = int(substring(p1,6,2)) -1
-      eraMth = int(substring(p1,11,2))
-      eraDay = int(substring(p1,16,2))
-  endif
-  if(era ="令和") //Reiwa
-      opYr = 2019
-  else
-      if(era="平成") //Heisei
-          opYr = 1989
-      else
-          //昭和 Showa
-          opYr = 1926
-      endif
-  endif
-  opYr = opYr+eraYr
-  opStr = string(eraDay) + "/" + string(eraMth) + "/" + string(opYr)
-  return(opStr)
-
-* Line 1: Find the position of the *kanji* 年 (year) and return the position to ``nenPos``. The first year of any era is called 元年, the other years are numerated sequentially with a half-width number. 
-* Line 2: Get the Japanese era name from the first 6-byte
-
-.. note:: 
-  There are only 3 Japanese eras possible for driving licenses, either 昭和 (Showa: 1926-1989), 平成 (Heisei: 1989-2019) or 令和 (Reiwa: 2019-). Each era has 2 full-width *kanji*. Since each UTF-8 full-width character `takes 3-byte <https://en.wikipedia.org/wiki/UTF-8#Encoding>`__ , the era takes up the first 6-byte 
-
-* Line 3: Check if the position of the *kanji* 年 from ``nenPos`` is 9, which means it is the first year of the era XX元年
-* Lines 4-6: For the first year of the era, set ``eraYr`` to 0 since it is the first year of that era. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
-* Lines 8-10: For other years of the era, set ``eraYr`` to the year value minus 1. Extract the month and day information to ``eraMth`` & ``eraDay`` respectively.   
-* Lines 12-21: Set the first year to ``opYr`` based on the era information.
-* Lines 22-23: Construct the Gregorian date string
-
-User-Defined Function extractSerial()
-##########################################
-* Choose the user-defined function ``extractSerial()`` at the bottom left 
-
-  .. image:: /soln/Menkyo/extractserial.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  nichiPos = find("日",p1)
-  return(int(substring(p1,nichiPos+3,0)))
-
-* Line 1: Find the position of the *kanji* 日 (day) and return it to ``nichiPos``
-* Line 2: Return the issuing number 
-
-User-Defined Function parseCat()
-##########################################
-* Choose the user-defined function ``parseCat()`` at the bottom left 
-
-  .. image:: /soln/Menkyo/parsecat.jpg
-
-* In the Script Function window we see 
-
-.. code-block::
-  :linenos:
-
-  nowCtr = 0
-  opStr = ""
-  totalCtr = 1
-  while(nowCtr<14 )
-      if(EEmpty.[nowCtr]=FFalse  ) 
-          if(GetBit(totalCtr,0)=1) 
-              opStr = opStr+vehCat.[nowCtr]
-          else
-              opStr = opStr+"/"+vehCat.[nowCtr] + "/\n"
-          endif
-          totalCtr = totalCtr+1
-      endif
-      nowCtr = nowCtr+1
-  endwhile
-  if(GetBit(totalCtr,0)=1) //was even
-      opStr = substring(opStr,0,strlen(opStr)-3)
-  endif
-  return(opStr)
-
-* Line 1-3: initializations
-* Line 4-14: ``while`` loop for each ``EEmpty`` array element
-* Line 5: Branch if ``EEmpty`` array element is not empty
-* Lines 6-7: If ``totalCtr`` is odd, concatenate to ``opStr`` based on ``vehCat``
-* Line 9: If ``totalCtr`` is not odd, concatenate to ``opStr`` based on ``vehCat`` with a ``\`` as separator and line break at the end
-* Lines 15-17: Remove last ``\``
-* Line 18: Return ``opStr``
-
-Pre Image Process
-#####################
-* Choose the predefined function ``Pre Image Process`` at the bottom left 
-
-  .. image:: /soln/Menkyo/preimgproc.jpg
-
-* In the Script Function window we see only 1 line, which resets the ``Inspection Status Box``
-
-.. code-block::
-  :linenos:
-
-  SetDisplayStatus( 0,0 )
-
-.. note:: 
-  The ``Inspection Status Box`` can be reset by either ``SetDisplayStatus( 0,0 )`` or ``SetDisplayStatus( "","" )``
+Line 1: red_threshold for ``A1`` disambiguity
+Line 2: green_threshold for ``A1`` disambiguity
+Line 3: Threshold for region determination
+Line 4: 12 big marks * 4 small marks
+Line 5: Angle for 1 small mark
 
 Post Image Process
 #####################
 * Choose the predefined function ``Post Image Process`` at the bottom left 
 
-  .. image:: /soln/Menkyo/postimgproc.jpg
+  |fn_post|
 
 * In the Script Function window we see
 
 .. code-block::
   :linenos:
 
-  licColor = chkLicType()
-  chkCat()
-  regDate = convert2yr(ocrRegDate )
-  birthDate = convert2yr(ocrRegDate1 )
-  regSerial = extractSerial(ocrRegDate )
-  engCat = parseCat( )
-  if(licType=0) 
-      SetDisplayStatus(engCat  , "darkred")
+  exactMark = (A1 / oneMark)
+  a = string("[exactMark%.0f]")
+  roundedMark = int(a)
+  readVal = 20+ roundedMark*5
+  if( roundedMark < thres.2 ) 
+      if( A2 > thres.0 ) 
+          readVal = 20- roundedMark*5
+      endif
   else
-      if(licType=1  ) 
-          SetDisplayStatus( engCat , "blue")
-      else
-          SetDisplayStatus( engCat , "darkgreen")
+      if( A2 > thres.1  ) 
+          readVal = 20+ (totalMark -roundedMark)*5
       endif
   endif
+  SetDisplayStatus( string(readVal), "darkgreen")
 
-* Line 1: Call the ``chkLicType()`` function and return the license color code to ``licColor`` in string and ``licType`` as integer
-* Line 2: Call the ``chkCat()`` function and return the occuapncy status of the vehicle category to the ``EEmpty`` array
-* Line 3: Convert registration date from Japanese era to Gregorian and return it to ``regDate``
-* Line 4: Convert birth date from Japanese era to Gregorian and return it to ``birthDate``
-* Line 5: Return the issuing number to ``regSerial``
-* Line 6: Based on ``EEmpty`` array, construct a string ``engCat``
-* Lines 7-15: Display ``engCat`` based on the detected license color-code in the ``Inspection Status Box``
+* Line 1: Calculate how many marks the needle is away from the polar axis, ignoring ambiguity 
+* Lines 2-3: Rounding, assuming that the needle is always exactly on a mark
+
+* Line 4: For most values, we do not need special treatment as shown in white. Output to ``readVal``
+
+  .. image:: /soln/ReadDial/ambiguouscode.jpg
+
+* Line 5: In white or red region
+* Line 7: In red region that requires recalculation, and output to ``readVal``
+* Line 11: In green region that requires recalculation, and output to ``readVal``
+* Line 14: Display ``readVal`` to the ``Inspection Status Box``
 
 Running the solution
 --------------------
@@ -425,29 +307,39 @@ Running the solution
 +--------------+---------------+
 
 .. |dial0| image:: /soln/ReadDial/dial0.jpg
+  :width: 300px
 .. |dial0r| image:: /soln/ReadDial/dial0r.jpg  
+  :width: 300px
 .. |dial15| image:: /soln/ReadDial/dial15.jpg
+  :width: 300px
 .. |dial20| image:: /soln/ReadDial/dial20.jpg
+  :width: 300px
 .. |dial20r| image:: /soln/ReadDial/dial20r.jpg  
+  :width: 300px
 .. |dial25| image:: /soln/ReadDial/dial25.jpg
+  :width: 300px
 .. |dial40| image:: /soln/ReadDial/dial40.jpg
+  :width: 300px
 .. |dial40r| image:: /soln/ReadDial/dial40r.jpg  
+  :width: 300px
 .. |dial60| image:: /soln/ReadDial/dial60.jpg
-
+  :width: 300px
 .. |dial80| image:: /soln/ReadDial/dial80.jpg
-  
+  :width: 300px
 .. |dial100| image:: /soln/ReadDial/dial100.jpg
+  :width: 300px
 .. |dial120| image:: /soln/ReadDial/dial120.jpg
-  
+  :width: 300px
 .. |dial135| image:: /soln/ReadDial/dial135.jpg
+  :width: 300px
 .. |dial140| image:: /soln/ReadDial/dial140.jpg
-  
+  :width: 300px
 .. |dial145| image:: /soln/ReadDial/dial145.jpg
-
+  :width: 300px
 .. |dial160| image:: /soln/ReadDial/dial160.jpg
-  
+  :width: 300px
 
 
 .. tip::
-  #japanese #OCR #teach-in #asian #script #edge #count 
+  #dial #analog #needle #angle #pencil #count #locator #match  #remove #blobs #preprocessor
 

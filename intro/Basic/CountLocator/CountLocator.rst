@@ -100,10 +100,13 @@ Tools Explanation
       .. image:: /intro/Basic/CountLocator/prepro1.jpg
 
       * A ``threshold`` tool with threshold set at 128, converting the input image to binary
-      * A ``Remove Blobs`` tool with its properties set so that all other white blobs are removed except for the circle. This ensures that the ``Count`` |counttool| tool detects only the circle and not multiple shapes
+      * A ``Remove blobs`` tool with its properties set so that all other white blobs are removed except for the circle. This ensures that the ``Count`` |counttool| tool detects only the circle and not multiple shapes
     
       .. warning:: 
         When multiple shapes are found by the ``Count`` tool |counttool|, their index is given by the program at random. Without the ``Remove blobs`` preprocessor, there is no way to ensure that the circular shape of interest will be given the first index.
+
+      .. note::
+        Use the ``Advanced`` button |advanced| to inspect the values to be entered into ``Remove blobs``
 
     * The centre point of the shape found named ``PP`` serves as locator 1's position
     
