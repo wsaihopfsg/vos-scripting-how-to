@@ -29,7 +29,7 @@ Tools
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* |caliper|_                                               |  * :confval:`Erode <Erode>`                            |
    |* :confval:`Point <Point>`                                 |  * Gaussian                                            |
-   |* Tip                                                      |  * High-pass (Sharpen)                                 |
+   |* |tip|_                                                   |  * High-pass (Sharpen)                                 |
    |* :confval:`Pencil <Pencil>`                               |  * :confval:`Invert <Invert>`                          |
    |* |distance|_                                              |  * Low-pass (Blur)                                     |
    |* |rake|_                                                  |  * Mask                                                |
@@ -48,6 +48,8 @@ Tools
    |                                                           |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |tip| replace:: ``Tip``
+.. _tip: ../soln/ReadDial/ReadDial.html
 .. |caliper| replace:: ``Caliper``
 .. _caliper: ../intro/Basic/EdgeCountLocator/EdgeCountLocator.html
 .. |arc| replace:: ``Arc``

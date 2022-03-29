@@ -11,8 +11,9 @@ Summary of this tutorial
 
 1. Using ``Count`` tool |counttool| as a position locator
 2. Using ``Match`` tool |matchtool| as rotation locator
-3. Use of ``Pencil`` tool |penciltool| to join 2 points
-4. Use of ``Angle`` tool |angletool| to detect the angle between the needle and some reference points
+3. Using ``Tip`` tool |tiptool| to find an extreme edge 
+4. Use of ``Pencil`` tool |penciltool| to join 2 points
+5. Use of ``Angle`` tool |angletool| to detect the angle between the needle and some reference points
 
 `Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/ReadDial>`__
 ----------------------------------------------------------------------------------------------------------
@@ -21,7 +22,7 @@ Summary of this tutorial
   :class: tight-table 
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``solution11.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/solution11.bin?raw=true>`__                      |
+  |1. ``solution13.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/ReadDial/solution13.bin?raw=true>`__                      |
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -104,9 +105,7 @@ Tools Explanation
 
   .. image:: /soln/ReadDial/loc1pos.jpg
 
-* There are 2 ``Match`` tools configured. 
-  
-  * The first named ``MS`` has a bigger ROI and its matching template set at the number 20. 
+* A ``Match`` tool named ``MS`` is configured with its matching template set at the number 20. 
   
   .. image:: /soln/ReadDial/match20.jpg
   
@@ -121,13 +120,13 @@ Tools Explanation
   
   .. image:: /soln/ReadDial/pp2rotprop.jpg
   
-* Another ``Match`` tool |matchtool| named ``MS1`` with a smaller ROI and its matching template set at the number 120. 
+* A ``Tip`` tool |tiptool| named ``Tip`` with its ROI trained at a corner near to the number 120. The found corner is called ``PP4``.
   
-    .. image:: /soln/ReadDial/match120.jpg
+    .. image:: /soln/ReadDial/tipat120.jpg
 
-    * It is anchored to ``Locator 1``, with its centre point shown.
+    * ``PP4`` is anchored to ``Locator 1``.
    
-    .. image:: /soln/ReadDial/match120prop.jpg
+    .. image:: /soln/ReadDial/tipat120pointprop.jpg
 
 * An ``Edge Count`` tool |edgecounttool| that detects the location of the needle and indicate the detected edge with a point ``PP1``
   
@@ -166,8 +165,8 @@ Tools Explanation
     
   * A supplementary angle ``A2`` for deconflicting results from ``A1``
   
-    * One ``Pencil`` tool named ``P2`` joining ``PP2`` (Centre of ``Match`` tool ``MS1``) to ``PP`` (position anchor of ``Locator 1``). 
-    * An ``angle`` tool |angletool| named ``A1`` that measures the angle between the pencil lines ``P`` & ``P2``. In ``0.bmp``, ``A2`` should appear as an 180° angle.
+    * One ``Pencil`` tool named ``P2`` joining ``PP4`` (corner found by ``Tip`` tool ``Tip``) to ``PP`` (position anchor of ``Locator 1``). 
+    * An ``angle`` tool |angletool| named ``A2`` that measures the angle between the pencil lines ``P`` & ``P2``. In ``0.bmp``, ``A2`` should appear as an 180° angle.
   
     ====== =======
     |p2|    |A2|
