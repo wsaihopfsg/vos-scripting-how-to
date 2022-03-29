@@ -173,7 +173,7 @@ Tools Explanation
     ``P2``  ``A2``
     ====== =======
     
-    .. |p2| image:: /soln/ReadDial/pencilp2.jpg 
+    .. |p2| image:: /soln/ReadDial/pencilp2a.jpg 
       :width: 450px
 
     .. |A2| image:: /soln/ReadDial/angleA2.jpg 
