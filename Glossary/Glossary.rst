@@ -24,14 +24,14 @@ Tools
    +-----------------------------------------------------------+--------------------------------------------------------+
    |* :confval:`Match <Match>`                                 |* Preprocessing                                         |
    |                                                           |                                                        |
-   |* :confval:`Count <Count>`                                 |  * Convolve 3x3                                        |
+   |* :confval:`Count <Count>`                                 |  * |convolve|_                                         |
    |* :confval:`Edge Count <Edge Count>`                       |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* |caliper|_                                               |  * :confval:`Erode <Erode>`                            |
    |* :confval:`Point <Point>`                                 |  * Gaussian                                            |
-   |* |tip|_                                                   |  * High-pass (Sharpen)                                 |
+   |* |tip|_                                                   |  * High-pass                                           |
    |* :confval:`Pencil <Pencil>`                               |  * :confval:`Invert <Invert>`                          |
-   |* |distance|_                                              |  * Low-pass (Blur)                                     |
+   |* |distance|_                                              |  * Low-pass                                            |
    |* |rake|_                                                  |  * Mask                                                |
    |* |contour|_                                               |  * |median|_                                           |
    |* :confval:`Angle <Angle>`                                 |  * :confval:`Normalize`                                |
@@ -47,6 +47,9 @@ Tools
    |* Verify                                                   |  * Thresh (adaptive)                                   |
    |* OCV                                                      |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
+
+.. |convolve| replace:: ``Convolve 3x3``
+.. _convolve: ../intro/Basic/Preprocessor/Preprocessor.html
 
 .. |tip| replace:: ``Tip``
 .. _tip: ../soln/ReadDial/ReadDial.html
