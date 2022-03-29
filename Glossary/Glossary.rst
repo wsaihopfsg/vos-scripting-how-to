@@ -28,20 +28,20 @@ Tools
    |* :confval:`Edge Count <Edge Count>`                       |  * |dilate|_                                           |
    |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
    |* |caliper|_                                               |  * :confval:`Erode <Erode>`                            |
-   |* :confval:`Point <Point>`                                 |  * Gaussian                                            |
-   |* |tip|_                                                   |  * High-pass                                           |
+   |* :confval:`Point <Point>`                                 |  * |gaussian|_                                         |
+   |* |tip|_                                                   |  * |highpass|_                                         |
    |* :confval:`Pencil <Pencil>`                               |  * :confval:`Invert <Invert>`                          |
-   |* |distance|_                                              |  * Low-pass                                            |
-   |* |rake|_                                                  |  * Mask                                                |
+   |* |distance|_                                              |  * |lowpass|_                                          |
+   |* |rake|_                                                  |  * |mask|_                                             |
    |* |contour|_                                               |  * |median|_                                           |
    |* :confval:`Angle <Angle>`                                 |  * :confval:`Normalize`                                |
-   |* |arc|_                                                   |  * Project H                                           |
-   |* |circle|_                                                |  * Project V                                           |
+   |* |arc|_                                                   |  * |projecth|_                                         |
+   |* |circle|_                                                |  * |projectv|_                                         |
    |* |concent|_                                               |  * :confval:`Remove blobs <Remove blobs>`              |
    |* Graphics                                                 |  * |shearx|_                                           |
    |* :confval:`Barcode <Barcode>`                             |  * |sheary|_                                           |
-   |                                                           |  * Sobel                                               |
-   |* :confval:`QR Code <QR Code>`                             |  * Subtract                                            |
+   |                                                           |  * |sobel|                                             |
+   |* :confval:`QR Code <QR Code>`                             |  * |subtract|                                          |
    |                                                           |  * :confval:`Threshold <Threshold>`                    |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
@@ -50,6 +50,22 @@ Tools
 
 .. |convolve| replace:: ``Convolve 3x3``
 .. _convolve: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |gaussian| replace:: ``Gaussian``
+.. _gaussian: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |highpass| replace:: ``High-pass``
+.. _highpass: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |lowpass| replace:: ``Low-pass``
+.. _lowpass: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |mask| replace:: ``Mask``
+.. _mask: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |projecth| replace:: ``Project H``
+.. _projecth: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |projectv| replace:: ``Project V``
+.. _projectv: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |sobel| replace:: ``Sobel``
+.. _sobel: ../intro/Basic/Preprocessor/Preprocessor.html
+.. |subtract| replace:: ``Subtract``
+.. _subtract: ../intro/Basic/Preprocessor/Preprocessor.html
 
 .. |tip| replace:: ``Tip``
 .. _tip: ../soln/ReadDial/ReadDial.html
