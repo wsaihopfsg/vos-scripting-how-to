@@ -45,7 +45,7 @@ Tools
    |                                                           |  * :confval:`Threshold <Threshold>`                    |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
    |* Verify                                                   |  * Thresh (adaptive)                                   |
-   |                                                           |  * |zoom|_                                             |
+   |* OCV                                                      |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
 .. |tip| replace:: ``Tip``

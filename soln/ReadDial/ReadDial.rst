@@ -174,10 +174,10 @@ Tools Explanation
     ====== =======
     
     .. |p2| image:: /soln/ReadDial/pencilp2a.jpg 
-      :width: 450px
+      :width: 300px
 
     .. |A2| image:: /soln/ReadDial/angleA2.jpg 
-      :width: 240px
+      :width: 260px
 
 Why 2 angles are needed
 ########################
