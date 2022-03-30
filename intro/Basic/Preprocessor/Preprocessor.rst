@@ -94,8 +94,8 @@ Tools Explanation
 
   .. |pre| image:: /intro/Basic/Preprocessor/preprop.jpg
   .. |pre1| image:: /intro/Basic/Preprocessor/pre1prop.jpg
-  .. |pre2| image:: /intro/Basic/Preprocessor/pre2prop.jpg  
-  .. |pre3| image:: /intro/Basic/Preprocessor/pre3prop.jpg
+  .. |pre2| image:: /intro/Basic/Preprocessor/pre2propA.jpg  
+  .. |pre3| image:: /intro/Basic/Preprocessor/pre3propA.jpg
   .. |pre4| image:: /intro/Basic/Preprocessor/pre4prop.jpg
   .. |pre5| image:: /intro/Basic/Preprocessor/pre5prop.jpg
   .. |pre6| image:: /intro/Basic/Preprocessor/pre6prop.jpg
@@ -117,32 +117,23 @@ Running the solution
 
 * At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. 
 
-* We can observe that
-   
-  * ``Pre2`` is able to recognize the alphabets with 100% accuracy, 
-  * ``OCR`` has difficult to decode the last R of *italic font OCR*. Tweaking the ``Required score`` of ``OCR`` manually does not seem to help as summarize in the following table.
-    
-    * 85: italicfontOC
-    * 50: italicfontOCI
-    * 40: italicfontOCIc
-    * 10: c italicfontOC     
+* We first examine the box with ``Pre2`` & ``Pre3``
+  
+  .. image:: /intro/Basic/Preprocessor/results23a.jpg
 
-+-------------------------------------------------+-------------------------------------------------+
-||1|                                              ||2|                                              |
-|                                                 |                                                 |
-|``Required score`` = 85                          |``Required score`` = 50                          |
-+-------------------------------------------------+-------------------------------------------------+
-||3|                                              ||4|                                              |
-|                                                 |                                                 |
-|``Required score`` = 40                          |``Required score`` = 10                          |
-+-------------------------------------------------+-------------------------------------------------+
+  * Both ``Low-pass`` (``Pre2``) & ``Gaussian`` (``Pre3``) are low-pass filters that is able to remove noise by blurring
+    * ``Low-pass`` (``Pre2``) blurs out noise and edges 
+    * ``Gaussian`` (``Pre3``) blurs out noise but is able to retain edges better than ``Low-pass``
 
 .. Note::
-  * In this case where |charsamesize| is unchecked in the ``font editor`` |fonteditor|,
-    
-    * Spaces may become hard to detect
-    * Other taught-in chracters may have a higher score than the correct character, like in this example *i* seems fit into the downward stroke of the *R*.
+  * White noise exists in all frequencies
+  * Edges are sudden changes in intensity values and hence exist as high frequencies
+  * ``Low-pass`` filter allows low frequency contents to pass and block high frequencies
+    * Therefore ``Low-pass`` filter helps to reduce noise but also blurs edges 
+  * ``Gaussian``filter does not have a sharp cut-off frequency like ``Low-pass`` which cuts off all high-frequency contents abruptly.
+    * Hence ``Gaussian`` is better suited to remove noise while preserving edges
       
+
 
 .. Tip::
   #OCR #preprocessor #shear #italic #template #AI #grayscale #intensity
