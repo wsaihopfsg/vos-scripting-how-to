@@ -47,7 +47,7 @@ Tools Explanation
 -----------------
 * At the :hoverxreftooltip:`Tool Setup page <intro/Basic/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until ``many.bmp`` is loaded. 
 
-  .. image:: /intro/Basic/Preprocessor/preoverview.jpg
+  .. image:: /intro/Basic/Preprocessor/preoverview1.jpg
 
   * ``many.bmp`` is made up of these 2 images
   
@@ -98,9 +98,9 @@ Tools Explanation
   .. |pre3| image:: /intro/Basic/Preprocessor/pre3propA.jpg
   .. |pre4| image:: /intro/Basic/Preprocessor/pre4prop.jpg
   .. |pre5| image:: /intro/Basic/Preprocessor/pre5prop.jpg
-  .. |pre6| image:: /intro/Basic/Preprocessor/pre6prop.jpg
-  .. |pre7| image:: /intro/Basic/Preprocessor/pre7propA.jpg
-  .. |pre8| image:: /intro/Basic/Preprocessor/pre8propA.jpg
+  .. |pre6| image:: /intro/Basic/Preprocessor/pre6propB.jpg
+  .. |pre7| image:: /intro/Basic/Preprocessor/pre7propB.jpg
+  .. |pre8| image:: /intro/Basic/Preprocessor/pre8propB.jpg
   .. |pre9| image:: /intro/Basic/Preprocessor/pre9prop.jpg
   .. |pre10| image:: /intro/Basic/Preprocessor/pre10prop.jpg
   .. |pre11| image:: /intro/Basic/Preprocessor/pre11prop.jpg
@@ -158,11 +158,14 @@ Running the solution
 
 * The box with ``Pre6`` , ``Pre7`` & ``Pre5`` demonstrates the use of ``Mask``
   
-  .. image:: /intro/Basic/Preprocessor/results678a.jpg
+  .. image:: /intro/Basic/Preprocessor/results678B.jpg
 
-  * ``Pre6`` simply turns the grayscale image to binary, in which black pixels are 0s & white pixels are 1s. The ``mask`` uses these 0s and 1s to decide whether to replce this value.
+  * ``Pre6`` simply turns the grayscale image to binary using ``Threshold (adaptive)``, in which black pixels are 0s & white pixels are 1s. The ``mask`` uses these 0s and 1s to decide whether to replce this value.
   * ``Pre7`` fills all the 0s with the ``Fill value`` of 255, due to ``Invert`` being 1
   * ``Pre8`` fills all the 1s with the ``Fill value`` of 255, due to ``Invert`` being 0
+
+  .. note::
+    ``Threshold (adaptive)`` is used to create a binary image sensitive to lighting changes or reflection. For each pixel, a mean value is calculated around its ``Width`` x ``Height``. The amount ``Level`` is added to that mean to obtain the binary threshold.
 
 .. note::
   The pixels that are not replced by ``mask`` retain their original intensity values
@@ -220,5 +223,5 @@ Running the solution
   * Ensure the sum of the coefficients divided by the divider is between 0-1
   
 .. Tip::
-  #OCR #preprocessor #shear #italic #template #AI #grayscale #intensity
+  #preprocessor #project #horizontal #vertical #convolve #3x3 #high-pass #low-pass #sobel #subtract #gaussian #median #mask #invert
 

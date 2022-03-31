@@ -44,10 +44,12 @@ Tools
    |* :confval:`QR Code <QR Code>`                             |  * |subtract|                                          |
    |                                                           |  * :confval:`Threshold <Threshold>`                    |
    |* :confval:`OCR <OCR>`                                     |  * :confval:`Threshold (band) <Threshold (band)>`      |
-   |* Verify                                                   |  * Thresh (adaptive)                                   |
+   |* Verify                                                   |  * |thresadp|_                                         |
    |* OCV                                                      |  * |zoom|_                                             |
    +-----------------------------------------------------------+--------------------------------------------------------+
 
+.. |thresadp| replace:: ``Thresh (adaptive)``
+.. _thresadp: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |convolve| replace:: ``Convolve 3x3``
 .. _convolve: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |gaussian| replace:: ``Gaussian``

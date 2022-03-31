@@ -150,7 +150,7 @@ Basic Topics
 || |preprocessintro|                                                                                        |
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |preprocessintro| image:: /intro/Basic/Preprocessor/preoverview.jpg
+.. |preprocessintro| image:: /intro/Basic/Preprocessor/preoverview1.jpg
 
 Advanced Topics
 ===============

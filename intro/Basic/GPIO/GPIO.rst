@@ -141,6 +141,10 @@ Tools Explanation
       .. note::
         ``Normalize`` & ``Equalize`` perform similar functions of extending the pixel intensities to the full range of 0-255. However they are not the same. Please refer to the VOS manual and online resources to learn more about the differences between these 2 preprocessors.
 
+        ``Normalize`` : Adjust the pixel intensities to cover the full range from 0 to 255. Remove Min% and Max% intensity pixels before adjusting.
+
+        ``Equalize`` : broadens image intensity to span the entire range from 0 to 255. The darkest pixels in the area will be set to 0; the brightest pixels in the area will be set to 255. Other pixels are set based on a statistical normalization of the intensity histogram.
+
 
 Code Walk-Through
 -----------------
