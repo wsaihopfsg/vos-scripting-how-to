@@ -62,7 +62,7 @@ Code Walk-Through
   
 * ``App.config``
   
-  * Line 4: The configured server port. In our case it is |5025|_. //todo fix hyperlink
+  * Line 4: The configured server port. In our case it is ``5025``. 
   * Line 5: The server address. Since ``iServer.exe`` is running on the same machine as the c# client app, the local loopback address is configured.
   * Line 6: The default solution to load when the custom c# client app runs.
   * Line 7: The unit used for the custom c# client app
@@ -227,6 +227,3 @@ Running the c# client
 
 .. |APIhelp| image:: /intro/Advanced/csharp/vbhelp.jpg
 
-.. |5025| replace:: ``5025``
-
-.. _5025: `refcir`

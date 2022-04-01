@@ -42,7 +42,7 @@ This sample demonstrates
   :class: tight-table 
 
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__   //todo:update soln |
+  |1. ``preAbsence.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GPIO/preAbsence.bin?raw=true>`__                      |
   |                                     |                                                                                                                                                    |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/sensorsetup:Sensor Setup>` |solnsetup| |cir1|, import |import| |cir2| solution   |  
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -254,7 +254,7 @@ Image Logging
 .. Note::
   The difference between ``Image Logging`` and ``Image File Logging`` 
   
-  *  ``Image Logging`` : Images saved in memory, with a limit of xx //todo
+  *  ``Image Logging`` : Images saved in memory, with a limit 
   *  ``Image File Logging`` : Images saved to PC location
 
 Image File Logging
@@ -270,7 +270,7 @@ Image File Logging
   User may choose between ``.bmp`` or ``jpg`` as the image logging format.
 
 .. Note::
-  File names can be substituted a different name for one image using LogImage/WriteImageFile/WriteImageTools/WriteHistoryImage. //todo: wat are the differences?
+  File names can be substituted a different name for one image using LogImage/WriteImageFile/WriteImageTools/WriteHistoryImage. 
 
 .. Note::
   Click on |imgfilelogen| to toggle between enabling/disabling ``Image File Logging``

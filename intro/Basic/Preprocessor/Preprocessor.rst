@@ -161,11 +161,11 @@ Running the solution
   .. image:: /intro/Basic/Preprocessor/results678B.jpg
 
   * ``Pre6`` simply turns the grayscale image to binary using ``Threshold (adaptive)``, in which black pixels are 0s & white pixels are 1s. The ``mask`` uses these 0s and 1s to decide whether to replce this value.
-  * ``Pre7`` fills all the 0s with the ``Fill value`` of 255, due to ``Invert`` being 1
-  * ``Pre8`` fills all the 1s with the ``Fill value`` of 255, due to ``Invert`` being 0
+  * ``Pre7`` fills all the 0s with the ``Fill value`` of 200, due to ``Invert`` being 1
+  * ``Pre8`` fills all the 1s with the ``Fill value`` of 200, due to ``Invert`` being 0
 
   .. note::
-    ``Threshold (adaptive)`` is used to create a binary image sensitive to lighting changes or reflection. For each pixel, a mean value is calculated around its ``Width`` x ``Height``. The amount ``Level`` is added to that mean to obtain the binary threshold.
+    ``Threshold (adaptive)`` is used to create a binary image sensitive to lighting changes or reflection. For each pixel, a mean value is calculated around its ``Width`` x ``Height``. The amount ``Level`` is added to that mean to obtain the binary threshold. ``Level`` can be negative.
 
 .. note::
   The pixels that are not replced by ``mask`` retain their original intensity values

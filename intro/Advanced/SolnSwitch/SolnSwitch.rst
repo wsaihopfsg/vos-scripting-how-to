@@ -482,7 +482,7 @@ Running the solution
   There is a artificially inserted delay by placing ``chanegSolution`` within the ``Periodic: 200ms`` function. You may choose a custom periodic function with a shorter interval to reduce this delay.
 
 .. warning::
-  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics. //todo confirm this is really possible?
+  The statistics are reset. You will have to make use of ``persistent variables`` to store the run statistics. 
 
 .. tip::
   #multiple #solutions #switching #OCR #scale-invariant #roi #retrigger

@@ -14,7 +14,29 @@ This sample demonstrates
 1. How to dynamically change ROI through VOS script
 2. Reading of QR codes sequentially through ROI (region-of-interest) adjustment 
 
-//todo: parameter table for setparam
+.. _setRoiTable:
+
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ROI Type       | Points             | Explanation                                                                                 |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``point``      | x y                |                                                                                             |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``rect``       | x1 y1 x2 y2        | top left and bottom right corner points                                                     |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``line``       | x1 y1 x2 y2        | end points                                                                                  |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``circle``     | x1 y1 x2 y2        | any point on the circumference, opposite point on circumference along the diameter          |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``arc``        | x1 y1 x2 y2 x3 y3  | start point of the arc, any point along the arc, end point of the arc                       |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``polyline``   | x1 y1 ... xn yn    | all the vertex points                                                                       |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``polygon``    | x1 y1 ... xn yn    | all the vertex points. Polygon automatically closed by connecting the first and last points |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``annulus``    | x1 y1 x2 y2 x3 y3  | center point, any point on the outer circle, any point on the inner circle                  |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
+ | ``annulararc`` | x1 y1 x2 y2 x3 y3  | center point, a corner of the inner arc, corner at the opposite end on the outer arc        |
+ +----------------+--------------------+---------------------------------------------------------------------------------------------+
 
 .. Note::
   Without any scripting, VOS is able to read up to 64 QR codes simultaneously at one go within the ROI.  
@@ -106,42 +128,16 @@ Periodic Function
 
 * The shift ROI operation is performed by the ``setparam`` function as high-lighted aboved in line 13. The following table is copied from the VOS online help page; for QR code reading however, ``rect`` will suffice.
 
-.. _setRoiTable:
-
-//todo: shift table up, and line #: code explanation
- 
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ROI Type       | Points             | Explanation                                                                                 |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``point``      | x y                |                                                                                             |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``rect``       | x1 y1 x2 y2        | top left and bottom right corner points                                                     |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``line``       | x1 y1 x2 y2        | end points                                                                                  |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``circle``     | x1 y1 x2 y2        | any point on the circumference, opposite point on circumference along the diameter          |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``arc``        | x1 y1 x2 y2 x3 y3  | start point of the arc, any point along the arc, end point of the arc                       |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``polyline``   | x1 y1 ... xn yn    | all the vertex points                                                                       |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``polygon``    | x1 y1 ... xn yn    | all the vertex points. Polygon automatically closed by connecting the first and last points |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``annulus``    | x1 y1 x2 y2 x3 y3  | center point, any point on the outer circle, any point on the inner circle                  |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
- | ``annulararc`` | x1 y1 x2 y2 x3 y3  | center point, a corner of the inner arc, corner at the opposite end on the outer arc        |
- +----------------+--------------------+---------------------------------------------------------------------------------------------+
-
 * The ``argList`` is stored in the array ``Tool1Pos`` defined in lines 5-12
   
-  0. Name of the parameter being set, ``setroi``
-  1. Tool name, ``B2d0``
-  2. CamID 
-  3. ROI Type, ``rect``
-  4. x1 is the x-coordinate of the top left corner
-  5. y1 is the y-coordinate of the top left corner
-  6. x2 is the x-coordinate of the bottom right corner
-  7. y2 is the y-coordinate of the bottom right corner
+  1. Name of the parameter being set, ``setroi``
+  2. Tool name, ``B2d0``
+  3. CamID 
+  4. ROI Type, ``rect``
+  5. x1 is the x-coordinate of the top left corner
+  6. y1 is the y-coordinate of the top left corner
+  7. x2 is the x-coordinate of the bottom right corner
+  8. y2 is the y-coordinate of the bottom right corner
 
 
 * ``nowCtr`` in line 19 is a counter that keeps track of the current QR code being read, numbered as shown below.

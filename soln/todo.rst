@@ -12,17 +12,8 @@ TODO
 Summary of todo
 
 * Tolerance settings, p19-21 in Bible
-* Preprocessors
-  * Kernels https://setosa.io/ev/image-kernels/
-  * Subtract
-  * sobel
-  * mask
-  * high / low pass
 * setbrightness/contrast
-* Tools
-  * Gfx
-  * Contour
-  * You can define up to four locators.
+* You can define up to four locators.
   
 
 +------------------+----------------------------------+------------------------------------------------------------------+

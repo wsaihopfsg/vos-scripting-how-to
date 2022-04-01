@@ -56,7 +56,7 @@ Tools Explanation
 
 * Right-click on the row occupied by the preprocessor ``Pre`` in the ``Tool List``, to bring up properties of ``Pre``. Drag the ``Preprocess Properties`` window so that it is not blocking the main picture. The 5 preprocessors used in ``Pre`` are
 
-  #. Normalize //todo difference between normalize and equalize
+  #. Normalize
   #. Threshold (band)
   #. Invert
   #. Remove blobs
