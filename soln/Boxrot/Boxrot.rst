@@ -196,8 +196,13 @@ Running the solution
   :width: 300px
 .. |dial6| image:: /soln/Boxrot/boxrotresulttrans6.jpg
   :width: 300px
+.. |fast| image:: /soln/Boxrot/boxrotinspect.jpg
 
+.. note:: 
+  |fast|
+  
+  The tools used in this solution ensures a very quick inspection time.
 
 .. tip::
-  #dial #analog #needle #angle #pencil #count #locator #match  #remove #blobs #preprocessor
+  #angle #edge #count #fast #pencil #preprocessor
 
