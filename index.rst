@@ -309,6 +309,21 @@ User contributions
 
 .. |readmeters| image:: /soln/ReadDial/readdialoverview.jpg
 
+:doc:`Checking Box Orientation & Angle <soln/Boxrot/Boxrot>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Reject Boxes in Wrong Orientation On a Conveyor Belt                                                       |
++===========================================================================================================+
+|| In this application, the rectangular box needs to be put in a horizontal orientation with rotation not   |
+|| exceeding certain thresholds. If the box is in the wrong orientation, the inspection fails. If the box is|
+|| in the correct orientation but the exceeds the rotation limit, the inspection is recycled. Being on a    |
+|| conveyor, very fast inspection speed is also required.                                                   |
+|| |boxrot|                                                                                                 |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |boxrot| image:: /soln/Boxrot/boxrotoverview.jpg
+
 :doc:`Glossary <Glossary/Glossary>`
 ========================================
 

@@ -142,23 +142,27 @@ Configuration
    * :doc:`/soln/Menkyo/Menkyo`
    * :doc:`/soln/ReadDial/ReadDial` 
    * :doc:`/intro/Basic/EdgeCountLocator/EdgeCountLocator`
+   * :doc:`/soln/Boxrot/Boxrot`
 
 .. confval:: Point
 
    * :doc:`/intro/Basic/PencilLocator/PencilLocator`
    * :doc:`/soln/ReadDial/ReadDial` 
    * :doc:`/intro/Basic/EdgeCountLocator/EdgeCountLocator`
-  
+   * :doc:`/soln/Boxrot/Boxrot`
+
 .. confval:: Pencil
 
    * :doc:`/intro/Basic/PencilLocator/PencilLocator`
    * :doc:`/soln/ReadDial/ReadDial` 
-
+   * :doc:`/soln/Boxrot/Boxrot`
+  
 .. confval:: Angle
 
    * :doc:`/intro/Basic/MathFunc/MathFunc`
    * :doc:`/soln/ReadDial/ReadDial` 
-
+   * :doc:`/soln/Boxrot/Boxrot`
+  
 .. confval:: String
 
    * :doc:`/intro/Basic/StrFunc/StrFunc`
