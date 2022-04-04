@@ -324,6 +324,34 @@ User contributions
 
 .. |boxrot| image:: /soln/Boxrot/boxrotoverview.jpg
 
+.. :doc:`Checking Punnet Orientation <soln/Punnet/Punnet>`
+.. ----------------------------------------------------------------------------------------------------------------
+
+.. +-----------------------------------------------------------------------------------------------------------+
+.. .. |Reject Boxes in Wrong Orientation On a Conveyor Belt (II)                                                  |
+.. +===========================================================================================================+
+.. .. || This application is similar to the previous one, in which the rectangular box needs to be put in a       |
+.. .. || certain orientation with no requirement for computing the angle of rotation. If the box is in the wrong  |
+.. .. || orientation, the inspection fails. If the box is in the correct orientation, the inspection passes. This |
+.. .. || helps to reduce inspection time further                                                                  |
+.. .. || |punrot|                                                                                                 |
+.. +-----------------------------------------------------------------------------------------------------------+
+
+.. .. |punrot| image:: /soln/Punnet/punnetoverview.jpg
+
+:doc:`External Trigger <soln/Extrig/Extrig>`
+----------------------------------------------------------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Wiring up GPIOs to VOS                                                                                     |
++===========================================================================================================+
+|| This tutorial contains information on how to wire-up GPIOs to VOS. Note that most screen shots are not   |
+|| available on the VOS emulator because physical hardware is involved.                                     |
+|| |extrig|                                                                                                 |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |extrig| image:: /soln/Extrig/extrigpnp.jpg
+
 :doc:`Glossary <Glossary/Glossary>`
 ========================================
 
