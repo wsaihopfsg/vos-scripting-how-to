@@ -4,7 +4,7 @@
 
 .. include:: /shared/EmulatorComponents.rst
 
-Punnet Orientation Checking
+External Trigger Setup and Connection
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Summary of this tutorial
@@ -15,9 +15,10 @@ Summary of this tutorial
 
 Setting up of GPIOs
 ---------------------
-* * At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/inspectiontrig:Inspection Trigger Setup>` |sensorsetup| |cir1|, 
 
-.. image:: /soln/Boxrot/boxrottoolsetup.jpg
+* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/inspectiontrig:Inspection Trigger Setup>` |sensorsetup| |cir1|, set ``Trigger Source`` to ``Inspection Trigger`` |cir2|.
+
+* At the :hoverxreftooltip:`Setup Connections <soln/Hover/setupio:Setup IO>` |conn| |cir1|, ``Setup I/O`` |cir2| is used for interface configuration.
 
 * There is an ``Edge Count`` tool |edgecounttool| named ``E`` with preprocessor as shown below
 

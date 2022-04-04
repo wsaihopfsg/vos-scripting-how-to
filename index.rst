@@ -339,7 +339,7 @@ User contributions
 
 .. .. |punrot| image:: /soln/Punnet/punnetoverview.jpg
 
-:doc:`External Trigger <soln/Extrig/Extrig>`
+:doc:`GPIOs Setup and Connection <soln/Extrig/Extrig>`
 ----------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
