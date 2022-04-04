@@ -174,3 +174,11 @@
 .. |load4edit| image:: /img/emulator/buttons/load4edit.jpg
 
 .. |fontzoom| image:: /img/emulator/buttons/fontzoom.png
+
+.. |gpi| image:: /img/emulator/buttons/input.png
+   :width: 40px
+   :height: 40px
+
+.. |gpo| image:: /img/emulator/buttons/output.png
+   :width: 40px
+   :height: 40px

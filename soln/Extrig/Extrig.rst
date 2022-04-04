@@ -13,6 +13,13 @@ Summary of this tutorial
 2. Wiring of GPIs & configuration in VOS
 3. Wiring of GPOs & configuration in VOS
 
+VOS 2000 Pinout
+#####################
+
+* Please refer to the datasheets & manual for the pinout for your VOS model. For this tutorial we have used the pinout for VOS2000 as an example
+
+.. image:: /soln/Extrig/VOS2000pintout.jpg
+
 Setting up of GPIOs
 ---------------------
 
@@ -20,34 +27,12 @@ Setting up of GPIOs
 
 * At the :hoverxreftooltip:`Setup Connections <soln/Hover/setupio:Setup IO>` |conn| |cir1|, ``Setup I/O`` |cir2| is used for interface configuration.
 
-* There is an ``Edge Count`` tool |edgecounttool| named ``E`` with preprocessor as shown below
+GPI Configuration
+###################
 
-  ======================================== ============================================================
-  |edgecountprop|                          |edgecountpre|
-  Properties of edge count tool            Properties of the preprocessor of the edge count tool
-  ======================================== ============================================================
+* Click on ``Inputs`` |gpi|, and the ``Input COnfiguration`` will be shown
 
-  .. |edgecountprop| image:: /soln/Boxrot/boxrotedgecountprop.jpg
-  .. |edgecountpre| image:: /soln/Boxrot/boxrotedgecountpre.jpg
-
-  * The region-of-interest (ROI) of the ``Edge Count`` tool |edgecounttool| is designed to intersection with the edges of the punnet. With the help of the preprocessor, the 4 intersections points are  
-    
-    * Point ``PP`` is located at the low right-hand corner of the intersections
-    * Point ``PP1`` is located at the top right-hand corner of the intersections
-    * Point ``PP2`` is located at the top left-hand corner of the intersections
-    * Point ``PP3`` is located at the low left-hand corner of the intersections
-  
-* 2 ``Pencil`` tools |penciltool| defined
-
-  * ``Pencil`` tool |penciltool| name ``P`` joining points ``PP2`` to ``PP1``
-  * ``Pencil`` tool |penciltool| name ``P1`` joining points ``PP2`` to ``PP3``
-
-* An ``Angle`` tool |angletool| named ``A`` defined to compute the angle between ``P`` & ``P1``  
-
-.. note::
-  Make sure ``A`` is identical to the picture shown `here <#tools-explanation>`__. Sometimes the adjacent angle on a straight line of A is high-lighted which may give outcomes that differ from the solution design.
-
-* A ``Distance`` tool |distancetool| named ``L`` which measures the distance between ``PP`` & ``PP1``.
+.. image:: /soln/Extrig/inputconfig.png
   
 Code Walk-Through
 -----------------
