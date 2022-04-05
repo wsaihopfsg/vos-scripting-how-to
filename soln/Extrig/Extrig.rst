@@ -16,7 +16,7 @@ Summary of this tutorial
 VOS 2000 Pinout
 #####################
 
-* Please refer to the datasheets & manual for the pinout for your VOS model. For this tutorial we have used the pinout for VOS2000 as an example
+* Please refer to the datasheets & manual for the pinout of your VOS model. In this tutorial we have used the pinout of VOS2000 as an example
 
 .. image:: /soln/Extrig/VOS2000pintout.jpg
 
@@ -40,13 +40,13 @@ GPI Configuration
   +---------------+---------------------------------------------------------------------------------------------+
   | **Input**     | **Explanation**                                                                             |
   +---------------+---------------------------------------------------------------------------------------------+
-  |Trigger (GPI0) | * Set the polarity (Active High or Active Low) in the "Control" column                      |
+  |Trigger (GPI0) | * Set the polarity (Active High or Active Low) in the ``Control`` column                    |
   |               | * Enter a debounce period                                                                   |
-  |               | * Set a trigger divider "Triggers per Image" for the sensor trigger input                   |
+  |               | * Set a trigger divider ``Triggers per Image`` for the sensor trigger input                 |
   +---------------+---------------------------------------------------------------------------------------------+
   |IN1/GPI1       | * Use the drop-down list to select the function                                             |
   +---------------+ * ``Job Change`` and ``Job Select`` has been set for input 1 & 2 respectively               |
-  |IN2/GPI2       | * The "Value" column shows the current status of all inputs                                 |
+  |IN2/GPI2       | * The ``Value`` column shows the current status of all inputs                               |
   |               |                                                                                             |  
   |               |   * 1 for high, 0 for low                                                                   |
   +---------------+---------------------------------------------------------------------------------------------+
@@ -93,7 +93,7 @@ GPO Configuration
   Change the output based on your application, please make sure ``Pulse Duration`` is according to your design needs
 
 .. note:: 
-  For details of the outputs, please refer to the VOS manual Section 7.4.2
+  For details of the outputs, please refer to Section 7.4.2 of the VOS manual 
 
 GPO Wiring
 #####################
@@ -102,13 +102,13 @@ GPO Wiring
 * In this example, we use OUT1 and OUT2 where Pin 3 represent “Pass” and Pin 10 represent “Fail” respectively. 
 
 ======================== =
-PNP Wiring
+**PNP Wiring**
 ------------------------ -
 |pnpgpo|
 ======================== =
 
 ======================== =
-NPP Wiring
+**NPP Wiring**
 ------------------------ -
 |npngpo|
 ======================== =
