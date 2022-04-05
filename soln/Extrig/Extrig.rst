@@ -92,6 +92,9 @@ GPO Configuration
 .. note:: 
   Change the output based on your application, please make sure ``Pulse Duration`` is according to your design needs
 
+.. note:: 
+  For details of the outputs, please refer to the VOS manual Section 7.4.2
+
 GPO Wiring
 #####################
 
@@ -112,9 +115,6 @@ NPP Wiring
 
 .. |pnpgpo| image:: /soln/Extrig/gpopnp.jpg
 .. |npngpo| image:: /soln/Extrig/gponpn.jpg
-
-.. note:: 
-  For details of the outputs, please refer to the VOS manual Section 7.4.2
 
 .. tip::
   #GPI #GPO #wiring #GPIO #PNP #NPN
