@@ -65,7 +65,7 @@ Tools Explanation
   .. |edgecountprop| image:: /soln/Boxrot/boxrotedgecountprop.jpg
   .. |edgecountpre| image:: /soln/Boxrot/boxrotedgecountpre.jpg
 
-  * The region-of-interest (ROI) of the ``Edge Count`` tool |edgecounttool| is designed to intersection with the edges of the punnet. With the help of the preprocessor, the 4 intersections points are  
+  * The region-of-interest (ROI) of the ``Edge Count`` tool |edgecounttool| is designed to intersect with the edges of the punnet. With the help of the preprocessor, the 4 intersections points are  
     
     * Point ``PP`` is located at the low right-hand corner of the intersections
     * Point ``PP1`` is located at the top right-hand corner of the intersections

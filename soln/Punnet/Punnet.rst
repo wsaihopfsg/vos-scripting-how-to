@@ -9,38 +9,39 @@ Punnet Orientation Checking
 
 Summary of this tutorial
 
-1. Using ``Edge Count`` tool |edgecounttool| to find the edge of the punnet
-2. Using ``Pencil`` tool |penciltool| to join found edges
-3. Use of ``Angle`` tool |angletool| to detect the angle between the needle and some reference points
-
-`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Boxrot>`__
+* Using ``Edge Count`` tool |edgecounttool| to find the edge of the punnet with the help of preprocessors
+  
+`Folder Contents <https://github.com/wsaihopfsg/vos-scripting-how-to/tree/master/code/Soln/Punnet>`__
 ----------------------------------------------------------------------------------------------------------
 
 .. table::
   :class: tight-table 
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``strawberries.bin``              |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/strawberries.bin?raw=true>`__                      |
+  |1. ``solution19.bin``                |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/solution19.bin?raw=true>`  __                      |
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <soln/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir2| the solution        |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |2. ``trans1.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans1.bmp?raw=true>`__                               |  
-  |                                     |for a rotated image of a strawberry punnet in the correct orientation but more than the rotation threshold. Should return RECYCLE.                     |
+  |2. ``Image2_1.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_1.bmp?raw=true>`__                             |  
+  |                                     |for a punnet in the correct orientation. Should return PASS.                                                                                           |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``trans2.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans2.bmp?raw=true>`__                               |  
-  |                                     |for an unrotated image of a strawberry punnet in the correct orientation. Should return PASS.                                                          |
+  |3. ``Image2_2.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_2.bmp?raw=true>`__                             |  
+  |                                     |for a punnet in the correct orientation. Should return PASS.                                                                                           |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |4. ``trans3.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans3.bmp?raw=true>`__                               |  
-  |                                     |for a rotated image of a strawberry punnet in the correct orientation but more than the rotation threshold. Should return RECYCLE.                     |
+  |4. ``Image2_3.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_3.bmp?raw=true>`__                             |  
+  |                                     |for a punnet in the correct orientation. Should return PASS.                                                                                           |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |5. ``trans4.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans4.bmp?raw=true>`__                               |  
-  |                                     |for an unrotated image of a strawberry punnet in the correct orientation. Should return PASS.                                                          |
+  |5. ``Image2_6.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_6.bmp?raw=true>`__                             |  
+  |                                     |for a punnet in the correct orientation. Should return PASS.                                                                                           |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |6. ``trans5.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans5.bmp?raw=true>`__                               |  
-  |                                     |for an unrotated image of a strawberry punnet in the wrong orientation. Should return FAIL.                                                            |
+  |6. ``Image2_7x.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_7x.bmp?raw=true>`__                            |  
+  |                                     |for a punnet in the wrong orientation. Should return FAIL.                                                                                             |
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |7. ``trans6.bmp``                    |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Boxrot/trans6.bmp?raw=true>`__                               |
-  |                                     |for a rotated image of a strawberry punnet in the wrong orientation and less than rotation threshold. Should return FAIL.                              |
+  |6. ``Image2_8x.bmp``                 |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_8x.bmp?raw=true>`__                            |  
+  |                                     |for a punnet in the wrong orientation. Should return FAIL.                                                                                             |
+  +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |7. ``Image2_4.bmp``                  |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Soln/Punnet/Image2_4.bmp?raw=true>`__                             |
+  |                                     |for a composite image 2 punnets the correct orientation for tool setup. Should return PASS.                                                            |
   |                                     |                                                                                                                                                       |   
   |                                     |* At the :hoverxreftooltip:`Sensor Setup page <soln/Hover/sensorsetup:Sensor Setup>` |sensorsetup| |cir1|,                                             |
   |                                     |                                                                                                                                                       |
@@ -51,23 +52,43 @@ Summary of this tutorial
 
 Tools Explanation
 -----------------
-* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``trans2.bmp`` is loaded. 
+* At the :hoverxreftooltip:`Tool Setup page <soln/Hover/toolsetup:Tool Setup>` |toolsetup| |cir1|, click on |takepic| |cir2| until  ``Image2_4.bmp`` is loaded. 
 
-.. image:: /soln/Boxrot/boxrottoolsetup.jpg
+.. image:: /soln/Punnet/punnettoolsetup.jpg
 
-* There is an ``Edge Count`` tool |edgecounttool| named ``E`` with preprocessor as shown below
+* There is are 2 ``Edge Count`` tools |edgecounttool| defined. One named ``E1`` at the top and another named ``E2`` at the bottom. 
+* For ``E1``, its properties and preprocessors are shown below
 
   ======================================== ============================================================
   |edgecountprop|                          |edgecountpre|
-  Properties of edge count tool            Properties of the preprocessor of the edge count tool
+  Properties of ``E1``                     Properties of the preprocessor of ``E1``
   ======================================== ============================================================
 
-  .. |edgecountprop| image:: /soln/Boxrot/boxrotedgecountprop.jpg
-  .. |edgecountpre| image:: /soln/Boxrot/boxrotedgecountpre.jpg
+  .. |edgecountprop| image:: /soln/Punnet/punnetedgecountprop.jpg
+  .. |edgecountpre| image:: /soln/Punnet/punnetedgecountpre.jpg
 
-  * The region-of-interest (ROI) of the ``Edge Count`` tool |edgecounttool| is designed to intersection with the edges of the punnet. With the help of the preprocessor, the 4 intersections points are  
+* For ``E2``, its properties and preprocessors are shown below
+
+  ======================================== ============================================================
+  |edgecountprop2|                         |edgecountpre2|
+  Properties of ``E2``                     Properties of the preprocessor of ``E2``
+  ======================================== ============================================================
+
+  .. |edgecountprop2| image:: /soln/Punnet/punnetedgecountprop2.jpg
+  .. |edgecountpre2| image:: /soln/Punnet/punnetedgecountpre2.jpg
+
+* The purpose of each preprocessor is summarized here
+  
+  ================== ====================================================================
+  ``Equalize``       To deal with lighting variations
+  ``Project H``      To get an average intensity horizontally
+  ``Convolve 3x3``   An Sobel edge detection in the y-direction
+  ``Threshold``      Heuristic threshold to obtain the most prominent edges 
+  ================== ====================================================================
+  
+  * The region-of-interest (ROI) of the ``Edge Count`` tool |edgecounttool| is designed to intersect with the top and bottom edges of the punnet. Numerous intersections points are defined, each with the ``X`` & ``Y`` properties enabled. 
     
-    * Point ``PP`` is located at the low right-hand corner of the intersections
+    * Since each picture may experience 
     * Point ``PP1`` is located at the top right-hand corner of the intersections
     * Point ``PP2`` is located at the top left-hand corner of the intersections
     * Point ``PP3`` is located at the low left-hand corner of the intersections

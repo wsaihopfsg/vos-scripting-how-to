@@ -313,7 +313,7 @@ User contributions
 ----------------------------------------------------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Reject Boxes in Wrong Orientation On a Conveyor Belt                                                       |
+|Reject Boxes in Wrong Orientation On a Conveyor Belt (I)                                                   |
 +===========================================================================================================+
 || In this application, the rectangular box needs to be put in a horizontal orientation with rotation not   |
 || exceeding certain thresholds. If the box is in the wrong orientation, the inspection fails. If the box is|
@@ -324,20 +324,19 @@ User contributions
 
 .. |boxrot| image:: /soln/Boxrot/boxrotoverview.jpg
 
-.. :doc:`Checking Punnet Orientation <soln/Punnet/Punnet>`
-.. ----------------------------------------------------------------------------------------------------------------
+:doc:`Checking Punnet Orientation <soln/Punnet/Punnet>`
+----------------------------------------------------------------------------------------------------------------
 
-.. +-----------------------------------------------------------------------------------------------------------+
-.. .. |Reject Boxes in Wrong Orientation On a Conveyor Belt (II)                                                  |
-.. +===========================================================================================================+
-.. .. || This application is similar to the previous one, in which the rectangular box needs to be put in a       |
-.. .. || certain orientation with no requirement for computing the angle of rotation. If the box is in the wrong  |
-.. .. || orientation, the inspection fails. If the box is in the correct orientation, the inspection passes. This |
-.. .. || helps to reduce inspection time further                                                                  |
-.. .. || |punrot|                                                                                                 |
-.. +-----------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+|Reject Boxes in Wrong Orientation On a Conveyor Belt (II)                                                  |
++===========================================================================================================+
+|| This application is similar to the previous one, in which the rectangular box needs to be put in a       |
+|| certain orientation with no requirement for computing the angle of rotation. If the box is in the correct|
+|| orientation, the inspection passes; otherwise it fails. Very fast inspection speed is again required.    |
+|| |punrot|                                                                                                 |
++-----------------------------------------------------------------------------------------------------------+
 
-.. .. |punrot| image:: /soln/Punnet/punnetoverview.jpg
+.. |punrot| image:: /soln/Punnet/punnetoverview.jpg
 
 :doc:`GPIOs Setup and Connection <soln/Extrig/Extrig>`
 ----------------------------------------------------------------------------------------------------------------
