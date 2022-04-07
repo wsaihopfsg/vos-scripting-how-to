@@ -42,6 +42,7 @@ Configuration
     
    * :doc:`/soln/Scratch/Scratch`
    * :doc:`/soln/DefectDots/DefectDots` 
+   * :doc:`/soln/Punnet/Punnet`
 
 .. confval:: sqrt
    
@@ -143,6 +144,7 @@ Configuration
    * :doc:`/soln/ReadDial/ReadDial` 
    * :doc:`/intro/Basic/EdgeCountLocator/EdgeCountLocator`
    * :doc:`/soln/Boxrot/Boxrot`
+   * :doc:`/soln/Punnet/Punnet`
 
 .. confval:: Point
 
@@ -167,3 +169,18 @@ Configuration
 
    * :doc:`/intro/Basic/StrFunc/StrFunc`
    * :doc:`/soln/ReadDial/ReadDial` 
+
+.. confval:: Equalize
+
+   * :doc:`/soln/Punnet/Punnet`
+   * :doc:`/intro/Basic/GPIO/GPIO`
+
+.. confval:: Project H
+
+   * :doc:`/soln/Punnet/Punnet`
+   * :doc:`/intro/Basic/Preprocessor/Preprocessor`
+
+.. confval:: Convolve 3x3
+
+   * :doc:`/soln/Punnet/Punnet`
+   * :doc:`/intro/Basic/Preprocessor/Preprocessor`

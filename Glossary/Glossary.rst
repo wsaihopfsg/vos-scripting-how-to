@@ -27,9 +27,9 @@ Tools
    +-----------------------------------------------------------+--------------------------------------------------------+
    |* :confval:`Match <Match>`                                 |* Preprocessing                                         |
    |                                                           |                                                        |
-   |* :confval:`Count <Count>`                                 |  * |convolve|_                                         |
+   |* :confval:`Count <Count>`                                 |  * :confval:`Convolve 3x3 <Convolve 3x3>`              |
    |* :confval:`Edge Count <Edge Count>`                       |  * |dilate|_                                           |
-   |* :confval:`Intensity <Intensity>`                         |  * |equalize|_                                         |
+   |* :confval:`Intensity <Intensity>`                         |  * :confval:`Equalize <Equalize>`                      |
    |* |caliper|_                                               |  * :confval:`Erode <Erode>`                            |
    |* :confval:`Point <Point>`                                 |  * |gaussian|_                                         |
    |* |tip|_                                                   |  * |highpass|_                                         |
@@ -37,8 +37,8 @@ Tools
    |* |distance|_                                              |  * |lowpass|_                                          |
    |* |rake|_                                                  |  * |mask|_                                             |
    |* |contour|_                                               |  * |median|_                                           |
-   |* :confval:`Angle <Angle>`                                 |  * :confval:`Normalize`                                |
-   |* |arc|_                                                   |  * |projecth|_                                         |
+   |* :confval:`Angle <Angle>`                                 |  * :confval:`Normalize <Normalize>`                    |
+   |* |arc|_                                                   |  * :confval:`Project H <Project H>`                    |
    |* |circle|_                                                |  * |projectv|_                                         |
    |* |concent|_                                               |  * :confval:`Remove blobs <Remove blobs>`              |
    |* Graphics                                                 |  * |shearx|_                                           |
@@ -53,8 +53,6 @@ Tools
 
 .. |thresadp| replace:: ``Thresh (adaptive)``
 .. _thresadp: ../intro/Basic/Preprocessor/Preprocessor.html
-.. |convolve| replace:: ``Convolve 3x3``
-.. _convolve: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |gaussian| replace:: ``Gaussian``
 .. _gaussian: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |highpass| replace:: ``High-pass``
@@ -63,8 +61,6 @@ Tools
 .. _lowpass: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |mask| replace:: ``Mask``
 .. _mask: ../intro/Basic/Preprocessor/Preprocessor.html
-.. |projecth| replace:: ``Project H``
-.. _projecth: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |projectv| replace:: ``Project V``
 .. _projectv: ../intro/Basic/Preprocessor/Preprocessor.html
 .. |sobel| replace:: ``Sobel``
@@ -96,8 +92,6 @@ Tools
 .. _median: ../soln/RefCirSizeRect/RefCirSizeRect.html
 .. |normalize| replace:: ``Normalize``
 .. _normalize: ../soln/Scratch/Scratch.html
-.. |equalize| replace:: ``Equalize``
-.. _equalize: ../intro/Basic/GPIO/GPIO.html
 .. |shearx| replace:: ``Shear X``
 .. _shearx: ../intro/Basic/OcrItalic/OcrItalic.html
 .. |sheary| replace:: ``Shear Y``
@@ -226,11 +220,13 @@ Attribute Functions
    |* GetTolerances                                |* SetToolFill                                  |
    |* GetToolName                                  |* SetToolPenColor                              |
    |* GetToolResult                                |* SetToolText                                  |
-   |* GetToolType                                  |* Sort                                         |
+   |* GetToolType                                  |* |sort|_                                      |
    |* GetToolValue                                 |* |writevar|_                                  |
    |* GetVarDimension                              |                                               |
    +-----------------------------------------------+-----------------------------------------------+
 
+.. |sort| replace:: ``Sort``
+.. _sort: ../soln/Punnet/Punnet.html   
 .. |setmatchstr| replace:: ``SetMatchString``
 .. _setmatchstr: ../intro/Basic/MathFunc/MathFunc.html
 .. |setparam| replace:: ``SetParam``

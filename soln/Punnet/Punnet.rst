@@ -375,5 +375,5 @@ Running the solution
   :width: 300px
 
 .. tip::
-  #angle #edge #count #fast #pencil #preprocessor
+  #sort #edge #count #fast #preprocessor
 
