@@ -131,6 +131,7 @@ Configuration
    * :doc:`/intro/Advanced/FTP/FTP`
    * :doc:`/intro/Basic/CountLocator/CountLocator`
    * :doc:`/soln/ReadDial/ReadDial` 
+   * :doc:`/soln/Punnet/Punnet`
   
 .. confval:: Match
 

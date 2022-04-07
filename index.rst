@@ -349,7 +349,7 @@ User contributions
 || |extrig|                                                                                                 |
 +-----------------------------------------------------------------------------------------------------------+
 
-.. |extrig| image:: /soln/Extrig/extrigpnp.jpg
+.. |extrig| image:: /soln/Extrig/gpipnp1.jpg
 
 :doc:`Glossary <Glossary/Glossary>`
 ========================================

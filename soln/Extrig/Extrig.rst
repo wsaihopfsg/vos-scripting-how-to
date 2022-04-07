@@ -65,7 +65,7 @@ Pin 4 - BK              Pin 5 - PK
 -----------------------------------------------------------------------
 ======================= ======================= =======================
 
-.. |pnpgpi| image:: /soln/Extrig/gpipnp.jpg
+.. |pnpgpi| image:: /soln/Extrig/gpipnp1.jpg
 
 ======================= ======================= =======================
 **Sensor (NPN)**        **VOS Camera**          **Power** 
@@ -77,7 +77,7 @@ Pin 4 - BK              Pin 5 - PK
 -----------------------------------------------------------------------
 ======================= ======================= =======================
 
-.. |npngpi| image:: /soln/Extrig/gpinpn.jpg
+.. |npngpi| image:: /soln/Extrig/gpinpn1.jpg
 
 .. note:: 
   Make sure that Pin 7 ``IN CMN`` is connected!
