@@ -11,7 +11,7 @@ Welcome to VOS Scripting How-To!
 The following links describe a set of basic VOS tutorials. Please note that their solution and image files are available in the respective repositories.
 
 .. note::
-   While the authors try to be technically correct in these tutorials, the datasheet and manual for VOS in https://www.pepperl-fuchs.com shall provide the final technical adjudication.
+   While the authors try to be technically correct in these tutorials, the datasheet and manual for VOS in https://www.pepperl-fuchs.com/global/en/vos.htm shall provide the final technical adjudication.
 
 You should have downloaded and installed the ``Pepperl-Fuchs Vision Configuration Tool`` as described in the manual. 
 
@@ -155,7 +155,7 @@ Basic Topics
 Advanced Topics
 ===============
 
-:doc:`Interation with C# <intro/Advanced/csharp/csharp>`
+:doc:`Interaction with C# <intro/Advanced/csharp/csharp>`
 ----------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -214,16 +214,19 @@ Advanced Topics
 
 .. |ftpviewer| image:: /intro/Advanced/FTP/overview.png
 
-:ref:`Integration with ROS (WIP) <todo>`
-----------------------------------------
+:doc:`Integration with ROS <intro/Advanced/ROS/ROS>`
+------------------------------------------------------------------
 
 +-----------------------------------------------------------------------------------------------------------+
-|Publishing (X,Y) & Rotation Information For Robot Pick-and-Place                                           |
+|VOS integration with ROS motion planning in a virtual UR5 cobot                                            |
 +===========================================================================================================+
-|| The virtual robot performs a pick-and-place demonstration in RViz based on the (X,Y) co-ordinates        |
-|| pf the camera_frame published by the VOS emulator. Path planning is done by the MoveIt! package.         |
+|| In this example, we have integrated VOS with a virtual UR5 cobot for a pick-and-place demo in ROS. VOS   |
+|| takes a picture of the scene, and outputs the location & rotation of the QR code on the object to be     |
+|| picked up. The (x,y,rotation) information is published as a ROS topic and ROS performs automatic TF      |
+|| co-ordinate transformation. The virtual robot performs path planning from its current position to "pick" |
+|| the object up. Since a gripper is not simulated on the cobot, rotation information is not used in this   |
+|| demo except for showing the blue marker for object representation.                                       |
 || |pNp|                                                                                                    |
-|| `(c) Picture Credits <http://www.google.com>`__  //todo                                                  |
 +-----------------------------------------------------------------------------------------------------------+
 
 User contributions
