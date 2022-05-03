@@ -39,7 +39,7 @@ This sample demonstrates
   :class: tight-table 
 
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-  |1. ``FTP.bin``                       |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/OcrItalic.bin?raw=true>`__                        |
+  |1. ``ftp07.bin``                     |`The solution file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Advanced/FTP/ftp07.bin?raw=true>`__                            |
   |                                     |                                                                                                                                                       |
   |                                     |* At the :hoverxreftooltip:`Solution Setup page <intro/Basic/Hover/solnsetup:Solution Setup>` |solnsetup| |cir1| , import |import| |cir1| the solution |  
   +-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
