@@ -106,7 +106,7 @@ TCP Server Setup
   .. image:: /intro/Advanced/FTP/tcpp5024.jpg
 
 .. warning:: 
-  Firewalls may block incoming connections to your socket server. 
+  Firewalls / anti-virus may block incoming connections to your socket server. 
 
 Node-Red Flow
 ###################

@@ -89,7 +89,7 @@ Connections
   The ``VOS emulator`` can be configured as a ``TCP client`` also, for which the IP address and port of the ``TCP server`` needs to be provided for connection setup. Please refer to :doc:`Publishing VOS Data to MQTT </intro/Advanced/MQTT/MQTT>`
 
 .. warning:: 
-  Firewalls may block incoming connections to your socket server. 
+  Firewalls / anti-virus may block incoming connections to your socket server. 
   
 Code Walk-Through
 -----------------

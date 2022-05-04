@@ -7,6 +7,9 @@
 VOS integration with ROS motion planning in a virtual UR5 cobot
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+.. note::
+  Code has been developed with ``ROS Melodic`` in ``Ubuntu 18.04``. No guarantee that it will work with other ROS distros. 
+
 1. VOS sends ``x``, ``y`` , ``rotation`` data to ROS vision node through TCP 
 2. ROS vision node publishes the received data to a ROS topic
 3. Object location shows in RViz as a marker  
@@ -83,6 +86,9 @@ Connections
 
 .. image:: /intro/Advanced/ROS/tcp58888.jpg
 
+.. warning:: 
+  Firewalls / anti-virus may block incoming connections to your socket server. 
+
 VOS Code Walk-Through
 ----------------------
 
@@ -144,7 +150,13 @@ Periodic: 200ms
       endif
   endif
 
-* Lines 1-12: Branch for external trigger enabled; VOS checks for external trigger signal
+exTrigEn=1 Branch 
+^^^^^^^^^^^^^^^^^^
+
+.. note::
+  VOS checks for external trigger signal here by the ROS script :ref:`fake_ar_publisher.cpp <manualTrigger>`. Trigger will only be activated once.
+
+* Lines 1-12: Branch for external trigger enabled
 * Line 2: Read from socket until carrier return character (ASCII 13) to ``ReadBuffer``
 * Lines 3-11: if ``ReadBuffer`` is not empty
 * Line 6: Obtain the first character to ``CommandCharacter``
@@ -152,7 +164,13 @@ Periodic: 200ms
 * Line 8: Invoke trigger in VOS
 * Line 9: Turn ``exTrigEn`` off
 
-* Lines 13-23: Branch for VOS outputting data to socket, by checking if ``spamSocket=1``
+spamSocket=1 Branch
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+  VOS outputting data to socket here. The same data will be sent every 400ms for a total of 8 seconds.
+
+* Lines 13-23: The flag ``spamSocket=1`` signifies that post image processing has completed
 * Line 14-17: If count-down counter ``socketPub`` is even, which eventually makes the output interval to 2x200ms = 400ms. With ``socketPub`` initialized to 40, it means the values will be sent through the socket 20 times.
 * Line 16: Write ``socketStr`` to socket
 * Line 18: Decrement counter. 
@@ -340,6 +358,9 @@ fake_ar_publisher.cpp
     ros::spin();
   }
 
+Initialization
+^^^^^^^^^^^^^^^^^
+
 * Line 12: ROS topic publish
 * Line 13: Marker visualization publish
 * Line 14: 
@@ -348,16 +369,42 @@ fake_ar_publisher.cpp
   - ``valread`` stores the value from reading the socket
   - ``sockStatus`` stores the return status from ``mySockClient()``
 
-* Line 15: The IP address and port as obtained from input argument to ``SockAddr`` & ``SockPortStr`` respectively
+* Line 15: The IP address and port as obtained from command-line input argument to ``SockAddr`` & ``SockPortStr`` respectively
 * Line 16: Buffer for socket reading
+
+Functions camera_frame_name & pose
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * Lines 18-22: Singleton instance of camera frame name
 * Lines 24-29: Singleton instance of object position
+
+Function mySockClient
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+  In this demo, VOS is the socket server which this function attempts to connect to based on the input arguments for socket server's IP address and port.
+
 * Lines 31-53: Connect to socket server; returns ``0`` for successful connection and ``-1`` otherwise
+
+.. _manualTrigger:
+
 * Line 34: Character T with carrier return for triggering VOS
+
 * Lines 35-40: Socket creation with status return and screen output.
 * Lines 45-53: Socket connection to provided IP address and port, with status return and screen output.
 * Line 50: If socket has been successfully connected, send a trigger signal to VOS
+
+Void pubVisualMarker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+  Location & querternion information would have been passed to the function input argument ``m``
+
 * Lines 58-79: Visual marker creation
+
+Void pubCallback
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * Lines 81-123: Publish call back
 * Lines 91-117: Process the VOS data as sent from socket 
 * Line 92: Read up to 1024 bytes from the socket into ``buffer``
@@ -370,6 +417,13 @@ fake_ar_publisher.cpp
 * Line 121: Publish to ROS topic
 * Line 122: Call pubVisualMarker() for marker creation
 
+Function main 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Lines 127-128: Get command-line input arguments for socket server's ip address and port
+* Line 135: Attempt to connect to socket server
+* Line 147: Callback function
+  
 workcellex22.launch
 ##########################################
 
@@ -388,6 +442,8 @@ workcellex22.launch
   </node>
   </launch>
 
+.. _defaultValues:
+
 * Line 2: Default socket port if not supplied from command-line
 * Line 3: Default IP address if not supplied from command-line
 * Line 4: Pass the arguments to the ``fake_ar_publisher`` package
@@ -395,10 +451,33 @@ workcellex22.launch
 Running the solution
 --------------------
 
-* At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` |runsoln| |cir1|, click on ``Manual Trigger`` |manTrig| button |cir2|. You will observe the phone's screen is updated with each ``Manual Trigger`` |manTrig|.
+.. note::
+  At the :hoverxreftooltip:`Run Solution page <intro/Basic/Hover/runsoln:Run Solution>` **do not** press the ``Manual Trigger`` button because triggering is activated by the ROS script.
 
+1. Launch the VOS solution as above, without clicking on the manual trigger button.
+2. At your ROS workspace parent folder, invoke 
+   
+   ``catkin build``
+
+3. If necessary, source the worksapce by 
+   
+   ``source devel/setup.bash``
+
+4. In a separate Linux command prompt, launch ``RViz`` with the virtual robot and the related ``MoveIt!`` packages for path planning by invoking
+   
+   ``roslaunch myworkcell_moveit_config myworkcell_planning_execution.launch``
+
+5. In yet another Linux command prompt, invoke 
+   
+   ``roslaunch myworkcell_support workcellex22.launch SockAddr:=xxx.xxx.xxx.xxx SockPort:=yyyyy``
+
+.. note::
+  Please change ``SockAddr`` & ``SockPort`` as appropriate in the command line. If left unspecified, the default values are ``192.168.10.143`` and ``8888`` for :ref:`ip and port respectively <defaultValues>`.
+
+6. The virtual robot will be launched as shown in the youtube video below.
+   
 .. youtube:: 1O28Kq6fWc8
 
 .. Tip::
-  #ROS #socket #path #planning #robot #ur5 #pick-and-place #cobot #qr #tf
+  #ROS #socket #path #planning #robot #ur5 #pick-and-place #cobot #qr #tf #melodic #socket 
 
