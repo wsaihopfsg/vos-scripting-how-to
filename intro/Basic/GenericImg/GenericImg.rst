@@ -34,8 +34,8 @@ This demonstrates how to convert a .jpg file into a .bmp format that can be read
   |2. ``1canvas.jpg``                   |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GenericImg/1canvas.jpg?raw=true>`__ after canvas resize  |
   |                                     |                                                                                                                                                    |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-  |3. ``1canvas.jpg.bmp``               |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GenericImg/1canvas.jpg?raw=true>`__ after canvas resize &|
-  |                                     |format conversion                                                                                                                                   |
+  |3. ``1canvas.jpg.bmp``               |`The image file <https://github.com/wsaihopfsg/vos-scripting-how-to/blob/master/code/Basic/GenericImg/1canvas.jpg.bmp?raw=true>`__ after canvas     |
+  |                                     |resize and format conversion                                                                                                                        |
   +-------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
