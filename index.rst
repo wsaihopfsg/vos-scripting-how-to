@@ -152,6 +152,20 @@ Basic Topics
 
 .. |preprocessintro| image:: /intro/Basic/Preprocessor/preoverview1.jpg
 
+:doc:`Image Conversion <intro/Basic/GenericImg/GenericImg>`
+------------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------------+
+|Using Pictures from Any Image Source to Emulator                                                           |  
++===========================================================================================================+
+|| Since VOS requires that images must be monochrome bitmaps with the resolution of the selected sensor,    |
+|| this tutorial demonstrates how to convert pictures from any image source into a VOS compliant one.       |
+|| |jpg2bmp|                                                                                                |
++-----------------------------------------------------------------------------------------------------------+
+
+.. |jpg2bmp| image:: /intro/Basic/GenericImg/jpg2bmp.jpg
+   :width: 300pt
+
 Advanced Topics
 ===============
 
